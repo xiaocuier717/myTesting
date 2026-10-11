@@ -1,0 +1,49 @@
+name: AI+CAD research tracker
+
+on:
+  schedule:
+    - cron: "17 0 * * *"   # every day 00:17 UTC (08:17 Beijing time)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["research-tracker/**", ".github/workflows/research-tracker.yml"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: research-tracker
+  cancel-in-progress: false
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrape latest papers
+        run: python research-tracker/scraper.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research-tracker/site/data/papers.json
+          git diff --cached --quiet || git commit -m "chore: daily AI+CAD research update $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: research-tracker/site
+      - id: deploy
+        uses: actions/deploy-pages@v4

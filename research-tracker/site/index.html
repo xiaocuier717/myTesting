@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI + CAD 测试研究追踪</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70;
+    --border: #e3e3e0; --accent: #2457d6; --new: #d9480f; --tag: #eef2fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141416; --card: #1e1e21; --text: #ececee; --muted: #9a9aa2;
+      --border: #2e2e33; --accent: #7aa2ff; --new: #ff8a4c; --tag: #252b3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.6 -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .controls input, .controls select {
+    font: inherit; padding: 8px 10px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--card); color: var(--text);
+  }
+  .controls input { flex: 1 1 240px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .chip { border: 1px solid var(--border); background: var(--card); color: var(--text);
+          border-radius: 999px; padding: 3px 12px; cursor: pointer; font: inherit; font-size: 13px; }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .stats { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .paper { background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+           padding: 14px 16px; margin-bottom: 10px; }
+  .paper h2 { font-size: 16px; margin: 0 0 4px; line-height: 1.4; }
+  .paper h2 a { color: var(--text); text-decoration: none; }
+  .paper h2 a:hover { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+  .badge { display: inline-block; font-size: 12px; padding: 0 8px; border-radius: 4px;
+           background: var(--tag); margin: 6px 4px 0 0; }
+  .badge.new { background: var(--new); color: #fff; }
+  details { margin-top: 6px; font-size: 14px; }
+  summary { cursor: pointer; color: var(--accent); font-size: 13px; }
+  .links a { color: var(--accent); font-size: 13px; margin-right: 12px; }
+  .empty { color: var(--muted); text-align: center; padding: 48px 0; }
+  .warn { color: var(--new); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AI + CAD 测试研究追踪</h1>
+  <p class="sub">每天自动从 arXiv 与 OpenAlex 抓取 AI × CAD（含测试 / 评测 / 验证）的最新论文</p>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="搜索标题、摘要、作者…">
+    <select id="range">
+      <option value="1">今天新增</option>
+      <option value="7" selected>最近 7 天</option>
+      <option value="30">最近 30 天</option>
+      <option value="0">全部</option>
+    </select>
+    <select id="source">
+      <option value="">全部来源</option>
+      <option>arXiv</option>
+      <option>OpenAlex</option>
+    </select>
+    <select id="sort">
+      <option value="date">按发现时间</option>
+      <option value="pub">按发表日期</option>
+      <option value="score">按相关度</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="stats" id="stats">加载中…</div>
+  <div id="list"></div>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let DATA = { papers: [] };
+const activeTags = new Set();
+
+function daysAgo(n) {
+  const d = new Date(); d.setUTCDate(d.getUTCDate() - n + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function render() {
+  const q = $("q").value.trim().toLowerCase();
+  const range = +$("range").value;
+  const source = $("source").value;
+  const latest = DATA.papers.reduce((m, p) => p.first_seen > m ? p.first_seen : m, "");
+  // "今天" means the most recent scrape day, so the page isn't empty before today's run.
+  const since = range === 1 ? latest : range ? daysAgo(range) : "";
+
+  let items = DATA.papers.filter((p) =>
+    p.first_seen >= since &&
+    (!source || p.source === source) &&
+    [...activeTags].every((t) => p.tags.includes(t)) &&
+    (!q || `${p.title} ${p.abstract} ${p.authors.join(" ")} ${p.venue}`.toLowerCase().includes(q)));
+
+  const key = $("sort").value;
+  items.sort((a, b) =>
+    key === "pub" ? b.published.localeCompare(a.published) :
+    key === "score" ? b.score - a.score || b.published.localeCompare(a.published) :
+    b.first_seen.localeCompare(a.first_seen) || b.published.localeCompare(a.published));
+
+  const updated = DATA.updated ? new Date(DATA.updated).toLocaleString("zh-CN") : "—";
+  $("stats").innerHTML = `共 ${DATA.papers.length} 篇 · 最近一次抓取新增 ${DATA.new_today ?? 0} 篇 · 当前显示 ${items.length} 篇 · 更新于 ${updated}` +
+    (DATA.errors?.length ? `<div class="warn">部分来源抓取失败：${esc(DATA.errors.join("；"))}</div>` : "");
+
+  $("list").innerHTML = items.length ? items.map((p) => {
+    const authors = p.authors.length > 6 ? p.authors.slice(0, 6).join(", ") + " 等" : p.authors.join(", ");
+    return `<article class="paper">
+      <h2><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h2>
+      <div class="meta">${esc(authors)}</div>
+      <div class="meta">${esc(p.published)} · ${esc(p.venue || p.source)}</div>
+      <div>${p.first_seen === latest ? '<span class="badge new">NEW</span>' : ""}${p.tags.map((t) => `<span class="badge">${esc(t)}</span>`).join("")}</div>
+      ${p.abstract ? `<details><summary>摘要</summary><p>${esc(p.abstract)}</p></details>` : ""}
+      <div class="links"><a href="${esc(p.url)}" target="_blank" rel="noopener">原文</a>${p.pdf ? `<a href="${esc(p.pdf)}" target="_blank" rel="noopener">PDF</a>` : ""}</div>
+    </article>`;
+  }).join("") : `<div class="empty">没有符合条件的论文，试试放宽时间范围或筛选条件。</div>`;
+}
+
+function renderChips() {
+  const counts = {};
+  DATA.papers.forEach((p) => p.tags.forEach((t) => counts[t] = (counts[t] || 0) + 1));
+  $("chips").innerHTML = Object.entries(counts).sort((a, b) => b[1] - a[1])
+    .map(([t, n]) => `<button class="chip${activeTags.has(t) ? " on" : ""}" data-tag="${esc(t)}">${esc(t)} ${n}</button>`).join("");
+}
+
+$("chips").addEventListener("click", (e) => {
+  const t = e.target.closest(".chip")?.dataset.tag;
+  if (!t) return;
+  activeTags.has(t) ? activeTags.delete(t) : activeTags.add(t);
+  renderChips(); render();
+});
+["q", "range", "source", "sort"].forEach((id) => $(id).addEventListener("input", render));
+
+fetch("data/papers.json", { cache: "no-store" })
+  .then((r) => r.json())
+  .then((d) => { DATA = d; renderChips(); render(); })
+  .catch(() => { $("stats").textContent = "数据加载失败（本地预览请用 python -m http.server 打开）。"; });
+</script>
+</body>
+</html>
