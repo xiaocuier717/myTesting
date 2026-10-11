@@ -1,12 +1,7 @@
 {
- "updated": "2026-10-11T03:43:28+00:00",
- "new_today": 22,
- "errors": [
-  "arXiv: HTTP Error 429: Too Many Requests",
-  "arXiv: HTTP Error 429: Too Many Requests",
-  "arXiv: The read operation timed out",
-  "arXiv: HTTP Error 429: Too Many Requests"
- ],
+ "updated": "2026-10-11T05:31:23+00:00",
+ "new_today": 51,
+ "errors": [],
  "papers": [
   {
    "id": "doi:10.3389/fcvm.2026.1909068",
@@ -57,30 +52,6 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2610.11896",
-   "title": "Automated Assembly Instruction Generation from CAD Models Using Grounded Large Language Models: A Human-in-the-Loop Framework",
-   "abstract": "Assembly documentation is a downstream manufacturing artifact that is still usually authored by interpreting CAD models by hand. Structured product data and large language models are both available, yet studies of CAD interpretation, assembly sequence planning, instruction writing, and human oversight have largely proceeded separately. This paper formulates CAD-grounded assembly instruction generation: the production of natural-language assembly procedures constrained by structured engineering information extracted from CAD models. The proposed framework maps a STEP assembly to a typed ProductGraph intermediate representation, derives a precedence order by deterministic topological sorting, realizes each step as language conditioned only on selected graph context, attaches per-step visual documentation, and applies rule-based and model-assisted checks. PDF export remains disabled until a human reviewer resolves every quality flag. The case study establishes endto-end feasibility on a built-in six-part reference assembly: the pipeline preserves a reported assembly order and carries quantity, material, and torque into an exported manual page. Generalization and geometric validation remain open empirical questions. The contribution is an architecture that separates engineering state, deterministic reasoning, grounded language realization, verification, and human release.",
-   "authors": [
-    "Aaron Dsouza",
-    "Mohammed Azeez Khan",
-    "Ashutosh Mishra",
-    "Arshaan Khan",
-    "Neha K. Nair",
-    "Amar Kumar Behera"
-   ],
-   "published": "2026-10-08",
-   "url": "https://doi.org/10.48550/arxiv.2610.11896",
-   "pdf": "https://doi.org/10.48550/arxiv.2610.11896",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
-   "tags": [
-    "测试/评测",
-    "LLM/智能体"
-   ],
-   "score": 5,
-   "first_seen": "2026-10-11"
-  },
-  {
    "id": "doi:10.3389/fdata.2026.1866430",
    "title": "DermArtifactDB: a multi-label dataset for artifact annotation in public dermoscopic image repositories",
    "abstract": "Dermoscopy is a widely adopted, non-invasive imaging technique that plays a crucial role in the early detection and clinical assessment of skin lesions (1). Its effectiveness, however, depends on the quality of the acquired images. In clinical practice, dermoscopic images often contain visual artifacts, such as hair, ruler markings, dark corners, bubbles, or ink traces, which are not part of the lesion itself. These artifacts can affect the visual appearance of the lesion, modifying color and texture patterns and complicating both clinical assessment and automated image analysis (2; 3; 4; 5). Consequently, artifacts are considered an important factor contributing to noise and bias in computer-aided diagnosis (CAD) systems, impacting model interpretability, robustness, and diagnostic performance (6; 7).Although interest in automated dermoscopic image analysis has increased, publicly available datasets specifically focused on artifact annotation remain limited. Public datasets, including International Skin Imaging Collaboration (ISIC)-2019 (8; 9), PH2 (10), and Derm7pt (11), contain images with visible acquisition artifacts, but they are primarily used to train models for skin lesion classification and do not include explicit labels for artifact presence or type. The lack of artifact annotations introduces several limitations. First, it limits the ability to study how artifacts affect model performance and interpretability.Second, it hinders the development of preprocessing methods to detect and mitigate artifacts. Third, although multiple artifacts often co-occur within the same image, existing datasets rarely capture this multi-artifact scenario, and most studies (4; 7; 12; 13) instead focus on individual artifacts.To date, only a limited number of studies have addressed the annotation of dermoscopic artifacts. Bissoto et al. (6) introduced manual artifact annotations for investigating dataset bias and spurious correlations, quantifying how artifacts act as confounding factors for lesion classification. They labeled small subsets of two dermoscopic datasets: 2,594 images from ISIC 2018 (out of more than 12,000 available images) and 872 images from the Dermoscopic Atlas (out of 1,746). While this work demonstrated the relevance of artifact-aware analysis, the annotation methodology is limited in scope, as it relies on fully manual labeling applied to small subsets of the available data. In addition, the absence of a defined and reproducible annotation procedure limits its scalability and reuse. More recently, Bissoto et al. (14) extended this line of research by training per-artifact classifiers on previously introduced manual annotations. These classifiers were then applied to infer artifact presence in larger datasets such as ISIC-2019. Although this strategy enabled large-scale analysis, the annotations correspond to classifier output scores (probabilistic predictions) rather than verified binary ground-truth labels derived from systematic expert annotation.Moreover, these predictions are reported only for a single dataset and lack expert validation, which may lead to discrepancies with the true artifact labels, especially for difficult-to-detect artifacts.To address these limitations, we introduce DermArtifactDB, a unified and standardized dataset that provides multi-label annotations for seven dermoscopic artifacts (hair, ruler markings, ink markings, patches, dark corners, gel borders, and gel bubbles). These annotations are provided for the complete image sets of three widely used public repositories (ISIC-2019, PH2, and Derm7pt), comprising 20,211 images in total (19,000 from ISIC-2019, 1,011 from Derm7pt and 200 from PH2). For each image, DermArtifactDB provides one image-level binary label per artifact category (presence/absence of each of the seven artifacts), amounting to 141,477 labels. These labels do not indicate where each artifact is located within the image, and no pixel-level segmentation masks or region annotations are provided. As the images come from these public datasets, our contribution lies not in the images themselves but in the standardized, expert-validated artifact metadata, together with the annotation pipeline and dataset-level statistics released with it. The annotations were generated using a robust data-driven pipeline that combines classical imageprocessing detectors, deep learning-based segmentation models, a transformer-based multi-label detector (C-Tran ( 15)), and expert manual review with clinical oversight. This multi-phase design was developed to ensure annotation consistency and reliability across all three datasets. DermArtifactDB enriches existing dermoscopic repositories with artifact-level metadata, enabling the study of artifact distribution, diversity, and co-occurrence, and supporting the development of more transparent, interpretable, and robust CAD systems.This section describes the data sources and the multi-phase annotation framework used to construct the proposed dermoscopic artifact dataset. The methodology follows the four-phase pipeline shown in Figure 1, encompassing data collection, classical automatic artifact detection, transformer-based artifact detection, and expert manual review.The annotation pipeline relies on two independent detection stages (Phases 2 and 3 in Figure 1), followed by expert review (Phase 4 in Figure 1). Phase 2 is an ensemble of artifact-specific detectors: six of them (dark corners, ruler markings, patches, gel border, gel bubbles, and ink markings) rely on classical imageprocessing techniques and are fully specified by the parameters reported in their respective subsections (see Sections 2.2.2-2.2.7) to ensure reproducibility. Two deep learning segmentation models are additionally used within this stage, namely an ensemble of segmentation networks for hair detection (see Section 2.2.1) and a Double U-Net that segments the skin lesion to reduce false positives in the patch detector (see Section 2.2.4). Phase 3 is an independent detector based on a C-Tran multi-label transformer (see Section 2.3) that jointly predicts the seven artifact categories. The architectures and training configurations of all learned models are detailed in full in the corresponding subsections below. The hair-segmentation code is publicly availablefoot_0 , the C-Tran detector builds on the publicly available reference implementation of The proposed artifact-annotated dataset integrates dermoscopic images from three public datasets: ISIC-2019, PH2, and Derm7pt. None of the three repositories provides labels for the presence or type of acquisition artifacts, precisely the gap addressed by DermArtifactDB.These datasets comprise thousands of images acquired from multiple clinical centers, dermatology departments, and imaging devices, providing a heterogeneous representation of real-world dermoscopic acquisition conditions. All datasets contain fully anonymized skin lesion images, and no patient-identifiable metadata was processed. This diversity supports the development of generalized artifact-aware algorithms.Seven artifact categories were selected based on their prevalence in dermoscopic imaging and their documented impact on both clinical interpretation and CAD systems (3). Each category corresponds to a distinct visual pattern often observed in dermoscopic images:• Hair: Filaments that partially occlude the lesion surface and introduce texture variations (2; 4).• Dark corners: Darkened peripheral regions caused by illumination fall-off from the circular dermatoscope lens. These underexposed areas typically appear near the image edges and may partially obscure lesion boundaries (17).• Gel border: Bright or translucent ring-shaped structures formed by the interaction between contact gel and the dermatoscope's illumination (2).• Gel bubbles: Circular specular bubbles trapped within the gel interface, characterized by high reflectance and sharp boundaries (2).• Ruler markings: Straight, high-contrast linear structures originating from measurement tools placed near the lesion (12).• Ink markings: Irregular colored traces (typically blue or black) introduced during clinical examination (7).• Patches: Colored adhesive markers placed on the skin near the lesion during image acquisition, varying in shape and color (6).Figure 2 shows representative examples of the seven dermoscopic artifact categories considered in this work, using images from the ISIC-2019 dataset. Each subfigure shows the typical visual appearance and variability within a given artifact class. In addition, subfigure (h) highlights the co-occurrence of multiple artifacts within the same image, reflecting the multi-label nature of real-world clinical acquisitions. The first phase of the annotation pipeline consists of artifact-specific detection modules. Six of them (dark corners, ruler markings, patches, gel border, gel bubbles, and ink markings) rely on classical imageprocessing techniques, while hair detection employs deep learning-based segmentation models due to the morphological complexity of this artifact, as described in Section 2.2.1. This step provides an initial estimate of artifact presence in each image. For each artifact, three complementary detectors are applied in parallel, all targeting the same artifact type while capturing different aspects of its visual appearance, such as color, geometry, or intensity. This design allows the method to handle the variability in how a given artifact appears across patients, imaging devices, and acquisition conditions. For each artifact category k, the outputs of the three detectors d(k) 1 , d(k) 2 , d (k)3 ∈ {0, 1} were aggregated using a majority-voting rule. An artifact was considered present when at least two of the three detectors provided a positive response; otherwise, it was considered absent. Accordingly, the output of this phase (Phase 2) is, for each image, a seven-dimensional binary vector indicating the presence or absence of each artifact category. The intermediate binary masks produced by the individual detectors are generated only as part of the detection process and are not part of the released annotations. The detectors for each artifact are defined as follows:Hair detection was addressed using an ensemble of three deep learning segmentation models (Attention U-Net ( 18), Dense U-Net (19), and Attention Dense U-Net (20)), selected to capture the high morphological variability of hair structures, following our previous hair-removal work (4). Each model k ∈ {1, 2, 3} produces a binary mask M (k) ∈ {0, 1} H×W , where H and W are the height and width of the image. Hair presence was quantified using the hair density ratio:R (k) hair = 1 HW H i=1 W j=1 M (k) ijAn image was labeled as containing hair ifR (k)hair > τ hair , where τ hair was empirically selected in the range [0.01, 0.05] and set to 0.03. Final predictions were obtained via majority voting across the three models. Dark corners correspond to underexposed regions located at the edges of dermoscopic images, typically caused by the dermoscopic lens geometry (17). Detection was performed using three complementary detectors in the HSV, YCrCb, and CIELAB color spaces.For each color space, the image was thresholded to obtain a binary mask highlighting low-luminance pixels near the image borders. The image was then divided into four quadrants: top-left, top-right, bottomleft, and bottom-right. For each quadrant, rows and columns along the image borders were analyzed. For every border row or column, we computed the proportion of pixels classified as dark:f border = number of dark pixels in row/column number of pixels in row/column A border region was considered dark if f border ≥ τ border . The threshold τ border was empirically selected by evaluating values in the range [0.005, 0.05], with the final value set to 0.01. This choice allowed detection of subtle vignetting effects while remaining robust to noise. The final label was obtained by majority voting across the three color-space detectors.Ruler markings were detected by identifying straight line segments using the probabilistic Hough transform (21). To account for variability in ruler appearance and image resolution, three complementary detectors were used with different parameter configurations, including accumulator thresholds in the range [50, 150] and minimum line lengths in [10,25] pixels. The final configurations were set to accumulator thresholds of 50, 100, and 150, and minimum line lengths of 10, 15, and 25 pixels for the three detectors, respectively. The probabilistic Hough transform represents each detected line as a finite segment defined by two endpoints, (x 1 , y 1 ) and (x 2 , y 2 ). This formulation is appropriate for dermoscopic images, where the straight edge of a ruler typically appears as multiple fragmented segments rather than as a single continuous line. Due to the rigid linear structure of a ruler, all fragments belonging to the same ruler are expected to share a common orientation. The orientation of each segment was therefore computed as follows:θ = arctan y 2 -y 1 x 2 -x 1The dominant direction θ * was estimated as the most common orientation among the detected segments, and only segments satisfying |θ -θ * | < τ tol were retained. The tolerance parameter was selected in the range [5 • , 15 • ], with τ tol = 10 • . A positive detection was assigned if at least one set of aligned segments was identified, and final labels were obtained via majority voting.Patches were detected using three color spaces (HSV, YCrCb, and CIELAB). These detectors were designed to capture the warm (yellow, orange, red) and cool (green, blue) chromatic tones that are characteristic of adhesive markers. To reduce false positives, lesion regions were first segmented using Double U-Net ( 16) and excluded from the analysis. For lesion segmentation, we used the Double U-Net model provided by its original authors (16), pretrained for skin-lesion segmentation. It is applied only to exclude lesion pixels from the patch analysis and was not retrained in this work.Adhesive markers often exhibit heterogeneous chromatic appearance, combining highly saturated regions with less saturated areas due to illumination variability. To account for this, each detector generated two chromatic masks: a low-threshold mask capturing pixels within a broad color range (including weakly saturated regions), and a high-threshold mask retaining only strongly saturated pixels. Let N low and N high denote the number of non-zero pixels in the low-and high-threshold masks, respectively. We defined the following color consistency ratio:r patches = N high N low × 100A patch was considered present when both color consistency and spatial extent criteria were patches > τ and N high > τ thresholds were selected empirically ∈ τ ∈ with final values τ = and τ = which were applied across all three color-space Final labels were obtained via majority voting across the three borders appear as ring-shaped structures near the edges of dermoscopic images. Detection was performed using three color spaces (HSV, YCrCb, and on peripheral regions by the image to with circular skin circular structures were using the Hough retaining only within of the image reflecting the typically of gel each detected with , the gel border was as an region of width τ width binary masks were an mask M , corresponding to a of , and an mask M , corresponding to a of τ width . The gel border mask was then defined gel = M gel borders from artifacts, with low the were A positive detection was assigned if the region a minimum threshold τ were selected empirically width ∈ τ ∈ with final values τ width = and τ = Final labels were obtained via majority voting across the three bubbles were detected as circular structures within the contact edge detection and morphological were applied to obtain while hair regions using the hair mask as described in Section were characterized by their A and , and a was computed = 2 with A in the range [50, pixels and high were retained. detectors with thresholds > > and > were used to account for variability in A positive detection was assigned when at least one both the and Final labels were obtained via majority voting across the three markings, typically characterized by blue or were detected across three color spaces (HSV, YCrCb, CIELAB). They often exhibit variability in color due to illumination To account for this, each detector generated two complementary masks: a low-threshold mask capturing a broad range of tones and a high-threshold mask retaining only strongly saturated or blue pixels. Let N ink low and N ink high denote the number of non-zero pixels in these A chromatic consistency was defined ink = N ink high N ink low positive detection was assigned when both chromatic consistency and spatial extent were ink > τ and N ink high > τ τ the proportion of strongly saturated while τ a minimum number of detected pixels. were selected empirically ∈ τ ∈ with final values τ = and τ = The same threshold values were used for the HSV, YCrCb, and CIELAB Final labels were obtained via majority voting across the three classical detectors with a multi-label on our previous work we this model for dermoscopic artifact detection using label training and an with to capture and to artifacts. This has shown to binary and for subtle and jointly predicts the presence of seven artifact categories within a multi-label classification C-Tran integrates a visual with a that models The produces a spatial that is with a set of label a label strategy is where a of labels is to the model to infer annotations from co-occurrence of gel borders and our previous work the C-Tran is a with and jointly with the The model is with an of × three four and a of model was on the ISIC-2019 dataset training with of the training data used for validation, using the of ( = = = used the with a learning of 10 , a and early 15 based on the implementation builds on the publicly available reference code of C-Tran typically training C-Tran this the and learning described together with the strategy and the This allows it to on the available data the low bias of C-Tran was models and the same and on ISIC-2019. was with four multi-label the the and and the C-Tran the on all of them (see in model outputs a vector of seven independent = 1 , 2 , . . . , k ∈ each k is obtained a and the that artifact k is of the These values do not a and are not to to one to the output of a predictions are obtained by each at = 1, k ≥ k < output of this phase (Phase is a seven-dimensional binary obtained by the at both the same type of output binary and artifact region The multi-label generated by C-Tran are not used as they only as a visual for the expert during Phase 4 (see Section and are additionally released for analysis (see Section predictions were generated using the two described in the previous the classical ensemble detector and the C-Tran were at the image and across individual artifact categories to were when both produced predictions across all seven artifact first that the released annotations are image-level binary DermArtifactDB not region masks or Consequently, the expert review for each image and each artifact a single binary rather than a spatial and the reference labels correspond to these binary with in at least one artifact category were for review and by two independent a and a The the and visual for each a detected structure is with the visual of the the original image together with the C-Tran as a spatial The in provided clinical validation, artifact presence in the of dermoscopic For each the the original dermoscopic the predictions from the ensemble the predictions generated by and the multi-label produced by which the image regions contributing to each on this both assigned binary labels for each of the seven artifact review of each image followed an explicit the visual in the artifact (see Section as the the as the original dermoscopic image was at full the two automated predictions ensemble and were to the artifact categories in for each of these the corresponding C-Tran was used to the image supporting the and a binary label was assigned to that category its The categories on which both the label and were not were as the two automated but the two with each the was the two with each (including in which both from the automated the was jointly was In the that was not the assessment was as the reference For the PH2 all images were and every was the final dataset consists of labels obtained a ensemble of classical detectors, transformer-based detection, and independent expert This annotation strategy labeling of dermoscopic repositories while the and clinical relevance for robust learning released dataset provides standardized multi-label annotations of dermoscopic artifacts for images from three publicly available ISIC-2019, PH2, and Derm7pt. Due to the dermoscopic images are not can obtain the original images from the corresponding repositories and them with the corresponding artifact annotations using their respective image or ISIC the structure of the artifact annotation dataset , a one per dataset (ISIC-2019, PH2, and Derm7pt), each providing binary artifact labels for the corresponding images. An is into containing images generated by These image regions that most strongly to each artifact and are provided for and analysis. They are not used as annotations and are independent of the released binary artifact labels. A the which dataset-level artifact the of the number of artifacts per image, and representative artifact co-occurrence A provides an of the annotation the dataset and for the annotation to the original images. In addition, to and DermArtifactDB is documented following the for framework and to the for data The complete is provided as the structure and of the datasets, Figure 3 together with a presence of hair highlighting the of acquisition conditions. these all three datasets exhibit artifact co-occurrence, indicating that artifacts to co-occur more than 2 the of artifact-level annotation across datasets, where a is defined as a between the outputs of the classical detectors and the model for a given The proposed annotation framework of manual In ISIC-2019, artifact-level (out of corresponding to manual review due to between the classical detectors and the transformer In artifact-level (out of All were by two and a was in all the of the proposed the PH2 dataset images, artifact-level a complete manual All artifact labels, including both and were by the same and discrepancies were This as a full clinical of the annotation framework and the reliability of the proposed pipeline in a dataset manual of a corresponding to of the dataset images in ISIC-2019 and images in supports the consistency and clinical of the generated annotations.",
@@ -98,6 +69,77 @@
    "tags": [
     "测试/评测",
     "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.12147",
+   "title": "Healthy Counterfactual Generation via Diffusion Inpainting for Mammography Classification",
+   "abstract": "False negatives remain a critical limitation of computer-aided diagnosis (CAD) systems for breast cancer screening due to delayed detection and treatment. To address this issue, we propose a counterfactual data augmentation strategy that generates healthy mammograms by \"erasing\" lesions from anomalous images, thereby enriching the training distribution. We train a Denoising Diffusion Probabilistic Model on BI-RADS 1 (healthy) mammograms and use a RePaint-based sampling strategy to inpaint realistic normal tissue within annotated lesion bounding boxes. The resulting healthy counterfactuals replace annotated lesion regions with realistic healthy tissue while preserving patient-specific anatomical structure, as supported by similarity metrics between real and generated images. Image realism was further assessed by radiologists and found to be consistent with the original dataset quality. We evaluate counterfactual augmentation across four representative classifier architectures: a convolutional neural network (ConvNeXt), a vision transformer (ViT), a vision-language model pre-trained on mammogram-report pairs (Mammo-CLIP) and a multi-scale attention-based multiple-instance learning framework (FPN-MIL). Experiments conducted on the VinDr-Mammo dataset show improvements in sensitivity across all architectures, particularly at 80\\% fixed specificity, contributing towards more reliable CAD systems for breast cancer. Code is available at: https://github.com/ines03garcia/diffusion-based-counterfactual-generation.",
+   "authors": [
+    "Inês Cruchinho Garcia",
+    "Mariana Mourão",
+    "Francisco Maria Calisto",
+    "Carlos Santiago",
+    "Jacinto Nascimento"
+   ],
+   "published": "2026-10-08",
+   "url": "https://arxiv.org/abs/2610.12147",
+   "pdf": "https://arxiv.org/pdf/2610.12147v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.11954",
+   "title": "Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion",
+   "abstract": "CAD reconstruction methods assume a luxury reality rarely grants: unrestricted visual access to the object, photographed from any desired angle. Real objects, however, are scene-embedded, bolted against walls, wedged into corners, resting on floors, where the scene renders much of the view sphere unreachable and the remaining views unequally informative. We introduce \\textbf{SightCAD}, a framework for parametric CAD reconstruction that treats view feasibility as a first-class constraint. In this work we consider objects from standard CAD benchmarks embedded in realistic indoor scenes with physically derived visibility constraints over a discrete view sphere. A learned view selector must choose $K$ feasible views for a vision--language model (VLM) that generates executable CadQuery code, scored by geometric fidelity of the executed solid. Because reward arrives only after discrete view selection, autoregressive generation, and CAD-kernel execution, we propose a joint training paradigm in which the view selector and the CAD-generation VLM are trained together against this reward. The learned selection policy departs sharply from random, uniform, and coverage-greedy alternatives, outperforming surface-area maximization (SA-max) by up to $6.4$ Intersection-over-Union (IoU) points across budgets $K\\in\\{1,\\dots,5\\}$. The full system surpasses strong external baselines on scene-embedded, occluded multi-view renders of DeepCAD and Fusion360 objects ($+21$ and $+17$ effective-mIoU points over the best baseline, respectively), as well as on test-time domain-canonicalized real images from the industrial T-LESS benchmark and on both synthetic and real images from the MP6D industrial metal-parts benchmark, while producing the highest rate of executable programs of any method compared (invalid-code rate ${\\leq}1.5\\%$).",
+   "authors": [
+    "Kartik Bali",
+    "Mahish Guru",
+    "Yiderigun Borjigin",
+    "Alexandra Starostina",
+    "Christian J. Cyron",
+    "Roland Aydin"
+   ],
+   "published": "2026-10-08",
+   "url": "https://arxiv.org/abs/2610.11954",
+   "pdf": "https://arxiv.org/pdf/2610.11954v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.11896",
+   "title": "Automated Assembly Instruction Generation from CAD Models Using Grounded Large Language Models: A Human-in-the-Loop Framework",
+   "abstract": "Assembly documentation is a downstream manufacturing artifact that is still usually authored by interpreting CAD models by hand. Structured product data and large language models are both available, yet studies of CAD interpretation, assembly sequence planning, instruction writing, and human oversight have largely proceeded separately. This paper formulates CAD-grounded assembly instruction generation: the production of natural-language assembly procedures constrained by structured engineering information extracted from CAD models. The proposed framework maps a STEP assembly to a typed ProductGraph intermediate representation, derives a precedence order by deterministic topological sorting, realizes each step as language conditioned only on selected graph context, attaches per-step visual documentation, and applies rule-based and model-assisted checks. PDF export remains disabled until a human reviewer resolves every quality flag. The case study establishes endto-end feasibility on a built-in six-part reference assembly: the pipeline preserves a reported assembly order and carries quantity, material, and torque into an exported manual page. Generalization and geometric validation remain open empirical questions. The contribution is an architecture that separates engineering state, deterministic reasoning, grounded language realization, verification, and human release.",
+   "authors": [
+    "Aaron Dsouza",
+    "Mohammed Azeez Khan",
+    "Ashutosh Mishra",
+    "Arshaan Khan",
+    "Neha K. Nair",
+    "Amar Kumar Behera"
+   ],
+   "published": "2026-10-08",
+   "url": "https://arxiv.org/abs/2610.11896",
+   "pdf": "https://arxiv.org/pdf/2610.11896v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
    ],
    "score": 5,
    "first_seen": "2026-10-11"
@@ -123,6 +165,27 @@
    "pdf": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001701&type=printable",
    "venue": "PLOS Digital Health",
    "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.12202",
+   "title": "Sim-to-Real RL for ASVs using SysID",
+   "abstract": "Autonomous Surface Vehicles (ASVs) operating in dynamic marine environments require robust control policies for tasks such as path following and station keeping, making reinforcement learning (RL) a promising alternative to classical controllers. However, existing ASV simulators rarely support parallel environments for RL training. Such existing simulators require accurate hydrodynamic modeling from computational fluid dynamics solvers or towing tank tests for setting hydrodynamic parameters to address the sim-to-real gap. To address these challenges, we present an ASV simulator and accompanying pipeline that enables training policies starting from unknown vehicle dynamics. Our framework uses only a CAD model and brief set of open-water field trajectories for approximating and refining both hydrodynamic and thruster parameters. Real-world deployments on a BlueBoat ASV demonstrate successful zero-shot sim-to-real transfer in path following and station-keeping tasks without prior hydrodynamic and propeller information.",
+   "authors": [
+    "Cody Sheltraw",
+    "Tsimafei Lazouski",
+    "Maani Ghaffari",
+    "Alan Papalia"
+   ],
+   "published": "2026-10-08",
+   "url": "https://arxiv.org/abs/2610.12202",
+   "pdf": "https://arxiv.org/pdf/2610.12202v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
    "tags": [
     "测试/评测"
    ],
@@ -160,6 +223,30 @@
     "LLM/智能体"
    ],
    "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.10858",
+   "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+   "abstract": "Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChipAgent, a first-of-its-kind multi-agent flow of large language model (LLM) agents for end-to-end analog/RF circuit design automation, in which AI agents collaboratively orchestrate the complete design flow under human supervision. RFChipAgent is built around four technical pillars. First, a multimodal retrieval-augmented generation (RAG) subsystem with private per-document FAISS indexing extracts design knowledge from existing engineering documentation. Second, a topology agent drives topology selection, and a schematic and testbench agent automates circuit and testbench assembly. Third, a closed-loop hybrid circuit-sizing engine combines Tree-structured Parzen Estimator (TPE) and CMA-ES optimization, evaluating every candidate in a simulator-in-the-loop framework. Fourth, a trust-scored simulation database accumulates verified performance data and builds an adaptive optimization model that informs subsequent trials. We validate RFChipAgent on a family of GF22FDSOI 60 GHz wideband mm-wave low-noise amplifier (LNA) topologies, demonstrating automated topology generation, specification-driven design-space exploration, and simulator-guided optimization. Experimental results show substantial reductions in design effort while maintaining signoff-quality verification. This work establishes a foundation for LLM-driven multi-agent electronic design automation (EDA) for analog/RF circuits.",
+   "authors": [
+    "Awani Khodkumbhe",
+    "Yunfei Feng",
+    "Raj Rangarajan",
+    "Kevin Wang",
+    "Kamal Sahota"
+   ],
+   "published": "2026-10-07",
+   "url": "https://arxiv.org/abs/2610.10858",
+   "pdf": "https://arxiv.org/pdf/2610.10858v1",
+   "venue": "arXiv cs.AR, cs.AI, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
    "first_seen": "2026-10-11"
   },
   {
@@ -209,24 +296,182 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2610.09781",
+   "id": "arxiv:2610.09781",
    "title": "End-to-End Autonomous Generation of Human Assembly Plans",
    "abstract": "Turning a CAD design into an assembly plan is still largely done by hand, requiring engineers to reason about geometric feasibility, tool access, stability, and the ergonomics of human assembly. In this work, we encode long-established design for assembly (DfA) principles into a contained, end-to-end approach for generating assembly plans. Our approach takes only a mesh assembly and produces either a step-by-step assembly manual or a structured failure report, requiring no joint metadata, fastener annotations, or additional information. Four major components of a manufacturing plan are addressed autonomously: an assembly tool list, the assembly sequence and subassemblies, an assembly manual, and design feedback for improving assemblability. For determining the sequence plan, we systematically disassemble the object in a physics simulator and apply a cost function that encodes DfA principles. Manual generation, tool labelling, and assembly feedback rely primarily on multimodal large language models. Compared with a baseline that always removes the outermost part first from Tian et al., DfA-aware sequence planning reduces simulated assembly time, measured with a robot-arm assembly-time proxy, by 35% on 136 assemblies of 5 to 30 parts. The correct tool is selected for 88.6% of assembly steps. A vision-language model judge compares the generated manuals against ablated variants, identifying which page elements carry the information a reader needs. The presented approach and open-source code are available for use by engineers or AI agents looking to rapidly accelerate the creation of manufacturing plans for a given product design.",
    "authors": [
     "Faustin Arion von Arx",
     "Millicent Schlafly",
-    "Mark Fuge"
+    "Mark D. Fuge"
    ],
    "published": "2026-10-07",
-   "url": "https://doi.org/10.48550/arxiv.2610.09781",
-   "pdf": "https://arxiv.org/pdf/2610.09781",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2610.09781",
+   "pdf": "https://arxiv.org/pdf/2610.09781v1",
+   "venue": "arXiv cs.RO, cs.GR",
+   "source": "arXiv",
    "tags": [
     "B-rep/几何",
     "LLM/智能体"
    ],
    "score": 2,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.09127",
+   "title": "CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use",
+   "abstract": "Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across different part geometries and stages of reconstruction. We introduce CADFather, an autonomous agentic system that coordinates complementary tools to recover parametric CAD programs from 3D meshes. A vision-language assistant inspects renders of the target and intermediate reconstructions, then decides which candidate CAD programs to extend, which tools to invoke, how many proposals to generate, and when to finish. Learned and algorithmic tools propose CAD operations, while numerical optimization refines the parameters of existing programs. Proposed or refined programs are executed and evaluated to provide feedback for subsequent decisions. The agent maintains alternative candidate programs for each target part and preserves the best valid result throughout reconstruction. CADFather uses pretrained generation and assistant models without additional training. We evaluate reconstruction quality and execution validity on the full DeepCAD, Fusion360, and MCB test sets, as well as on CADENA-Bench, CADBench, and BenchCAD. We additionally analyze computational cost and the trade-off between cost and reconstruction quality.",
+   "authors": [
+    "Gennadiy Savrasov",
+    "Maksim Elistratov",
+    "Nikita Gavrilov",
+    "Albert Garifullin",
+    "Oleg Pavlov",
+    "Soslan Kabisov",
+    "Vladimir Frolov",
+    "Anton Konushin",
+    "Andrey Kuznetsov",
+    "Dmitrii Zhemchuzhnikov"
+   ],
+   "published": "2026-10-06",
+   "url": "https://arxiv.org/abs/2610.09127",
+   "pdf": "https://arxiv.org/pdf/2610.09127v1",
+   "venue": "arXiv cs.AI, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.08698",
+   "title": "PrimitiveCAD: An LLM-Based Point-to-CAD Reconstruction with Primitive-Aware Tokenization and Operation Alignment",
+   "abstract": "Large-model-based point-to-CAD generation holds immense potential for advancing industrial design and enhancing 3D modeling efficiency. However, most existing methods approach the problem as a general point-cloud encoding and token prediction task, neglecting the tokenization and supervision specifically for CAD-related primitives. As a result, these methods often struggle to accurately reconstruct the intricate primitive structures. To address this limitation, we propose PrimitiveCAD, a novel multi-stage paradigm for point-to-CAD reconstruction that enhances the geometric accuracy of generated CAD models while better preserving critical geometric features. First, we introduce a primitive-aware point cloud tokenization model, enabling the system to learn more robust geometric representations from CAD point clouds. Next, we perform supervised finetuning on a large language model (LLM) and introduce an operation alignment loss to align key CAD operation frequencies, thereby improving the preservation of global shape features. Finally, we incorporate reinforcement learning (RL) and introduce a feature-line alignment reward to further reduce stochasticity and enhance the fine-grained preservation of geometric features. Experiments on the DeepCAD and Fusion360 datasets show that our method achieves state-of-the-art performance in code validity, geometric accuracy, and geometric feature preservation.",
+   "authors": [
+    "Jian Gao",
+    "Kailin Bi",
+    "Jiamin Xu",
+    "Jinlan Xu",
+    "Gang Xu"
+   ],
+   "published": "2026-10-06",
+   "url": "https://arxiv.org/abs/2610.08698",
+   "pdf": "https://arxiv.org/pdf/2610.08698v1",
+   "venue": "arXiv cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 3,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.06790",
+   "title": "Back to the Future: Rethinking EDA Infrastructure for Agentic Systems in Chip Design Verification",
+   "abstract": "The unprecedented computational scale of modern artificial intelligence depends on complex, multi-billion-transistor Systems-on-Chip, yet the workflows that verify these chips remain stubbornly manual. Although Large Language Models (LLMs) have made rapid inroads into Electronic Design Automation (EDA), approximately 74.6% of existing studies target static Register-Transfer Level (RTL) code generation, leaving post-simulation verification and interactive waveform debugging largely untouched. We introduce Back-to-the-Future (BTTF), an end-to-end agentic framework that closes this infrastructural gap. BTTF distills massive, unstructured simulation dumps into a normalized relational SQLite database and couples it with a collaborative multi-agent orchestration engine that translates natural-language verification queries into schema-aware SQL while correlating signal anomalies with versioned RTL repositories. Across a 150-query benchmark, BTTF attains 95.33% execution accuracy, charting a practical path toward autonomous EDA verification.",
+   "authors": [
+    "Je Yang",
+    "Ivan Lobov",
+    "Thomas Karpati"
+   ],
+   "published": "2026-10-05",
+   "url": "https://arxiv.org/abs/2610.06790",
+   "pdf": "https://arxiv.org/pdf/2610.06790v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.06316",
+   "title": "RollPlace: Improving Macro Placement via Monte Carlo Rollout Search",
+   "abstract": "The application of Reinforcement Learning (RL) in Electronic Design Automation (EDA), particularly for chip placement, has attracted considerable attention in recent years. While existing machine learning (ML)-based approaches have achieved notable progress, they predominantly focus on generating optimal layouts in a single attempt, often producing solutions that require subsequent refinement. To address this limitation, we propose RollPlace, a novel and generalized macro placement framework. RollPlace adopts a two-stage optimization strategy: generating initial placement solutions via machine learning methods or heuristic-based strategies, and refining these layouts efficiently by adjusting specific macros derived from the initial stage. This strategy circumvents the sequential generation constraints inherent in traditional RL-based placement methods. Furthermore, RollPlace seamlessly integrates Monte Carlo Tree Search (MCTS) to balance exploration and exploitation, and employs a rollout mechanism for efficient local search. Extensive experiments on the ISPD 2005 benchmark demonstrate that RollPlace outperforms state-of-the-art methods. Additionally, end-to-end experimental results based on OpenROAD across 19 benchmarks show that RollPlace excels in multiple metrics. The proposed framework offers a robust and scalable solution for addressing the growing complexity of modern chip design challenges.",
+   "authors": [
+    "Qi Zhou",
+    "Guojun Liu",
+    "Guangzhi Qi",
+    "Ming Lu",
+    "Jiechu Liu",
+    "Zhongli Liu",
+    "Jianqun Yang",
+    "Xingji Li"
+   ],
+   "published": "2026-10-05",
+   "url": "https://arxiv.org/abs/2610.06316",
+   "pdf": "https://arxiv.org/pdf/2610.06316v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.07062",
+   "title": "Learning to Simulate Individuals from Macro Social Signals",
+   "abstract": "Large language models are increasingly used to simulate how individuals respond to new situations, yet the behavioral reasoning behind these responses is either inherited from pretraining or learned from individual-level annotations, which offer limited behavioral diversity and little supervision of the reasoning itself. We propose to learn behavioral reasoning from prediction markets, whose price trajectories record how populations respond to real-world events at scale. We introduce macro2mind, which trains a language model with GRPO using market signals. A social behavioral decomposition makes behavioral reasoning an explicit step of forecasting: the model infers representative groups of market participants, predicts how each interprets the news and updates its beliefs, reasons about their interactions, and aggregates these responses into a price. A hindsight-regret curriculum with difficulty-aware sampling focuses training on transitions where hindsight-identified groups substantially improve the forecast while prioritizing examples that remain learnable for the current policy. The learned reasoning applies to user simulation without further training. On SWM-Bench, macro2mind achieves state-of-the-art directional accuracy and correlation on Polymarket. Trained on market data, it transfers zero-shot to four user-simulation benchmarks (Humanual, OvertonBench, PRISM, and CAD) and has competitive performance among zero-shot methods. Used as a data generator, macro2mind also raises a downstream simulator's accuracy on unseen users by 15.5 points, outperforming data generated by its backbone by 13.2 points.",
+   "authors": [
+    "Yining Zhao",
+    "Bushi Liu",
+    "Haofei Yu",
+    "Zhengyang Qi",
+    "Shanyong Wang",
+    "Chuyue Li",
+    "Yuxiang Liu",
+    "Jiaxuan You"
+   ],
+   "published": "2026-10-05",
+   "url": "https://arxiv.org/abs/2610.07062",
+   "pdf": "https://arxiv.org/pdf/2610.07062v1",
+   "venue": "arXiv cs.LG, cs.AI, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.04292",
+   "title": "LMBuild: Evaluating LLM Agents for Generating Buildable and Functional Structures",
+   "abstract": "LLM-based agents are increasingly capable of generating complex 3D structures, with the potential to reshape how objects are designed and realized in the physical world. Yet, producing elegant geometry is fundamentally different from producing objects that can be built and perform their intended functions. Existing evaluations largely focus on geometric quality while overlooking physical realizability. We introduce LMBuild, a benchmark for evaluating LLM agents on generating buildable and functional structures. LMBuild represents generated objects as assembled structures comprising part decompositions, joints, materials, and sequences. To support reproducible evaluation, we provide a unified framework consisting of: (1) an interactive environment in which agents can use tools to retrieve, create, and place components to construct objects; (2) a curated benchmark that repurposes established CAD datasets and augments them with knowledge from Wikipedia; and (3) a evaluation framework covering structural soundness, functional affordance, design quality, and physical realization. Evaluations across 30 systems reveal several intriguing findings: (a) Soundness and alignment are no longer the primary bottlenecks for frontier closed-source models, while functional affordance and physical operability remain substantially more challenging; (b) stronger models more effectively create new components, whereas weaker models tend to rely on retrieval; and (c) providing functional specifications substantially improves part completeness, kinematics, and physical operability. These results show that generating real-world structures requires deeper reasoning about functional affordances, mechanics, and designing and creating novel components. We expect LMBuild to provide a foundation for measuring progress and incentivizing research toward agents that generate buildable and functional structures.",
+   "authors": [
+    "Jiateng Liu",
+    "Rushi Wang",
+    "Cheng Qian",
+    "Xuejun Zhang",
+    "Sun Li",
+    "Jiayu Liu",
+    "Yifan Shen",
+    "Xu Cao",
+    "Jiarui Yao",
+    "Bingxuan Li",
+    "Ruhi Sarikaya",
+    "Heng Ji"
+   ],
+   "published": "2026-10-03",
+   "url": "https://arxiv.org/abs/2610.04292",
+   "pdf": "https://arxiv.org/pdf/2610.04292v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
    "first_seen": "2026-10-11"
   },
   {
@@ -249,7 +494,32 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2610.03971",
+   "id": "arxiv:2610.04262",
+   "title": "CADForge: Agentic Single-View CAD Reconstruction with Explicit Geometry Reasoning",
+   "abstract": "Reconstructing editable parametric CAD models from a single-view image is of great practical value for modern manufacturing, yet remains challenging due to incomplete geometric observations and complex inter-part relationships. To address it, we propose CADForge, an agentic framework that progressively converts a single image into CadQuery programs. CADForge decomposes an object into CAD-meaningful components and performs explicit geometric reasoning for each component, a process that first identifies CAD-relevant constraints and then translates them into precise modeling parameters through mathematical code. The inferred parameters then drive component-wise synthesis of executable CadQuery programs, with a review agent evaluating the resulting geometry and providing targeted feedback for iterative refinement. To further improve robustness and efficiency, CADForge incorporates a failure-guided toolkit construction mechanism to distill accumulated experience into tools, and maintains a compact parametric CAD memory for retrieving modeling context on demand. Experiments on diverse single- and multi-part objects show that CADForge consistently outperforms existing baselines in reconstruction fidelity and perceptual quality, demonstrating an effective approach to accurate single-view CAD reconstruction.",
+   "authors": [
+    "Keyang Lu",
+    "Zhifei Yang",
+    "Tianao Dong",
+    "Mingzhe Xing",
+    "Zhen Xiao",
+    "Yikai Wang"
+   ],
+   "published": "2026-10-03",
+   "url": "https://arxiv.org/abs/2610.04262",
+   "pdf": "https://arxiv.org/pdf/2610.04262v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 3,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.03971",
    "title": "An Executable Benchmark for LLM-Based HLS Repair:Design Complexity and Repair Underconstraint",
    "abstract": "Automated repair of High-Level Synthesis (HLS) designs using large language models (LLMs) is an emerging but underexplored problem. While LLM-based repair shows strong results on register-transfer level (RTL) Verilog, the only prior systematic study of HLS logic repair reports just 10.5% correction accuracy for GPT-4, with no analysis of why repair fails or what drives difficulty. We present the first comprehensive evaluation of LLM-based HLS repair across four models (GPT-4o, GPT-4o-mini, GPT-5.4, and Claude Opus 4.6) on 125 benchmark instances spanning eight logic bug types across three open-source HLS suites (CHStone, MachSuite, Polybench). We construct the first executable APR-style HLS repair benchmark with suite-specific functional oracles, enabling pass@k evaluation rather than the string-match approximations used in prior work. Design context and scale, rather than bug type alone, dominate repair difficulty: repair rates range from 6-45% on complex cryptographic kernels (CHStone) to 81-93% on compact algorithmic kernels (MachSuite) despite identical bug type distributions. We introduce solution multiplicity, the fraction of distinct patches generated across repeated repair attempts, as an empirical measure of repair underconstraint, and show it strongly predicts repair failure across all four models (Spearman rho = -0.393, p = 6.61 x 10^-20). Frontier models reduce underconstrained instances from 41-46 (GPT-4o, GPT-4o-mini) to just 3 (Claude Opus 4.6), with pass@1 improving from 42-53% to 73-76%. SHFT bugs remain consistently hard across all models, and semantic bug classes such as buffer indexing become reliably repairable only at frontier scale. These findings show that future APR benchmarks must include complex, executable, and weakly identifiable designs that remain challenging after frontier LLM repair.",
    "authors": [
@@ -257,16 +527,105 @@
     "Dean Sullivan"
    ],
    "published": "2026-10-02",
-   "url": "https://doi.org/10.48550/arxiv.2610.03971",
-   "pdf": "https://arxiv.org/pdf/2610.03971",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2610.03971",
+   "pdf": "https://arxiv.org/pdf/2610.03971v1",
+   "venue": "arXiv cs.AR, cs.AI",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
     "LLM/智能体"
    ],
    "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.04116",
+   "title": "CUAWright: A Minimal Unified Interface for Digital Agents",
+   "abstract": "The prevailing approach to computer-use agents couples a model with a domain-specific harness: a browser or desktop environment equipped with human engineered tools that are fixed before task execution. As models' coding capabilities improve, the GUI native and static harness prevents them from direct programmatic operation on system state, as well as flexible construction of tools. To this end, we introduce CUAWright, a minimal terminal harness of roughly 3K lines of code that uses bash commands as its sole action interface, and a file system as its evolvable space for dynamically creating tools and managing the context. We conduct comprehensive experiments across a wide range of digital tasks, and demonstrate that by giving the agent a minimal, programmable interface, it achieves substantially stronger results compared to their GUI or hybrid CLI interface across a wide range of tasks. On OSWorld 2.0, CUAWright delivers a 33.2% relative improvement in partial reward while reducing estimated cost by 37.5% compared with the published GPT-5.5 baseline. On Online-Mind2Web and the long horizon Odysseys benchmark, CUAWright substantially outperforms GUI native harness by 4.7% and 44.0% in success rate, respectively. Furthermore, we found the gains extend to CAD applications that require accurate visual understanding and CLI interaction: on CADGenBench and BenchCAD, our unified harness yields 8.1%-41.6% relative improvements over other CLI based harnesses with GPT-5.5. Together, these results suggest digital environments are far more programmable than their GUI interfaces imply, and a minimal terminal-focused harness is the key for better performance and efficiency.",
+   "authors": [
+    "Yadong Lu",
+    "Theodore Lee",
+    "Yifei Li",
+    "Lawrence Keunho Jang",
+    "Tianci Xue",
+    "Yu Su",
+    "Huan Sun",
+    "Ahmed Hassan Awadallah"
+   ],
+   "published": "2026-10-02",
+   "url": "https://arxiv.org/abs/2610.04116",
+   "pdf": "https://arxiv.org/pdf/2610.04116v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.04084",
+   "title": "Dependable AI-Assisted Engineering: A Formal Framework for AI Participation and Assurance in Safety-Critical Workflows",
+   "abstract": "Generative AI can produce engineering artefacts, but generation alone does not determine whether or how those artefacts should enter safety-critical workflows. This paper develops a formal framework for assigning AI participation and assurance at the level of individual workflow units. Each unit has a participation and assurance record covering its engineering requirement, an approved operational formalization where applicable, the applicable mechanism, fallback where applicable, evidence obligations and the applicable guarantee, plus a deployment-readiness status. The framework distinguishes deterministic verification, statistically calibrated admission, authorized human judgement supported by AI advice, authorized human adjudication of AI-produced artefacts, retained deterministic tool paths and explicit non-participation; these arrangements carry different kinds of guarantee rather than levels on a common scale. The framework also separates formalization fidelity from verifier soundness, provides a staged classification and readiness procedure, and derives conditions for comparing a gated AI-assisted unit with an incumbent process under recurring-population assumptions. We instantiate and apply the framework in an executed 17-unit wing-spar structural-analysis workflow combining deterministically gated AI-generated CAD, retained deterministic computation and human judgement. The AI-generated CAD program passed all 23 deterministic checks and was admitted at the first attempt. Favourable stress magnitudes did not suffice to pass the stress criteria where the predeclared mesh-convergence evidence was insufficient; those criteria were instead referred to engineering judgement. The case demonstrates selective AI participation and explicit evidence handling at unit level; no claim is made of workflow-level dependability, certification, structural safety or productivity.",
+   "authors": [
+    "Puxue Tan"
+   ],
+   "published": "2026-10-02",
+   "url": "https://arxiv.org/abs/2610.04084",
+   "pdf": "https://arxiv.org/pdf/2610.04084v1",
+   "venue": "arXiv cs.CV, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.03622",
+   "title": "CORNAV: Construction-Aware Reasoning for Robot Navigation on Active Worksites",
+   "abstract": "The construction industry faces persistent labor shortages, low productivity that costs the global economy over $1.6 trillion annually, and one of the highest injury rates among major industries. These factors motivate the use of autonomous robots to improve efficiency and worker safety. Existing language-grounded navigation systems, however, rely on semantic scene understanding alone and lack access to construction-specific context such as architectural plans, evolving work schedules, and safety constraints. As a result, they localize permanent building features unreliably and cannot safely navigate active jobsites. We present CORNAV, a blueprint-grounded, schedule-aware navigation framework that operates from 2D CAD drawings and project schedules without requiring a Building Information Model. CORNAV aligns architectural blueprints against hierarchical open-vocabulary 3D scene graphs to ground object queries, converts project schedules into time-varying navigation constraints, and validates requests through an LLM-based safety module that escalates hazardous zones before planning. An A* planner then enforces mandatory exclusion zones while preferentially avoiding higher-risk areas. Across an indoor office and a real construction site, blueprint grounding raises task success from 13.0% to 72.2% over semantic retrieval alone, schedule awareness eliminates all hard-zone violations, and the safety module correctly rejects hazardous requests arising from mislabeled project schedules.",
+   "authors": [
+    "Parastoo Ali Pour",
+    "Deepak Prakash Kumar",
+    "Tommy Zhou",
+    "Pramod Khargonekar",
+    "Mohammad Abdullah Al Faruque"
+   ],
+   "published": "2026-10-02",
+   "url": "https://arxiv.org/abs/2610.03622",
+   "pdf": "https://arxiv.org/pdf/2610.03622v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.03799",
+   "title": "StepCAD: Mesh-to-CAD Code Generation via LLM Policy and Geometry-Guided Search",
+   "abstract": "Recovering executable CAD programs from 3D meshes is challenging due to the compositional nature of CAD construction and the interaction between discrete modeling choices and continuous parameters. Many learning-based methods predict complete programs in a single pass and rely predominantly on sketch-extrude representations, limiting operation diversity and opportunities to correct geometric errors during reconstruction. We introduce StepCAD, a generative optimization approach that combines a state-conditioned CAD policy with geometry-guided search. Given an input mesh, the policy predicts construction actions conditioned on both target and intermediate geometry, and an IoU-guided tree search refines the resulting program through local edits. We also introduce ARCADE-1.5M, a large-scale dataset of 1.5M executable CAD programs spanning diverse operations, sequences with a maximum length of 150+ counted operations, and 12.5M intermediate state-action transitions. Experiments across multiple CAD reconstruction benchmarks show that StepCAD achieves state-of-the-art geometric reconstruction accuracy with consistently high validity, yielding up to 87.2% relative IoU improvement over the strongest evaluated baseline, with particularly large gains on complex shapes. Project page: https://ghadinehme.com/stepcad.github.io/",
+   "authors": [
+    "Ghadi Nehme",
+    "Faez Ahmed"
+   ],
+   "published": "2026-10-01",
+   "url": "https://arxiv.org/abs/2610.03799",
+   "pdf": "https://arxiv.org/pdf/2610.03799v1",
+   "venue": "arXiv cs.CV, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
    "first_seen": "2026-10-11"
   },
   {
@@ -290,6 +649,216 @@
     "测试/评测",
     "EDA/芯片",
     "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.02544",
+   "title": "CITADEL: CWE-Guided Insertion of Hardware Trojans via Analysis of DFG-Enabled LLMs",
+   "abstract": "The increasing sophistication of Hardware Trojans (HTs) and system-level vulnerabilities poses significant risks to modern integrated circuits. However, constructing realistic HT scenarios, remains a substantial burden: researchers must manually analyze complex RTL structures, identify plausible weaknesses, and craft stealthy, synthesizable insertions that preserve functional correctness. This paper introduces CITADEL CWE-Guided Insertion of Trojans via Analysis of DFG-Enabled LLMs, a framework that leverages Large Language Models (LLMs) and Data Flow Graphs (DFGs) to automate CWE-grounded HT synthesis. CITADEL uses structured CWE semantics together with DFG-derived structural context to assist the user in identifying relevant vulnerabilities, localize the module surrounding the chosen insertion point, and perform intent-conditioned RTL modification. The framework produces minimal, synthesizable, and interface-preserving HTs with ultra-rare triggers. Experimental evaluation across diverse RTL designs demonstrates that all generated HTs are 100% syntactically correct, remain undetectable under large-scale random simulation, and are functionally triggerable under their intended activation conditions. These results highlight CITADEL as a scalable and principled method for generating realistic HT benchmarks.",
+   "authors": [
+    "Jayanth Thangellamudi",
+    "Raghul Saravanan",
+    "Sudipta Paria",
+    "Swarup Bhunia",
+    "Sai Manoj P D"
+   ],
+   "published": "2026-10-01",
+   "url": "https://arxiv.org/abs/2610.02544",
+   "pdf": "https://arxiv.org/pdf/2610.02544v1",
+   "venue": "arXiv cs.CR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2610.01910",
+   "title": "Robot Learning on Discrete Surfaces: Theory and Applications",
+   "abstract": "All the objects composing our world are enclosed within surfaces. Yet, most robot learning and motion generation frameworks treat surfaces as constraints ignoring their intrinsic geometry. This gap is acute for polyhedral meshes--the standard output of CAD and 3D reconstruction--whose discrete geometric structure remains unexploited. In this paper, we propose a unified discrete Riemannian framework that enables robot learning directly on polyhedral surface meshes. Using discrete differential geometry, we define logarithmic and exponential maps, parallel transport, and ambient-space projections that remain well-defined across faces, edges, and vertices. We instantiate the framework in three learning paradigms: (i) Dynamic Movement Primitives (DMPs), an improved exponential-map computation and a fixed-tangent-cone forcing-term encoding with parallel transport yield better cross-surface generalisation and stability over prior mesh-based approaches. (ii) Gaussian Process (GP), a geodesic-based kernel with practical admissibility control, enables regression at arbitrary mesh locations without smoothness assumptions. (iii) Riemannian Flow Matching (RFM), mesh-native operators improve generative quality over spectral baselines while reducing training time. The framework is validated in simulation against state-of-the-art methods and demonstrated on two real-robot scenarios: generalising user-drawn trajectories across different surfaces and planning polishing motions on RGB-D-reconstructed surfaces.",
+   "authors": [
+    "Matteo Dalle Vedove",
+    "Fares J. Abu-Dakka",
+    "Luigi Palopoli",
+    "Daniele Fontanelli",
+    "Matteo Saveriano"
+   ],
+   "published": "2026-10-01",
+   "url": "https://arxiv.org/abs/2610.01910",
+   "pdf": "https://arxiv.org/pdf/2610.01910v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.39116",
+   "title": "GRC-Pose: Generation-Reconstruction Correspondence for Prior-Free 6D Object Pose Tracking",
+   "abstract": "Prior-free 6D object pose tracking seeks to recover the trajectory of an unseen object from a single RGB video without object-specific CAD models, posed reference images, or pose annotations. Geometric foundation models provide complementary object-centric and scene-centric cues, yet SAM3D CAD is indexed by an arbitrary object-local surface parameterization, whereas reconstructed evidence is expressed in a sequence-specific world frame with partial surface coverage. To exploit this complementarity, we formulate tracking as generation-reconstruction correspondence and introduce GRC-Pose, a correspondence-based framework that combines learned correspondence prediction with robust pose estimation. Concretely, GeoCorr-Matcher estimates weighted object-scene correspondences and per-match uncertainty for each pose candidate. FGH-Solver integrates these matches through multiple robust geometric estimators and sequence-level posterior inference, while a posterior-gated memory retains only inlier-supported observations through occlusion and viewpoint change. Extensive evaluation shows that with SAM3D CAD, GRC-Pose achieves state-of-the-art Average Recall and motion retention on HOT3D, improving the latter by 58% over prior art. On classical benchmarks including YCBInEOAT and LINEMOD, it remains highly competitive.",
+   "authors": [
+    "Shiyang Liu",
+    "Weiquan Lin",
+    "Luping Xiao",
+    "Jiadong Tang",
+    "Yi Yang",
+    "Yu Gao",
+    "Xingyu Chen"
+   ],
+   "published": "2026-09-30",
+   "url": "https://arxiv.org/abs/2609.39116",
+   "pdf": "https://arxiv.org/pdf/2609.39116v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.38863",
+   "title": "GeoNest: Learning to Select Failure-Aware Neighborhoods for the Irregular Knapsack Problem in a Circular Container",
+   "abstract": "The two-dimensional irregular knapsack problem in a fixed circular container is an important combinatorial optimization problem for maximizing material utilization in manufacturing. Conventional geometric packing solvers can produce tightly packed layouts, yet they often partition the residual space into isolated small pockets that cannot fit valuable unplaced polygons. To overcome this late-stage packing bottleneck, we propose a failure-aware large neighborhood search framework named GeoNest, driven by a graph policy trained via reinforcement learning. Specifically, we first construct neighborhoods by pairing failed target polygons with residual pockets. We then use explanatory poses to identify the placed polygons that block candidate insertions. These diagnosed blocking relations define bounded, fixed-item repair subproblems for the underlying geometric solver. Finally, the graph policy selects the most promising subproblem for execution. For evaluation, we introduce CircleNest-Bench, a benchmark comprising 2,391 load-controlled instances from four contour sources, including a held-out industrial CAD source. Experimental results demonstrate that, under the same total time budget, GeoNest improves mean utilization over a state-of-the-art standalone packing solver by about 0.9% on average across the three main test sets and by about 0.6% on the held-out industrial set.",
+   "authors": [
+    "Zhongman Du",
+    "Huiming Zhang",
+    "Linlin Yang",
+    "Sheng Xu",
+    "Baochang Zhang"
+   ],
+   "published": "2026-09-30",
+   "url": "https://arxiv.org/abs/2609.38863",
+   "pdf": "https://arxiv.org/pdf/2609.38863v1",
+   "venue": "arXiv cs.LG, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.39150",
+   "title": "OP-CAD: On-Policy Clean-Audio Distillation for Robust Audio-Visual Reasoning",
+   "abstract": "Omni-modal large language models deployed in real-world environments encounter external noise that can interfere with their perception and understanding of multimodal inputs. We study their robustness in audio-visual understanding, focusing on question answering under environmental noise and competing speech. The challenge is to resist acoustic interference while preserving useful audio evidence. On-policy distillation provides dense teacher feedback on student-generated responses, but uniform token weighting does not explicitly prioritize positions affected by acoustic interference. We introduce OP-CAD (On-Policy Clean-Audio Distillation), a curriculum-based privileged self-distillation framework for robust audio-visual understanding. Training progresses from mild to severe environmental noise and competing speech, with selective token-level supervision at each stage. The student generates responses from corrupted audio-visual input, while a frozen teacher uses clean audio and the verified answer to supervise the same response prefixes. To allocate this supervision, OP-CAD compares teacher predictions under clean, corrupted, and visual-only contexts without revealing the answer. These matched comparisons measure sensitivity to audio removal and corruption; a bounded weighting rule emphasizes positions identified by either signal while retaining supervision throughout the response. OP-CAD outperforms the compared methods across all evaluated noise conditions. Paired analyses further show improved preservation of clean-correct answers under strong interference, with no observed aggregate clean-accuracy penalty. These results demonstrate the value of directing clean-teacher supervision toward acoustically sensitive predictions for robust audio-visual reasoning.",
+   "authors": [
+    "Xingming Shui",
+    "Dapeng Chen",
+    "Bowei Liu",
+    "Jingqi Tian",
+    "Minfu Li",
+    "Kun Yi",
+    "Jiapeng Hong",
+    "Yansong Tang"
+   ],
+   "published": "2026-09-30",
+   "url": "https://arxiv.org/abs/2609.39150",
+   "pdf": "https://arxiv.org/pdf/2609.39150v1",
+   "venue": "arXiv cs.CV, cs.SD",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.38405",
+   "title": "Draft: A Parametric Tool for Robot Design Exploration",
+   "abstract": "Robot performance is often limited by the cost of iterating on morphology and control together, since every computer-aided design (CAD) change has to be carried into a simulation-ready model before control work begins. Co-design methods attempt to close this gap, but each uses a model generator written for a single platform or lack the use of real-world data to suggest that designs are plausible. We present Draft, a parametric generation tool whose generalized engine compiles any parametric tree of serial chains into a simulation-ready MJCF model, without CAD. It allows engineers to explore design tradeoffs through easily adjustable models and evaluate how changes influence controller performance. Draft grounds the free parameters of each design using trends fitted to a survey of $114$ actuators and $49$ published robot descriptions, so that a generated robot is anchored to real-world hardware. We validate those trends wholistically by building twins of four off-the-shelf robots, whose masses agree to $1.10\\times$ geometric mean fold error. Finally, we demonstrate how Draft exposes design tradeoffs by evaluating three quadrupeds through a two-stage reinforcement learning curriculum.",
+   "authors": [
+    "David Nguyen",
+    "Marcelo Coelho",
+    "Sangbae Kim"
+   ],
+   "published": "2026-09-29",
+   "url": "https://arxiv.org/abs/2609.38405",
+   "pdf": "https://arxiv.org/pdf/2609.38405v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "EDA/芯片"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.37686",
+   "title": "EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments?",
+   "abstract": "Autonomous agents have made rapid progress in general-purpose computer use, but reliable automation of professional industrial engineering remains out of reach, as engineering workflows demand reasoning over geometric and physical constraints and dependencies preserved across software and design stages. We present EngiWorld, the first benchmark structured around the complete design loop: 1,301 expert-curated tasks spanning 6 engineering domains (CAD, CAE, CAM, BIM, EDA, and 3D visualization) and 26 professional software platforms, with both GUI and CLI interfaces and 6 task types ranging from software-selection to open-ended tasks. We further introduce an artifact-centric evaluation methodology built on a unified domain-verifier suite, which programmatically checks the geometric validity, physical feasibility, and rule compliance of final and intermediate artifacts, and scores quantitative design tasks continuously by specification attainment rather than binary success. Evaluation of seven frontier models reveals a substantial capability gap: the strongest model achieves an EngiScore of only 44.3, and just 3.6% of multi-software attempts succeed. EngiWorld provides the first rigorous foundation for measuring progress toward agents that operate professional engineering software end to end.",
+   "authors": [
+    "Hongcheng Gao",
+    "Hailong Qu",
+    "Yu Lei",
+    "Henghui Sun",
+    "Haoyang Li",
+    "Yipeng Wei",
+    "Naihao Xue",
+    "Xiaohan Yu",
+    "Zhuo Tao",
+    "Yihe Zang",
+    "Yajiao Wang",
+    "Jingyi Tang",
+    "Yi Li",
+    "Jingjing Zhou",
+    "Jie Luo",
+    "Bohan Zeng",
+    "Chengyu Shen",
+    "Hao Jiang",
+    "Chong Chen",
+    "Bowen Qu",
+    "Olive Huang",
+    "Zeqiang Wang"
+   ],
+   "published": "2026-09-29",
+   "url": "https://arxiv.org/abs/2609.37686",
+   "pdf": "https://arxiv.org/pdf/2609.37686v1",
+   "venue": "arXiv cs.AI, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.36806",
+   "title": "CANTO: CAD-Native Transformer Operators for AI-Aided Engineering",
+   "abstract": "Modern engineering systems, from automobiles to aircraft, are designed by using precise, continuous parametric computer-aided design (CAD) models. Evaluating design changes through numerical simulation requires meshing the continuous geometry, a computationally expensive and often brittle process that can require manual intervention and replaces the continuous representation with a discrete approximation. Most neural surrogates accelerate the simulation, but inherit this representation gap by relying on meshes, point clouds, voxels, or other sampled approximations of geometry. We introduce CANTO, a transformer neural operator that maps directly from continuous CAD geometry to physical fields, without meshing the input geometry. We develop a theoretical framework for learning operators from geometric manifolds to function spaces of physical fields, representing geometry through sequences of parametric patches. CANTO instantiates this framework by directly tokenizing non-uniform rational B-spline (NURBS) patches from their control points, knot vectors, and weights, and predicts continuous surface and volume fields at arbitrary query locations. We evaluate CANTO on four automotive and aircraft aerodynamics industry benchmarks: AhmedML, WindsorML, DrivAerML, and HiLiftAeroML. CANTO achieves state-of-the-art accuracy on most evaluated surface and volume prediction tasks, including a 19.8% reduction in surface-pressure relative $L_2$ error compared with AB-UPT on HiLiftAeroML. Differentiability with respect to CAD parameters further enables gradient-based inverse design of designs. On AhmedML, CANTO identifies designs with 4.4 to 20.4% lower drag than the best dataset designs satisfying the same volume and lift constraints, with the improvements verified using the same CFD setup used to generate the original dataset.",
+   "authors": [
+    "Daniel Leibovici",
+    "Nikola Borislavov Kovachki",
+    "Dawon Ahn",
+    "Ruben Ohana",
+    "Ira J. S. Shokar",
+    "Abouzar Ghasemi",
+    "Semih Akkurt",
+    "Rishikesh Ranade",
+    "Neil Ashton",
+    "Jan Kautz",
+    "Jean Kossaifi"
+   ],
+   "published": "2026-09-29",
+   "url": "https://arxiv.org/abs/2609.36806",
+   "pdf": "https://arxiv.org/pdf/2609.36806v2",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何"
    ],
    "score": 6,
    "first_seen": "2026-10-11"
@@ -322,17 +891,20 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2609.33699",
-   "title": "SpecRead: A Benchmark for Measuring Whether Language Models Understand Hardware Specifications",
-   "abstract": "Existing benchmarks for large language models (LLMs) in hardware design evaluate downstream artifacts such as generated RTL, assertions, or testbenches. When a model fails such a benchmark, the failure is ambiguous: it may have misread the specification, or it may have understood the specification and failed to write the code. We present SpecRead, a benchmark that isolates specification comprehension from generation ability. SpecRead v2.1 contains 385 questions over 10 open-source OpenTitan IP blocks: exact retrieval, cross-section reasoning, contradiction detection in mutated specifications, and spec-RTL consistency checking, plus 82 controls (41 distractor, 41 consistent-RTL). Type-4 items are built from real RTL mutations; we retain only mutations that Icarus Verilog simulation shows to change observable behavior. A with-spec vs. without-spec ablation suggests the questions require the excerpt, not training recall alone (without-spec accuracy 3/20 on the t1/t2 subset), though memorization of the source text may still help spot mutations. As an initial characterization with a small model, Ministral-3B scores 33.2% overall (128/385; macro average 39.0%): 55.2% on retrieval, 51.7% on cross-section reasoning. On the two contradiction-focused types, the verdict-plus-location measure gives 48.0% (t3) and 63.3% (t4), with a 51.2% false-positive rate on distractors and 100% on consistent-RTL controls. Layered scoring shows the model locates contradictions well (78.9-81.6% location accuracy) but scores lower on their category (43.9-49.7%). A structured \"rule-table\" prompting intervention lowers accuracy on every question type except t2 (tied). SpecRead is automatically scorable by deterministic checks, with gray-zone cases counted wrong under the conservative main scoring. The benchmark is regenerable for type-3 items via mutation injection, and built exclusively from public sources.",
+   "id": "arxiv:2609.36161",
+   "title": "From Dead Code and Static Requirements to Working Engines: Software Revival with Coding Agents",
+   "abstract": "Can coding agents restore software that no longer runs while preserving its underlying methods, and reconstruct industrial software engines from open specifications? Here we introduce ReviveBench, a benchmark with two task families evaluated by hidden verifiers calibrated against native execution environments, established engineering tools, or purpose-built reference implementations. The revival family comprises ten tasks involving dependency incompatibilities, deleted core modules, legacy builds, and a GPU-based foundation model. Every starting workspace fails verification, and the strongest evaluated model passes all ten tasks in at least one run each. In contamination-control experiments, identifier obfuscation reduces line similarity to the original implementations from 0.51--0.96 to 0.03--0.44 without reducing the observed pass rate of any evaluated model. On repositories created after the stated knowledge cutoffs, the strongest model passes eight of nine runs. The reconstruction family comprises thirteen tasks spanning numerical, geometric, hardware, and transactional systems (e.g. CAD and CRM). Two models meet the benchmark's pass criteria on all thirteen, although our audit shows that the CFD task cannot establish numerical-solver capability. Benchmark construction and auditing uncover 28 verifier defects, including 24 false negatives and two false positives. These findings show that executable verification can itself introduce substantial measurement error. We present three practical checks: test whether prescribed methods can reach the grading thresholds, investigate agreement among independently generated candidates, and recompute diagnostics from submitted artifacts. ReviveBench thus provides both an evaluation of software revival and engine reconstruction, and cases in validating the verifiers used to measure coding agents for software design.",
    "authors": [
-    "Feilian Huang"
+    "Tianyu Liu",
+    "Dingyuan Dai",
+    "Yufan Du",
+    "Zhen Yang"
    ],
-   "published": "2026-09-27",
-   "url": "https://doi.org/10.48550/arxiv.2609.33699",
-   "pdf": "https://arxiv.org/pdf/2609.33699",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "published": "2026-09-28",
+   "url": "https://arxiv.org/abs/2609.36161",
+   "pdf": "https://arxiv.org/pdf/2609.36161v1",
+   "venue": "arXiv cs.SE, cs.AI",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
@@ -342,23 +914,129 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2609.27067",
-   "title": "ChipMEM: Verification-Grounded Memory for EDA Agents",
-   "abstract": "Large language model (LLM)-based agents use Electronic Design Automation (EDA) tools to generate and revise register-transfer-level (RTL) designs under synthesis and verification feedback. Recent methods learn from this feedback by distilling reusable skills from execution traces or by training on rewards derived from EDA-tools. Both methods are typically evaluated on the tasks that produced the experience. Repeated access to benchmark feedback on the same task can reward task-specific revision rather than creating reusable knowledge that transfers. We introduce ChipMEM, a verification-grounded memory layer for EDA agents. It combines cross-task procedural memory with within-trajectory statistical guidance. Its procedural component distills and stores a skill only after it passes synthesis, simulation, or formal checks, rather than relying on model self-assessments. A Bayesian component maintains hierarchical Beta estimates over tool-call outcomes and ranks recovery strategies that succeeded under comparable errors. A common adapter applies the same memory interface to RTL optimization and testbench-generation agents while preserving each domain's tools and acceptance criteria. We measure performance on training tasks and evaluate whether learned skills transfer to unseen tasks. On RTLRewriter-Bench, under matched model and tool settings, ChipMEM produces equivalence-passing outputs on 39/54 scored designs versus 35/54 without memory; on the 49-design short suite, mean area improvement is 8.69% versus 5.66%. On held-out CVDP tasks, ChipMEM with a frozen procedural library achieves 20/20 accepted outcomes versus 18/20 without memory in a single evaluation per setting.",
+   "id": "arxiv:2609.35035",
+   "title": "THEIA: A Multimodal Dataset and Benchmark for Vision-Language Analysis of Layout",
+   "abstract": "The integration of artificial intelligence into computer-aided design frameworks has sparked a shift in the design of analog integrated circuits (ICs), transitioning the field from using manual and algorithmic-based solutions to adopting automated and intelligent paradigms. In this scenario, the GDSII file represents the industry-standard database containing the ultimate and most accurate source of information of the analog circuit, encapsulating the complex physical geometries and parasitic realities that define tape out performance. This paper proposes THEIA, a novel dataset containing thousands of layout images paired with question-answer conversations, along with a benchmark that employs a fine-tuned vision-language model (VLM) to analyze GDSII files of analog circuits, enabling designers to interact with and query physical layouts as intuitive, meaningful entities. Experimental results using thousands of analog designs across five realistic tasks demonstrate that the proposed fine-tuned VLM outperforms state-of-the-art general-purpose VLMs by a significant margin (up to 73%), highlighting a fundamental gap between general-purpose multimodal reasoning and domain-specific layout understanding.",
    "authors": [
-    "Abdulrahman AlRabah",
-    "Joshua Mabry",
-    "Dilek Hakkani-Tür",
-    "Abdussalam Alawini",
-    "Hamid Shojaei",
-    "Kartik Hegde",
-    "Sandesh Adhikary"
+    "Giuseppe Chiari",
+    "Michele Piccoli",
+    "Federico Viola",
+    "Davide Zoni"
    ],
-   "published": "2026-09-22",
-   "url": "https://doi.org/10.48550/arxiv.2609.27067",
-   "pdf": "https://arxiv.org/pdf/2609.27067",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "published": "2026-09-28",
+   "url": "https://arxiv.org/abs/2609.35035",
+   "pdf": "https://arxiv.org/pdf/2609.35035v2",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.34976",
+   "title": "Inspector: Conversational and Lightweight Analyzer of Analog Circuit Layouts Using LLM and CNNs",
+   "abstract": "The integration of artificial intelligence into computer-aided design frameworks has sparked a shift in the design of analog integrated circuits (ICs), transitioning the field from using manual and algorithmic-based solutions to adopting automated and intelligent paradigms. In this scenario, the GDSII file represents the industry-standard database containing the ultimate and most accurate source of information of the analog circuit, encapsulating the complex physical geometries and parasitic realities that define tape out performance. This paper proposes a novel framework that combines fine-tuned LLMs and CNNs to analyze GDSII files of analog circuits, enabling a conversational interface between the tool and the designers. Experimental results using thousands of analog designs across four realistic tasks demonstrate that the proposed solution outperforms state-of-the-art general-purpose massive VLMs by a significant margin (up to 81%), thus providing a lightweight solution to the problem of GDSII analysis.",
+   "authors": [
+    "Abril Cano Castro",
+    "Giuseppe Chiari",
+    "Michele Piccoli",
+    "Federico Viola",
+    "Davide Zoni"
+   ],
+   "published": "2026-09-28",
+   "url": "https://arxiv.org/abs/2609.34976",
+   "pdf": "https://arxiv.org/pdf/2609.34976v1",
+   "venue": "arXiv cs.LG, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.35242",
+   "title": "DrawingsDreamer: A Unified Multi-View Engineering Drawings Generation Model",
+   "abstract": "Scalable Vector Graphics (SVG) are essential for modern industrial Computer-Aided Design (CAD). However, existing autoregressive SVG generation models are predominantly tailored for artistic creation and struggle to maintain the rigorous geometric fidelity and cross-view spatial alignment required for engineering drawings. To bridge this gap, we introduce \\textbf{DrawingsDreamer}, a unified Large Language Model (LLM)-driven framework for multi-view vector-based engineering drawings generation. By formulating the generation of multi-view engineering drawings purely as a sequence modeling task, we eliminate the need of raster image encoders. We propose a Streamlined Representation utilizing hierarchical postfix tokenization, which guides the model to establish local geometric coordinates before assigning semantic boundaries. Optimized via a progressive task-aware curriculum schedule, \\textbf{DrawingsDreamer} effectively transitions from localized structural repair to macroscopic generation in a unified model. Extensive experiments demonstrate that our unified model achieves strong performance in both geometric fidelity and syntactic accuracy across diverse conditional and unconditional generation tasks.",
+   "authors": [
+    "Shurui Liu",
+    "Weide Chen",
+    "Changwang Yi",
+    "Ancong Wu"
+   ],
+   "published": "2026-09-28",
+   "url": "https://arxiv.org/abs/2609.35242",
+   "pdf": "https://arxiv.org/pdf/2609.35242v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.33699",
+   "title": "SpecRead: A Benchmark for Measuring Whether Language Models Understand Hardware Specifications",
+   "abstract": "Existing benchmarks for large language models (LLMs) in hardware design evaluate downstream artifacts such as generated RTL, assertions, or testbenches. When a model fails such a benchmark, the failure is ambiguous: it may have misread the specification, or it may have understood the specification and failed to write the code. We present SpecRead, a benchmark that isolates specification comprehension from generation ability. SpecRead v2.1 contains 385 questions over 10 open-source OpenTitan IP blocks: exact retrieval, cross-section reasoning, contradiction detection in mutated specifications, and spec-RTL consistency checking, plus 82 controls (41 distractor, 41 consistent-RTL). Type-4 items are built from real RTL mutations; we retain only mutations that Icarus Verilog simulation shows to change observable behavior. A with-spec vs. without-spec ablation suggests the questions require the excerpt, not training recall alone (without-spec accuracy 3/20 on the t1/t2 subset), though memorization of the source text may still help spot mutations. As an initial characterization with a small model, Ministral-3B scores 33.2% overall (128/385; macro average 39.0%): 55.2% on retrieval, 51.7% on cross-section reasoning. On the two contradiction-focused types, the verdict-plus-location measure gives 48.0% (t3) and 63.3% (t4), with a 51.2% false-positive rate on distractors and 100% on consistent-RTL controls. Layered scoring shows the model locates contradictions well (78.9-81.6% location accuracy) but scores lower on their category (43.9-49.7%). A structured \"rule-table\" prompting intervention lowers accuracy on every question type except t2 (tied). SpecRead is automatically scorable by deterministic checks, with gray-zone cases counted wrong under the conservative main scoring. The benchmark is regenerable for type-3 items via mutation injection, and built exclusively from public sources.",
+   "authors": [
+    "Feilian Huang"
+   ],
+   "published": "2026-09-27",
+   "url": "https://arxiv.org/abs/2609.33699",
+   "pdf": "https://arxiv.org/pdf/2609.33699v1",
+   "venue": "arXiv cs.AI, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.30955",
+   "title": "Flow-TAG: Flow-based conditional latent transport for accurate spline approximation and data compression",
+   "abstract": "Robust curve fitting is essential in computer-aided design for transforming noisy, discrete data into accurate geometric models that ensure numerical stability across engineering workflows. B-spline models have become the industry standard for this task, offering a flexible and reliable framework characterized by local control and smooth shape representation. This paper presents flow-TAG--a data-driven framework based on a generative flow model with a 1D U-Net backbone capable of mapping the geometry of a curve to the optimal parametrization for cubic B-splines. By leveraging learned geometric patterns, flow-TAG exhibits superior parameterization performance, robustness to noise in the input data, and strong generalization capability to previously unseen 2D and 3D curves drawn from distinct data distributions. Flow-TAG yields fitted curves that achieve the lower root-mean-square error (55% lower on average) and Hausdorff distance (52% lower on average) relative to state-of-the-art data-driven methods. In addition, we investigate the practical applicability of our generative framework in the compression of ECG signals for wearable devices. The proposed compression setup provides a compression ratio of 13 with the signal distortion of around 5%, which is acceptable in the field.",
+   "authors": [
+    "Roman Pavelkin",
+    "Luis A. Zavala-Mondragon",
+    "Fons van der Sommen"
+   ],
+   "published": "2026-09-25",
+   "url": "https://arxiv.org/abs/2609.30955",
+   "pdf": "https://arxiv.org/pdf/2609.30955v1",
+   "venue": "arXiv cs.CG",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.30131",
+   "title": "Enhancing Word-Level Property Directed Reachability with LLM-Driven Semantic Guidance",
+   "abstract": "Property Directed Reachability (PDR) is a prominent algorithm for hardware formal verification. However, bit-level PDR often struggles with datapath-heavy designs because bit-blasting obscures high-level semantics. While word-level PDR addresses this by reasoning over bit-vector and array theories, its performance remains bottlenecked by discovering proof-relevant word-level relations. We propose LLM4PDR, a framework leveraging Large Language Models (LLMs) to guide word-level PDR search through three mechanisms: (1) Predicate Generation, extracting state relationships as candidate predicates during inductive generalization; (2) Clause Generation, producing candidate frame lemmas to accelerate convergence after formal validation; and (3) Assertion Generation, synthesizing helper assertions that strengthen the target property under counterexample-guided refinement. We implement LLM4PDR in the Pono model checker and evaluate it on arithmetic micro-benchmarks, HLS-generated pipelines, open-source RTL components, and hardware model checking competition (HWMCC) instances. Results show LLM-generated guidance improves both solved instances and runtime on datapath-heavy and control-plus-datapath designs. The strongest configuration solves 28 of 33 arithmetic benchmarks, compared to 13 for vanilla Pono and 11 for AVR. On HLS pipelines and open-source RTL, different modes provide complementary speedups: clause guidance is effective for deep pipelines and predicate guidance for bus and memory-controller designs. On HWMCC benchmarks, benefits are instance-dependent, demonstrating notable speedups and timeout avoidance on hard cases. These results suggest that LLM-generated, verifier-checked semantic hints can serve as a practical complement to conventional word-level PDR.",
+   "authors": [
+    "Guangyu Hu",
+    "Mingkai Miao",
+    "Zhiyuan Yan",
+    "Xiaofeng Zhou",
+    "Wei Zhang",
+    "Hongce Zhang"
+   ],
+   "published": "2026-09-24",
+   "url": "https://arxiv.org/abs/2609.30131",
+   "pdf": "https://arxiv.org/pdf/2609.30131v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
@@ -394,20 +1072,301 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2609.21157",
+   "id": "arxiv:2609.27067",
+   "title": "ChipMEM: Verification-Grounded Memory for EDA Agents",
+   "abstract": "Large language model (LLM)-based agents use Electronic Design Automation (EDA) tools to generate and revise register-transfer-level (RTL) designs under synthesis and verification feedback. Recent methods learn from this feedback by distilling reusable skills from execution traces or by training on rewards derived from EDA-tools. Both methods are typically evaluated on the tasks that produced the experience. Repeated access to benchmark feedback on the same task can reward task-specific revision rather than creating reusable knowledge that transfers. We introduce ChipMEM, a verification-grounded memory layer for EDA agents. It combines cross-task procedural memory with within-trajectory statistical guidance. Its procedural component distills and stores a skill only after it passes synthesis, simulation, or formal checks, rather than relying on model self-assessments. A Bayesian component maintains hierarchical Beta estimates over tool-call outcomes and ranks recovery strategies that succeeded under comparable errors. A common adapter applies the same memory interface to RTL optimization and testbench-generation agents while preserving each domain's tools and acceptance criteria. We measure performance on training tasks and evaluate whether learned skills transfer to unseen tasks. On RTLRewriter-Bench, under matched model and tool settings, ChipMEM produces equivalence-passing outputs on 39/54 scored designs versus 35/54 without memory; on the 49-design short suite, mean area improvement is 8.69% versus 5.66%. On held-out CVDP tasks, ChipMEM with a frozen procedural library achieves 20/20 accepted outcomes versus 18/20 without memory in a single evaluation per setting.",
+   "authors": [
+    "Abdulrahman AlRabah",
+    "Joshua Mabry",
+    "Dilek Hakkani-Tür",
+    "Abdussalam Alawini",
+    "Hamid Shojaei",
+    "Kartik Hegde",
+    "Sandesh Adhikary"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.27067",
+   "pdf": "https://arxiv.org/pdf/2609.27067v1",
+   "venue": "arXiv cs.LG, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.26751",
+   "title": "EquivSVA: A Formally Verified Dataset of Behavioral Assertions Across Equivalent RTL Implementations",
+   "abstract": "Large language models are increasingly used to generate SystemVerilog Assertions from natural-language specifica- tions and register-transfer-level designs. Existing datasets and benchmarks support important goals such as large- scale training, formal evaluation, specification-to-assertion generation, and mutation-based testing. A complemen- tary need is to study whether a generated assertion cap- tures externally observable behavior or depends on inci- dental details of one RTL implementation. We present EquivSVA, a formally verified dataset organized around behavior families. Each family contains four structurally distinct RTL implementations of the same externally ob- servable behavior, shared interface-level gold properties, three controlled mutants, and formal-validation evidence. EquivSVA contains 120 behavior families across 12 cat- egories, 480 reference RTL implementations, 914 gold properties, and 360 mutants. Every final family passes a fixed 17-job validation suite covering RTL equivalence, gold-property proofs, property reachability, mutant dis- tinguishability, and gold-property checks on mutants. We also provide fixed family-safe train, development, and test splits. As a small demonstration of the analyses en- abled by the dataset, we evaluate the publicly released, Apache-2.0-licensed Qwen2.5-Coder-7B-Instruct model on the held-out test split. Of 293 interface-only generated properties, 93 are formally sound, and the number of sound properties varies across equivalent implementations for 14 of 24 test families. These results illustrate how behavior-family organization can support controlled stud- ies of assertion-generation robustness without requiring changes in intended functionality. The dataset, generators, validation scripts, and case-study artifacts are publicly released at https://github.com/aditigupta96/EquivSVA.",
+   "authors": [
+    "FNU Aditi"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.26751",
+   "pdf": "https://arxiv.org/pdf/2609.26751v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.25637",
+   "title": "SLED-IFV: Solver-Validated LLM-Guided Decomposition for Scalable Hardware Information-Flow Verification",
+   "abstract": "Formal hardware information-flow verification (IFV) provides strong guarantees against secret-dependent timing and control behavior, but often scales poorly on realistic RTL. We identify two recurring proof barriers in self-composed IFV: implementation complexity, where proof-hard datapath logic dominates even though the property needs only a compact boundary relation, and relational inductive complexity, where the proof depends on cross-copy public-control facts that the backend prover does not infer efficiently. To address them, we introduce two semantic proof decomposition forms: functional simplification, which replaces a proof-hard RTL region with a validated over-approximate summary, and relational strengthening, which exposes and proves the cross-copy relations needed for induction. We further present SLED-IFV, a solver-validated LLM-guided flow that automates the selection of these forms and their concrete targets. Given a self-composed miter and an oracle-free decision sheet, the LLM proposes a decomposition, then materializes it into proof artifacts under controller checks. The controller compiles the checked artifacts into proof obligations, and the formal verification backend remains the sole authority for acceptance. Across nine nontrivial benchmarks constructed from real RTL, SLED-IFV achieves up to 603x solver-only speedup and converts two 12-hour timeouts into completed proofs. The closed-loop flow produces verifier-accepted decompositions for all cases.",
+   "authors": [
+    "Liangtao Dai",
+    "Yimin Gao",
+    "Melika Morsali",
+    "Mircea Stan"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.25637",
+   "pdf": "https://arxiv.org/pdf/2609.25637v1",
+   "venue": "arXiv cs.CR, cs.AR, cs.LO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.25615",
+   "title": "Evidence-gated multimodal parsing and vectorization of architectural floor plans",
+   "abstract": "Architectural floor plans remain a high-friction barrier to archive digitization and early design-model preparation because heterogeneous graphics encode spatial semantics and editable geometry together. We introduce SALI-FP, an evidence-gated multimodal pipeline that converts a plan into reviewable semantic maps, objects, vectors, and relation records while constraining local revisions by image evidence. In a full production audit of 11,534 heterogeneous plans, SALI-FP produced structured outputs for every plan, including 752,510 valid polygon-bearing objects. The same output form has supported initial drawing digitization and design-model preparation in practical design work. Public-benchmark calibration is paired with a 30-case matched visual evidence set in Appendix F, where room-scale coverage, openings, oblique boundaries, and circulation continuity can be inspected directly. SALI-FP offers an engineering-oriented interpretation-to-geometry workflow for reviewed CAD/BIM preparation and existing-building information recovery.",
+   "authors": [
+    "Hongxuan Chen",
+    "Wenda Wang",
+    "Jiachen Lu",
+    "Qirui Shen",
+    "Zilong Huang",
+    "Lei He",
+    "Xinyue Dong",
+    "Weixin Huang"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.25615",
+   "pdf": "https://arxiv.org/pdf/2609.25615v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.26443",
+   "title": "Mammo-LIFE: Longitudinal Mammographic Imaging and Clinical Feature Enrichment for Post-Radiotherapy Outcome Prediction",
+   "abstract": "Recent advances in Artificial Intelligence (AI)-powered Computer-Aided Diagnosis (CAD) systems have substantially improved breast cancer screening, diagnosis, and prognosis. Comparatively, postradiotherapy outcome prediction using paired longitudinal mammograms has received considerably less attention. This is largely due to the limited availability of well-annotated longitudinal datasets. Longitudinal mammograms, coupled with paired pre- and post-treatment information, provide a unique opportunity to characterize treatment-induced breast tissue changes following radiotherapy. The resulting learned representations can serve as a valuable asset for advancing personalized radiotherapy planning and post-treatment management. In this context, we propose Mammo-LIFE, a patient-level multimodal framework for post-radiotherapy outcome prediction that combines longitudinal mammographic features with patient-level clinical variables. The imaging branch processes paired pre- and post-treatment mammograms acquired from the four standard views using a mammography-specific encoder adapted via Low-Rank Adaptation (LoRA). Within each view, preand post-treatment representations are explicitly compared through a longitudinal comparison module to capture treatment-related changes. The resulting view-level embeddings are then aggregated using learned view-attention pooling to form a unified patient-level mammographic representation. Selected clinical variables are subsequently combined with the image-derived prediction probability through a late-fusion strategy. To evaluate the effectiveness of combining paired longitudinal mammograms with clinical information, experiments were conducted on an in-house clinical cohort using patient-level stratified five-fold cross-validation.",
+   "authors": [
+    "Farnoush Bayatmakou",
+    "Maryam Hosseini",
+    "Reza Taleei",
+    "Arash Mohammadi"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.26443",
+   "pdf": "https://arxiv.org/pdf/2609.26443v1",
+   "venue": "arXiv cs.CV, eess.IV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.26989",
+   "title": "Spiderbot: An Open-Source Energy-Efficient Hexapod with Passive Gravity Compensation",
+   "abstract": "Hexapod robots can achieve static stability with fewer actuated joints than bipeds or quadrupeds, yet many platforms still use 3-DOF legs, increasing weight and continuous torque requirement with limited gain in locomotion capability on flat, inclined and moderately rough terrains. We release Spiderbot, an open-source hexapod that uses a 4-bar linkage with a passive spring to mechanically support body weight, with a 2-DOF per-leg design that substantially reduces energy consumption. This mechanism substantially offloads gravitational torque during standing stance consuming only 1.5W (reduction of over 90\\% over the unsprung version and up to 96\\% over other similar hexapods). The passive spring compensation extends to payloads of up to 3.25kg with no additional torque requirements. The platform enables long-duration deployments on a modest battery budget and costs under \\$400, making it suitable for large-scale multi-agent experiments. We validate the locomotion capabilities of the platform with an RL policy trained in mjlab, including successful sim-to-real transfer, despite the complexity of the mechanism. The platform is evaluated on flat and rough terrains, slope up to $15^\\circ$ and step obstacles. We release all the CAD files, assembling instructions, and full training and deployment code along with the model checkpoints at https://erc-bpgc.github.io/SpiderBot/.",
+   "authors": [
+    "Ritwik Sharma",
+    "Vimarsh Shah",
+    "Saransh Agrawal"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.26989",
+   "pdf": "https://arxiv.org/pdf/2609.26989v1",
+   "venue": "arXiv cs.RO, eess.SY",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.23425",
+   "title": "Semi-automated reconstruction of indoor geometry from 360-degree video for CFD-based airflow analysis in classrooms",
+   "abstract": "Computational Fluid Dynamics (CFD) is widely used to evaluate ventilation and contaminant transport in occupied buildings, but deployment at scale is limited by three bottlenecks: acquiring room geometry without costly scanning hardware or manual CAD modeling, decomposing the scene into individually manipulable objects, and reconfiguring those objects for alternative layouts without re-capturing the room. We present a semi-automated workflow that converts a single 360-degree video of a room into individually editable, simulation-ready geometry assets. A dense point cloud is reconstructed using Neural Radiance Fields (NeRF), and 2D instance masks from text-prompted SAM 3 segmentation are lifted to 3D using multi-view consensus and depth-band filtering. Points are separated into object instances with an octree, and occlusion gaps are healed with a connectivity graph. Chair templates are fitted by Iterative Closest Point (ICP) alignment, and table geometry is generated procedurally. A browser-based editor supports quality assurance and rapid construction of alternative layout configurations. A steady Reynolds-averaged OpenFOAM solution then drives transient passive-scalar transport; the setup is verified using a mesh-sensitivity study and validated against an IEA Annex 20 benchmark. We apply the workflow to two university classrooms and a tiered lecture-hall auditorium. The capture-to-geometry pass takes two to five hours per room on a consumer workstation. In a controlled obstruction sequence in one classroom, the modeled half-clearance time varies non-monotonically as furniture is added, and a cross-room comparison indicates that clearance behavior cannot be reliably extrapolated between rooms, motivating per-room geometry acquisition. By making that acquisition low-cost, the workflow makes geometry-resolved comparative ventilation studies practical for spaces such as classrooms.",
+   "authors": [
+    "Dhruv Gamdha",
+    "James Afful",
+    "Shambhavi Joshi",
+    "Ulrike Passe",
+    "Adarsh Krishnamurthy",
+    "Baskar Ganapathysubramanian"
+   ],
+   "published": "2026-09-20",
+   "url": "https://arxiv.org/abs/2609.23425",
+   "pdf": "https://arxiv.org/pdf/2609.23425v1",
+   "venue": "arXiv cs.CV, cs.CE, physics.flu-dyn",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "EDA/芯片"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.23363",
+   "title": "TicTacBench: Benchmarking Timing Closure Capabilities of Coding Agents",
+   "abstract": "Recent advances in large language models (LLMs) have led to the emergence of coding agents capable of performing complex engineering tasks, including register-transfer level (RTL) design and optimization. Existing RTL benchmarks mainly evaluate functional correctness and performance, power, and area (PPA) of the generated RTL designs, leaving agents' ability for \\emph{timing closure} under-evaluated. We propose TicTacBench, a benchmark specifically designed to evaluate coding agents' capabilities for RTL-level timing closure under post-place-and-route (post-PnR) evaluation. TicTacBench contains 30 diverse tasks, each provided with a suboptimal RTL design, realistic timing constraints, functional equivalence verification, and timing reports. With over 300 runs of coding agents driven by 8 frontier LLMs, we find that even the best agent can only close 53.3\\% of tasks with 7.18\\% area-delay product (ADP) degradation and 8.83\\% energy-delay-squared product (EDDP) improvement on average. We identify common failure categories that explain why agents fail to close timing. Then we propose TicTacSkill, a new method that guides agents to follow standard timing-closure procedures and improves the Timing Closure Rate by 9\\%. These results suggest that while coding agents have made significant progress in RTL design, their timing-closure capability still has substantial room for improvement.",
+   "authors": [
+    "Bowei Wang",
+    "Zhigang Fang",
+    "Zhijie Yang",
+    "Renzhi Chen",
+    "Shanshan Li",
+    "Lei Wang"
+   ],
+   "published": "2026-09-20",
+   "url": "https://arxiv.org/abs/2609.23363",
+   "pdf": "https://arxiv.org/pdf/2609.23363v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.23506",
+   "title": "Stability-Aware Imitation Learning from Model Predictive Control for Autonomous Vehicle Lateral Control: Exact Q-Loss and a Novel Training Procedure",
+   "abstract": "This paper develops a certified imitation-learning framework for approximating model predictive control (MPC) policies with feedforward neural controllers and validates it on autonomous-vehicle lateral control. An exact finite-horizon Q-loss is constructed by fixing the learner's first steering action in the expert MPC problem and re-optimizing the remaining horizon, thereby measuring its downstream optimal-control consequence rather than only pointwise action mismatch. The neural policy is represented as a linear fractional transformation (LFT) interconnection with activation nonlinearities described by sector integral quadratic constraints (IQCs). Combined with a quadratic Lyapunov condition, this representation yields a differentiable certification margin based on the largest eigenvalue of the Lyapunov-IQC matrix. The margin is enforced during training through a logarithmic barrier, while certified Dataset Aggregation (DAgger) and safe projection keep data-aggregation rollouts within the certified policy set. Experiments on a CAD-referenced autonomous-vehicle platform with AprilTag localization and real-time steering demonstrate the resulting closed-loop performance.",
+   "authors": [
+    "Tien Dat Vu",
+    "Minh Quan Nguyen",
+    "Anh Tuan Vu",
+    "Thanh Tung Nguyen",
+    "Minh Doan"
+   ],
+   "published": "2026-09-20",
+   "url": "https://arxiv.org/abs/2609.23506",
+   "pdf": "https://arxiv.org/pdf/2609.23506v1",
+   "venue": "arXiv eess.SY",
+   "source": "arXiv",
+   "tags": [],
+   "score": 0,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.22688",
+   "title": "Vision2CAD: A Visual Agent Harness for Explicit Geometry Referencing and Localization in Parametric CAD Modeling",
+   "abstract": "Generating parametric CAD models requires accurate geometry and stable feature dependencies. Existing methods face challenges in selecting geometric references, interpreting sketch-plane local coordinates, and establishing sketch constraints to projected external geometry. We present Vision2CAD, a visual agent harness that combines vision-language model (VLM) reasoning with deterministic CAD kernel operations. An ID-based interface supports explicit geometry selection, a local-coordinate bridge converts view coordinates into sketch coordinates, and projected-edge localization supports external sketch constraints. These mechanisms establish feature dependencies within the supported modeling operations and constraint types. We also introduce the Geometry Explicit Reference Dataset (GERD), which aligned commands, geometry states and IDs at every modeling step. On GERD-EVL and a DeepCAD test subset, Vision2CAD improves mIoU by 11.1\\% and 5.6\\% and reduces Chamfer distance by 17.3\\% and 41.8\\%, respectively. Parameter-editing experiments and ablation studies further proved the preservation of parametric dependencies.",
+   "authors": [
+    "Xi Cheng",
+    "Chenxi Zhai",
+    "Hang Cheng",
+    "Mingyu Fan",
+    "Pingfa Feng",
+    "Long Zeng"
+   ],
+   "published": "2026-09-19",
+   "url": "https://arxiv.org/abs/2609.22688",
+   "pdf": "https://arxiv.org/pdf/2609.22688v1",
+   "venue": "arXiv cs.CV, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.22622",
+   "title": "Electrodermal Activity (EDA) for Stress Detection: A Comprehensive Survey and Benchmark",
+   "abstract": "Electrodermal activity (EDA) is widely used for pervasive stress monitoring because of its sensitivity to sympathetic arousal and its computational efficiency. However, research remains fragmented: studies concentrate on a small subset of available datasets, preprocessing and evaluation protocols are inconsistent, and widely adopted methodological conventions remain unvalidated. Existing reviews summarize these practices without evaluating them under a common protocol. To bridge these gaps, this paper presents a comprehensive survey and benchmark for EDA-based stress detection. We review the technical pipeline from preprocessing to modeling and compile 26 public datasets and 22 representative unimodal studies to inform future dataset selection and methodological design. Under a subject-independent protocol spanning five diverse datasets, we benchmark decomposition, filtering, and channel-input choices alongside a broad range of machine learning (ML) and deep learning (DL) models in both in-domain and cross-domain transfer settings. Our results provide the first multi-dataset validation of cvxEDA, the default decomposition method, show that feature-based ML outperforms end-to-end (E2E) DL, and identify ecological validity as a key factor in cross-domain transfer. We conclude with directions toward robust, data-efficient, and trustworthy deployment.",
+   "authors": [
+    "Gang Liu",
+    "Zixiong Ning"
+   ],
+   "published": "2026-09-18",
+   "url": "https://arxiv.org/abs/2609.22622",
+   "pdf": "https://arxiv.org/pdf/2609.22622v1",
+   "venue": "arXiv eess.SP",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.21158",
+   "title": "HMB-GAN: Hybrid Multi-Bézier GAN for Vector Shape Synthesis",
+   "abstract": "We explore the use of hybrid quantum-classical generative adversarial networks for synthesising CAD-ready vector geometries. Unlike prior work that operates in rasterised or single-Bézier domains, we introduce HMB-GAN (Hybrid Multi-Bézier GAN), an end-to-end differentiable generative framework that constructs closed shapes through stitched multi-segment Bézier representations with geometric continuity enforced by construction. We compare a quantum-enhanced generator with a classical generator within this architecture and evaluate them across point cloud distribution metrics and geometric shape statistics. Results show that despite faster convergence, a reduction in model parameter count, and slightly improved performance on point cloud metrics, the quantum generator suffers from excessive simulator overhead and thus classically-simulated evaluation suffers from hardware constraints. These results demonstrate the feasibility of modelling structured geometries through hybrid quantum architectures whilst highlighting contemporary hardware limitations.",
+   "authors": [
+    "Elian Hugh Thiele-Evans",
+    "Binh Duong Pham",
+    "Hani Omar M Alharbi",
+    "Liibaan Aaden",
+    "Syed Umer Hasnain Zaidi",
+    "Prem Prakash Jayaraman",
+    "Muhammad Saeed",
+    "Boris Eisenbart"
+   ],
+   "published": "2026-09-17",
+   "url": "https://arxiv.org/abs/2609.21158",
+   "pdf": "https://arxiv.org/pdf/2609.21158v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "EDA/芯片"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.21157",
    "title": "Can Agents Design Better Chips with a Higher Level Abstraction?",
    "abstract": "Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by leveraging higher-level abstractions. We compare Direct RTL Design, Agent-based HLS Design, Post-Compiler HLS Refinement, and Post-HLS RTL Refinement, and combine Agent-based HLS Design with Post-HLS RTL Refinement as Agent-based HLS with RTL Refinement (AHRR). We use FPGAs as a practical, easy-to-deploy platform for end-to-end evaluation, but note that the design-flow tradeoffs we study are largely independent of the target technology. Across a diverse 11-tasks benchmark suite, AHRR achieves a 2.6$\\times$ geometric-mean speedup over Direct RTL Design across our benchmark suite. Case studies show that HLS distills design knowledge into abstractions that agents can leverage, while RTL refinement recovers lower-level optimization opportunities. Together, these results make AHRR a promising workflow for agentic chip design. The code and evaluation artifacts are available at https://github.com/ZijD/AHRR.",
    "authors": [
     "Zijian Ding",
-    "邹洋",
+    "Yang Zou",
     "Yizhou Sun",
     "Jason Cong"
    ],
    "published": "2026-09-17",
-   "url": "https://doi.org/10.48550/arxiv.2609.21157",
-   "pdf": "https://arxiv.org/pdf/2609.21157",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2609.21157",
+   "pdf": "https://arxiv.org/pdf/2609.21157v1",
+   "venue": "arXiv cs.AI, cs.AR",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
@@ -436,7 +1395,56 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2609.18022",
+   "id": "arxiv:2609.20323",
+   "title": "NeuSOGA3D: A Neuro-Symbolic Framework for Explainable 3D Geometric Reconstruction",
+   "abstract": "Three-dimensional reconstruction from unorganized point clouds remains a challenging problem in computer vision, geometric modeling, and computer-aided design. While neural implicit methods achieve impressive reconstruction accuracy, geometry is typically encoded in latent representations that limit interpretability and reuse within engineering workflows. We present NeuSOGA3D (Neuro-Symbolic Observation-Guided Geometric Abstraction in 3D), a hybrid framework that combines learned perceptual priors inherited from NeuSOGA with explicit symbolic geometric reasoning. The method projects point clouds onto principal orthographic planes, constructs symbolic implicit spline representations from the resulting observations, and fuses them through shape-preserving constructive solid geometry operations to generate a coarse visual hull. Additional geometric detail is recovered through cross-sectional decomposition and volumetric reconstruction using Partial Shape-Preserving Splines. Unlike conventional neural implicit approaches, NeuSOGA3D progressively transforms observations into explicit symbolic entities, including control polygons, implicit spline fields, cross-sections, and volumetric lofts. Experiments on all forty categories of the ModelNet40 benchmark demonstrate the ability of the framework to recover structurally meaningful and CAD-compatible geometric representations from diverse point-cloud observations. The results highlight the potential of combining learned perception with symbolic geometric reasoning for explainable geometric intelligence.",
+   "authors": [
+    "Qingde Li",
+    "Qingqi Hong",
+    "Zihan Li",
+    "Jie Tian"
+   ],
+   "published": "2026-09-17",
+   "url": "https://arxiv.org/abs/2609.20323",
+   "pdf": "https://arxiv.org/pdf/2609.20323v2",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.22325",
+   "title": "ReliCAD: From Uncertain LLM Generation to Reliable Parametric CAD Modeling",
+   "abstract": "Large language models have shown considerable potential for natural-language-driven parametric CAD modeling. However, a fundamental contradiction exists between their probabilistic generation and the deterministic requirements of CAD modeling, resulting in limitations in reliability, design-intent preservation, and geometric validity. Existing methods typically rely on large-scale annotated datasets, lack explicit modeling of design intent, and underutilize the deterministic capabilities of CAD kernels. To address these limitations, we propose ReliCAD, a unified framework that transforms uncertain LLM generation into reliable parametric CAD modeling. Through explicit design-intent modeling, ReliCAD converts user requirements into structured design specifications and explicitly models geometric relations, topological dependencies, and feature construction order. It then generates constraint-aware parametric instructions and invokes the CAD kernel through an Agent-ready API to perform geometric construction and constraint solving. ReliCAD further records runtime evidence and employs a verification-feedback mechanism to assess consistency between the generated model and the design specifications, enabling error localization and iterative repair. Experiments on the public HistCAD generation dataset and our multi-granularity CAD editing dataset demonstrate that ReliCAD significantly outperforms baseline methods, achieving 99.8\\% validity rate and 0.8753 IoU. ReliCAD provides a verifiable, repairable, and generalizable approach to natural-language-interactive CAD modeling.",
+   "authors": [
+    "Peng Zheng",
+    "Xintong Dong",
+    "Chuanyang Li",
+    "Jiaxin Jing",
+    "Chuqi Han",
+    "Hailong Shen",
+    "Yanzhi Song",
+    "Zhouwang Yang"
+   ],
+   "published": "2026-09-16",
+   "url": "https://arxiv.org/abs/2609.22325",
+   "pdf": "https://arxiv.org/pdf/2609.22325v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.18022",
    "title": "VeriBugBench: An Empirically Grounded Framework for Constructing Verilog RTL Debugging Benchmarks",
    "abstract": "RTL source-level debugging research requires benchmark artifacts that provide faulty designs together with precise change locations, executable test stimuli, and reproducible configurations. Available Verilog resources usually provide only a subset of these elements. We present VeriBugBench, a framework for constructing Verilog RTL debugging benchmarks through empirically grounded fault construction, LLM-based testbench enhancement, and execution-based retention. The mutation library maps recurring, multi-granularity repair patterns observed in RTL bug-fix histories to 19 executable inverse operators. For each project, an LLM generates a design-specific stimulus phase from the clean DUT and original testbench; the phase is composed with the original testbench for candidate execution. Applying the framework to 45 open-source projects yields VeriBugBench-v1.0, with 2,608 executable single-fault instances whose effects are observable at design outputs. Across the 45 projects, the assembled testbenches increase mean project-level fault observability from 36.01% to 39.54% and improve line coverage and execution-trace diversity on average. VeriBugBench provides versioned RTL variants, source-level ground truth, testbenches, and execution artifacts for evaluating RTL debugging methods.",
    "authors": [
@@ -449,10 +1457,10 @@
     "Jiang Wu"
    ],
    "published": "2026-09-16",
-   "url": "https://doi.org/10.48550/arxiv.2609.18022",
-   "pdf": "https://arxiv.org/pdf/2609.18022",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2609.18022",
+   "pdf": "https://arxiv.org/pdf/2609.18022v2",
+   "venue": "arXiv cs.AR, cs.SE",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
@@ -462,28 +1470,7 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "https://openalex.org/W7213473472",
-   "title": "SpecLens: LLM-Based Verilog Generation with Specification-Derived Constraints via Behavioral Divergence",
-   "abstract": "Large language models (LLMs) have recently shown promise in Verilog generation, but producing functionally correct RTL directly from natural-language specifications remains a highly challenging task. Existing approaches improve LLM-based Verilog generation mainly with retrieval-augmented generation (RAG), self-planning, or few-shot prompting. However, these methods focus primarily on external or generic forms of enhancement rather than strengthening the specification with task-specific constraints. In this work, we propose SpecLens, an automated framework for LLM-based Verilog generation that derives specification-driven constraints by analyzing behavioral divergence among multiple candidate implementations, using the original specification as the only external semantic source during generation. On the VerilogEval v2.0 spec-to-RTL benchmark, SpecLens achieves a functional pass@1 ratio of 86.2\\% with o3-mini-medium and 89.4\\% with o3-mini-high. This corresponds to a 3.6 percentage-point gain over the SOTA prompting method with o3-mini-medium and a 3.8 percentage-point gain over the SOTA behavioral divergence method with o3-mini-high. In addition, on RTLLM v1.1 and v2.0, analysis shows that SpecLens is more specification-faithful and less prone to benchmark-aligned priors. SpecLens achieves 100\\% syntactic correctness on VerilogEval v2.0, 86.2\\% on RTLLM v1.1, and 88\\% on RTLLM v2.0, even without using costly compile-repair loops to revise generated code iteratively. The code is open source and available at https://anonymous.4open.science/r/SpecLens-4632/readme.md.",
-   "authors": [
-    "Wen Bing",
-    "Bing Li"
-   ],
-   "published": "2026-09-15",
-   "url": "https://arxiv.org/abs/2609.16729",
-   "pdf": "https://arxiv.org/pdf/2609.16729",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
-   "tags": [
-    "测试/评测",
-    "EDA/芯片",
-    "LLM/智能体"
-   ],
-   "score": 6,
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "doi:10.48550/arxiv.2609.19189",
+   "id": "arxiv:2609.19189",
    "title": "CovR: Coverage-Aware Hardware Verification via Reasoning-Guided Reinforcement Learning",
    "abstract": "Design verification remains one of the most resource-intensive stages of hardware development, often consuming up to 70% of the total design effort. While recent work has explored using Large Language Models (LLMs) to automate testbench generation, most existing approaches focus narrowly on functional correctness, overlooking the critical aspect of coverage quality. To bridge this gap, we present CovR, an agentic framework for automated testbench generation that combines self-reflection loops with simulation-based feedback to maximize coverage. Using this pipeline, we construct a large-scale dataset of 16,514 natural specification RTL reasoning testbench tuples with a strong teacher model, enabling coverage-aware supervision. Building on this, we propose a reinforcement learning (RL) framework tailored for coverage-driven testbench generation, leveraging tool-derived rewards from simulation and coverage feedback to optimize a student model. Experimental results show that the CovR finetuned model achieves 93.81% cov@10 on VerilogEval and RTLLM V2.0, and 87.76% cov@10 on CVDP, outperforming state-of-the-art approaches by 7.97% and 3.59%, respectively. Furthermore, deploying the finetuned model back into the agentic refinement pipeline further improves cov@10 to 94.27% on VerilogEval and RTLLM V2.0 and 91.39% on CVDP. Moreover, when integrated as a plug-in stimulus engine for full verification workflows, CovR improves coverage by 18.95% and mutation detection score by 1.19%, while revealing 4.46% undetected failures, highlighting the importance of optimizing for coverage in LLM-based hardware verification.",
    "authors": [
@@ -492,10 +1479,10 @@
     "Sherief Reda"
    ],
    "published": "2026-09-15",
-   "url": "https://doi.org/10.48550/arxiv.2609.19189",
-   "pdf": "https://arxiv.org/pdf/2609.19189",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2609.19189",
+   "pdf": "https://arxiv.org/pdf/2609.19189v2",
+   "venue": "arXiv cs.AR, cs.CL",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
@@ -505,7 +1492,99 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "doi:10.48550/arxiv.2609.15318",
+   "id": "arxiv:2609.16729",
+   "title": "SpecLens: LLM-Based Verilog Generation with Specification-Derived Constraints via Behavioral Divergence",
+   "abstract": "Large language models (LLMs) have recently shown promise in Verilog generation, but producing functionally correct RTL directly from natural-language specifications remains a highly challenging task. Existing approaches improve LLM-based Verilog generation mainly with retrieval-augmented generation (RAG), self-planning, or few-shot prompting. However, these methods focus primarily on external or generic forms of enhancement rather than strengthening the specification with task-specific constraints. In this work, we propose SpecLens, an automated framework for LLM-based Verilog generation that derives specification-driven constraints by analyzing behavioral divergence among multiple candidate implementations, using the original specification as the only external semantic source during generation. On the VerilogEval v2.0 spec-to-RTL benchmark, SpecLens achieves a functional pass@1 ratio of 86.2\\% with o3-mini-medium and 89.4\\% with o3-mini-high. This corresponds to a 3.6 percentage-point gain over the SOTA prompting method with o3-mini-medium and a 3.8 percentage-point gain over the SOTA behavioral divergence method with o3-mini-high. In addition, on RTLLM v1.1 and v2.0, analysis shows that SpecLens is more specification-faithful and less prone to benchmark-aligned priors. SpecLens achieves 100\\% syntactic correctness on VerilogEval v2.0, 86.2\\% on RTLLM v1.1, and 88\\% on RTLLM v2.0, even without using costly compile-repair loops to revise generated code iteratively. The code is open source and available at https://anonymous.4open.science/r/SpecLens-4632/readme.md.",
+   "authors": [
+    "Wen Bing",
+    "Bing Li"
+   ],
+   "published": "2026-09-15",
+   "url": "https://arxiv.org/abs/2609.16729",
+   "pdf": "https://arxiv.org/pdf/2609.16729v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.17263",
+   "title": "CAD-Based Relation Learning and Geometric-Symbolic Planning for Robotic Assembly",
+   "abstract": "Assembly Sequence Planning (ASP) remains a challenging problem due to its combinatorial nature, making exhaustive planning approaches impractical for complex industrial assemblies. Furthermore, many CAD models lack reliable semantic contact information or require extensive manual preprocessing, limiting the applicability of existing methods. This paper presents a hybrid ASP framework combining learning-based relation extraction with geometric-symbolic reasoning to generate feasible robotic disassembly sequences from imperfect CAD data. A neural network predicts semantic geometric relations from point clouds, while human-in-the-loop verification enables correction of uncertain predictions and planning failures. Extracted relations are transformed into a symbolic assembly graph, enabling a geometric-symbolic planner to efficiently compute locally valid sets of robotic manipulation primitives. A visibility-based ray-casting strategy guides the search for feasible disassembly directions without requiring an exhaustive combinatorial search, while the local solution space enables efficient sequence optimization. The framework is evaluated on an introduced assembly dataset and on the ASAP test dataset. On the ASAP test dataset, the proposed planner achieves an 85.83% planning success rate while reducing the median planning time by more than one order of magnitude across all assembly sizes and by more than a factor of 50 for assemblies with more than 30 components compared to the baseline. The results demonstrate that the proposed hybrid framework enables efficient robotic assembly sequence planning from imperfect CAD data while substantially reducing planning time. By combining learning-based feature segmentation, human-in-the-loop verification, and geometric-symbolic reasoning, the framework provides a practical foundation for scalable and adaptable robotic assembly and disassembly planning.",
+   "authors": [
+    "Fabian Harlacher",
+    "Christian Friedrich"
+   ],
+   "published": "2026-09-15",
+   "url": "https://arxiv.org/abs/2609.17263",
+   "pdf": "https://arxiv.org/pdf/2609.17263v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.16727",
+   "title": "PriorPose: Reference-Guided Joint Deformation and Alignment for Category-Level Object Pose Estimation",
+   "abstract": "Category-level object pose estimation seeks to recover a similarity transform $(R,t,s)$ for unseen instances without instance-specific CAD models. Most competitive methods are correspondence-based: prior-free variants regress canonical (NOCS) coordinates directly from local observations and implicitly memorize the canonical frame in the weights, which ties the parameters to category-typical orientations and hurts generalization under distribution shift; prior-based variants introduce a category prior but typically follow a serial deform-then-align pipeline, where underconstrained canonical completion can corrupt correspondences and induce error cascades in pose. We propose PriorPose, a reference-guided correspondence framework that keeps the category prior explicit and solves canonicalization and alignment jointly in a shared feature space. A reference-guided seeded transformer embeds the partial observation and the category prior as token sets and fuses them via geometry-aware seeds, from which the network jointly predicts a per-point NOCS field for visible points and a canonical deformation of the prior that reconstructs a full canonical instance, while a deep pose head regresses $(R,t,s)$ from the induced correspondences. A two-part shape consistency objective, with canonical-space and camera-space consistency losses, couples correspondence, deformation, and pose, reducing reliance on memorized canonical orientations and avoiding deform-then-align error cascades. Experiments on standard and larger-category benchmarks demonstrate that PriorPose sets new state-of-the-art results on most evaluated metrics, especially under strict pose thresholds, while remaining competitive on relaxed pose and IoU metrics and showing improved robustness under shape variation and domain shift.",
+   "authors": [
+    "Yihan Chen",
+    "Huan Ren",
+    "Wenfei Yang",
+    "Hang Du",
+    "Tianzhu Zhang",
+    "Feng Wu"
+   ],
+   "published": "2026-09-15",
+   "url": "https://arxiv.org/abs/2609.16727",
+   "pdf": "https://arxiv.org/pdf/2609.16727v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.16251",
+   "title": "CADWorld: Computer-Use Benchmark for Long-Horizon Computer-Aided Design",
+   "abstract": "Computer-use agents are increasingly evaluated in realistic desktop environments, but existing benchmarks provide limited coverage of professional engineering workflows whose outputs are persistent, structured artifacts. Mechanical computer-aided design (CAD) is a particularly demanding setting: an agent must manipulate geometry and constraints over long interaction horizons while producing a native project whose dimensions, construction structure, and downstream engineering state remain valid. We introduce \\textbf{CADWorld}, a benchmark for long-horizon computer use in FreeCAD. CADWorld contains 200 tasks spanning 11 mechanical-CAD workflow categories, including sketching, part modeling, assembly, CAM, FEM, measurement, mesh processing, and technical drawing. Agents operate through screenshots and GUI actions, while success is determined by task-specific executable checks over saved FreeCAD artifacts and auxiliary outputs, covering geometric properties, parametric structure, constraints, manufacturing state, and simulation results. Across seven current agents on the full benchmark, the strongest agent achieves 17.5\\% success, compared with an 87.0\\% expert reference pass. We find that weaker agents often fail before producing a valid artifact, whereas stronger agents increasingly fail on structural, geometric, and construction-process requirements. CADWorld therefore exposes a gap between general GUI competence and reliable execution of persistent, verifiable engineering workflows. Project accessible at https://cad-world.github.io.",
+   "authors": [
+    "Zihan Dong",
+    "Yuanzhe Liu",
+    "Zhiyuan Ma",
+    "Qishi Zhan",
+    "Dehan Kong",
+    "Guohao Li",
+    "Kaixin Li"
+   ],
+   "published": "2026-09-14",
+   "url": "https://arxiv.org/abs/2609.16251",
+   "pdf": "https://arxiv.org/pdf/2609.16251v2",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.15318",
    "title": "LLM-enabled Behavior Driven Development Workflow for Formally Verified Hardware Designs",
    "abstract": "Recently, the use of Large Language Models (LLMs) for different tasks in the Electronic Design Automation (EDA) life-cycle has been studied extensively, but an integrated view is lacking. Specifications are the foundation of this life-cycle, but they suffer from ambiguity when written in natural language, which especially affects the quality of LLM output. Formal specifications mitigate these ambiguities, but they come with their own challenges. On the other hand, Controlled Natural Language (CNL) specifications can serve as a middle-ground, reducing ambiguity while retaining interpretability. In this work, we propose an integrated view on the use of LLMs for EDA and establish an LLM-enabled behavior driven hardware development workflow. We introduce and define Formal Verification Gherkin Scenarios (FV Gherkin Scenarios), unlocking CNL specifications as the foundation for formally verified hardware designs via Formal Property Verification (FPV). Experimental evaluation shows that our workflow is able to outperform other established LLM-based methods by 2.48x in functional correctness of generated Register Transfer Level (RTL) designs and by 2.54x in formal coverage of generated assertions for FPV.",
    "authors": [
@@ -514,16 +1593,162 @@
     "Rolf Drechsler"
    ],
    "published": "2026-09-14",
-   "url": "https://doi.org/10.48550/arxiv.2609.15318",
-   "pdf": "https://arxiv.org/pdf/2609.15318",
-   "venue": "arXiv (Cornell University)",
-   "source": "OpenAlex",
+   "url": "https://arxiv.org/abs/2609.15318",
+   "pdf": "https://arxiv.org/pdf/2609.15318v1",
+   "venue": "arXiv cs.AR, cs.SE",
+   "source": "arXiv",
    "tags": [
     "测试/评测",
     "EDA/芯片",
     "LLM/智能体"
    ],
    "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.35788",
+   "title": "Hybrid Reconstruction of Admissible Spline Spaces from Locally Modified Unclamped Patches for Isogeometric Analysis",
+   "abstract": "We propose a decoupled reconstruction framework that temporarily decomposes a NURBS representation into independent local Active Sections, enabling arbitrary local knot insertion, degree elevation, and basis modifications while preserving exact CAD geometry. However, these independent modifications inevitably violate inter-patch continuity, requiring a robust algebraic recovery of global admissibility. We introduce a novel reconstruction methodology that constructs a positive Hybrid Reconstruction Operator: anchor degrees of freedom are identified via QR pivoting, after which a sequence of linear programming problems with distance-based regularization generates strictly non-negative nullspace vectors, while a subsequent non-negative least-squares solve enforces a precise partition of unity. Crucially, to ensure computational efficiency and preserve locality, we implement a hierarchical pairwise condensation strategy that freezes columns already satisfying new interface constraints, confining the optimization exclusively to the active degrees of freedom at each merge step. The resulting hybrid basis is, by construction, strictly non-negative, spans the exact constrained nullspace, preserves partition of unity to machine precision, and reproduces the original geometry exactly. Numerical benchmarks, including a nonlinear diffusion problem on multi-patch curves with heterogeneous local polynomial degrees, confirm optimal convergence rates and demonstrate the framework's ability to seamlessly combine local geometric flexibility with globally consistent approximation spaces. By entirely decoupling local spline editing from the enforcement of continuity, this methodology provides a highly efficient, mathematically principled, and universally applicable tool for adaptive Isogeometric Analysis.",
+   "authors": [
+    "C. G. Provatidis",
+    "I. Dimitriou"
+   ],
+   "published": "2026-09-14",
+   "url": "https://arxiv.org/abs/2609.35788",
+   "pdf": "https://arxiv.org/pdf/2609.35788v1",
+   "venue": "arXiv cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.15122",
+   "title": "DepthBenchCAD: When Does Deeper Auditing Yield More Reliable Conclusions?",
+   "abstract": "Generative CAD models are expected to remain behaviorally correct after parameter edits, so increasing the number of edit checks is often treated as a direct route to more reliable evaluation. Under a fixed budget, however, auditing each program more thoroughly reduces the number of tasks and independent generations that can be evaluated, which can ultimately make model-level estimates less accurate. We study this phenomenon and the conditions under which it arises. We decompose behavioral evaluation into three evidence levels: task templates, stochastic generations, and within-program edits. We define an average failure risk that is invariant to audit depth, and combine three-level variance with measured execution costs to analyze the tradeoff between deeper edit auditing and broader independent coverage. Experiments across two CAD environments and five generation systems show that the value of deeper auditing depends on where evaluation uncertainty originates. When template heterogeneity or generation stochasticity dominates, additional edit checks can increase total estimation error; when within-program state variation is large and generation is expensive, deeper auditing is more valuable. Variance and cost estimates from calibration predict the direction of this change and provide a diagnostic basis for allocating evidence on held-out tasks. These results show that the thoroughness of program inspection can diverge from the reliability of model evaluation, and they help determine whether the next unit of budget should be spent on a new task, a new generation, or additional edit checks.",
+   "authors": [
+    "Hongye Yang",
+    "Zhihao Xie",
+    "Shengjun Xiong",
+    "Boxiao Huang"
+   ],
+   "published": "2026-09-14",
+   "url": "https://arxiv.org/abs/2609.15122",
+   "pdf": "https://arxiv.org/pdf/2609.15122v1",
+   "venue": "arXiv cs.SE, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.15659",
+   "title": "KaiNinja: Extending Native 3D Generators to the Part Level",
+   "abstract": "Native 3D generators turn one image into a single mesh. TRELLIS.2 and its peers deliver high-fidelity non-watertight geometry with materials, but the output is one fused object, while downstream work such as editing, rigging and simulation operates on part-level assets. A naive idea is to run a 3D segmentation network on the fused mesh that TRELLIS.2 generates, but such pipelines are slow and bounded by the accuracy of the segmentation. We want a simple way to extend an existing native 3D generator to the part level. But we face a critical problem: the O-Voxel grid stores one sheet of surface per voxel, so a single volume cannot represent the interface where two parts touch, at any resolution. We introduce a dual-volume representation to solve this problem and put forward KaiNinja, a part-level extension of TRELLIS.2 built on a dual-volume form of its O-Voxel representation. KaiNinja keeps the generation speed and quality of TRELLIS.2 while extending it to the part level, with no mask or segmenter in the pipeline. Its training data come from sources of many kinds, including CAD models and assets authored by an LLM-driven agent; to our knowledge it is the first 3D generative model trained on agent-authored part data. Surprisingly, we also find that whole-object fidelity improves over the same backbone fine-tuned on the same dataset. Against part generation pipelines of different paradigms, it lowers whole-object Chamfer distance by 40% and raises strict part F-score by 16%.",
+   "authors": [
+    "Ruihan Yu",
+    "Lian Fu",
+    "Muyao Niu",
+    "Zheng-hui Huang",
+    "Yu-Ju Tsai",
+    "Sho Kuno",
+    "Fengbo Lan",
+    "Yonghao Yu",
+    "Erwin Wu",
+    "Ming-Hsuan Yang",
+    "Kaipeng Zhang",
+    "Zhixiang Wang"
+   ],
+   "published": "2026-09-14",
+   "url": "https://arxiv.org/abs/2609.15659",
+   "pdf": "https://arxiv.org/pdf/2609.15659v2",
+   "venue": "arXiv cs.GR, cs.AI, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.14928",
+   "title": "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform",
+   "abstract": "Data-driven materials development requires the collection of large amounts of high-quality materials data. Full autonomy of materials experiments is anticipated, but its technical hurdles are high and its adoption remains limited. In this study, we constructed a simple, easy-to-deploy automated experimentation platform that focuses not on full autonomy but on the reliable automation and quantitative recording of experimental processes. Specifically, commercially available instruments such as robot arms, electric pipettes, web cameras, and an electronic balance are combined, components such as fixtures are fabricated with a 3D printer, and the instruments are operated by control code generated by an AI agent based on a large language model. As a demonstration, we applied the platform to a two-solution mixing experimental system and synthesized ZIF-8, a metal-organic framework. A white suspension phase was observed in the product, and X-ray diffraction measurements confirmed that it was ZIF-8. We also found that its particle size distribution depends strongly on the solution dispensing speed of the electric pipette, which is a parameter that is difficult to control or record in manual operation. This dependence was reproduced in repeated runs, confirming the repeatability of the automated synthesis. This result is a good example showing that the control and recording of process parameters that are rarely quantified in manual work can govern the quality of materials data. All control code, CAD models, and documentation are made publicly available to encourage the spread of laboratory-scale automation of experiments.",
+   "authors": [
+    "Yusuke Hashimoto",
+    "Takaya Muramoto",
+    "Hikari Terada",
+    "Harim Song",
+    "Yuan Wang",
+    "Takaaki Tomai"
+   ],
+   "published": "2026-09-14",
+   "url": "https://arxiv.org/abs/2609.14928",
+   "pdf": "https://arxiv.org/pdf/2609.14928v1",
+   "venue": "arXiv cond-mat.mtrl-sci, physics.app-ph, physics.ins-det",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.14521",
+   "title": "CGGT: Curve-Grounded Geometry Transformer for 3D Parametric Curve Reconstruction",
+   "abstract": "Recovering editable 3D parametric curves from 2D images is a fundamental challenge in computer graphics, bridging pixel-based perception and vector-based CAD modeling. Existing NeRF- and 3DGS-based methods often rely on dense calibrated views, precomputed 2D edge maps, and costly per-scene optimization, limiting their applicability to casually captured real-world inputs. We propose CGGT, a Curve-Grounded Geometry Transformer that directly grounds 3D-consistent 2D curve instances in the image space from sparse, unposed multi-view images. CGGT combines a geometry-aware transformer encoder for multi-view feature learning with a curve-aware masked-attention decoder for cross-view instance association. In a single forward pass, it predicts camera parameters, dense depth maps, and instance-level 2D curve masks, which are then lifted into 3D and refined through a fast parametric optimization stage to recover compact, editable 3D curve primitives. To support structured curve learning, we introduce Wireframe-100K, a large-scale dataset comprising 100,000 CAD models with diverse topologies, realistic multi-view renderings, and accurate parametric curve annotations. Extensive experiments show that our framework achieves substantial improvements in both reconstruction accuracy and efficiency, particularly under challenging sparse-view settings and in separating persistent 3D structural edges from view-dependent image edges caused by silhouettes, textures, and appearance variations. Despite being trained solely on synthetic data, CGGT generalizes well to real-world images, demonstrating its potential for practical CAD-style wireframe reconstruction from unconstrained visual inputs.",
+   "authors": [
+    "Zhirui Gao",
+    "Renjiao Yi",
+    "Yunfan Ye",
+    "Ruizhen Hu",
+    "Chenyang Zhu",
+    "Wei Chen",
+    "Kai Xu"
+   ],
+   "published": "2026-09-13",
+   "url": "https://arxiv.org/abs/2609.14521",
+   "pdf": "https://arxiv.org/pdf/2609.14521v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "arxiv:2609.14156",
+   "title": "Visible Touch: Rendering Contact for Visuomotor Policies",
+   "abstract": "Integrating contact information into visuomotor policies remains an open problem. Touch is essential to robust manipulation, yet most modern policies, including pretrained vision-language-action (VLA) models, operate from vision and proprioception alone. Existing approaches to closing this gap require specialized tactile hardware, add separate tactile encoders, or commit to non-image policy backbones, all incompatible with the modern paradigm of image-conditioned policies built on pretrained 2D visual representations. Our key insight is that the bottleneck is not the contact information itself, but how it is delivered: when contact signals are exposed in the same spatial frame as the scene the policy already attends to, they become directly usable by any image-conditioned policy without architectural changes. We operationalize this insight in Visible Touch, paired with a custom low-cost magnetic contact sensor that is open-sourced and fabricated from off-the-shelf parts via a parametric CAD-to-mold pipeline. Across the LIBERO benchmark, Visible Touch improves BC-Transformer success by 15.7 percentage points on average in the 2-view setting, with similar gains in the 1-view setting; controlled comparisons show that the contact-integration strategy strongly affects how effectively tactile information is used. The pattern holds when fine-tuning pretrained VLAs: miniVLA on LIBERO gains 25 percentage points on average, and $π_{0.5}$ on four real-world contact-rich tasks gains 30 percentage points with our custom sensor.",
+   "authors": [
+    "Metin Alp Dogan",
+    "Edward Sun",
+    "Feng Xu",
+    "Daniel Wu",
+    "Allen Peng",
+    "Dennis Hong",
+    "Yuchen Cui"
+   ],
+   "published": "2026-09-12",
+   "url": "https://arxiv.org/abs/2609.14156",
+   "pdf": "https://arxiv.org/pdf/2609.14156v2",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 7,
    "first_seen": "2026-10-11"
   }
  ]
