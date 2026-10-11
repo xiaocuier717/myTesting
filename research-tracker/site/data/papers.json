@@ -1,6 +1,530 @@
 {
- "updated": null,
- "new_today": 0,
- "errors": [],
- "papers": []
+ "updated": "2026-10-11T03:43:28+00:00",
+ "new_today": 22,
+ "errors": [
+  "arXiv: HTTP Error 429: Too Many Requests",
+  "arXiv: HTTP Error 429: Too Many Requests",
+  "arXiv: The read operation timed out",
+  "arXiv: HTTP Error 429: Too Many Requests"
+ ],
+ "papers": [
+  {
+   "id": "doi:10.3389/fcvm.2026.1909068",
+   "title": "Large language model-assisted CAD-RADS classification: structured report extraction, accuracy, and clinical decision-making risk of ChatGPT-4o/5 and DeepSeek-R1",
+   "abstract": "Objective To compare ChatGPT-4o, ChatGPT-5, and DeepSeek-R1 in assigning main Coronary Artery Disease Reporting and Data System (CAD-RADS) categories from findings-only coronary computed tomography angiography (CCTA) reports and to characterize management-relevant classification errors. Methods This retrospective diagnostic-accuracy study included 2,100 category-balanced findings-only CCTA reports (300 per CAD-RADS category). Two experienced CCTA radiologists graded the English-translated reports; 12 disagreements were resolved by a third. ChatGPT-4o was evaluated in standard mode, ChatGPT-5 in Thinking mode, and DeepSeek-R1 in Deep Thinking mode; model generation and inference mode therefore varied together. Exact-match accuracy with 95% Wilson confidence intervals (CIs), paired comparisons, and unweighted Gwet AC1 with 95% CIs were calculated. Management-relevant transitions and digital subtraction angiography (DSA) findings among high-risk downgrades were analyzed. Results DeepSeek-R1 had an exact-match accuracy of 82.57% (95% CI, 80.89–84.13) and AC1 of 0.797 (95% CI, 0.778–0.816). ChatGPT-5 had an accuracy of 80.19% (95% CI, 78.43–81.84) and AC1 of 0.769 (95% CI, 0.749–0.789), whereas ChatGPT-4o had an accuracy of 53.62% (95% CI, 51.48–55.74) and AC1 of 0.460 (95% CI, 0.435–0.485). Cochran's Q test was significant (Q = 657.87; df = 2; P < 0.001); after Holm correction, DeepSeek-R1 also outperformed ChatGPT-5 in the paired comparison ( P = 0.026), and both outperformed ChatGPT-4o (both P < 0.001). ChatGPT-4o downgraded 127/900 (14.11%) reference high-risk reports to CAD-RADS 3 or lower. Of these 127 cases, 65 underwent DSA within three months; DSA supported the original high-risk assessment in 56/65 (86.15%). The corresponding high-risk downgrade proportions were 37/900 (4.11%) for ChatGPT-5 and 23/900 (2.56%) for DeepSeek-R1. Conclusion The DeepSeek-R1 Deep Thinking and ChatGPT-5 Thinking configurations achieved higher accuracy than ChatGPT-4o in standard mode. Because model generation and inference mode varied together, the results do not isolate a model-family effect. LLMs merit further evaluation for secondary structuring when no documented CAD-RADS category is available, but should not overwrite a radiologist-assigned category or independently determine management.",
+   "authors": [
+    "Haorong Rong",
+    "Xiyi Huang",
+    "Xinjie Chen",
+    "欧阳丽珠",
+    "Yuelu Li",
+    "Xin Lin",
+    "Jialing Pan",
+    "Yunjing Li",
+    "Fan Xie",
+    "Fusheng Ouyang",
+    "Qiugen Hu",
+    "Baoliang Guo"
+   ],
+   "published": "2026-10-09",
+   "url": "https://doi.org/10.3389/fcvm.2026.1909068",
+   "pdf": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2026.1909068/pdf",
+   "venue": "Frontiers in Cardiovascular Medicine",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.32782/2786-7684/2026-3-7",
+   "title": "ARTIFICIAL INTELLIGENCE AS A DECISION-SUPPORT TOOL FOR MATERIAL SELECTION IN PROSTHODONTICS: AN ANALYTICAL REVIEW OF THE LITERATURE",
+   "abstract": "Background. The rapid development of digital dentistry and artificial intelligence (AI) is expanding the range of technologies available for diagnosis, treatment planning, prosthetic design, and outcome prediction. Material selection remains a clinically important component of prosthodontic treatment because the choice of restorative material must account for mechanical, functional, biological, and esthetic requirements. Aim. To analyze recent literature on the application of AI in prosthodontics, with particular attention to its potential role in supporting restorative material selection, integrating clinical and digital parameters, predicting prosthetic outcomes, and personalizing treatment planning. Materials and methods. A narrative analytical review was developed from literature published during seven completed calendar years (January 2019–December 2025). Relevant publications were identified in PubMed/MEDLINE, Scopus, Web of Science, and NCBI resources using combinations of terms related to artificial intelligence, machine learning, prosthodontics, dental materials, CAD/CAM, crowns, dental prostheses, occlusion, and treatment outcomes. Publications were thematically analyzed according to AI application, type of prosthodontic task, data source, clinical purpose, reported outcomes, and limitations. Results. The reviewed literature demonstrates that AI is increasingly applied in prosthodontic diagnostics, treatment planning, automated crown design, finish-line detection, occlusal assessment, prediction of prosthetic outcomes, and digital workflows. AI-assisted CAD systems have shown potential to improve design efficiency and, in selected studies, achieve clinically acceptable crown fit. However, the evidence remains heterogeneous with substantial differences in datasets, algorithms, validation procedures, and outcome measures. Direct evidence supporting independently validated AI systems for individualized restorative material selection remains limited. Current evidence therefore supports the use of AI primarily as a clinical decision-support tool rather than as an autonomous system for material selection. Conclusions. AI has considerable potential to support individualized material selection and prosthodontic treatment planning by integrating multiple clinical and digital parameters. At the same time, current evidence does not support treating AI as an autonomous replacement for professional clinical judgment. Direct validation of AI systems specifically designed to select restorative materials remains limited, and many predictive models require stronger external validation and prospective clinical evaluation. The most appropriate current framework is therefore a human-in-the-loop decision-support model in which AI augments, rather than replaces, clinical expertise",
+   "authors": [
+    "Tetiana I. Dzetsiukh"
+   ],
+   "published": "2026-10-09",
+   "url": "https://doi.org/10.32782/2786-7684/2026-3-7",
+   "pdf": "https://journals.uzhnu.uz.ua/index.php/intermedical/article/download/1845/1904",
+   "venue": "Intermedical journal",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.11896",
+   "title": "Automated Assembly Instruction Generation from CAD Models Using Grounded Large Language Models: A Human-in-the-Loop Framework",
+   "abstract": "Assembly documentation is a downstream manufacturing artifact that is still usually authored by interpreting CAD models by hand. Structured product data and large language models are both available, yet studies of CAD interpretation, assembly sequence planning, instruction writing, and human oversight have largely proceeded separately. This paper formulates CAD-grounded assembly instruction generation: the production of natural-language assembly procedures constrained by structured engineering information extracted from CAD models. The proposed framework maps a STEP assembly to a typed ProductGraph intermediate representation, derives a precedence order by deterministic topological sorting, realizes each step as language conditioned only on selected graph context, attaches per-step visual documentation, and applies rule-based and model-assisted checks. PDF export remains disabled until a human reviewer resolves every quality flag. The case study establishes endto-end feasibility on a built-in six-part reference assembly: the pipeline preserves a reported assembly order and carries quantity, material, and torque into an exported manual page. Generalization and geometric validation remain open empirical questions. The contribution is an architecture that separates engineering state, deterministic reasoning, grounded language realization, verification, and human release.",
+   "authors": [
+    "Aaron Dsouza",
+    "Mohammed Azeez Khan",
+    "Ashutosh Mishra",
+    "Arshaan Khan",
+    "Neha K. Nair",
+    "Amar Kumar Behera"
+   ],
+   "published": "2026-10-08",
+   "url": "https://doi.org/10.48550/arxiv.2610.11896",
+   "pdf": "https://doi.org/10.48550/arxiv.2610.11896",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.3389/fdata.2026.1866430",
+   "title": "DermArtifactDB: a multi-label dataset for artifact annotation in public dermoscopic image repositories",
+   "abstract": "Dermoscopy is a widely adopted, non-invasive imaging technique that plays a crucial role in the early detection and clinical assessment of skin lesions (1). Its effectiveness, however, depends on the quality of the acquired images. In clinical practice, dermoscopic images often contain visual artifacts, such as hair, ruler markings, dark corners, bubbles, or ink traces, which are not part of the lesion itself. These artifacts can affect the visual appearance of the lesion, modifying color and texture patterns and complicating both clinical assessment and automated image analysis (2; 3; 4; 5). Consequently, artifacts are considered an important factor contributing to noise and bias in computer-aided diagnosis (CAD) systems, impacting model interpretability, robustness, and diagnostic performance (6; 7).Although interest in automated dermoscopic image analysis has increased, publicly available datasets specifically focused on artifact annotation remain limited. Public datasets, including International Skin Imaging Collaboration (ISIC)-2019 (8; 9), PH2 (10), and Derm7pt (11), contain images with visible acquisition artifacts, but they are primarily used to train models for skin lesion classification and do not include explicit labels for artifact presence or type. The lack of artifact annotations introduces several limitations. First, it limits the ability to study how artifacts affect model performance and interpretability.Second, it hinders the development of preprocessing methods to detect and mitigate artifacts. Third, although multiple artifacts often co-occur within the same image, existing datasets rarely capture this multi-artifact scenario, and most studies (4; 7; 12; 13) instead focus on individual artifacts.To date, only a limited number of studies have addressed the annotation of dermoscopic artifacts. Bissoto et al. (6) introduced manual artifact annotations for investigating dataset bias and spurious correlations, quantifying how artifacts act as confounding factors for lesion classification. They labeled small subsets of two dermoscopic datasets: 2,594 images from ISIC 2018 (out of more than 12,000 available images) and 872 images from the Dermoscopic Atlas (out of 1,746). While this work demonstrated the relevance of artifact-aware analysis, the annotation methodology is limited in scope, as it relies on fully manual labeling applied to small subsets of the available data. In addition, the absence of a defined and reproducible annotation procedure limits its scalability and reuse. More recently, Bissoto et al. (14) extended this line of research by training per-artifact classifiers on previously introduced manual annotations. These classifiers were then applied to infer artifact presence in larger datasets such as ISIC-2019. Although this strategy enabled large-scale analysis, the annotations correspond to classifier output scores (probabilistic predictions) rather than verified binary ground-truth labels derived from systematic expert annotation.Moreover, these predictions are reported only for a single dataset and lack expert validation, which may lead to discrepancies with the true artifact labels, especially for difficult-to-detect artifacts.To address these limitations, we introduce DermArtifactDB, a unified and standardized dataset that provides multi-label annotations for seven dermoscopic artifacts (hair, ruler markings, ink markings, patches, dark corners, gel borders, and gel bubbles). These annotations are provided for the complete image sets of three widely used public repositories (ISIC-2019, PH2, and Derm7pt), comprising 20,211 images in total (19,000 from ISIC-2019, 1,011 from Derm7pt and 200 from PH2). For each image, DermArtifactDB provides one image-level binary label per artifact category (presence/absence of each of the seven artifacts), amounting to 141,477 labels. These labels do not indicate where each artifact is located within the image, and no pixel-level segmentation masks or region annotations are provided. As the images come from these public datasets, our contribution lies not in the images themselves but in the standardized, expert-validated artifact metadata, together with the annotation pipeline and dataset-level statistics released with it. The annotations were generated using a robust data-driven pipeline that combines classical imageprocessing detectors, deep learning-based segmentation models, a transformer-based multi-label detector (C-Tran ( 15)), and expert manual review with clinical oversight. This multi-phase design was developed to ensure annotation consistency and reliability across all three datasets. DermArtifactDB enriches existing dermoscopic repositories with artifact-level metadata, enabling the study of artifact distribution, diversity, and co-occurrence, and supporting the development of more transparent, interpretable, and robust CAD systems.This section describes the data sources and the multi-phase annotation framework used to construct the proposed dermoscopic artifact dataset. The methodology follows the four-phase pipeline shown in Figure 1, encompassing data collection, classical automatic artifact detection, transformer-based artifact detection, and expert manual review.The annotation pipeline relies on two independent detection stages (Phases 2 and 3 in Figure 1), followed by expert review (Phase 4 in Figure 1). Phase 2 is an ensemble of artifact-specific detectors: six of them (dark corners, ruler markings, patches, gel border, gel bubbles, and ink markings) rely on classical imageprocessing techniques and are fully specified by the parameters reported in their respective subsections (see Sections 2.2.2-2.2.7) to ensure reproducibility. Two deep learning segmentation models are additionally used within this stage, namely an ensemble of segmentation networks for hair detection (see Section 2.2.1) and a Double U-Net that segments the skin lesion to reduce false positives in the patch detector (see Section 2.2.4). Phase 3 is an independent detector based on a C-Tran multi-label transformer (see Section 2.3) that jointly predicts the seven artifact categories. The architectures and training configurations of all learned models are detailed in full in the corresponding subsections below. The hair-segmentation code is publicly availablefoot_0 , the C-Tran detector builds on the publicly available reference implementation of The proposed artifact-annotated dataset integrates dermoscopic images from three public datasets: ISIC-2019, PH2, and Derm7pt. None of the three repositories provides labels for the presence or type of acquisition artifacts, precisely the gap addressed by DermArtifactDB.These datasets comprise thousands of images acquired from multiple clinical centers, dermatology departments, and imaging devices, providing a heterogeneous representation of real-world dermoscopic acquisition conditions. All datasets contain fully anonymized skin lesion images, and no patient-identifiable metadata was processed. This diversity supports the development of generalized artifact-aware algorithms.Seven artifact categories were selected based on their prevalence in dermoscopic imaging and their documented impact on both clinical interpretation and CAD systems (3). Each category corresponds to a distinct visual pattern often observed in dermoscopic images:• Hair: Filaments that partially occlude the lesion surface and introduce texture variations (2; 4).• Dark corners: Darkened peripheral regions caused by illumination fall-off from the circular dermatoscope lens. These underexposed areas typically appear near the image edges and may partially obscure lesion boundaries (17).• Gel border: Bright or translucent ring-shaped structures formed by the interaction between contact gel and the dermatoscope's illumination (2).• Gel bubbles: Circular specular bubbles trapped within the gel interface, characterized by high reflectance and sharp boundaries (2).• Ruler markings: Straight, high-contrast linear structures originating from measurement tools placed near the lesion (12).• Ink markings: Irregular colored traces (typically blue or black) introduced during clinical examination (7).• Patches: Colored adhesive markers placed on the skin near the lesion during image acquisition, varying in shape and color (6).Figure 2 shows representative examples of the seven dermoscopic artifact categories considered in this work, using images from the ISIC-2019 dataset. Each subfigure shows the typical visual appearance and variability within a given artifact class. In addition, subfigure (h) highlights the co-occurrence of multiple artifacts within the same image, reflecting the multi-label nature of real-world clinical acquisitions. The first phase of the annotation pipeline consists of artifact-specific detection modules. Six of them (dark corners, ruler markings, patches, gel border, gel bubbles, and ink markings) rely on classical imageprocessing techniques, while hair detection employs deep learning-based segmentation models due to the morphological complexity of this artifact, as described in Section 2.2.1. This step provides an initial estimate of artifact presence in each image. For each artifact, three complementary detectors are applied in parallel, all targeting the same artifact type while capturing different aspects of its visual appearance, such as color, geometry, or intensity. This design allows the method to handle the variability in how a given artifact appears across patients, imaging devices, and acquisition conditions. For each artifact category k, the outputs of the three detectors d(k) 1 , d(k) 2 , d (k)3 ∈ {0, 1} were aggregated using a majority-voting rule. An artifact was considered present when at least two of the three detectors provided a positive response; otherwise, it was considered absent. Accordingly, the output of this phase (Phase 2) is, for each image, a seven-dimensional binary vector indicating the presence or absence of each artifact category. The intermediate binary masks produced by the individual detectors are generated only as part of the detection process and are not part of the released annotations. The detectors for each artifact are defined as follows:Hair detection was addressed using an ensemble of three deep learning segmentation models (Attention U-Net ( 18), Dense U-Net (19), and Attention Dense U-Net (20)), selected to capture the high morphological variability of hair structures, following our previous hair-removal work (4). Each model k ∈ {1, 2, 3} produces a binary mask M (k) ∈ {0, 1} H×W , where H and W are the height and width of the image. Hair presence was quantified using the hair density ratio:R (k) hair = 1 HW H i=1 W j=1 M (k) ijAn image was labeled as containing hair ifR (k)hair > τ hair , where τ hair was empirically selected in the range [0.01, 0.05] and set to 0.03. Final predictions were obtained via majority voting across the three models. Dark corners correspond to underexposed regions located at the edges of dermoscopic images, typically caused by the dermoscopic lens geometry (17). Detection was performed using three complementary detectors in the HSV, YCrCb, and CIELAB color spaces.For each color space, the image was thresholded to obtain a binary mask highlighting low-luminance pixels near the image borders. The image was then divided into four quadrants: top-left, top-right, bottomleft, and bottom-right. For each quadrant, rows and columns along the image borders were analyzed. For every border row or column, we computed the proportion of pixels classified as dark:f border = number of dark pixels in row/column number of pixels in row/column A border region was considered dark if f border ≥ τ border . The threshold τ border was empirically selected by evaluating values in the range [0.005, 0.05], with the final value set to 0.01. This choice allowed detection of subtle vignetting effects while remaining robust to noise. The final label was obtained by majority voting across the three color-space detectors.Ruler markings were detected by identifying straight line segments using the probabilistic Hough transform (21). To account for variability in ruler appearance and image resolution, three complementary detectors were used with different parameter configurations, including accumulator thresholds in the range [50, 150] and minimum line lengths in [10,25] pixels. The final configurations were set to accumulator thresholds of 50, 100, and 150, and minimum line lengths of 10, 15, and 25 pixels for the three detectors, respectively. The probabilistic Hough transform represents each detected line as a finite segment defined by two endpoints, (x 1 , y 1 ) and (x 2 , y 2 ). This formulation is appropriate for dermoscopic images, where the straight edge of a ruler typically appears as multiple fragmented segments rather than as a single continuous line. Due to the rigid linear structure of a ruler, all fragments belonging to the same ruler are expected to share a common orientation. The orientation of each segment was therefore computed as follows:θ = arctan y 2 -y 1 x 2 -x 1The dominant direction θ * was estimated as the most common orientation among the detected segments, and only segments satisfying |θ -θ * | < τ tol were retained. The tolerance parameter was selected in the range [5 • , 15 • ], with τ tol = 10 • . A positive detection was assigned if at least one set of aligned segments was identified, and final labels were obtained via majority voting.Patches were detected using three color spaces (HSV, YCrCb, and CIELAB). These detectors were designed to capture the warm (yellow, orange, red) and cool (green, blue) chromatic tones that are characteristic of adhesive markers. To reduce false positives, lesion regions were first segmented using Double U-Net ( 16) and excluded from the analysis. For lesion segmentation, we used the Double U-Net model provided by its original authors (16), pretrained for skin-lesion segmentation. It is applied only to exclude lesion pixels from the patch analysis and was not retrained in this work.Adhesive markers often exhibit heterogeneous chromatic appearance, combining highly saturated regions with less saturated areas due to illumination variability. To account for this, each detector generated two chromatic masks: a low-threshold mask capturing pixels within a broad color range (including weakly saturated regions), and a high-threshold mask retaining only strongly saturated pixels. Let N low and N high denote the number of non-zero pixels in the low-and high-threshold masks, respectively. We defined the following color consistency ratio:r patches = N high N low × 100A patch was considered present when both color consistency and spatial extent criteria were patches > τ and N high > τ thresholds were selected empirically ∈ τ ∈ with final values τ = and τ = which were applied across all three color-space Final labels were obtained via majority voting across the three borders appear as ring-shaped structures near the edges of dermoscopic images. Detection was performed using three color spaces (HSV, YCrCb, and on peripheral regions by the image to with circular skin circular structures were using the Hough retaining only within of the image reflecting the typically of gel each detected with , the gel border was as an region of width τ width binary masks were an mask M , corresponding to a of , and an mask M , corresponding to a of τ width . The gel border mask was then defined gel = M gel borders from artifacts, with low the were A positive detection was assigned if the region a minimum threshold τ were selected empirically width ∈ τ ∈ with final values τ width = and τ = Final labels were obtained via majority voting across the three bubbles were detected as circular structures within the contact edge detection and morphological were applied to obtain while hair regions using the hair mask as described in Section were characterized by their A and , and a was computed = 2 with A in the range [50, pixels and high were retained. detectors with thresholds > > and > were used to account for variability in A positive detection was assigned when at least one both the and Final labels were obtained via majority voting across the three markings, typically characterized by blue or were detected across three color spaces (HSV, YCrCb, CIELAB). They often exhibit variability in color due to illumination To account for this, each detector generated two complementary masks: a low-threshold mask capturing a broad range of tones and a high-threshold mask retaining only strongly saturated or blue pixels. Let N ink low and N ink high denote the number of non-zero pixels in these A chromatic consistency was defined ink = N ink high N ink low positive detection was assigned when both chromatic consistency and spatial extent were ink > τ and N ink high > τ τ the proportion of strongly saturated while τ a minimum number of detected pixels. were selected empirically ∈ τ ∈ with final values τ = and τ = The same threshold values were used for the HSV, YCrCb, and CIELAB Final labels were obtained via majority voting across the three classical detectors with a multi-label on our previous work we this model for dermoscopic artifact detection using label training and an with to capture and to artifacts. This has shown to binary and for subtle and jointly predicts the presence of seven artifact categories within a multi-label classification C-Tran integrates a visual with a that models The produces a spatial that is with a set of label a label strategy is where a of labels is to the model to infer annotations from co-occurrence of gel borders and our previous work the C-Tran is a with and jointly with the The model is with an of × three four and a of model was on the ISIC-2019 dataset training with of the training data used for validation, using the of ( = = = used the with a learning of 10 , a and early 15 based on the implementation builds on the publicly available reference code of C-Tran typically training C-Tran this the and learning described together with the strategy and the This allows it to on the available data the low bias of C-Tran was models and the same and on ISIC-2019. was with four multi-label the the and and the C-Tran the on all of them (see in model outputs a vector of seven independent = 1 , 2 , . . . , k ∈ each k is obtained a and the that artifact k is of the These values do not a and are not to to one to the output of a predictions are obtained by each at = 1, k ≥ k < output of this phase (Phase is a seven-dimensional binary obtained by the at both the same type of output binary and artifact region The multi-label generated by C-Tran are not used as they only as a visual for the expert during Phase 4 (see Section and are additionally released for analysis (see Section predictions were generated using the two described in the previous the classical ensemble detector and the C-Tran were at the image and across individual artifact categories to were when both produced predictions across all seven artifact first that the released annotations are image-level binary DermArtifactDB not region masks or Consequently, the expert review for each image and each artifact a single binary rather than a spatial and the reference labels correspond to these binary with in at least one artifact category were for review and by two independent a and a The the and visual for each a detected structure is with the visual of the the original image together with the C-Tran as a spatial The in provided clinical validation, artifact presence in the of dermoscopic For each the the original dermoscopic the predictions from the ensemble the predictions generated by and the multi-label produced by which the image regions contributing to each on this both assigned binary labels for each of the seven artifact review of each image followed an explicit the visual in the artifact (see Section as the the as the original dermoscopic image was at full the two automated predictions ensemble and were to the artifact categories in for each of these the corresponding C-Tran was used to the image supporting the and a binary label was assigned to that category its The categories on which both the label and were not were as the two automated but the two with each the was the two with each (including in which both from the automated the was jointly was In the that was not the assessment was as the reference For the PH2 all images were and every was the final dataset consists of labels obtained a ensemble of classical detectors, transformer-based detection, and independent expert This annotation strategy labeling of dermoscopic repositories while the and clinical relevance for robust learning released dataset provides standardized multi-label annotations of dermoscopic artifacts for images from three publicly available ISIC-2019, PH2, and Derm7pt. Due to the dermoscopic images are not can obtain the original images from the corresponding repositories and them with the corresponding artifact annotations using their respective image or ISIC the structure of the artifact annotation dataset , a one per dataset (ISIC-2019, PH2, and Derm7pt), each providing binary artifact labels for the corresponding images. An is into containing images generated by These image regions that most strongly to each artifact and are provided for and analysis. They are not used as annotations and are independent of the released binary artifact labels. A the which dataset-level artifact the of the number of artifacts per image, and representative artifact co-occurrence A provides an of the annotation the dataset and for the annotation to the original images. In addition, to and DermArtifactDB is documented following the for framework and to the for data The complete is provided as the structure and of the datasets, Figure 3 together with a presence of hair highlighting the of acquisition conditions. these all three datasets exhibit artifact co-occurrence, indicating that artifacts to co-occur more than 2 the of artifact-level annotation across datasets, where a is defined as a between the outputs of the classical detectors and the model for a given The proposed annotation framework of manual In ISIC-2019, artifact-level (out of corresponding to manual review due to between the classical detectors and the transformer In artifact-level (out of All were by two and a was in all the of the proposed the PH2 dataset images, artifact-level a complete manual All artifact labels, including both and were by the same and discrepancies were This as a full clinical of the annotation framework and the reliability of the proposed pipeline in a dataset manual of a corresponding to of the dataset images in ISIC-2019 and images in supports the consistency and clinical of the generated annotations.",
+   "authors": [
+    "Vanesa Gómez-Martínez",
+    "David Chushig-Muzo",
+    "Isabel Polimón Olabarrieta",
+    "Cristina Soguero-Ruíz"
+   ],
+   "published": "2026-10-08",
+   "url": "https://doi.org/10.3389/fdata.2026.1866430",
+   "pdf": "https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2026.1866430/pdf",
+   "venue": "Frontiers in Big Data",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.1371/journal.pdig.0001701",
+   "title": "Diagnostic performance of the ECG-SMART AI score for detecting angiographically significant coronary artery disease in patients undergoing elective coronary angiography",
+   "abstract": "The 12-lead ECG is central to the evaluation of patients with suspected coronary artery disease (CAD) but has limited diagnostic accuracy for identifying significant obstructive disease prior to elective coronary angiography. We previously developed an artificial intelligence-enhanced ECG (AI-ECG) model for detecting acute coronary occlusion. Whether this model generalizes to identifying angiographically significant CAD in symptomatic patients undergoing elective evaluation remains unknown. In this prospective cohort study, symptomatic outpatients undergoing elective coronary angiography at a tertiary center received standard 12-lead ECGs before the procedure. ECGs were analyzed offline using a previously validated AI-ECG model originally developed for acute coronary occlusion. Patients were categorized as low or intermediate-to-high risk using predefined thresholds. The primary outcome was angiographically significant CAD (≥70% stenosis in a major epicardial vessel or ≥50% stenosis of the left main coronary artery). Among 363 patients (age 58.9 ± 11 years; 55.1% male), 36.1% had angiographically significant CAD. The AI-ECG classified 56% as low risk and 44% as intermediate-to-high risk. After adjustment for conventional clinical characteristics, intermediate-to-high risk remained independently associated with significant CAD (OR 3.12, 95% CI 1.88-5.20; p < 0.001). Model discrimination was good (AUROC 0.79, 95% CI 0.74-0.84), with 60% precision at 80% recall. In summary, the ECG-SMART AI score demonstrated good diagnostic performance for identifying angiographically significant CAD in symptomatic patients undergoing elective coronary angiography. These findings support the generalizability of a previously developed AI-ECG model beyond acute coronary occlusion and suggest that AI-enhanced ECG analysis may complement existing clinical assessment by providing additional noninvasive information to refine pretest probability during elective evaluation.",
+   "authors": [
+    "Dania A Bani Hani",
+    "Jafar Alasad Alshraideh",
+    "Hamza Alduraidi",
+    "Akram Saleh",
+    "Nathan T. Riek",
+    "Karam Daoud",
+    "Rui Qi Ji",
+    "Samir Saba",
+    "Clifton W. Callaway",
+    "Salah S. Al‐Zaiti"
+   ],
+   "published": "2026-10-08",
+   "url": "https://doi.org/10.1371/journal.pdig.0001701",
+   "pdf": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001701&type=printable",
+   "venue": "PLOS Digital Health",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.1371/journal.pgph.0007429",
+   "title": "Implementing computer‑aided detection for TB active case finding: A qualitative study of feasibility and acceptability in Tondo, Manila",
+   "abstract": "Tuberculosis (TB) remains the leading cause of death from a single infectious agent, with over 1.23 million deaths globally in 2024. Despite available treatment and prevention strategies, timely and accurate detection remains challenging, particularly in high-burden settings such as the Philippines, which accounted for 6.8% of the global burden of TB in 2024. Computer-aided detection (CAD) software integrated with digital chest X-ray offers enhanced screening capacity, but its success depends on feasibility and acceptability within local health systems. This qualitative study explored perceptions and experiences of CAD integration during a Médecins Sans Frontières community-based TB active case finding campaign (ACF) in Tondo, Manila. In-depth interviews, focus group discussions, and direct observations were conducted with MSF staff, health center physicians, TB program personnel, ACF participants, and community leaders between January and April 2023. Thematic analysis identified four main themes: (1) Operational functionality and efficiency: Staff reported CAD increased screening capacity, supported clinical decision-making, and streamlined workloads; ACF participants reported a convenient process. (2) Human resources and role adaptation: Staff perceived role redistribution as initially challenging, highlighting the need for adequate capacity building and technical support; (3) Technical feasibility and system design: project managers and staff emphasized understanding CAD's capabilities and limitations to plan infrastructure, set thresholds, and compensate for inherent limitations. (4) Community acceptability and ethical considerations: community participants expressed mixed views on the reliability of novel \"high-tech\" tools and stressed the importance of aligning with local healthcare needs. This study demonstrates that implementing CAD in TB ACF is both feasible and acceptable when supported by careful planning and adaptation to local contexts. Sustainable implementation hinges on technical support and the meaningful involvement of healthcare workers and communities, whose insights help ensure ethical and effective digital health innovation. The experience in Tondo offers lessons on deploying CAD in high-burden, resource-constrained settings.",
+   "authors": [
+    "Emelie Love Yonally Phillips",
+    "Ma. Danica Katrina P. Galvan",
+    "Jun Sung Min",
+    "Cathy Hewison",
+    "Carmina Duyala",
+    "John Carlo Palmado",
+    "Sheryl N. Peral",
+    "Olivier Camélique",
+    "Mary Ruth Roxas",
+    "Marve Duka",
+    "Gina F. Pardilla",
+    "Maria Julieta C. Recidoro",
+    "Richard Hibe Castro",
+    "Farah Hossain",
+    "Helena Huerga",
+    "Valentina Carnimeo"
+   ],
+   "published": "2026-10-08",
+   "url": "https://doi.org/10.1371/journal.pgph.0007429",
+   "pdf": "https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0007429&type=printable",
+   "venue": "PLOS Global Public Health",
+   "source": "OpenAlex",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.55041/ijcope.v2i10.031",
+   "title": "AI Skin Disease Detection System",
+   "abstract": "Skin diseases and cutaneous malignancies present a growing global healthcare burden, exacerbated by a chronic shortage of specialized dermatologists. This paper evaluates AI SkinScan, an end-to-end computer-aided diagnostic (CAD) system that integrates deep convolutional neural networks with zero-shot vision-language models for automated dermatological triage. The pipeline features an OpenCLIP (ViT-B/32) gatekeeper for non-skin input filtering and a ResNet-18 classifier fine-tuned on the HAM10000 dataset across seven diagnostic categories. Deployed as a full-stack mobile application (React 19, FastAPI, Capacitor 8), the system integrates image quality validation, clinical symptom questionnaires, differential diagnosis ranking, and severity-graded triage reporting. Evaluated on an independent ISIC 2018 holdout test set (n=1,512), the system achieved a validation macro AUC-ROC of 0.8406 and a test macro AUC-ROC of 0.7958. We present a rigorous analysis of classification performance, clinical safety triggers, and deployment considerations.",
+   "authors": [
+    "Mr. Ayaz Shaikh",
+    "Sachin Kumar",
+    "Saif Sayyed",
+    "Priyanshu Duratkar",
+    "Bhushan Nagdeve",
+    "Sanmay Gurudeo"
+   ],
+   "published": "2026-10-07",
+   "url": "https://doi.org/10.55041/ijcope.v2i10.031",
+   "pdf": "https://ijcope.org/wp-content/uploads/2026/10/AI-Skin-Disease-Detection-System-1.pdf",
+   "venue": "International Journal of Creative and Open Research in Engineering and Management",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.53022/oarjst.2026.18.1.0091",
+   "title": "Machine Learning for Tool Condition Monitoring and Predictive Maintenance in CNC Machining: A Systematic Review",
+   "abstract": "Computer Numerical Control (CNC) machining is the backbone of precision manufacturing, but the productivity, part quality and machine uptime of CNC machining are dependent on the condition of the cutting tool. Conventional fixed-interval tool replacement either discards valuable tool life or permits the tool to be used past safe bounds of dimension, and progressive flank wear, chipping and breakage also affect surface finish and dimensional accuracy. This systematic review follows the reporting guidelines outlined in the PRISMA 2020 statement, and summarizes the existing research literature between January 2016 and September 2026 addressing the application of machine learning (ML) for CNC tool condition monitoring (TCM) and predictive maintenance (PdM). Studies were classified along four dimensions: machining operation, sensing modality, learning method and maintenance objective. It has been revealed that cutting force, vibration, acoustic emission and spindle current/power are the most important indirect measurement signals; that feature quality has significant influence on the performance of traditional classifiers; and that the deep sequence model, including convolutional and long short-term memory models, is now the most popular model for wear estimation and remaining useful life prediction. The reported accuracy is generally in the range of 85% to 99%, but is rarely comparable because the datasets, tools, materials, and validation procedures vary. The research gaps identified were: lack of or costly labelled data, poor cross-machine generalisation, real-time deployment latency, class imbalance and data quality, limited interpretability, under-used ensemble and hybrid methods, under-representation of small firms and developing economies, and incompleteness in integrating with digital twins and CAD/CAM data. The review suggests a research agenda, in which transferable and explainable models are coupled with design-of-experiments process knowledge, low-cost edge sensing and human-centred implementation, particularly relevant for manufacturers operating in resource constrained industrial environments",
+   "authors": [
+    "Stanford Mloyi",
+    "Thembinkosi Tavengwa",
+    "Mazvita Zengeni",
+    "Tafadzwa Walambuka",
+    "Tapiwa Precious Tarumbwa"
+   ],
+   "published": "2026-10-07",
+   "url": "https://doi.org/10.53022/oarjst.2026.18.1.0091",
+   "pdf": "https://oarjst.com/sites/default/files/OARJST-2026-0091.pdf",
+   "venue": "Open Access Research Journal of Science and Technology",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.09781",
+   "title": "End-to-End Autonomous Generation of Human Assembly Plans",
+   "abstract": "Turning a CAD design into an assembly plan is still largely done by hand, requiring engineers to reason about geometric feasibility, tool access, stability, and the ergonomics of human assembly. In this work, we encode long-established design for assembly (DfA) principles into a contained, end-to-end approach for generating assembly plans. Our approach takes only a mesh assembly and produces either a step-by-step assembly manual or a structured failure report, requiring no joint metadata, fastener annotations, or additional information. Four major components of a manufacturing plan are addressed autonomously: an assembly tool list, the assembly sequence and subassemblies, an assembly manual, and design feedback for improving assemblability. For determining the sequence plan, we systematically disassemble the object in a physics simulator and apply a cost function that encodes DfA principles. Manual generation, tool labelling, and assembly feedback rely primarily on multimodal large language models. Compared with a baseline that always removes the outermost part first from Tian et al., DfA-aware sequence planning reduces simulated assembly time, measured with a robot-arm assembly-time proxy, by 35% on 136 assemblies of 5 to 30 parts. The correct tool is selected for 88.6% of assembly steps. A vision-language model judge compares the generated manuals against ablated variants, identifying which page elements carry the information a reader needs. The presented approach and open-source code are available for use by engineers or AI agents looking to rapidly accelerate the creation of manufacturing plans for a given product design.",
+   "authors": [
+    "Faustin Arion von Arx",
+    "Millicent Schlafly",
+    "Mark Fuge"
+   ],
+   "published": "2026-10-07",
+   "url": "https://doi.org/10.48550/arxiv.2610.09781",
+   "pdf": "https://arxiv.org/pdf/2610.09781",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.37547/tajet/volume08issue10-01",
+   "title": "AI-Guided Stimulus and Debug Triage: A Methodology for Accelerating Pre-Silicon Emulation of Flagship SoC Programs",
+   "abstract": "Raw emulation capacity for flagship system-on-chip (SoC) programs keeps growing, and engineer-hour supply keeps falling further behind it. That gap, not machine availability, is the actual bottleneck in pre-silicon verification today, driven by workload diversity across artificial intelligence (AI), extended reality (XR), and mobile platforms converging on a single die. This article argues that closing the gap requires a bounded, governed layer of AI-guided assistance rather than either extreme - full automation or continued reliance on engineer-only throughput. A three-layer adoption framework is proposed: scoping, which restricts AI involvement to stimulus generation for known-workload classes and anomaly-flagged debug triage while keeping root-cause sign-off and tape-out risk calls fully engineer-owned; validation, which requires every AI-generated output to be checked against a trusted reference - simulation, formal methods, or historical regression baselines - before an engineer may act on it; and governance, an operating-review cadence with rollback criteria defined before deployment, not improvised afterward. Pilot deployment of emulation-friendly RTL on a premium-tier mobile SoC program produced a shift of approximately 60 percent of RTL earlier in the program schedule, with no coverage-model exception granted to reach that outcome. The finding that emerges is not that AI accelerates verification - that much is already argued elsewhere - but that the acceleration only survives contact with a tape-out schedule when it is deliberately bounded. Emulation productivity under AI assistance is a governance problem before it is a technical one, and the three-layer framework is offered as a transferable operating model for programs where the cost of an unvalidated miss is unacceptable.",
+   "authors": [
+    "Abhishek Kumar Sinha"
+   ],
+   "published": "2026-10-03",
+   "url": "https://doi.org/10.37547/tajet/volume08issue10-01",
+   "pdf": "https://theamericanjournals.com/index.php/tajet/article/download/8445/7725/12785",
+   "venue": "The American Journal of Engineering And Technology",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.03971",
+   "title": "An Executable Benchmark for LLM-Based HLS Repair:Design Complexity and Repair Underconstraint",
+   "abstract": "Automated repair of High-Level Synthesis (HLS) designs using large language models (LLMs) is an emerging but underexplored problem. While LLM-based repair shows strong results on register-transfer level (RTL) Verilog, the only prior systematic study of HLS logic repair reports just 10.5% correction accuracy for GPT-4, with no analysis of why repair fails or what drives difficulty. We present the first comprehensive evaluation of LLM-based HLS repair across four models (GPT-4o, GPT-4o-mini, GPT-5.4, and Claude Opus 4.6) on 125 benchmark instances spanning eight logic bug types across three open-source HLS suites (CHStone, MachSuite, Polybench). We construct the first executable APR-style HLS repair benchmark with suite-specific functional oracles, enabling pass@k evaluation rather than the string-match approximations used in prior work. Design context and scale, rather than bug type alone, dominate repair difficulty: repair rates range from 6-45% on complex cryptographic kernels (CHStone) to 81-93% on compact algorithmic kernels (MachSuite) despite identical bug type distributions. We introduce solution multiplicity, the fraction of distinct patches generated across repeated repair attempts, as an empirical measure of repair underconstraint, and show it strongly predicts repair failure across all four models (Spearman rho = -0.393, p = 6.61 x 10^-20). Frontier models reduce underconstrained instances from 41-46 (GPT-4o, GPT-4o-mini) to just 3 (Claude Opus 4.6), with pass@1 improving from 42-53% to 73-76%. SHFT bugs remain consistently hard across all models, and semantic bug classes such as buffer indexing become reliably repairable only at frontier scale. These findings show that future APR benchmarks must include complex, executable, and weakly identifiable designs that remain challenging after frontier LLM repair.",
+   "authors": [
+    "Maisha Mastora",
+    "Dean Sullivan"
+   ],
+   "published": "2026-10-02",
+   "url": "https://doi.org/10.48550/arxiv.2610.03971",
+   "pdf": "https://arxiv.org/pdf/2610.03971",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.1145/3832160",
+   "title": "Fuzzing FPGA Synthesis and Simulation Tools via LLM-Generated Syntax-Valid HDL Codes",
+   "abstract": "Field-Programmable Gate Array (FPGA) synthesis and simulation tools, such as Vivado , Quartus , Yosys , and Icarus Verilog , are key components of Electronic Design Automation (EDA) toolchains, translating high-level Hardware Description Language (HDL) designs into low-level gate netlists. However, defects in these compilers can propagate into the synthesized netlists, leading to crashes and functionally incorrect or even insecure hardware implementations and posing significant security risks. Existing fuzz testing approaches face several challenges, including limited diversity in primitive-cell types and a lack of feedback-guided exploration. These issues restrict their ability to thoroughly exercise the compilers and expose deep-seated defects. To address these challenges, we propose PolyHDL, which leverages the prompting Large Language Models (LLMs) for generating valid HDL designs to detect compiler defects in FPGA synthesis and simulation tools. By leveraging prompt learning and integrating feedback-driven guidance from primitive-cell diversity, PolyHDL generates semantically valid HDL designs with diverse primitive-cell combinations, thereby addressing the aforementioned challenges. Furthermore, through equivalence check, PolyHDL effectively reveals potential compiler defects in FPGA synthesis and simulation tools. Experimental results demonstrate that PolyHDL successfully identified and reported 18 valid defects in widely used toolchains, including Vivado , Yosys , Icarus Verilog , and Quartus within one month, 17 of which were confirmed by the official technical support, and achieved a 13.1%–13.4% improvement in code coverage over the SOTA approaches.",
+   "authors": [
+    "He Jiang",
+    "Wen Zhao",
+    "Shikai Guo",
+    "Zhihao Xu",
+    "Xiaochen Li",
+    "Rubing Huang"
+   ],
+   "published": "2026-10-01",
+   "url": "https://doi.org/10.1145/3832160",
+   "pdf": "https://dl.acm.org/doi/pdf/10.1145/3832160?download=true",
+   "venue": "Proceedings of the ACM on software engineering.",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.34785",
+   "title": "BEHAVE: Functional Behavior Modeling Enables Self-Improving Agents for Hardware Design and Verification",
+   "abstract": "Developing agents for hardware design and verification requires reliable correctness feedback. As a hardware specification may permit correct implementations with different latencies, matching design and reference outputs cycle by cycle can reject valid designs. To address this, we introduce BEHAVE, an agentic framework for multi-turn joint hardware design and verification through functional behavior modeling. We define Behavior IR to express task functionality as executable behavior models without prescribing implementation timing beyond the specification. The agent iteratively develops a register-transfer-level (RTL) design and a behavior model as the design's verification reference. Our evaluator, BEHAVE-Sim, checks both artifacts separately against a hidden golden behavior model using input stimuli generated by random sampling and solver-guided search. BEHAVE thus supports power, performance, and area (PPA) exploration across task-permitted latencies and microarchitectures. During training, the same evaluator provides verifiable reinforcement learning (RL) rewards from specification-behavior pairs without reference RTL. For self-improvement, the agent continually searches for high-level implementations relevant to its capability gaps, constructs and checks specification-behavior pairs, and trains on the expanded task pool. We release BEHAVE-Train and BEHAVE-Eval with 600 human-reviewed specification-behavior pairs for realistic hardware workloads. Starting from 60 seed tasks and acquiring 100 new tasks, self-improvement raises Qwen3.8-27B's RTL pass@1 on BEHAVE-Eval from 55.0% to 75.0%, reaching performance comparable to RL using a 540-task pool.",
+   "authors": [
+    "Yuheng Wu",
+    "Berk Gokmen",
+    "Sujeeth Jinesh",
+    "Lauren McLane",
+    "Aarav Wattal",
+    "Qi Yang Huang",
+    "Zhaozhuo Xu",
+    "Thierry Tambe"
+   ],
+   "published": "2026-09-28",
+   "url": "https://doi.org/10.48550/arxiv.2609.34785",
+   "pdf": "https://arxiv.org/pdf/2609.34785",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.33699",
+   "title": "SpecRead: A Benchmark for Measuring Whether Language Models Understand Hardware Specifications",
+   "abstract": "Existing benchmarks for large language models (LLMs) in hardware design evaluate downstream artifacts such as generated RTL, assertions, or testbenches. When a model fails such a benchmark, the failure is ambiguous: it may have misread the specification, or it may have understood the specification and failed to write the code. We present SpecRead, a benchmark that isolates specification comprehension from generation ability. SpecRead v2.1 contains 385 questions over 10 open-source OpenTitan IP blocks: exact retrieval, cross-section reasoning, contradiction detection in mutated specifications, and spec-RTL consistency checking, plus 82 controls (41 distractor, 41 consistent-RTL). Type-4 items are built from real RTL mutations; we retain only mutations that Icarus Verilog simulation shows to change observable behavior. A with-spec vs. without-spec ablation suggests the questions require the excerpt, not training recall alone (without-spec accuracy 3/20 on the t1/t2 subset), though memorization of the source text may still help spot mutations. As an initial characterization with a small model, Ministral-3B scores 33.2% overall (128/385; macro average 39.0%): 55.2% on retrieval, 51.7% on cross-section reasoning. On the two contradiction-focused types, the verdict-plus-location measure gives 48.0% (t3) and 63.3% (t4), with a 51.2% false-positive rate on distractors and 100% on consistent-RTL controls. Layered scoring shows the model locates contradictions well (78.9-81.6% location accuracy) but scores lower on their category (43.9-49.7%). A structured \"rule-table\" prompting intervention lowers accuracy on every question type except t2 (tied). SpecRead is automatically scorable by deterministic checks, with gray-zone cases counted wrong under the conservative main scoring. The benchmark is regenerable for type-3 items via mutation injection, and built exclusively from public sources.",
+   "authors": [
+    "Feilian Huang"
+   ],
+   "published": "2026-09-27",
+   "url": "https://doi.org/10.48550/arxiv.2609.33699",
+   "pdf": "https://arxiv.org/pdf/2609.33699",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.27067",
+   "title": "ChipMEM: Verification-Grounded Memory for EDA Agents",
+   "abstract": "Large language model (LLM)-based agents use Electronic Design Automation (EDA) tools to generate and revise register-transfer-level (RTL) designs under synthesis and verification feedback. Recent methods learn from this feedback by distilling reusable skills from execution traces or by training on rewards derived from EDA-tools. Both methods are typically evaluated on the tasks that produced the experience. Repeated access to benchmark feedback on the same task can reward task-specific revision rather than creating reusable knowledge that transfers. We introduce ChipMEM, a verification-grounded memory layer for EDA agents. It combines cross-task procedural memory with within-trajectory statistical guidance. Its procedural component distills and stores a skill only after it passes synthesis, simulation, or formal checks, rather than relying on model self-assessments. A Bayesian component maintains hierarchical Beta estimates over tool-call outcomes and ranks recovery strategies that succeeded under comparable errors. A common adapter applies the same memory interface to RTL optimization and testbench-generation agents while preserving each domain's tools and acceptance criteria. We measure performance on training tasks and evaluate whether learned skills transfer to unseen tasks. On RTLRewriter-Bench, under matched model and tool settings, ChipMEM produces equivalence-passing outputs on 39/54 scored designs versus 35/54 without memory; on the 49-design short suite, mean area improvement is 8.69% versus 5.66%. On held-out CVDP tasks, ChipMEM with a frozen procedural library achieves 20/20 accepted outcomes versus 18/20 without memory in a single evaluation per setting.",
+   "authors": [
+    "Abdulrahman AlRabah",
+    "Joshua Mabry",
+    "Dilek Hakkani-Tür",
+    "Abdussalam Alawini",
+    "Hamid Shojaei",
+    "Kartik Hegde",
+    "Sandesh Adhikary"
+   ],
+   "published": "2026-09-22",
+   "url": "https://doi.org/10.48550/arxiv.2609.27067",
+   "pdf": "https://arxiv.org/pdf/2609.27067",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "https://openalex.org/W7214246236",
+   "title": "AgenticSizing: A Large Language Model-based Multi-Agent Framework for Analog Circuit Sizing",
+   "abstract": "Analog circuit sizing remains a challenging and time-consuming task due to the large design space, strong performance trade-offs, and increasing circuit complexity in scaled technologies. Although recent large language model (LLM)-based methods show promise in improving sample efficiency and interpretability, existing approaches often lack explicit circuit-topology understanding and are mainly evaluated on relatively simple analog building blocks. This paper presents a multi-agent LLM-based framework for complex analog circuit sizing. The proposed framework first analyzes the circuit topology and decomposes the netlist into functional blocks and substructures. It also extracts lightweight design knowledge for reuse. Based on the extracted topology and knowledge, a planner coordinates multiple role-specialized sizing agents to update design variables and achieve global performance specifications. This workflow mimics the collaborative process of an expert analog design team and provides a structured, interpretable, and simulation-driven optimization procedure. The framework was validated on eight circuits, with the largest design containing up to 55 transistors and 60 sizing variables. Notably, for the LDO benchmark, the proposed method achieved a 60\\% success rate with an average of 83 iterations, where classical optimizers failed to find feasible solutions. Further, ablation studies demonstrate that topology understanding, design-knowledge infusion, and agent specialization provide complementary benefits. The source code is available to support reproducibility.",
+   "authors": [
+    "Yijia Hao",
+    "Pratibha Verma",
+    "Dongxu Guo",
+    "Cristian Sestito",
+    "Michael O'Boyle",
+    "Christos-Savvas Bouganis",
+    "Themis Prodromakis"
+   ],
+   "published": "2026-09-22",
+   "url": "https://arxiv.org/abs/2609.25873",
+   "pdf": "https://arxiv.org/pdf/2609.25873",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.21157",
+   "title": "Can Agents Design Better Chips with a Higher Level Abstraction?",
+   "abstract": "Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by leveraging higher-level abstractions. We compare Direct RTL Design, Agent-based HLS Design, Post-Compiler HLS Refinement, and Post-HLS RTL Refinement, and combine Agent-based HLS Design with Post-HLS RTL Refinement as Agent-based HLS with RTL Refinement (AHRR). We use FPGAs as a practical, easy-to-deploy platform for end-to-end evaluation, but note that the design-flow tradeoffs we study are largely independent of the target technology. Across a diverse 11-tasks benchmark suite, AHRR achieves a 2.6$\\times$ geometric-mean speedup over Direct RTL Design across our benchmark suite. Case studies show that HLS distills design knowledge into abstractions that agents can leverage, while RTL refinement recovers lower-level optimization opportunities. Together, these results make AHRR a promising workflow for agentic chip design. The code and evaluation artifacts are available at https://github.com/ZijD/AHRR.",
+   "authors": [
+    "Zijian Ding",
+    "邹洋",
+    "Yizhou Sun",
+    "Jason Cong"
+   ],
+   "published": "2026-09-17",
+   "url": "https://doi.org/10.48550/arxiv.2609.21157",
+   "pdf": "https://arxiv.org/pdf/2609.21157",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.22347",
+   "title": "Verification Reward Model for Reinforcement Learning in Chip Design Verification",
+   "abstract": "We propose a Verification Reward Model (VRM) framework for training language models to create and repair chip verification artifacts. The central object is a versioned verification contract that binds requirements, permissible stimulus, observation boundaries, reference behavior, evaluation budgets, and acceptance criteria. Compiler, simulator, formal, mutation, coverage, and expert-review evidence are converted into auditable records. Deterministic acceptance checks remain outside the learned model. A learned outcome model predicts expensive future evidence from the specification, the generated artifact, and explicitly masked partial evidence; a semantic critic identifies evidence-supported weaknesses; a deterministic reward composer translates the resulting quality vector into task-conditioned training rewards. Extensions include paired clean/fault interventions, marginal fault-discovery rewards, uncertainty-aware evaluation scheduling, and a quarantined cross-domain learning loop. Evaluation emphasizes independently validated fault detection, false alarms, generalization across design families, and total cost to reach a specified quality level. We describe a first experiment on a small, open-tool-compatible benchmark with lightweight models, with full UVM capability admitted through feature-specific qualification. This is a position paper: we specify the framework and the experiments that would test it, and we report no training, EDA, or silicon results.",
+   "authors": [
+    "Chaurasia, Shashank"
+   ],
+   "published": "2026-09-17",
+   "url": "https://doi.org/10.48550/arxiv.2609.22347",
+   "pdf": "https://arxiv.org/pdf/2609.22347",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.18022",
+   "title": "VeriBugBench: An Empirically Grounded Framework for Constructing Verilog RTL Debugging Benchmarks",
+   "abstract": "RTL source-level debugging research requires benchmark artifacts that provide faulty designs together with precise change locations, executable test stimuli, and reproducible configurations. Available Verilog resources usually provide only a subset of these elements. We present VeriBugBench, a framework for constructing Verilog RTL debugging benchmarks through empirically grounded fault construction, LLM-based testbench enhancement, and execution-based retention. The mutation library maps recurring, multi-granularity repair patterns observed in RTL bug-fix histories to 19 executable inverse operators. For each project, an LLM generates a design-specific stimulus phase from the clean DUT and original testbench; the phase is composed with the original testbench for candidate execution. Applying the framework to 45 open-source projects yields VeriBugBench-v1.0, with 2,608 executable single-fault instances whose effects are observable at design outputs. Across the 45 projects, the assembled testbenches increase mean project-level fault observability from 36.01% to 39.54% and improve line coverage and execution-trace diversity on average. VeriBugBench provides versioned RTL variants, source-level ground truth, testbenches, and execution artifacts for evaluating RTL debugging methods.",
+   "authors": [
+    "Xiankai Meng",
+    "Kejian Feng",
+    "Xinlin Zhao",
+    "Zhuo Zhang",
+    "Yan Lei",
+    "Xiaoguang Mao",
+    "Jiang Wu"
+   ],
+   "published": "2026-09-16",
+   "url": "https://doi.org/10.48550/arxiv.2609.18022",
+   "pdf": "https://arxiv.org/pdf/2609.18022",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "https://openalex.org/W7213473472",
+   "title": "SpecLens: LLM-Based Verilog Generation with Specification-Derived Constraints via Behavioral Divergence",
+   "abstract": "Large language models (LLMs) have recently shown promise in Verilog generation, but producing functionally correct RTL directly from natural-language specifications remains a highly challenging task. Existing approaches improve LLM-based Verilog generation mainly with retrieval-augmented generation (RAG), self-planning, or few-shot prompting. However, these methods focus primarily on external or generic forms of enhancement rather than strengthening the specification with task-specific constraints. In this work, we propose SpecLens, an automated framework for LLM-based Verilog generation that derives specification-driven constraints by analyzing behavioral divergence among multiple candidate implementations, using the original specification as the only external semantic source during generation. On the VerilogEval v2.0 spec-to-RTL benchmark, SpecLens achieves a functional pass@1 ratio of 86.2\\% with o3-mini-medium and 89.4\\% with o3-mini-high. This corresponds to a 3.6 percentage-point gain over the SOTA prompting method with o3-mini-medium and a 3.8 percentage-point gain over the SOTA behavioral divergence method with o3-mini-high. In addition, on RTLLM v1.1 and v2.0, analysis shows that SpecLens is more specification-faithful and less prone to benchmark-aligned priors. SpecLens achieves 100\\% syntactic correctness on VerilogEval v2.0, 86.2\\% on RTLLM v1.1, and 88\\% on RTLLM v2.0, even without using costly compile-repair loops to revise generated code iteratively. The code is open source and available at https://anonymous.4open.science/r/SpecLens-4632/readme.md.",
+   "authors": [
+    "Wen Bing",
+    "Bing Li"
+   ],
+   "published": "2026-09-15",
+   "url": "https://arxiv.org/abs/2609.16729",
+   "pdf": "https://arxiv.org/pdf/2609.16729",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.19189",
+   "title": "CovR: Coverage-Aware Hardware Verification via Reasoning-Guided Reinforcement Learning",
+   "abstract": "Design verification remains one of the most resource-intensive stages of hardware development, often consuming up to 70% of the total design effort. While recent work has explored using Large Language Models (LLMs) to automate testbench generation, most existing approaches focus narrowly on functional correctness, overlooking the critical aspect of coverage quality. To bridge this gap, we present CovR, an agentic framework for automated testbench generation that combines self-reflection loops with simulation-based feedback to maximize coverage. Using this pipeline, we construct a large-scale dataset of 16,514 natural specification RTL reasoning testbench tuples with a strong teacher model, enabling coverage-aware supervision. Building on this, we propose a reinforcement learning (RL) framework tailored for coverage-driven testbench generation, leveraging tool-derived rewards from simulation and coverage feedback to optimize a student model. Experimental results show that the CovR finetuned model achieves 93.81% cov@10 on VerilogEval and RTLLM V2.0, and 87.76% cov@10 on CVDP, outperforming state-of-the-art approaches by 7.97% and 3.59%, respectively. Furthermore, deploying the finetuned model back into the agentic refinement pipeline further improves cov@10 to 94.27% on VerilogEval and RTLLM V2.0 and 91.39% on CVDP. Moreover, when integrated as a plug-in stimulus engine for full verification workflows, CovR improves coverage by 18.95% and mutation detection score by 1.19%, while revealing 4.46% undetected failures, highlighting the importance of optimizing for coverage in LLM-based hardware verification.",
+   "authors": [
+    "Manar Abdelatty",
+    "Maryam Nouh",
+    "Sherief Reda"
+   ],
+   "published": "2026-09-15",
+   "url": "https://doi.org/10.48550/arxiv.2609.19189",
+   "pdf": "https://arxiv.org/pdf/2609.19189",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2609.15318",
+   "title": "LLM-enabled Behavior Driven Development Workflow for Formally Verified Hardware Designs",
+   "abstract": "Recently, the use of Large Language Models (LLMs) for different tasks in the Electronic Design Automation (EDA) life-cycle has been studied extensively, but an integrated view is lacking. Specifications are the foundation of this life-cycle, but they suffer from ambiguity when written in natural language, which especially affects the quality of LLM output. Formal specifications mitigate these ambiguities, but they come with their own challenges. On the other hand, Controlled Natural Language (CNL) specifications can serve as a middle-ground, reducing ambiguity while retaining interpretability. In this work, we propose an integrated view on the use of LLMs for EDA and establish an LLM-enabled behavior driven hardware development workflow. We introduce and define Formal Verification Gherkin Scenarios (FV Gherkin Scenarios), unlocking CNL specifications as the foundation for formally verified hardware designs via Formal Property Verification (FPV). Experimental evaluation shows that our workflow is able to outperform other established LLM-based methods by 2.48x in functional correctness of generated Register Transfer Level (RTL) designs and by 2.54x in formal coverage of generated assertions for FPV.",
+   "authors": [
+    "Luca Müller",
+    "Qian Liu",
+    "Rolf Drechsler"
+   ],
+   "published": "2026-09-14",
+   "url": "https://doi.org/10.48550/arxiv.2609.15318",
+   "pdf": "https://arxiv.org/pdf/2609.15318",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-11"
+  }
+ ]
 }
