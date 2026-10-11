@@ -1,0 +1,29 @@
+{
+  "lookback_days": 30,
+  "max_results_per_query": 50,
+  "keep_days": 365,
+  "arxiv_queries": [
+    "(abs:CAD OR abs:\"computer-aided design\") AND (abs:LLM OR abs:\"large language model\" OR abs:\"deep learning\" OR abs:\"neural\" OR abs:\"generative\")",
+    "(abs:CAD OR abs:\"computer-aided design\") AND (abs:benchmark OR abs:evaluation OR abs:testing OR abs:verification)",
+    "(abs:\"text-to-CAD\" OR abs:\"CAD code generation\" OR abs:CadQuery OR abs:\"parametric CAD\" OR abs:\"B-rep\")",
+    "(abs:EDA OR abs:\"electronic design automation\" OR abs:\"hardware verification\" OR abs:RTL) AND (abs:LLM OR abs:\"large language model\" OR abs:\"machine learning\") AND (abs:testing OR abs:verification OR abs:testbench OR abs:benchmark)"
+  ],
+  "openalex_queries": [
+    "large language model CAD generation",
+    "deep learning computer-aided design evaluation benchmark",
+    "AI CAD model testing verification",
+    "machine learning CAD software testing",
+    "LLM hardware verification testbench generation"
+  ],
+  "relevance": {
+    "ai_terms": ["llm", "large language model", "language model", "gpt", "deep learning", "machine learning", "neural", "transformer", "diffusion", "generative", "artificial intelligence", "reinforcement learning", "foundation model", "vision-language", "multimodal", "agent"],
+    "cad_terms": ["cad", "computer-aided design", "computer aided design", "b-rep", "brep", "cadquery", "parametric model", "solid model", "sketch", "mechanical design", "eda", "electronic design automation", "rtl", "verilog", "netlist", "chip design"]
+  },
+  "topics": {
+    "测试/评测": ["test", "testing", "benchmark", "evaluation", "evaluate", "verification", "validation", "testbench", "assertion", "metric"],
+    "CAD 生成": ["text-to-cad", "cad generation", "generate cad", "cad code", "cadquery", "parametric", "sketch generation", "image-to-cad", "point cloud to cad"],
+    "B-rep/几何": ["b-rep", "brep", "boundary representation", "mesh", "geometry", "solid model", "point cloud"],
+    "EDA/芯片": ["eda", "electronic design automation", "rtl", "verilog", "hardware", "chip", "circuit", "netlist"],
+    "LLM/智能体": ["llm", "large language model", "gpt", "agent", "vision-language", "multimodal"]
+  }
+}
