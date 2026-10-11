@@ -15,6 +15,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -28,16 +29,20 @@ USER_AGENT = "ai-cad-research-tracker/1.0 (https://github.com/xiaocuier717/myTes
 ATOM = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
 
 
-def http_get(url: str, retries: int = 3) -> bytes:
+def http_get(url: str, retries: int = 4) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            with urllib.request.urlopen(req, timeout=90) as resp:
                 return resp.read()
         except Exception as exc:  # noqa: BLE001 - network errors of all kinds
             if attempt == retries - 1:
                 raise
             wait = 5 * 2**attempt
+            # Rate limited (arXiv often 429s shared CI IPs): back off much longer.
+            if isinstance(exc, urllib.error.HTTPError) and exc.code in (429, 503):
+                retry_after = exc.headers.get("Retry-After", "")
+                wait = int(retry_after) if retry_after.isdigit() else 30 * 2**attempt
             print(f"  retry in {wait}s after error: {exc}", file=sys.stderr)
             time.sleep(wait)
     raise RuntimeError("unreachable")
@@ -152,13 +157,14 @@ def main() -> int:
 
     fetched: list[dict] = []
     errors: list[str] = []
-    for q in cfg["arxiv_queries"]:
-        print(f"arXiv: {q}")
-        try:
-            fetched += [p for p in fetch_arxiv(q, cfg["max_results_per_query"]) if p["published"] >= since]
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"arXiv: {exc}")
-        time.sleep(3)  # arXiv API etiquette
+    # One combined arXiv request: separate requests get rate limited (HTTP 429).
+    arxiv_query = " OR ".join(f"({q})" for q in cfg["arxiv_queries"])
+    print(f"arXiv: {len(cfg['arxiv_queries'])} queries combined")
+    try:
+        max_results = cfg["max_results_per_query"] * len(cfg["arxiv_queries"])
+        fetched += [p for p in fetch_arxiv(arxiv_query, max_results) if p["published"] >= since]
+    except Exception as exc:  # noqa: BLE001
+        errors.append(f"arXiv: {exc}")
     for q in cfg["openalex_queries"]:
         print(f"OpenAlex: {q}")
         try:
