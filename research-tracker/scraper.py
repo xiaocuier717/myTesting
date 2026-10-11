@@ -131,11 +131,14 @@ def compile_terms(terms: list[str]) -> re.Pattern:
 def classify(papers: list[dict], cfg: dict) -> list[dict]:
     ai_re = compile_terms(cfg["relevance"]["ai_terms"])
     cad_re = compile_terms(cfg["relevance"]["cad_terms"])
+    # Medical "CAD" (computer-aided diagnosis, coronary artery disease) is off-topic.
+    exclude_terms = cfg["relevance"].get("exclude_terms", [])
+    exclude_re = compile_terms(exclude_terms) if exclude_terms else None
     topic_res = {name: compile_terms(terms) for name, terms in cfg["topics"].items()}
     kept = []
     for p in papers:
         text = f"{p['title']} {p['abstract']}"
-        if not (ai_re.search(text) and cad_re.search(text)):
+        if not (ai_re.search(text) and cad_re.search(text)) or (exclude_re and exclude_re.search(text)):
             continue
         p["tags"] = [name for name, rx in topic_res.items() if rx.search(text)]
         # Score: testing-related work ranks first, then by topic coverage.
@@ -187,7 +190,9 @@ def main() -> int:
 
     existing = {}
     if DATA_PATH.exists():
-        existing = {p["id"]: p for p in json.loads(DATA_PATH.read_text(encoding="utf-8")).get("papers", [])}
+        old = json.loads(DATA_PATH.read_text(encoding="utf-8")).get("papers", [])
+        # Re-apply the current filter so config changes also clean up stored papers.
+        existing = {p["id"]: p for p in classify(old, cfg)}
     seen_titles = {norm_title(p["title"]): pid for pid, p in existing.items()}
 
     new_count = 0
