@@ -17,7 +17,8 @@
   ],
   "relevance": {
     "ai_terms": ["llm", "large language model", "language model", "gpt", "deep learning", "machine learning", "neural", "transformer", "diffusion", "generative", "artificial intelligence", "reinforcement learning", "foundation model", "vision-language", "multimodal", "agent"],
-    "cad_terms": ["cad", "computer-aided design", "computer aided design", "b-rep", "brep", "cadquery", "parametric model", "solid model", "sketch", "mechanical design", "eda", "electronic design automation", "rtl", "verilog", "netlist", "chip design"]
+    "cad_terms": ["cad", "computer-aided design", "computer aided design", "b-rep", "brep", "cadquery", "parametric model", "solid model", "sketch", "mechanical design", "eda", "electronic design automation", "rtl", "verilog", "netlist", "chip design"],
+    "exclude_terms": ["coronary", "artery", "cardiac", "angiography", "angiographic", "patient", "clinical", "computer-aided detection", "computer-aided diagnosis", "computer aided diagnosis", "cad-rads", "mammography", "mammographic", "dermoscopic", "dermoscopy", "skin disease", "radiology", "radiological", "radiotherapy", "tumor", "tumour", "cancer", "lesion", "nodule", "polyp", "tuberculosis", "prosthodontic", "prosthodontics"]
   },
   "topics": {
     "测试/评测": ["test", "testing", "benchmark", "evaluation", "evaluate", "verification", "validation", "testbench", "assertion", "metric"],
