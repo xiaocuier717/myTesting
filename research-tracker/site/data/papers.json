@@ -1,8 +1,32 @@
 {
- "updated": "2026-10-11T05:56:17+00:00",
- "new_today": 0,
+ "updated": "2026-10-12T05:59:52+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.48550/arxiv.2610.05380",
+   "title": "VHDL-REPOBENCH: A Repository-Level Benchmark for Evaluating Large Language Models on VHDL Design Generation",
+   "abstract": "Large Language Models (LLMs) are increasingly applied in hardware design automation, demonstrating strong potential in generating and understanding hardware description languages. However, most existing benchmarks focus on Verilog, with limited evaluation of VHDL, which remains widely used in industry and academia for FPGA and safety-critical systems. To address this gap, we introduce VHDL-REPOBENCH, a large-scale, cross-file, repository-level benchmark for assessing LLM capabilities on realistic VHDL design generation and analysis tasks. VHDL-REPOBENCH curates ~100 open-source VHDL repositories, encompassing ~2.5k VHDL files and ~500 testbenches, and provides structured problem statements, module stubs, and self-verifying testbenches. The benchmark enables comprehensive evaluation across syntax, semantic correctness, hierarchical reasoning, cross-file dependency resolution, and functional verification. We evaluate several state-of-the-art models, including GPT-4o, Llama-3-70B, Qwen2.5-72B, CodeLlama-70B, and multi-step reasoning approaches such as Reflexion and CoDes. Results reveal that while current LLMs achieve moderate line- and block-level accuracy, substantial challenges remain in multi-file reasoning, hierarchical design understanding, and specification-to-module generation. VHDL-REPOBENCH represents the first large-scale VHDL-focused benchmark and provides a valuable resource for the hardware design community to evaluate, compare, and advance LLM capabilities for practical VHDL development.",
+   "authors": [
+    "Prashanth Vijayaraghavan",
+    "Akul Malhotra",
+    "Ashutosh Jadhav",
+    "Ehsan Degan",
+    "Vandana V. Mukherjee"
+   ],
+   "published": "2026-10-04",
+   "url": "https://doi.org/10.48550/arxiv.2610.05380",
+   "pdf": "https://arxiv.org/pdf/2610.05380",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-12"
+  },
   {
    "id": "arxiv:2610.11954",
    "title": "Look Where You Can: Active View Selection for CAD Reconstruction under Occlusion",
@@ -618,7 +642,7 @@
   {
    "id": "arxiv:2609.37686",
    "title": "EngiWorld: What Can Frontier Agents Deliver in Professional Engineering Environments?",
-   "abstract": "Autonomous agents have made rapid progress in general-purpose computer use, but reliable automation of professional industrial engineering remains out of reach, as engineering workflows demand reasoning over geometric and physical constraints and dependencies preserved across software and design stages. We present EngiWorld, the first benchmark structured around the complete design loop: 1,301 expert-curated tasks spanning 6 engineering domains (CAD, CAE, CAM, BIM, EDA, and 3D visualization) and 26 professional software platforms, with both GUI and CLI interfaces and 6 task types ranging from software-selection to open-ended tasks. We further introduce an artifact-centric evaluation methodology built on a unified domain-verifier suite, which programmatically checks the geometric validity, physical feasibility, and rule compliance of final and intermediate artifacts, and scores quantitative design tasks continuously by specification attainment rather than binary success. Evaluation of seven frontier models reveals a substantial capability gap: the strongest model achieves an EngiScore of only 44.3, and just 3.6% of multi-software attempts succeed. EngiWorld provides the first rigorous foundation for measuring progress toward agents that operate professional engineering software end to end.",
+   "abstract": "Autonomous agents have made rapid progress in general-purpose computer use, yet reliable automation of professional industrial engineering remains out of reach. Engineering workflows require reasoning over geometric and physical constraints and keeping dependencies consistent across software and design stages. We present EngiWorld, a benchmark designed around the capabilities that real engineering projects require, from operating a single application to solving engineering problems end to end. It contains 1,301 expert-curated tasks spanning six engineering domains (CAD, CAE, CAM, BIM, EDA, and DCC) and 26 professional software applications, with both GUI and CLI interfaces. The tasks are organized into six types, corresponding to capabilities that real engineering projects require. We further introduce an artifact-centric evaluation methodology built on a unified suite of domain verifiers. The verifiers programmatically check whether final and intermediate artifacts are geometrically valid, physically feasible, and compliant with design rules. Beyond binary success, they also score how well optimized designs meet their specifications. Evaluation of seven frontier models reveals a substantial capability gap: the strongest model scores only 44.7/100, and just 3.6% of runs on tasks that require cross-software coordination succeed. EngiWorld provides a rigorous foundation for measuring progress toward agents that operate professional engineering software end to end.",
    "authors": [
     "Hongcheng Gao",
     "Hailong Qu",
@@ -645,7 +669,7 @@
    ],
    "published": "2026-09-29",
    "url": "https://arxiv.org/abs/2609.37686",
-   "pdf": "https://arxiv.org/pdf/2609.37686v1",
+   "pdf": "https://arxiv.org/pdf/2609.37686v2",
    "venue": "arXiv cs.AI, cs.CL",
    "source": "arXiv",
    "tags": [
