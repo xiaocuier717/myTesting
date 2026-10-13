@@ -1,8 +1,28 @@
 {
- "updated": "2026-10-12T05:59:52+00:00",
+ "updated": "2026-10-13T06:48:04+00:00",
  "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.14445/23488549/ijece-v13i9p111",
+   "title": "A Methodical Comparison of Random Forest and Neural Network Models to Forecast Digital Design Behaviour",
+   "abstract": "Predicting design behaviour in digital systems is vital to optimize electronic design automation workflows and help reduce time-to-market for integrated circuits. Traditional System Verilog and UVM-based methods demonstrate functional correctness while lacking predictive insights to performance metrics prior to synthesis, resulting in expensive design iterations when the timing or power constraints are violated. In this paper, we compare Random Forest (RF) and Neural Network (NN) models for predicting digital design behaviour at the pre-synthesis stage by timing, power consumption and resource utilization. The main novelty is in predictive analytics for proactive design optimization with RTL features. The 2 models were trained and tested in 1,000 synthesis runs on various RTL designs. The RF used 200 decision trees with optimized hyperparameters, whereas the NN was based on five layers with dropout regularization. Performance metrics such as Mean Absolute Error, Root Mean Square Error and R² scores were obtained. RF shows accuracy for timing prediction and robustness over noisy inputs, while NN is excellent when modeling intricate non-linear relationships. However, its training time is much longer. Analysis of feature importance demonstrated clock frequency, technology node, etc. with the most influential predictors. The comparisons guide the choice of suitable machine learning methods by analyzing trade-offs between interpretability, computational cost and predictive performance.",
+   "authors": [
+    "Surajit Bhattacherjee",
+    "Dipankar Pal"
+   ],
+   "published": "2026-10-10",
+   "url": "https://doi.org/10.14445/23488549/ijece-v13i9p111",
+   "pdf": "https://www.internationaljournalssrg.org/../IJECE/2026/Volume13-Issue9/IJECE-V13I9P111.pdf",
+   "venue": "International Journal of Electronics and Communication Engineering",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-13"
+  },
   {
    "id": "doi:10.48550/arxiv.2610.05380",
    "title": "VHDL-REPOBENCH: A Repository-Level Benchmark for Evaluating Large Language Models on VHDL Design Generation",
@@ -901,7 +921,7 @@
     "Pratibha Verma",
     "Dongxu Guo",
     "Cristian Sestito",
-    "Michael O'Boyle",
+    "Michael O’Boyle",
     "Christos-Savvas Bouganis",
     "Themis Prodromakis"
    ],
