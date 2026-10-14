@@ -1,8 +1,73 @@
 {
- "updated": "2026-10-13T06:48:04+00:00",
- "new_today": 1,
+ "updated": "2026-10-14T04:55:13+00:00",
+ "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.17776",
+   "title": "TempFit: Panoptic Symbol Spotting via Template Fitting",
+   "abstract": "In this paper, we introduce TempFit, a novel approach for the problem of Panoptic Symbol Spotting on CAD drawings. Existing methods treat symbol spotting as a per-primitive classification or mask-prediction task, with no explicit constraint enforcing that the primitives assigned to one instance form a spatially connected group. As a result, predictions may erroneously merge primitives from distant symbols into a single instance or fragment a coherent symbol across multiple predictions. Motivated by the professional \"retrieve-and-transform\" CAD design workflow, we reformulate this task as a Template Fitting problem, where each foreground instance is detected by retrieving and aligning a canonical template from a library, enforcing structural completeness by construction. Building on this formulation, we present an autoregressive transformer that unifies template retrieval and pose prediction within a single end-to-end pipeline. The framework treats the template library as an explicit geometric memory, parsing background regions in parallel via learnable background tokens and synthesizing foreground instances autoregressively while attending to template-specific geometry at each step. Experiments on FloorplanCAD and our newly collected IndustryCAD dataset, a more challenging benchmark with complex industrial symbols, heavy occlusion, and wide scale variation, demonstrate state-of-the-art performance with particularly large gains on IndustryCAD. Project page: https://tempfit-project.github.io/.",
+   "authors": [
+    "Honghao Xu",
+    "Hao Wang",
+    "Xiang Liu",
+    "Juzhan Xu",
+    "Manfred Lau",
+    "Kai Xu",
+    "Ruizhen Hu"
+   ],
+   "published": "2026-10-13",
+   "url": "https://arxiv.org/abs/2610.17776",
+   "pdf": "https://arxiv.org/pdf/2610.17776v1",
+   "venue": "arXiv cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-14"
+  },
+  {
+   "id": "arxiv:2610.15240",
+   "title": "The Era of Vibe Tapeout: Dark Age or Golden Age for Analog Circuit Design?",
+   "abstract": "LLM agents now write their own schematic and layout generators, run EDA tools, read the results, and fix the design. This \"vibe tapeout\" is becoming practical for analog circuits as well. This paper measures how far it has come in two settings. (A) On an open PDK (SKY130), a cloud LLM agent designed an 11-bit, 5.12-MS/s SAR ADC from its specification. The agents produced DRC- and LVS-clean macros and met the specification after parasitic extraction (PEX). In particular, under the condition in which the agent received a sanitized reference design derived from our 65-nm design (vibe porting), it produced the best layout in the shortest time. Its area was 1/1.6 to 1/2.8 of that of the conditions without a reference. This condition reached signoff without human intervention. The agents also identified the causes of post-PEX degradation (CDAC wiring coupling and common-mode-dependent comparator offset) by their own experiments. On the other hand, agents sometimes reported false passes, and verification independent of the design agent was essential. (B) A commercial PDK is under NDA and cannot be given to a cloud LLM. We therefore evaluated local LLMs running on university servers with a six-task benchmark on a commercial 65-nm CMOS PDK. Kimi K3 passed five of the six tasks, while MiniMax M3 passed two. Neither solved the debugging task, which requires finding the cause from symptoms. Finally, we discuss the prospects for extending vibe tapeout from ADCs to entire SoCs, and ask whether vibe tapeout is a dark age or a golden age for analog design. Our answer is that it is a golden age for designers who know what to verify.",
+   "authors": [
+    "Kentaro Yoshioka"
+   ],
+   "published": "2026-10-11",
+   "url": "https://arxiv.org/abs/2610.15240",
+   "pdf": "https://arxiv.org/pdf/2610.15240v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-14"
+  },
+  {
+   "id": "arxiv:2610.15681",
+   "title": "Rethinking Human Intent-to-CAD: Parametric CAD Model Generation via Cooperative Multi-Task Alignment and Spatial-Aware Reinforcement Learning",
+   "abstract": "Parametric Computer-Aided-Design (CAD) modeling from human intent remains challenging, particularly during the conceptual design stage, where design goals are expressed through incomplete and unstructured modalities (e.g., hand-drawn sketches and textual descriptions). In this work, we rethink the human intent-to-CAD pipeline and propose a unified method that directly maps multi-level human intents to executable codes, without assuming the prior existence of target CAD models. To support our study, we construct HiCAD, the first large-scale dataset aligning hand-drawn sketches, textual descriptions, and parametric CAD codes. Based on this, we introduce HiCAD, a two-stage framework comprising Cooperative Multi-Task Alignment to bridge the representational gap between heterogeneous inputs, and Spatial-Aware Reinforcement Learning to enforce geometric and topological consistency. Extensive experiments demonstrate that our method significantly outperforms existing baselines across multiple tasks, validating its effectiveness and robustness in transforming heterogeneous human intents into high-fidelity parametric CAD models. Our project page: https://zqwlearning.github.io/HiCAD.",
+   "authors": [
+    "Qingwang Zhang",
+    "Jiahao Li",
+    "Xiangdong Zhou"
+   ],
+   "published": "2026-10-11",
+   "url": "https://arxiv.org/abs/2610.15681",
+   "pdf": "https://arxiv.org/pdf/2610.15681v1",
+   "venue": "arXiv cs.CV, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-14"
+  },
   {
    "id": "doi:10.14445/23488549/ijece-v13i9p111",
    "title": "A Methodical Comparison of Random Forest and Neural Network Models to Forecast Digital Design Behaviour",
