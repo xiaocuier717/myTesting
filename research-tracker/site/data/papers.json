@@ -1,8 +1,27 @@
 {
- "updated": "2026-10-14T04:55:13+00:00",
- "new_today": 3,
+ "updated": "2026-10-15T04:40:56+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.66838/sauc.6512",
+   "title": "ICoder-27B: Recursive AI-Led Development of Frontier Industrial Coding Model",
+   "abstract": "Recursive AI, the prospect of artificial intelligence taking an increasingly complete role in building and improving artificial intelligence, has so far been demonstrated mostly on small models, bounded tasks, and fixed time budgets. A recent technical report by Yang and colleagues [1] asks a more demanding question: how little human involvement is sufficient for an agent to lead the development of a release-ready, frontier-competitive model? Their answer is an agent-led pipeline that produced iCoder-27B, a 27-billion-parameter model for register-transfer-level (RTL) hardware design and GPU kernel optimization. This paper is an independent technical review and analysis of that report; it does not present new training results.We reconstruct the design principle of high-density human priors with low-frequency intervention, the executable research skills that carry those priors, and the four-stage pipeline of data evolution, supervised fine-tuning, on-policy self-distillation, and reinforcement learning with verifiable rewards....",
+   "authors": [
+    "Pratyush Singh"
+   ],
+   "published": "2026-10-12",
+   "url": "https://doi.org/10.66838/sauc.6512",
+   "pdf": "https://visualcompublications.es/SAUC/article/download/6512/4864",
+   "venue": "Street Art & Urban Creativity",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-15"
+  },
   {
    "id": "arxiv:2610.17776",
    "title": "TempFit: Panoptic Symbol Spotting via Template Fitting",
@@ -150,7 +169,7 @@
    ],
    "published": "2026-10-08",
    "url": "https://arxiv.org/abs/2610.11896",
-   "pdf": "https://arxiv.org/pdf/2610.11896v1",
+   "pdf": "https://arxiv.org/pdf/2610.11896v2",
    "venue": "arXiv cs.LG",
    "source": "arXiv",
    "tags": [
