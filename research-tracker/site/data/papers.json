@@ -1,8 +1,73 @@
 {
- "updated": "2026-10-15T04:40:56+00:00",
- "new_today": 1,
+ "updated": "2026-10-16T04:33:31+00:00",
+ "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.21755",
+   "title": "DeciCAD: Harness-Grounded Learning of Action Policies for CAD Agents",
+   "abstract": "Large Language Model agents operate through closed-loop action policies whose decision space is defined by an agent harness. We investigate how this operating space shapes agent behavior and policy learning in computer-aided design (CAD), a professional domain characterized by persistent state, geometric constraints, and long-horizon procedures. We instantiate this perspective in DeciCAD, a domain-native harness that exposes semantic CAD actions, decision-oriented observations, environment feedback, and persistent state transitions. Building on this harness, we develop a learning pipeline that extracts causal decision supervision from interaction trajectories and improves the policy through supervised fine-tuning (SFT) and geometry-grounded online reinforcement learning (RL). Across four CAD benchmarks, DeciCAD achieves the best F1 and intersection over union (IoU) while reducing model-output tokens by 45--88% relative to a general-purpose coding harness. Under matched supervision, its SFT policy improves F1 from 0.6883 to 0.7437 and outperforms the coding policy; subsequent online RL further raises geometry availability from 66.5% to 73.5% and F1 to 0.7880. These results demonstrate that the decision space induced by a harness materially affects both agent execution and policy learning in CAD.",
+   "authors": [
+    "Yufeng Peng",
+    "Yixin Zhang",
+    "Ziyi Liu",
+    "Zhikun Xu",
+    "Jiarong Yang",
+    "Sijie Wang",
+    "Wenjie Feng",
+    "Qiyu Kang"
+   ],
+   "published": "2026-10-15",
+   "url": "https://arxiv.org/abs/2610.21755",
+   "pdf": "https://arxiv.org/pdf/2610.21755v1",
+   "venue": "arXiv cs.AI, cs.CL, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-16"
+  },
+  {
+   "id": "arxiv:2610.21570",
+   "title": "Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design",
+   "abstract": "LLM agents can write directed tests that close functional coverage, but coverage only shows that a state was reached, not that the data on the way there was correct. This is a long-known point in verification and we do not claim it as new. We describe a small coverage-closure agent that applies it to an LLM loop: coverage is read from the report that the simulation itself exports (cocotb-coverage YAML) and never taken from the model's account, and data integrity is checked by scoreboards that are separate from the model. On three architecturally distinct RTL designs (an asynchronous FIFO, a UART transmitter and an AHB2APB bridge) the agent raised coverage from 91.7%, 88.9% and 67.4% to 100% within its 8-iteration budget in every logged run, using one design-agnostic agent. A reactive scoreboard monitor attached to the FIFO's base testbench also found a clock-domain-crossing bug in the author's own stimulus code. The monitor is not yet attached to the LLM-generated tests, so their data integrity is not independently checked; one manual check on a single FIFO test is reported as preliminary. We list the weaknesses of this evidence: three designs, no baseline, no ablation, and logged runs that come from several agent checkpoints.",
+   "authors": [
+    "Venkata Krishna Kumar Vedantam"
+   ],
+   "published": "2026-10-15",
+   "url": "https://arxiv.org/abs/2610.21570",
+   "pdf": "https://arxiv.org/pdf/2610.21570v1",
+   "venue": "arXiv cs.AR, cs.AI, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-16"
+  },
+  {
+   "id": "arxiv:2610.20651",
+   "title": "Towards automatic digital garment assembly",
+   "abstract": "Creating digital garments from existing two-dimensional patterns remains a time-consuming process. Although patterns are widely available in digital form, their assembly in garment CAD software involves manual definition of sewing operations and arrangement of the pattern panels for drape simulation. We present two learning-based approaches that automate both tasks using the 2D vector pattern as their sole input. Our automatic sewing model operates at the segment level, leveraging a Transformer encoder with multiple prediction heads. Our novel architecture supports many-to-many, ordered segment correspondences, as well as hems, overlapping seams needed for multilayer garments, and construction properties such as seam allowances and stitch types, required for the finished virtual garment but neglected by previous methods. A complementary panel-level model predicts body-region assignments, layers, and placement coordinates to initialize the drape simulation. We evaluate both models on a curated dataset of 4,035 professionally assembled garment instances. The sewing model exactly recovers all seam and hem topologies of 63.3\\% of test garments, while the arrangement model meets the specified placement criteria for all panels in 66.2\\% of test garments. We also integrate both methods into garment CAD software, demonstrating automatic assembly of successfully predicted garments.",
+   "authors": [
+    "Alejandro Rodriguez"
+   ],
+   "published": "2026-10-12",
+   "url": "https://arxiv.org/abs/2610.20651",
+   "pdf": "https://arxiv.org/pdf/2610.20651v1",
+   "venue": "arXiv cs.CV, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-16"
+  },
   {
    "id": "doi:10.66838/sauc.6512",
    "title": "ICoder-27B: Recursive AI-Led Development of Frontier Industrial Coding Model",
@@ -876,7 +941,7 @@
    ],
    "published": "2026-09-28",
    "url": "https://arxiv.org/abs/2609.35035",
-   "pdf": "https://arxiv.org/pdf/2609.35035v2",
+   "pdf": "https://arxiv.org/pdf/2609.35035v3",
    "venue": "arXiv cs.LG",
    "source": "arXiv",
    "tags": [
