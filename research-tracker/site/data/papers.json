@@ -1,10 +1,31 @@
 {
- "updated": "2026-10-17T04:27:48+00:00",
- "new_today": 0,
- "errors": [
-  "arXiv: HTTP Error 503: Service Unavailable"
- ],
+ "updated": "2026-10-18T04:35:49+00:00",
+ "new_today": 1,
+ "errors": [],
  "papers": [
+  {
+   "id": "doi:10.3390/machines14101206",
+   "title": "Artificial Intelligence for Engineering-Grade Parametric CAD: A Critical Review of Representations, Large Language Models, and Agentic Design Systems",
+   "abstract": "Artificial intelligence (AI) is rapidly expanding computer-aided design (CAD) from shape generation toward generative, conversational, and agentic engineering. However, most AI–CAD evaluations remain dominated by geometric similarity and execution success, while industrial CAD depends on editable parameters, design intent, stable feature histories, manufacturing constraints, and downstream CAD/CAE reuse. This structured critical review synthesizes 107 sources, principally from 2020–2026, across constrained sketches, boundary representations (B-Reps), parametric sequences, executable CAD programs, large language and multimodal models, CAD agents, commercial-CAD integration, and CAD–CAE. Rather than organizing the field only by model family, the review compares methods through the engineering information preserved and the behavior of generated models after modification. The synthesis identifies a consistent evidence gap: geometric validity and program execution are increasingly strong, whereas native feature-tree robustness, persistent references, design-intent preservation, and downstream verification remain weakly benchmarked. To address this gap, we propose the engineering-grade AI–CAD (EG–CAD) framework, in which geometric validity and executability are mandatory gates followed by parametric editability, constraint/design-intent preservation, feature-history robustness, engineering compliance, and downstream usability. A reference agent architecture and staged roadmap connect these criteria to CAD/CAM/CAE and smart-manufacturing workflows, reframing AI–CAD as an engineering automation problem rather than a shape-generation task.",
+   "authors": [
+    "Jihad Rishmany",
+    "Rodrigue Imad",
+    "Rabih Kahaleh"
+   ],
+   "published": "2026-10-16",
+   "url": "https://doi.org/10.3390/machines14101206",
+   "pdf": "https://doi.org/10.3390/machines14101206",
+   "venue": "Machines",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-10-18"
+  },
   {
    "id": "arxiv:2610.21755",
    "title": "DeciCAD: Harness-Grounded Learning of Action Policies for CAD Agents",
@@ -1072,7 +1093,7 @@
     "Pratibha Verma",
     "Dongxu Guo",
     "Cristian Sestito",
-    "Michael O’Boyle",
+    "Michael F. P. O’boyle",
     "Christos-Savvas Bouganis",
     "Themis Prodromakis"
    ],
