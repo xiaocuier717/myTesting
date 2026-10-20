@@ -1,8 +1,151 @@
 {
- "updated": "2026-10-19T04:42:17+00:00",
- "new_today": 2,
+ "updated": "2026-10-20T04:52:16+00:00",
+ "new_today": 6,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.25881",
+   "title": "Learn the Interface, Not the Implementation: Output Representation Dominates Training Regime in LLM-Based RTL Generation",
+   "abstract": "Large-language-model register-transfer-level (RTL) generation has concentrated on how to train the model: fine-tuning, continued pre-training, and reinforcement learning from a verifier. We argue this is the second-order question. On a bounded, formally specifiable task of generating single-error-correcting, double-error-detecting (SECDED) ECC memory wrappers, we hold the task, data, and correctness oracle fixed and vary two axes independently: the training regime (seven settings) and the output representation (four levels, from fully expanded flat Verilog to an eight-field configuration expanded by a deterministic generator). Because a reference generator exists, correctness is decided by formal equivalence over a design space of approximately ten million points, rather than sampled from a hand-written testbench. Two results follow. First, representation dominates: every representation close to raw RTL reaches a pass rate of at most 0.17, while the configuration reaches 0.83 with no training at all. Once the model emits the configuration, every training regime achieves a pass rate between 0.89 and 1.00. Second, raw RTL hits a hard output-length limit: a 512-bit design requires 44,237 tokens of flat Verilog compared with just 69 tokens for the configuration. Consequently, raw generation becomes infeasible above 32-bit data words rather than merely inaccurate. A model trained from scratch with fewer than 50 million parameters, combined with the verified generator, achieves 0.89 formal equivalence, compared with 1.00 for a 32-billion-parameter fine-tuned model, while using approximately 1600 times less inference energy per correct design. Inference energy also dominates amortized training energy. The lesson is to learn the interface, not the implementation.",
+   "authors": [
+    "Siddharth Patel",
+    "Vikram Singh",
+    "Siddharth Savyasachi Malu",
+    "Rohit Singh"
+   ],
+   "published": "2026-10-19",
+   "url": "https://arxiv.org/abs/2610.25881",
+   "pdf": "https://arxiv.org/pdf/2610.25881v1",
+   "venue": "arXiv cs.LG, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "arxiv:2610.26861",
+   "title": "Can It Actually Work? Synthesizing Functional CAD Mechanisms",
+   "abstract": "While LLM agents can generate visually plausible CAD assemblies, these designs often fail to fulfill their intended physical functions. We study functional CAD design, a setting where agents interpret underspecified requests to construct and iteratively revise mechanisms that satisfy functional requirements in physical simulation. Verifying these requirements is nontrivial: different candidate mechanisms may realize the same function through entirely different components, controls, and operating sequences. To bridge this gap, we propose FunCAD-Harness, a framework that translates abstract requirements into candidate-specific physical tests and uses simulation feedback to guide design revisions. To systematically evaluate this capability, we introduce FunCADBench, a benchmark spanning 46 mechanism families with interdependent and multi-step operations. Experiments across frontier LLM agents show that FunCAD-Harness exposes subtle mechanical failures invisible to visual inspection, substantially improving functional success rates over standard simulation-augmented baselines. Ultimately, our work marks a step toward CAD agents capable of translating human intent into working mechanisms.",
+   "authors": [
+    "Wenqian Zhang",
+    "Yangyi Huang",
+    "Zigeng Xu",
+    "Weiyang Liu",
+    "Zhen Liu"
+   ],
+   "published": "2026-10-19",
+   "url": "https://arxiv.org/abs/2610.26861",
+   "pdf": "https://arxiv.org/pdf/2610.26861v1",
+   "venue": "arXiv cs.CV, cs.CL, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "arxiv:2610.25840",
+   "title": "OV-PEAR: Observation-Verified Pose-Scale Estimation and Reconstruction for Unknown Industrial Manipulation Objects",
+   "abstract": "Fine industrial robotic manipulation requires 6D pose, scale, and an operation-ready 3D model. Existing industrial pose estimation relies on CAD models, object-specific training data, or stable workcells, limiting use with unseen objects; zero-shot methods suffer from single-view occlusion, generative bias, and scale uncertainty. We present OV-PEAR, an observation-verified framework for 3D reconstruction and pose-scale estimation of unknown industrial objects. Its three-stage object-centric pipeline: (1) segments RGB-D instances and generates object-level 3D hypotheses; (2) anchors them to the robot frame via appearance-aware view retrieval, explicit scale search, and visibility-sensitive registration; (3) back-projects multi-view RGB-D evidence into the object-canonical frame to verify voxel occupancy, suppress hallucinations, and produce reusable trusted object models. On BOP-Industrial, OV-PEAR achieves 0.657 average AR and improves pose and voxel-level geometric consistency in real scenes; real-robot connector assembly reaches 99.67% grasp and 84.00% assembly success. The model library and pose-scale log enable short-term object-level state maintenance at 0.02 ms/frame.",
+   "authors": [
+    "Guoqin Tang",
+    "Qingxuan Jia",
+    "Yichen Tan",
+    "Zihang Lv",
+    "Ruiquan Wang",
+    "Zeyuan Huang",
+    "Gang Chen"
+   ],
+   "published": "2026-10-19",
+   "url": "https://arxiv.org/abs/2610.25840",
+   "pdf": "https://arxiv.org/pdf/2610.25840v1",
+   "venue": "arXiv cs.RO, cs.AI",
+   "source": "arXiv",
+   "tags": [],
+   "score": 0,
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "arxiv:2610.24977",
+   "title": "CorrectRTL: Boost RTL Generation Quality Through Automated Self-Correction with Instruction Decomposition",
+   "abstract": "Large language models (LLMs) have shown strong promise in specification-to-RTL generation. Among the explorations, the self-correction paradigm has significantly advanced LLM-based RTL generation. However, two challenges limit further progress. Existing benchmarks are saturated by advanced LLMs, leaving little room to evaluate the agentic self-correction framework. The monolithic self-correction paradigm rewrites the entire design at once, where LLMs are susceptible to error confusion and corruption of originally correct code. To address the benchmark challenge, we contribute ScaleBench, a more challenging benchmark of 200 complex RTL designs. To address the challenge in methodology, we propose CorrectRTL, an agentic framework that realizes a new decompose-then-correct paradigm, in which the LLM agent explicitly decouples scaffold construction from detailed implementation. CorrectRTL contributes three core techniques: (1)~\\emph{Structure-oriented decomposition}, (2)~\\emph{Snippet-based RAG}, and (3)~\\emph{SVA-based self-correction}. On ScaleBench, CorrectRTL improves Pass@1 from 20.5% to 49.0% (+28.5%). On VerilogEval, CorrectRTL achieves up to 96.1% Pass@1, demonstrating consistent improvements across both simple and complex designs.",
+   "authors": [
+    "Jing Wang",
+    "Shang Liu",
+    "Hangan Zhou",
+    "Wenji Fang",
+    "Yuchao Wu",
+    "Yugao Zhu",
+    "Zhiyao Xie"
+   ],
+   "published": "2026-10-18",
+   "url": "https://arxiv.org/abs/2610.24977",
+   "pdf": "https://arxiv.org/pdf/2610.24977v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "arxiv:2610.24451",
+   "title": "Assessing the CAD Capabilities of General-Purpose AI Models: A Case Study of GPT-6 Astra",
+   "abstract": "Recent advances in general-purpose AI models and agentic systems have enabled them to perform some CAD tasks. A systematic assessment is now needed to establish what these systems can accomplish and how well their outputs meet engineering requirements. This paper presents an empirical study of GPT-6 Astra, a SOTA general-purpose AI model, across four basic CAD tasks: model understanding, generation, editing, and evaluation. We design test cases spanning different levels of complexity and engineering requirements. The results show that GPT-6 Astra can support multiple stages of CAD workflows, with successful outcomes in cases involving nontrivial geometric complexity. This suggests that general-purpose AI is beginning to offer practical value in almost all steps in CAD workflow. However, gaps remain between generating visually plausible geometry and producing valid, functional, and editable CAD models. Recurring errors in freeform geometry, parameter dependencies, and mating relationships between parts limit engineering usefulness. Agentic iterative refinement can improve results but does not consistently resolve critical errors; long completion times further constrain practical use.",
+   "authors": [
+    "Qiang Zou",
+    "Jiajun Shen",
+    "Zhijie Yang",
+    "Yuhao Wang",
+    "Shitianyi Leng",
+    "Dongshuo Yin"
+   ],
+   "published": "2026-10-17",
+   "url": "https://arxiv.org/abs/2610.24451",
+   "pdf": "https://arxiv.org/pdf/2610.24451v1",
+   "venue": "arXiv cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "arxiv:2610.24597",
+   "title": "CADS: Measuring the Incremental Contribution of LLM Proposers in Sequential Biological Screens",
+   "abstract": "Large language models are increasingly used to guide sequential biological screens, yet standard evaluations rely on raw hit counts that conflate a proposer's value with the discovery capacity of the underlying algorithmic harness. Adaptive sampling and corrupted experimental readouts also leave standard feedback comparisons without a false-discovery guarantee. We present Certified Agentic Discovery Screens (CADS), an error-controlled measurement framework that quantifies a proposer's incremental value against an identical LLM-free loop. By integrating capped likelihood-ratio bounds, e-processes, and complete-family e-BH, CADS controls the terminal false discovery rate under the stated null and corruption conditions despite arbitrary dependence, adaptive sampling, and optional stopping. In DepMap-backed simulations, CADS exposes two evaluation artifacts: the LLM-free harness alone clears the feedback gate, and raw origin counts overstate LLM contributions because LLM picks displace fallback discoveries. On the initial 20 seeds, supplying tested-candidate history to Qwen2.5-7B shifts its net contribution from +0.35, with a 95% interval covering zero, to +2.90, with the interval above zero. This initial net effect did not persist in a 50-seed matched-quota replication. These results support net gain over an LLM-free loop, measured between separately certified sets, as the appropriate measure of proposer contribution.",
+   "authors": [
+    "Guanxing Chen",
+    "Nihui Shao",
+    "Haohuai He",
+    "Zhenchao Tang",
+    "Pengwei Hu",
+    "Zhi-An Huang"
+   ],
+   "published": "2026-10-17",
+   "url": "https://arxiv.org/abs/2610.24597",
+   "pdf": "https://arxiv.org/pdf/2610.24597v1",
+   "venue": "arXiv cs.AI, q-bio.QM",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-20"
+  },
   {
    "id": "doi:10.48550/arxiv.2610.18891",
    "title": "From Prompts to Silicon: Scaling LLM-Assisted Chip Design with the AI Hardware Design League",
