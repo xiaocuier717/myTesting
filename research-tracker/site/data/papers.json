@@ -1,8 +1,147 @@
 {
- "updated": "2026-10-21T04:49:45+00:00",
- "new_today": 1,
+ "updated": "2026-10-22T04:48:31+00:00",
+ "new_today": 6,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.29518",
+   "title": "Mitigating Query Shortcuts in Chain-of-Thought with Context-Aware Decoding",
+   "abstract": "While Chain-of-Thought (CoT) prompting improves the reasoning performance of large language models (LLMs), recent studies have shown that final answers do not always depend on the generated rationales. In particular, LLMs may rely on query-specific shortcuts rather than the information provided by their reasoning steps. In this paper, we investigate whether context-aware decoding (CAD), an existing contrastive decoding method, can mitigate such shortcut behavior when applied to CoT reasoning. We study this application as Rationale Contrastive Decoding (RCD), which contrasts the next-token distributions conditioned on the query with and without its rationale, amplifying tokens whose likelihood increases due to the rationale. We provide a theoretical interpretation of this decoding rule via a KL-regularized reward-maximization objective. Experiments across five reasoning benchmarks demonstrate that RCD improves answer accuracy over standard CoT. Furthermore, intervention analyses using ground-truth and random rationales reveal that RCD increases the behavioral dependence of final answers on the rationale content. Our findings suggest that contrastive decoding offers a simple, training-free approach to mitigating query shortcuts.",
+   "authors": [
+    "Shin'ya Yamaguchi"
+   ],
+   "published": "2026-10-21",
+   "url": "https://arxiv.org/abs/2610.29518",
+   "pdf": "https://arxiv.org/pdf/2610.29518v1",
+   "venue": "arXiv cs.CL, cs.AI, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "arxiv:2610.28676",
+   "title": "VHDLBench: Benchmarking and Fine-Tuning Large Language Models for VHDL-Based Chip Design",
+   "abstract": "The rapid evolution of digital circuit complexity demands innovative approaches to hardware design automation. While Large Language Models (LLMs) have influenced software development, their application to Hardware Description Language (HDL) generation remains largely unexplored, particularly for VHDL. This paper presents a comprehensive study for AI-assisted digital circuit design, addressing gaps in current Electronic Design Automation workflows. The work introduces a VHDL dataset of 18,500+ syntax-verified examples from open-source repositories and converted Verilog designs. Five 7B-parameter LLMs were fine-tuned using parameter-efficient QLoRA technique, enabling deployment in resource-constrained environments. To evaluate model efficacy, a rigorous three-level pipeline was established: (1) syntax and synthesis validation, (2) functional simulation with testbenches, and (3) FPGA prototyping on Zynq SoCs. Results show fine-tuned models achieve up to 92% syntax correctness and 73% functional accuracy on common design tasks, with DeepSeek-Coder demonstrating the highest performance gains. Generated designs were successfully deployed on real hardware, confirming not only syntactic but operational viability. This work demonstrates that LLMs, when tailored with domain-specific data and lightweight fine-tuning can contribute meaningfully to the future of generative EDA workflows.",
+   "authors": [
+    "Patrik Drazic",
+    "Benaoumeur Senouci",
+    "Boualem Benatallah"
+   ],
+   "published": "2026-10-19",
+   "url": "https://arxiv.org/abs/2610.28676",
+   "pdf": "https://arxiv.org/pdf/2610.28676v1",
+   "venue": "arXiv cs.AR, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "doi:10.1016/j.cma.2026.119500",
+   "title": "Constraint-driven optimization and parametrization of industrial NURBS geometries via neural deformation field",
+   "abstract": "This work presents a differentiable framework for the parametrization and shape optimization of industrial CAD geometries represented by multi-patch NURBS surfaces. The method enables the deformation of complex CAD models through a physics-informed geometric parametrization, allowing direct morphing driven by physical constraints without the need to prescribe a predefined deformation strategy. A neural displacement field, implemented as a multi-layer perceptron acting on the NURBS control points, provides a compact parametrization of the admissible design space while preserving patch connectivity. Global geometric quantities relevant to vessel design, including displaced volume, wetted surface area and buoyancy centroid, are formulated as differentiable integral operators evaluated on the parametric domain. These quantities are computed through Gauss–Legendre quadrature combined with analytical B-spline derivatives for surface metric evaluation, allowing gradient propagation to the deformation parameters while limiting the computational overhead of automatic differentiation. The proposed framework operates directly on CAD representations without intermediate mesh generation. Numerical experiments on a modified KVLCC2 hull demonstrate the capability of the method to satisfy competing hydrostatic constraints while producing smooth CAD-compatible geometries and showing stable convergence across multiple random initializations.",
+   "authors": [
+    "Federico Tamburlin",
+    "Giovanni Canali",
+    "Giuseppe Alessio D’Inverno",
+    "Nicola Demo",
+    "Andrea Mola",
+    "Gianluigi Rozza"
+   ],
+   "published": "2026-10-19",
+   "url": "https://doi.org/10.1016/j.cma.2026.119500",
+   "pdf": "https://doi.org/10.1016/j.cma.2026.119500",
+   "venue": "Computer Methods in Applied Mechanics and Engineering",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "doi:10.1038/s44172-026-00808-z",
+   "title": "Intelligent generative design framework for semantic driven mechanical design",
+   "abstract": "Mechanical product design integrates functional reasoning, geometric modelling, assembly planning, and engineering validation, yet remains highly dependent on human expertise. Existing large language models lack the spatial reasoning and physical constraint awareness required for engineering-grade design, whereas task-specific neural networks perform well in localised geometric recognition but are restricted to narrowly defined and repetitive tasks. Here we show an Intelligent Generative Design framework that enables autonomous mechanical design from natural-language requirements through biologically inspired coordination of task-specific agents. Integrating multimodal engineering knowledge, the framework decomposes design tasks, performs engineering analysis, generates dimensionally accurate three-dimensional models, infers assembly constraints, and validates kinematic behaviour. Across diverse mechanical systems, the framework produces mechanically consistent designs and completes multi-component tasks beyond standalone large language models. Intelligent Generative Design establishes a framework for practical AI-assisted mechanical product development, with implications spanning intelligent manufacturing, rapid prototyping, and design space exploration within diverse industrial domains.",
+   "authors": [
+    "Yan Shi",
+    "Fangwei Ning",
+    "Jiaxing Lu",
+    "Yishu Cai",
+    "Duc Truong Pham",
+    "Xinze Li",
+    "Xu Xu",
+    "Liman Yang",
+    "Zhibo Sun",
+    "Shaofeng Xu",
+    "Lei Li",
+    "Yanxia Niu",
+    "Xiaomeng Tong",
+    "Jiarui Shang",
+    "Yangyong Wu",
+    "Luhao Wang",
+    "Yushan Ma",
+    "Maolin Cai",
+    "Shaohua Yang",
+    "Yixuan Wang"
+   ],
+   "published": "2026-10-19",
+   "url": "https://doi.org/10.1038/s44172-026-00808-z",
+   "pdf": "https://www.nature.com/articles/s44172-026-00808-z_reference.pdf",
+   "venue": "Communications Engineering",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "doi:10.60078/3060-4842-2026-vol3-iss5-pp432-454",
+   "title": "COMPUTER AND ENGINEERING GRAPHICS IN TRANSITION THROUGH A BIBLIOMETRIC AND THEMATIC REVIEW OF DISTANCE EDUCATION RESEARCH",
+   "abstract": "Distance learning is increasingly relevant in technical education, particularly in engineering and computer graphics. The integration of digital technologies enables the development of students’ spatial visualization and creative design skills essential for modern engineering practice. This review examines how distance education has transformed teaching and learning in these fields by analyzing global studies from 2014 to 2025. Although online delivery presents challenges in visualization and interactivity, advances such as computer-aided design (CAD), simulation-based environments, and virtual laboratories are helping to bridge these gaps. The review identifies diverse program types, ranging from foundational design graphics to advanced applications in artificial intelligence, data science, and augmented reality. Despite significant progress, limited empirical evidence exists on learning outcomes and engagement. Through bibliometric analysis, this study maps thematic trends and collaboration patterns, offering evidence-based insights to enhance the quality and accessibility of engineering graphics education in the digital era",
+   "authors": [
+    "Nagima Jiyenbayeva"
+   ],
+   "published": "2026-10-19",
+   "url": "https://doi.org/10.60078/3060-4842-2026-vol3-iss5-pp432-454",
+   "pdf": "https://sci-p.uz/index.php/aept/article/download/4776/4515",
+   "venue": "Ilgʻor iqtisodiyot va pedagogik texnologiyalar.",
+   "source": "OpenAlex",
+   "tags": [],
+   "score": 0,
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "doi:10.36922/msam026290070",
+   "title": "Foundation models in reverse engineering, CAD reconstruction and additive manufacturing: A systematic review",
+   "abstract": "Reverse engineering is undergoing a profound transformation driven by the emergence of foundation models. These models, together with their applications, are progressively extending the limits of artificial intelligence (AI) from geometrical reconstruction to a more sophisticated level engineering reasoning. In contrast to traditional methods, which usually use sequences of algorithms for specific 3D retrieval and reconstruction tasks, current foundation models train geometrical representations that are able to support semantic reasoning, computer-aided design (CAD) reconstruction, and intelligent manufacturing in a unified way. This work provides an overview of foundation models within the context of reverse engineering and their combination with CAD reconstruction and additive manufacturing. Starting from a systematic bibliometric analysis of the recent literature, the present review is mainly focused on the development of representation learning and reviews the key geometric forms that are being used by the current foundation models. The paper also explores the engineering abilities facilitated by such models in the reverse engineering process. Furthermore, current challenges, research obstacles, and future directions are critically explored, emphasizing the recent transition toward intelligent engineering systems. The analysis shows that foundation models are gradually making reverse engineering move from being an assortment of discrete computational activities to becoming an engineering process workflow that is made possible by means of geometry representations and multimodal reasoning as well as engineering AI. Finally, considerations on the importance of developing engineering conceptual frameworks to interpret the emerging role of foundation models in future intelligent engineering systems are drafted.",
+   "authors": [
+    "Rocco Furferi"
+   ],
+   "published": "2026-10-16",
+   "url": "https://doi.org/10.36922/msam026290070",
+   "pdf": "https://article.accscience.com/journal/MSAM/online_first/msam026290070/article_msam0262900701_430d08.pdf",
+   "venue": "Materials Science in Additive Manufacturing",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-22"
+  },
   {
    "id": "arxiv:2610.26904",
    "title": "Pareto-Optimal RTL Code Generation via Multi-Objective Reinforcement Learning with Large Language Models",
