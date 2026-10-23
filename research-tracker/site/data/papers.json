@@ -1,8 +1,30 @@
 {
- "updated": "2026-10-22T04:48:31+00:00",
- "new_today": 6,
- "errors": [],
+ "updated": "2026-10-23T04:51:07+00:00",
+ "new_today": 1,
+ "errors": [
+  "arXiv: HTTP Error 503: Service Unavailable"
+ ],
  "papers": [
+  {
+   "id": "doi:10.1038/s43246-026-01333-4",
+   "title": "From stretchable materials and functional fibers to intelligent textile sensing systems",
+   "abstract": "Abstract Wearable sensors that offer significant adaptability and comfort demonstrate substantial potential for discrete, seamless integration into garments, enabling diverse applications for remote monitoring. The transformation of rigid electronic devices into flexible and stretchable sensors, achieved by integrating conductive materials with compliant dielectrics, has enabled the development of robust sensors. However, several factors must be addressed to enable widespread adoption, including garment integration, wireless communication, data pipelines, signal processing, multimodal fusion, privacy and security concerns. Addressing these challenges is essential for establishing the technological and social infrastructure necessary for the widespread adoption of wearable technologies. This review highlights innovations in material and mechanical design strategies that have shaped the current landscape of wearables, and points out some remaining challenges.",
+   "authors": [
+    "Maria Papaefstathiou",
+    "Mohamed Elgendi",
+    "Carlo Menon"
+   ],
+   "published": "2026-10-21",
+   "url": "https://doi.org/10.1038/s43246-026-01333-4",
+   "pdf": "https://www.nature.com/articles/s43246-026-01333-4.pdf",
+   "venue": "Communications Materials",
+   "source": "OpenAlex",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-23"
+  },
   {
    "id": "arxiv:2610.29518",
    "title": "Mitigating Query Shortcuts in Chain-of-Thought with Context-Aware Decoding",
@@ -132,7 +154,7 @@
    ],
    "published": "2026-10-16",
    "url": "https://doi.org/10.36922/msam026290070",
-   "pdf": "https://article.accscience.com/journal/MSAM/online_first/msam026290070/article_msam0262900701_430d08.pdf",
+   "pdf": "https://doi.org/10.36922/msam026290070",
    "venue": "Materials Science in Additive Manufacturing",
    "source": "OpenAlex",
    "tags": [
