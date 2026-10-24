@@ -1,10 +1,74 @@
 {
- "updated": "2026-10-23T04:51:07+00:00",
- "new_today": 1,
- "errors": [
-  "arXiv: HTTP Error 503: Service Unavailable"
- ],
+ "updated": "2026-10-24T04:38:12+00:00",
+ "new_today": 3,
+ "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.31051",
+   "title": "Tilt-Rotor Quadcopter with Learned Residual Control and Mode-Dependent State Estimation",
+   "abstract": "Tilt-rotor quadcopters redirect thrust for translation without banking, but complicate modeling, state estimation, and disturbance rejection. This paper presents a simulation-based flight stack for a \\SI{2.00}{\\kilo\\gram} tilt-rotor quadcopter. The system uses a six-degree-of-freedom nonlinear model with first-order motor dynamics and two-axis rotor tilt, parameterized using a 3D CAD model. A cascaded PD controller commands forward and lateral tilt angles. A 14-state EKF fuses sensor data across hover, early-transition, and transition modes using a hysteretic (Schmitt-trigger) classifier to prevent covariance discontinuities. Because the proportional position loop leaves a steady-state offset under constant wind, a small bounded neural residual is added on top of the unmodified PD controller. It is trained by behavioral cloning from a teacher with privileged access to the true wind, while the deployed network never observes wind. In simulation, the EKF achieves a post-settling position root mean square error (RMSE) of \\SI{0.226}{\\metre} (horizontal) and \\SI{0.03}{\\metre} (vertical) and an attitude RMSE below \\SI{0.8}{\\degree}, and it estimates a wind velocity of $(\\num{2.0}, \\num{-1.2})\\,\\unit{\\metre\\per\\second}$ to within \\SI{0.15}{\\metre\\per\\second} per axis. The residual reduces steady-state station-keeping error under wind by approximately \\SI{49}{\\percent}, from \\SI{0.117}{\\metre} to \\SI{0.060}{\\metre} at \\SI{1.5}{\\metre\\per\\second} and from \\SI{0.319}{\\metre} to \\SI{0.162}{\\metre} at an out-of-distribution \\SI{3.9}{\\metre\\per\\second}. The framework provides a basis for hardware-in-the-loop and flight-test studies.",
+   "authors": [
+    "Ninad Joshi",
+    "Prabhat Kumar"
+   ],
+   "published": "2026-10-22",
+   "url": "https://arxiv.org/abs/2610.31051",
+   "pdf": "https://arxiv.org/pdf/2610.31051v1",
+   "venue": "arXiv cs.RO",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "arxiv:2610.30974",
+   "title": "GraphCAD: Geometry-Aware Diffusion on Edge-Adjacency Graphs for CAD Generation",
+   "abstract": "Generative modeling for Computer-Aided Design (CAD) remains fundamentally challenged by the need to capture the intricate interplay between discrete topological connectivity and precise spatial geometry inherent in Boundary Representations (B-reps). Existing generative approaches largely formulate CAD construction as a sequence modeling problem, but consequently lack an explicit topological inductive bias. In this work, we present GraphCAD, a geometry-aware generative framework that centers modeling on the Edge-Adjacency Graph (EAG), a novel graph-based CAD representation tailored for generative tasks. GraphCAD adopts a hybrid graph diffusion formulation to jointly model the discrete and continuous components of EAG and introduces a geometry-aware denoising mechanism that renders node attributes into spatial point sets. These point sets are encoded by an SE(3)-equivariant backbone and fused into the node representations, thereby grounding the generative process in physical geometry. To support this study, we construct EAGBench, a large-scale dataset of engineering CAD models. Extensive experiments show that GraphCAD can generate complex CAD models with more than 50 faces and achieves state-of-the-art performance in geometric fidelity and distributional alignment compared with sequence-based baselines.",
+   "authors": [
+    "Wenhao Zheng",
+    "Xianggen Liu",
+    "Li Yue",
+    "Jiancheng Shi",
+    "Jiancheng Lv"
+   ],
+   "published": "2026-10-22",
+   "url": "https://arxiv.org/abs/2610.30974",
+   "pdf": "https://arxiv.org/pdf/2610.30974v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "doi:10.1016/j.sysarc.2026.104049",
+   "title": "An empirical benchmark of supervised fine-tuned models for natural-language-to-VHDL generation of embedded system components",
+   "abstract": "Natural-language-to-VHDL generation is a critical yet underexplored task for embedded-systems design automation, where strict typing, concurrency, and synthesizability constraints make general-purpose code-generation results difficult to transfer. We present an empirical benchmark study contrasting locally fine-tuned Small Language Models (SLMs) with large-scale, non-fine-tuned baselines for component-level NL-to-VHDL generation under realistic, privacy-constrained deployment settings. Our contributions are resource- and evaluation-oriented: (i) an original, expert-curated NL–VHDL benchmark spanning a 31-class architectural taxonomy, provided under restricted access due to industrial confidentiality; (ii) a controlled, fixed-protocol comparison of locally trainable SLM backbones (encoder–decoder and decoder-only), together with eight non-fine-tuned baselines evaluated zero-shot, two of which (GPT-5.5, Claude Sonnet 5) were also evaluated under five-shot prompting; (iii) a metric-reliability analysis correlating seven automatic metrics with expert semantic-alignment judgment; and (iv) a synthesizability grounding using Xilinx Vivado RTL analysis and synthesis, with a qualitative failure taxonomy. Under the tested protocol and the model versions available at collection time, the domain-adapted CodeT5+ 770M is the best-performing model among the evaluated baselines, including recent state-of-the-art, non-fine-tuned models. A cross-benchmark evaluation on 152 VHDL-adapted VerilogEval tasks inverts this ranking under distribution shift, indicating that in-domain generation quality and out-of-distribution robustness are distinct properties. A central, actionable negative finding is the syntax-to-synthesizability gap: only 12% of complex high-level components synthesize autonomously, and we exhibit syntactically valid, synthesizable designs that nonetheless violate the architectural intent.",
+   "authors": [
+    "Pietro Liguori",
+    "Alessandra De Benedictis",
+    "Gaetano Prisco",
+    "Domenico Cotroneo"
+   ],
+   "published": "2026-10-01",
+   "url": "https://doi.org/10.1016/j.sysarc.2026.104049",
+   "pdf": "https://www.sciencedirect.com/science/article/pii/S138376212600367X/pdf",
+   "venue": "Journal of Systems Architecture",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-24"
+  },
   {
    "id": "doi:10.1038/s43246-026-01333-4",
    "title": "From stretchable materials and functional fibers to intelligent textile sensing systems",
