@@ -1,8 +1,72 @@
 {
- "updated": "2026-10-24T04:38:12+00:00",
+ "updated": "2026-10-25T04:42:56+00:00",
  "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1117/12.3133467",
+   "title": "Dual-graph computable knowledge engineering for CAD-to-CNC macro synthesis",
+   "abstract": "Large language models (LLMs) can synthesize G-code, but autonomous CAD-to-CNC macro-generation must preserve geometry, process constraints, variable roles, equations, loop bounds, coordinate mappings, and controller syntax. This paper presents a dual-graph computable knowledge engineering method in which typed knowledge objects are selected by a semantic relation graph and converted by a computational dependency graph into acyclic variable-expression-loop dependencies. A seven-layer Macro-Structured Parametric CNC Code (Macro-SPCC) schema and Macro-Program Intermediate Representation (MPIR) organize the evidence, while deterministic modules perform evaluation, geometric checking, and FANUC Macro B compilation. Across 12 tire-mold lettering-insert tasks from six DXF cases and two toolpath configurations, the method achieved 91.7% accuracy, 50.0 percentage points above Text-RAG, and a 100.0% compilation pass rate. VERICUT confirmed continuity, endpoint reachability, and safe retraction, demonstrating a traceable, computationally closed, and executable synthesis process.",
+   "authors": [
+    "Haining Liu",
+    "Changchao Jiao"
+   ],
+   "published": "2026-10-23",
+   "url": "https://doi.org/10.1117/12.3133467",
+   "pdf": null,
+   "venue": "",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-10-25"
+  },
+  {
+   "id": "doi:10.5281/zenodo.23600947",
+   "title": "EDA-Agent: A Multi-Agent AI System for RTL Verification, Circuit Debugging, and Semiconductor Design Automation -TCAD-2026-2322 (IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems)",
+   "abstract": "Hardware verification and debugging traditionally consume over 70% of digital Integrated Circuit (IC) design cycles. Engineers spend thousands of hours manually parsing static timing reports, inspecting Value Change Dump (VCD) waveform traces, and writing SystemVerilog Assertions (SVA). EDA-Agent is an open-source, multi-agent AI platform designed to automate Register-Transfer Level (RTL) code analysis, functional testbench generation, waveform failure debugging, synthesis area estimation, and timing slack optimization. To overcome the hallucination risks of pure neural generation, EDA-Agent employs a hierarchical coordinator-worker architecture that combines Large Language Models (LLMs) with strict deterministic boundaries: AST Static Analysis: A custom regex/AST parser deterministically evaluates design violations, such as latch inference conditions and blocking assignment race hazards. Trace-Based VCD Waveform Debugging: The system parses standard IEEE 1364 VCD files to build a temporal transition matrix, allowing the agent to back-track state transitions and map assertion failures directly to faulty source code lines. Retrieval-Augmented Generation (RAG): The system grounds its reasoning in an indexed database of IEEE 1800-2017 SystemVerilog standards, Yosys manuals, and OpenSTA documentation. Empirical evaluations of EDA-Agent demonstrate 100% unit test accuracy on core parsing components, 94.2% waveform-based bug localization accuracy, and a 37.5x acceleration in SystemVerilog testbench generation compared to manual human workflows.",
+   "authors": [
+    "Ritwik Raj"
+   ],
+   "published": "2026-10-23",
+   "url": "https://doi.org/10.5281/zenodo.23600947",
+   "pdf": "https://doi.org/10.5281/zenodo.23600947",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-25"
+  },
+  {
+   "id": "doi:10.1021/acsaelm.6c01066",
+   "title": "Machine Learning Computer-Aided Design of Electronic Devices and Circuits",
+   "abstract": "Abstract Driven by the miniaturization of single components, which has reached few nanometers, chips can nowadays accommodate hundreds of billions of transistors. As a result, modern nanoelectronics devices and systems are becoming extremely complex. To remain truly effective, computer-aided design (CAD) tools must evolve in parallel with these advancements, keeping pace with the increasing demands of scale and functionality. In recent years, machine learning (ML) has seen an incredible development in several areas. In nanoelectronics, ML is already offering promising technological solutions that improve performance and provide predictions across the entire electronic design stack. From material properties to quantum transport and circuit behavior, ML techniques are making simulation workflows much more efficient and flexible, leading to a new paradigm of CAD: Machine Learning Computer-Aided Design. This review examines the latest developments in computer simulations for assessing the performance of electronic systems and the types of models used across the different levels of abstraction. We also discuss the challenges that still need to be addressed, especially the need for physics-based ML models, and explore future directions toward generative machine learning frameworks tailored specifically for electronic system design.",
+   "authors": [
+    "Paolo Lugli",
+    "Damiano Marian",
+    "Alejandro Toral-López",
+    "Francesco Pieri",
+    "Gianluca Fiori"
+   ],
+   "published": "2026-10-22",
+   "url": "https://doi.org/10.1021/acsaelm.6c01066",
+   "pdf": "https://pubs.acs.org/aaembp/article-pdf/doi/10.1021/acsaelm.6c01066/68948242/el-2026-01066t.pdf",
+   "venue": "ACS Applied Electronic Materials",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-25"
+  },
   {
    "id": "arxiv:2610.31051",
    "title": "Tilt-Rotor Quadcopter with Learned Residual Control and Mode-Dependent State Estimation",
