@@ -1,8 +1,72 @@
 {
- "updated": "2026-10-26T04:48:47+00:00",
- "new_today": 2,
+ "updated": "2026-10-27T05:07:05+00:00",
+ "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.34751",
+   "title": "Adaptive Probe Design for Auditing AI Agents",
+   "abstract": "How can we audit an AI agent before it is safe and practical to deploy? A central task is to estimate its performance under the intended deployment policy (the target policy). However, historical observations may provide insufficient coverage of relevant states and actions, limiting evaluation reliability. We propose CAD (Flow-Constrained Audit Design), a framework that combines historical logs with a limited budget of targeted audit trials (probes). The key idea is to design probes that minimize the mismatch between the combined state-action visitation distribution (occupancy) of the logs and probes and that of the target policy. We formulate this design as a constrained convex optimization problem, directing probes toward regions important to the target policy but underrepresented in historical logs. We develop an adaptive algorithm that iteratively estimates environment dynamics and occupancies to update the probe policy. We link occupancy mismatch to bounds on mean squared error and asymptotic variance, and establish error bounds for CAD's adaptive estimator in finite and continuous state spaces. Experiments in Gridworld, LunarLander, and autonomous driving using real-world logs from the Waymo Open Motion Dataset show improved estimation accuracy over alternative data collection and probe designs.",
+   "authors": [
+    "Zhenghan Li",
+    "Xuan Bi",
+    "Jie Ding"
+   ],
+   "published": "2026-10-26",
+   "url": "https://arxiv.org/abs/2610.34751",
+   "pdf": "https://arxiv.org/pdf/2610.34751v1",
+   "venue": "arXiv stat.ME",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.35566",
+   "title": "Copying As Defense: Protecting Images from Editing By Eliciting Model Copying",
+   "abstract": "Image editors built on diffusion transformers (DiTs), such as Flux Kontext, make it possible to turn a single photograph into a convincing manipulated image, including harmful and non-consensual edits. Proactive defenses aim to prevent such manipulations by adding an imperceptible perturbation before an image is shared. Existing defenses for DiT-based in-context editors make the output attend less to the protected reference image. But this leaves the model free to follow the edit instruction using the text and its own generated tokens, often producing a new, weakly grounded image rather than preventing the edit. We find that the opposite strategy is more effective: instead of leading the model to ignore the reference, we encourage it to copy it. Through controlled attention interventions, we show that concentrating target-token attention on the reference image in only a few early blocks is sufficient to collapse the editing behavior, causing the model to reproduce its input, often as a lossy copy, rather than execute the requested transformation. Based on this insight, we introduce Copying-as-Defense (CaD), which maximizes per-token target-to-reference attention mass in early transformer blocks. Since attention rows are normalized, increasing reference attention suppresses the attention allocated to the text and generated canvas. Restricting the objective to early blocks also lets us truncate the backpropagation path, keeping optimization cheap. Across editors and benchmarks, CaD reduces average edit success from 81.4% on unprotected images to 24.0%, a 70.6% relative reduction, and by a further 44.3% relative to DeContext, the strongest baseline (43.0%). CaD is also roughly 1.8-2.0x faster per optimization step than comparable methods.",
+   "authors": [
+    "Salma Abdel Magid",
+    "Sanghyuk Chun",
+    "Eric Slyman",
+    "Kushal Kafle",
+    "Olga Russakovsky"
+   ],
+   "published": "2026-10-26",
+   "url": "https://arxiv.org/abs/2610.35566",
+   "pdf": "https://arxiv.org/pdf/2610.35566v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-27"
+  },
+  {
+   "id": "arxiv:2610.33133",
+   "title": "Physics Informed Neural Networks for Solving the Drift-Diffusion Equations",
+   "abstract": "The drift-diffusion equations are the fundamental building block for the modeling, design, and optimization of modern semiconductor devices. Solutions of the drift-diffusion equations rarely give way to analytical forms, and exhibit strong nonlinearity, with the solutions ranging over several orders of magnitude. These attributes have led to research into numerical solvers, and while many commercial Technology Computer Aided Design (TCAD) packages now exist, they may require long simulation times, exhibit sensitivity to initial guesses, and rely on mesh generation. Further, these solvers are not well suited for inverse problems where the design parameters of a device are retrieved from its desired functional characteristics. To address all these challenges, this work demonstrates the usage of Physics Informed Neural Networks (PINNs) for the solution of the drift-diffusion equations with errors comparable to traditional simulation software using advanced training techniques to solve problems beyond the well-behaved equilibrium regime. For this study, we specifically choose an abrupt PN-junction in both one and two dimensions that features extreme gradients of the carrier concentrations at the Ohmic contacts and an abrupt discontinuity in the doping profile. Using the proposed PINN architecture, we are able to retrieve accurate results for all observables under all bias conditions. Additionally, we apply the PINN solver towards the inverse problem of retrieving doping profiles directly from desired electric field distributions or electrostatic potentials under non-zero applied biases. Our work establishes a powerful PINNs-based approach for semiconductor device modeling with the ability to solve inverse problems under non-equilibrium conditions for microelectronics research and discovery.",
+   "authors": [
+    "Luke Ragan",
+    "Matteo G. C. Alasio",
+    "Enrico Bellotti",
+    "Luca Dal Negro"
+   ],
+   "published": "2026-10-23",
+   "url": "https://arxiv.org/abs/2610.33133",
+   "pdf": "https://arxiv.org/pdf/2610.33133v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-27"
+  },
   {
    "id": "arxiv:2610.32597",
    "title": "Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors",
