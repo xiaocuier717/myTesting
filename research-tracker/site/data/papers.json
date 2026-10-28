@@ -1,8 +1,29 @@
 {
- "updated": "2026-10-27T05:07:05+00:00",
- "new_today": 3,
+ "updated": "2026-10-28T05:43:31+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.3389/fbioe.2026.2011948",
+   "title": "Biomechanics-guided design of polymeric membranes and thin films for smart medical devices",
+   "abstract": "Polymeric membranes and thin films are integral components of a wide range of medical devices, where their mechanical behaviour directly influences device function, durability, and interaction with surrounding tissues. Their design is challenging because physiological environments impose complex combinations of cyclic loading, deformation, fluid pressure, shear, viscoelasticity, and interfacial stresses. In this narrative review, we discuss a biomechanics-guided approach to designing polymeric membranes and thin films that link physiological mechanical requirements to polymer chemistry, material architecture, fabrication processes, interfacial behaviour, and device-level performance. We first examine the mechanical characteristics of representative biological tissues and discuss how these properties can be translated into material design requirements. We then review major polymer classes and manufacturing strategies, with particular emphasis on how molecular structure, crosslinking, fibre alignment, porosity, and multilayer architecture influence mechanical behaviour. The review further considers mechanics-transport coupling, stimuli-responsive membranes, fatigue and degradation under physiological conditions, and application-specific challenges in cardiovascular, neural, dialysis, and wound-care devices. Finally, emerging approaches based on machine learning, 4D printing, organ-on-chip systems, and biomimetic ultrathin membranes are discussed. We highlight that effective biomechanics-guided design requires consideration of not only elastic stiffness, but also anisotropy, viscoelasticity, fatigue, interfacial mechanics, degradation, and physiological conditioning. This framework provides a basis for integrating material and mechanical design considerations into the development of multifunctional polymeric membranes for medical applications.",
+   "authors": [
+    "Snehleen Kaur",
+    "Kartikeya Dubey",
+    "Gurpreet Singh",
+    "Vikramsingh Thakur"
+   ],
+   "published": "2026-10-26",
+   "url": "https://doi.org/10.3389/fbioe.2026.2011948",
+   "pdf": "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2026.2011948/pdf",
+   "venue": "Frontiers in Bioengineering and Biotechnology",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-28"
+  },
   {
    "id": "arxiv:2610.34751",
    "title": "Adaptive Probe Design for Auditing AI Agents",
@@ -125,7 +146,7 @@
    "published": "2026-10-23",
    "url": "https://doi.org/10.1117/12.3133467",
    "pdf": null,
-   "venue": "",
+   "venue": "International Conference on Advanced Manufacturing Technology and Manufacturing Systems (ICAMTMS)",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
