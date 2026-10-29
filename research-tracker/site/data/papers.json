@@ -1,8 +1,28 @@
 {
- "updated": "2026-10-28T05:43:31+00:00",
+ "updated": "2026-10-29T05:49:58+00:00",
  "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.55041/ijcope.v2i7.283",
+   "title": "EDA-AGENT: A MULTI-AGENT AI SYSTEM FOR RTL VERIFICATION, CIRCUIT DEBUGGING, AND SEMICONDUCTOR DESIGN AUTOMATION",
+   "abstract": "Hardware verification and debugging consume over 70% of digital Integrated Circuit (IC) design cycles. Hardware engineers spend thousands of hours manually parsing static timing reports, inspecting Value Change Dump (VCD) waveform traces in GTKWave, and writing SystemVerilog assertions (SVA). In this paper, we introduce EDA-Agent — an open-source, multi-agent artificial intelligence platform designed to automate Register-Transfer Level (RTL) code analysis, functional testbench generation, waveform failure debugging, synthesis area estimation, and timing slack optimization. EDA-Agent combines Large Language Models (LLMs) with deterministically bounded Abstract Syntax Tree (AST) static analysis, VCD waveform time-tick tracing, and Retrieval-Augmented Generation (RAG) over IEEE specifications. Our empirical evaluation demonstrates 100% unit test accuracy, 94.2% bug localization accuracy on VCD signal traces, a 37.5x acceleration in testbench generation compared to human engineers, and 89.5% functional coverage reachability.",
+   "authors": [
+    "Ritwik Ritwik"
+   ],
+   "published": "2026-10-27",
+   "url": "https://doi.org/10.55041/ijcope.v2i7.283",
+   "pdf": "https://ijcope.org/wp-content/uploads/2026/08/EDA-Agent-A-Multi-Agent-AI-System-for-RTL-Verification-Circuit-Debugging-and-Semiconductor-Design-Automation.pdf",
+   "venue": "International Journal of Creative and Open Research in Engineering and Management",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-29"
+  },
   {
    "id": "doi:10.3389/fbioe.2026.2011948",
    "title": "Biomechanics-guided design of polymeric membranes and thin films for smart medical devices",
