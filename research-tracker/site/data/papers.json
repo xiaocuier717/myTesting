@@ -1,8 +1,100 @@
 {
- "updated": "2026-10-29T05:49:58+00:00",
- "new_today": 1,
+ "updated": "2026-10-30T05:50:38+00:00",
+ "new_today": 4,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2610.39306",
+   "title": "CAD-WAM: Anticipating Geometry for Text-to-CAD Generation",
+   "abstract": "Generating editable computer-aided design (CAD) models from text requires selecting operations that produce the intended changes to the geometry constructed so far. An incorrect operation can compromise subsequent steps, making reliable multi-step generation challenging. Existing methods based on large language models (LLMs) primarily learn to predict commands, without explicit supervision of the geometric states those commands should produce. Inspired by world-action models, we introduce CAD-WAM, which couples geometry-conditioned action generation with next-state prediction. We define complete modeling operations as actions in a CAD domain-specific language (DSL) and encode surface point clouds of intermediate solids into compact latent states using a pretrained variational autoencoder. An LLM backbone generates the next action from the target description and current geometric state, while an auxiliary head on the same backbone predicts the next state to provide geometric supervision during training. We construct step-wise training trajectories from parametric CAD models in the DeepCAD dataset, pairing each trajectory with an expert-level textual description. At inference, each generated action is executed by a CAD kernel, and the resulting solid is re-encoded to inform the next decision. On the DeepCAD test set, CAD-WAM outperforms the task-specific baselines in geometric accuracy and output validity, with larger gains on models requiring more operations, and produces more accurate geometry than general-purpose LLMs prompted with the same DSL. Ablations further show that next-state supervision reduces mean Chamfer distance by 13.2\\% relative to an otherwise identical model trained only to predict actions. Code is available at https://github.com/Lzy-1037/CAD-WAM.",
+   "authors": [
+    "Zhengyang Li",
+    "Weijie Zheng",
+    "Yuxin Cui",
+    "Sijie Wang",
+    "Wenjie Feng",
+    "Qiyu Kang"
+   ],
+   "published": "2026-10-29",
+   "url": "https://arxiv.org/abs/2610.39306",
+   "pdf": "https://arxiv.org/pdf/2610.39306v1",
+   "venue": "arXiv cs.CV, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "arxiv:2610.38489",
+   "title": "GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing",
+   "abstract": "Register-Transfer Level (RTL) simulators are fundamental to modern IC design workflows, yet like any complex software, they frequently contain critical bugs that compromise simulation accuracy. To systematically stress-test these tools, we introduce GI-RTL-Fuzz, a grammar-informed fuzzing framework that leverages Large Language Models (LLMs) to generate high-quality RTL test cases. Our key innovation is guiding the LLM's generation process using Backus-Naur Form (BNF) grammar coverage information, enabling the exploration of complex and rarely-tested language features. By performing differential testing against different RTL simulators, our framework uncovered a significant number of previously unknown inconsistencies in both the linting process and simulation results of major Verilog simulators.",
+   "authors": [
+    "Ziyue Zheng",
+    "Zhi Qu",
+    "Yangdi Lyu"
+   ],
+   "published": "2026-10-28",
+   "url": "https://arxiv.org/abs/2610.38489",
+   "pdf": "https://arxiv.org/pdf/2610.38489v1",
+   "venue": "arXiv cs.AR, cs.CR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "arxiv:2610.38201",
+   "title": "From Natural Language to Real Schematics: An Automated Workflow for Power Electronics Schematic Synthesis",
+   "abstract": "Designing power electronics converters traditionally requires intensive human expertise across topology sizing, commercial component selection, circuit simulation verification, and schematic drafting. While Large Language Models (LLMs) show promise in electronic design automation (EDA), applying standalone LLMs directly to board-level power electronics schematic synthesis suffers from severe engineering hallucinations, including inaccurate analytical sizing, fabricated or mismatched component part numbers, violated voltage derating margins, and broken topological connectivity. In this paper, we propose a Bounded Dual-Loop Automated Schematic Synthesis Framework that translates natural language specifications into verified, editable KiCad schematics and manufacturing deliverables. Our workflow integrates six stages across three functional columns: (1) requirement parsing and knowledge-driven power stage synthesis covering non-isolated (Buck, Boost) and isolated/resonant (Flyback, DAB, half-bridge LLC) topologies; (2) contract- and evidence-coordinated component selection grounded in distributor APIs and OEM datasheets, coupled with closed-loop ngspice transient verification and stress feedback; and (3) modular control hardware integration and multi-format deliverable generation featuring native KiCad netlist round-trip verification. End-to-end case studies on a 24-36V to 12V,2A Buck converter (29 positions, 83 verified terminals) and an isolated 48V to 24V, 0.5A, Dual-Active Bridge (DAB) converter (87 positions, 341 verified terminals), alongside comparative evaluations against a Vanilla LLM baseline, demonstrate that our framework improves component verification coverage from 22.2 to 98.6, nominal value consistency from 0 to 97.7, and SPICE simulation pass rates from 0 to 100.",
+   "authors": [
+    "Bowen Su",
+    "Huan Chen",
+    "Jiahua Ying",
+    "Ran Ou",
+    "Weilong Chen",
+    "Li Xue",
+    "Kai Sun"
+   ],
+   "published": "2026-10-28",
+   "url": "https://arxiv.org/abs/2610.38201",
+   "pdf": "https://arxiv.org/pdf/2610.38201v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.31913",
+   "title": "Decode Late, Multiply Once: Rethinking the Dot Product for Quantized Weights",
+   "abstract": "Large neural networks are increasingly deployed with 1-4 bit weights and 16- or 32-bit activations, yet their dot products still use one multiplier per element. We show that a length-n dot product with k-bit weight codes can be computed with n+2^k additions and at most 2^k decodes and 2^k multiplications. Each weight code is used directly as an address offset that selects one of 2^k accumulators; each activation is added into the selected accumulator; and the accumulated sums are decoded and multiplied only once, at the end, in a fused decode-and-multiply step. The decoded weight vector is never formed. The refactoring is exact for integer arithmetic, works with integer or floating-point operands and with arbitrary, including nonlinear, decoders, and extends to group-wise scales and to matrix and tensor products. The multiplier count falls by n/2^k, while total arithmetic energy improves by a smaller, bounded factor that we quantify with a cost model. We describe a scatter-accumulate processing element (SA-PE) that replaces the MAC unit in a weight-stationary systolic array, with a load/stream/reduce/drain schedule in which a small, time-shareable multiplier runs only 2^k times per tile. Because decoded weights are not stored, local weight memory shrinks by up to w_d/k for w_d-bit decoded weights. An RTL implementation synthesized for FPGA and compared with a matched MAC array shows that an unshared SA-PE is larger than a MAC PE, and that the saving appears when the reduction multiplier is shared across PEs. Software models confirm exact integer equivalence and floating-point error no worse than the conventional pipeline. We do not claim the underlying identity is new, and we discuss related work on weight sharing and lookup-based kernels.",
+   "authors": [
+    "Jonathan C. Tapson"
+   ],
+   "published": "2026-10-22",
+   "url": "https://doi.org/10.48550/arxiv.2610.31913",
+   "pdf": "https://arxiv.org/pdf/2610.31913",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片"
+   ],
+   "score": 1,
+   "first_seen": "2026-10-30"
+  },
   {
    "id": "doi:10.55041/ijcope.v2i7.283",
    "title": "EDA-AGENT: A MULTI-AGENT AI SYSTEM FOR RTL VERIFICATION, CIRCUIT DEBUGGING, AND SEMICONDUCTOR DESIGN AUTOMATION",
