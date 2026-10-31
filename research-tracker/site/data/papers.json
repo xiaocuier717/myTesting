@@ -1,8 +1,74 @@
 {
- "updated": "2026-10-30T05:50:38+00:00",
- "new_today": 4,
+ "updated": "2026-10-31T05:42:50+00:00",
+ "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1145/3856825",
+   "title": "HaVen-Agent: Enhancing Hallucination-Mitigated Verilog Code Generation Aligned with HDL Engineers through Code Repair and Multi-Agent Orchestration",
+   "abstract": "Recently, the use of large language models (LLMs) for Verilog code generation has attracted great research interest to enable hardware design automation. However, previous works have shown a gap between the ability of LLMs and the practical demands of hardware description language (HDL) engineering. This gap includes differences in how engineers phrase questions and hallucinations in the generated code. To address these challenges, we introduce HaVen , a novel LLM framework designed to mitigate hallucinations and align Verilog code generation with the practices of HDL engineers. HaVen tackles hallucination issues by proposing a comprehensive taxonomy and employing a chain-of-thought (CoT) mechanism to translate symbolic modalities ( e .g. truth tables, state diagrams, e tc.) into accurate natural language descriptions. Furthermore, HaVen bridges this gap by using a data augmentation strategy, synthesizing high-quality instruction-code pairs that match real HDL engineering practices. Building upon HaVen , we develop HaVen -R, a reasoning-augmented extension fine-tuned with a Rejection Sampling Fine-Tuning (RFT) Dataset and a Reasoning Dataset, enabling Chain-of-Thought (CoT) guided self-reflection to iteratively repair Verilog code. We further introduce HaVen -Agent, a multi-agent system that orchestrates a Planner Agent (GPT-4o), a Coder Agent ( HaVen -R), and a Verifier Agent for iterative code repair. Our experiments demonstrate that HaVen -Agent significantly improves the correctness of Verilog code generation, outperforming state-of-the-art methods on VerilogEval and RTLLM benchmarks. Additional evaluations include a 400-case multi-generator repair study, component and iteration ablations, CVDP, end-to-end cost and latency analysis, and protocol-aware comparisons with recent feedback, agentic, and reasoning-augmented methods. HaVen is publicly available at https://github.com/Intelligent-Computing-Research-Group/HaVen.",
+   "authors": [
+    "Yiyao Yang",
+    "Fu Teng",
+    "Pengju Liu",
+    "Mengnan Qi",
+    "Cheng Zou",
+    "Shuo Yang",
+    "Ruitong An",
+    "Chen Nie",
+    "Xuhong Zhang",
+    "Zhezhi He"
+   ],
+   "published": "2026-10-28",
+   "url": "https://doi.org/10.1145/3856825",
+   "pdf": "https://dl.acm.org/doi/pdf/10.1145/3856825?download=true",
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "doi:10.18861/ania.2026.16.2.4270",
+   "title": "Impact of Artificial Intelligence algorithms on architectural visualization. A Practical review",
+   "abstract": "This article investigates the creative potential and practical use of artificial intelligence in architectural visualization by testing three free platforms: Fabrie, Mnml AI and LookX AI Cloud, on a real project involving the design of a single-story house with a summer kitchen. The study aims to assess the extent to which these AI tools can support or enhance the development and refinement of architectural visualizations, both through the generation of new renders based on conceptual sketches and through the processing of existing visual data. The methodology involves the comparative analysis of the platforms’ outputs using four evaluation criteria: clarity of spatial perception, level of detailing, emotional expressiveness, and the format and quality of the final exported visual data. Based on this framework, the study identifies the respective strengths and limitations of each AI system, highlighting distinctive characteristics in render quality, user interface, and interpretive responsiveness to design prompts. The article also formulates practical guidelines for data preparation and prompt formulation, addressing technical constraints, model sensitivity, and the iterative nature of human-AI interaction. A key contribution of the study lies in its dual methodological approach: rendering experiments were conducted in two modes: generation from a blank sketch and enhancement of an existing render, thereby illuminating how AI tools can be integrated into different phases of the design workflow. The study also reflects on the broader implications of human-AI collaboration in architectural practice, focusing on how authorship, visual language, and creative decision-making are redefined in the context of automated design assistance. The scientific novelty of this research lies in its detailed, real-case-based evaluation of emerging AI visualization platforms in architectural work. Its practical significance is evident in the set of recommendations it provides to architects, designers, and educators exploring AI as a co-creative design partner.",
+   "authors": [
+    "Наталія Сергіївна Вергунова"
+   ],
+   "published": "2026-10-28",
+   "url": "https://doi.org/10.18861/ania.2026.16.2.4270",
+   "pdf": "https://revistas.ort.edu.uy/anales-de-investigacion-en-arquitectura/article/download/4270/4917",
+   "venue": "Anales de Investigación en Arquitectura",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.35579",
+   "title": "Infinity Machine: a self-improving AI agent for research",
+   "abstract": "We present the Infinity Machine, a self-improving AI agent that we use for research on problems whose answers aprogram or data can check. Each candidate solution is produced by a full tool-using agent that works for up to an hour in a fresh sandbox; proposers see only a public score, and a private split decides what counts. The harness itself(prompts, tools, skills, playbook, meta agent) is an editable genome, changed only through a kernel-enforced gate with held-out and cost checks. An autonomous mode goes from a plain-text goal to a verified report with no human step: an agent picks an open problem and writes its verifier, the kernel calibrates it, an adversarial agent audits it, and an agent that never sees the verifier re-checks the result. Across fourteen problems in six days, for about $180 of model usage, the system produced four results beyond the published state of the art on catalogued open problems in quantum information: a certified depolarizing-channel threshold point p = 0.064966, a qutrit positivity frontier of 0.2910672, a 44-gate depth-6 Golay state preparation, and a stabilizer-rank bound chi(T^7) <= 10. It also cut SABRE qubit-routing overhead from 68,559 to 12,087 added gates. In hardware, it cut the energy per MAC of an open 8x8 INT8 systolic tile by 77.7% through a full open RTL-to-GDS flow, bit-exact. Three fully autonomous runs ended in honestties with public records; one audit caught a stale record, and one agent-written score pointing the wrong way went unnoticed. We report the failures as carefully: the one self-derived harness generation was rejected on cost, proposers gamed lenient scorers four times, and operator changes were decisive for several results.",
+   "authors": [
+    "Harish Santhanalakshmi Ganesan"
+   ],
+   "published": "2026-10-26",
+   "url": "https://doi.org/10.48550/arxiv.2610.35579",
+   "pdf": "https://arxiv.org/pdf/2610.35579",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-10-31"
+  },
   {
    "id": "arxiv:2610.39306",
    "title": "CAD-WAM: Anticipating Geometry for Text-to-CAD Generation",
