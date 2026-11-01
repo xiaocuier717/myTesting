@@ -1,8 +1,27 @@
 {
- "updated": "2026-10-31T05:42:50+00:00",
- "new_today": 3,
+ "updated": "2026-11-01T06:06:47+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.59490/6ad294696ee698573e4dd65c",
+   "title": "Automation of Tunnel Support Detailing with AI-Assisted Programming",
+   "abstract": "Drafting tasks in geological engineering are time-consuming and often highly repetitive, with tunnel support drawings being a representative example. Although such tasks may appear straightforward and intuitive to experienced engineers, translating drafting logic into executable code typically requires substantial software development effort. While modern CAD and BIM platforms provide programming and automation capabilities, their effective use has traditionally depended on skilled programmers rather than domain engineers. This paper presents a practical case study in which a geological engineer with only basic programming experience leveraged recent advances in artificial intelligence, specifically large language models, to develop a custom code for automating tunnel support drawings. The workflow generates detailed support layouts directly from the tunnel contour and a limited set of user-defined engineering parameters, such as bolt spacing, liner thickness, and support class. Crucially, the approach preserves engineering judgement by requiring the engineer to define all design parameters and to review the final outputs, while automating repetitive drafting operations. The results demonstrate a viable pathway for lowering the barrier to engineering automation. The proposed approach is readily extendable to similar repetitive drawing tasks across a broad range of geological engineering applications.",
+   "authors": [
+    "A. Mitelman",
+    "A. Urlainis"
+   ],
+   "published": "2026-10-29",
+   "url": "https://doi.org/10.59490/6ad294696ee698573e4dd65c",
+   "pdf": "https://dapp.orvium.io/api/v1/deposits/6ad294696ee698573e4dd65c/pdf",
+   "venue": "",
+   "source": "OpenAlex",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-01"
+  },
   {
    "id": "doi:10.1145/3856825",
    "title": "HaVen-Agent: Enhancing Hallucination-Mitigated Verilog Code Generation Aligned with HDL Engineers through Code Repair and Multi-Agent Orchestration",
