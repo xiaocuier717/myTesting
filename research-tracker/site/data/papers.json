@@ -1,8 +1,32 @@
 {
- "updated": "2026-11-01T06:06:47+00:00",
+ "updated": "2026-11-02T06:05:30+00:00",
  "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.54097/ht37b711",
+   "title": "Co-Construction of Production-Line AAS Geometric Models and Knowledge Graphs Driven by a Vision-Language Model",
+   "abstract": "Digital twin systems for a production line usually run on two models at once: an Asset Administration Shell (AAS) that holds asset information under IEC 63278, and a knowledge graph (KG) that records device topology and process semantics. On real projects, though, the two are built apart from each other. Engineers key the AAS geometric model in by hand from drawings and field measurements, while process engineers author the KG separately. The same data therefore gets entered twice, reuse is poor, and sooner or later the two models disagree. This paper presents a co-construction method that removes the duplication at its source. A fine-tuned vision-language model (VLM) reads the engineering sources a line already has, namely 2D/3D CAD drawings, on-site laser point clouds, and equipment technical manuals, and fills a standardized AAS; the KG is then derived from that AAS by fixed rules, so both models share one source. The method is arranged in four layers: multi-source data preprocessing with coarse-to-fine ICP spatial registration; LoRA-based domain adaptation of an open-source VLM supported by industrial prompt templates; automatic population of the AAS geometric, property, and connectivity submodels with conformance-checked .aasx generation on Eclipse BaSyx, plus QEM-based mesh simplification; and same-source KG derivation through fixed field-to-triple mapping rules, backed by a single-source constraint, automatic reconciliation, and incremental refresh with version traceability. We demonstrate the complete pipeline on a photovoltaic cell production line, and a parameterized Monte Carlo simulation of data consistency shows that, for manual single-entry error rates between 1% and 10%, conventional dual-entry modeling produces 4–39 times more data inconsistencies than the proposed single-source derivation, with the gap widening as the error rate grows. The method offers a reusable and extensible path toward production-line digital twin modeling; empirical validation on a physical line is planned as future work.",
+   "authors": [
+    "Hui Li",
+    "Xiaoyi Zhao",
+    "Shasha Wang",
+    "Chenxi Yang",
+    "Wenxin Huang"
+   ],
+   "published": "2026-10-29",
+   "url": "https://doi.org/10.54097/ht37b711",
+   "pdf": "https://drpress.org/ojs/index.php/fcis/article/download/36303/35401",
+   "venue": "Frontiers in Computing and Intelligent Systems",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-02"
+  },
   {
    "id": "doi:10.59490/6ad294696ee698573e4dd65c",
    "title": "Automation of Tunnel Support Detailing with AI-Assisted Programming",
