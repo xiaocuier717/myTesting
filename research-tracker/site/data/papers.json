@@ -1,8 +1,286 @@
 {
- "updated": "2026-11-02T06:05:30+00:00",
- "new_today": 1,
+ "updated": "2026-11-03T06:48:54+00:00",
+ "new_today": 12,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.02659",
+   "title": "Parametric CAD Bench v3: Evaluating Agentic Parametric CAD Authoring from Text and Engineering Drawings",
+   "abstract": "Producing an executable CAD script is not sufficient to establish that an agent has satisfied an engineering design request. Evaluation must also consider the resulting geometry, specified dimensions, and native CAD modeling history. We present Parametric CAD Bench v3, a 100-task benchmark comprising 30 text-to-CAD creation tasks, 30 text-to-CAD create-and-edit tasks, and 40 tasks that reconstruct mechanical parts from engineering drawings. Agents operate in a pinned FreeCAD environment and submit native CAD artifacts to a separate programmatic verifier. The primary metric is mean continuous task reward, combining geometry similarity and specification consistency rather than binary task success. A September 24, 2026 snapshot covers 13 model-agent systems; Claude Code with Claude Opus 5.5 achieves the highest overall point estimate, 61.03%, and an image-to-CAD mean reward of 84.66%. These measurements describe complete systems, not isolated model capabilities. We release versioned tasks, evaluation configurations, and inspectable result artifacts.",
+   "authors": [
+    "Mei Chen",
+    "Yu Xia",
+    "Haipeng Mao"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.02659",
+   "pdf": "https://arxiv.org/pdf/2611.02659v1",
+   "venue": "arXiv cs.AI, cs.CV, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.03138",
+   "title": "KlaskTron: An Open-Source Platform for Physical Adversarial Multi-Agent RL",
+   "abstract": "Progress in robot learning, particularly physical multi-agent reinforcement learning (MARL), is currently challenged by a limited availability of accessible, standardized benchmarks. While simulation-based MARL has produced remarkable emergent behaviors, from coordinated team play to complex tool use, translating these advances to physical systems remains difficult. A key barrier is infrastructural: physical platforms are often prohibitively expensive, require specialized facilities, or lack open mechanisms and designs for reproducibility. We introduce KlaskTron, an open-source, low-cost (<\\$2500 USD), desktop-scale robotic testbed for adversarial MARL based on the dynamic tabletop game KLASK. The platform features dual CoreXY gantries with high-torque brushless motors, enabling the high-speed, precise manipulation required for competitive play. Crucially, we provide a complete ecosystem: hardware designs (CAD, BOM), a GPU-native digital twin in NVIDIA Isaac Lab for high-fidelity modeling and simulation, and a validated sim-to-real baseline using a learned neural actuator model. We demonstrate that this baseline enables zero-shot policy transfer, with trained agents exhibiting emergent adversarial behaviors. To ensure full reproducibility of our results, all project assets are released publicly: hardware CAD/BOM and assembly documentation at [https://idscethzurich.github.io/klask_hardware], inference software stack at [https://github.com/IDSCETHZurich/klask_software] and the simulation and MARL setup at [https://github.com/IDSCETHZurich/klask_rl].",
+   "authors": [
+    "Aswin Ramachandran",
+    "Jona Schulz",
+    "Maurus Derungs",
+    "Carlo Angelini",
+    "Tobias Meier",
+    "Raffaello D'Andrea"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.03138",
+   "pdf": "https://arxiv.org/pdf/2611.03138v1",
+   "venue": "arXiv cs.RO, cs.AR, cs.MA",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.02540",
+   "title": "PixelBench: Can LLMs Understand and Generate Images Pixel by Pixel?",
+   "abstract": "Large language models (LLMs) can generate visual assets through text-based formats such as SVG and CAD, but these symbolic representations describe images using high-level primitives rather than explicit raster values. We ask whether LLMs can instead generate pixel images directly through their existing vocabulary, without a learned image tokenizer or decoder. We introduce PixelBench, a benchmark for text-to-pixel (T2P) and image-to-pixel (I2P) generation across multiple resolutions, together with a complementary pixel-understanding evaluation. Models generate an RGB color palette followed by a grid of indices specifying the palette color of each output pixel. In T2P, the strongest models produce recognizable images directly from text. In I2P, the strongest models outperform palette-matched downsampling and specialized pixelization algorithms at low resolutions. Pixel-understanding performance correlates strongly with generation performance. A resolution-scaling study shows that pixel-generation performance often improves initially before declining at high resolutions. Finally, we introduce Pixel Reconstruction Tuning (PRT), which augments visual instruction tuning with caption-palette-grid trajectories. We post-train Molmo2-4B from its pretraining checkpoint by mixing general instruction data with our curated PRT data, improving performance across 16 visual-centric benchmarks, indicating that explicit pixel reconstruction can provide useful auxiliary supervision.",
+   "authors": [
+    "Haoquan Zhang",
+    "Feiyang Liu",
+    "Juanxi Tian",
+    "Wanhua Li",
+    "Haodong Duan",
+    "Weiyang Liu"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.02540",
+   "pdf": "https://arxiv.org/pdf/2611.02540v1",
+   "venue": "arXiv cs.CV, cs.CL, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.02433",
+   "title": "Blueprint2CAD: Benchmarking Foundation Models on Engineering Drawing-to-CAD Render Correspondence",
+   "abstract": "Engineering drawings specify mechanical parts through orthographic projections. Recognizing which part a drawing depicts underlies part search, design reuse, and digitization, yet no public benchmark measures whether vision models can do it. We introduce Blueprint2CAD, a benchmark for drawing-to-render correspondence: given an orthographic line drawing and a shaded render, usually from another viewpoint, decide whether they show the same part. Its data layer, BlueCAD-30K, applies an open drafting pipeline to 29,925 Zero-to-CAD models, adding view-aligned renders, clean and dimensioned drawings from six viewpoints, and surface-type metadata. Frozen encoders retrieve the matching part from a 10,000-model gallery with up to 65% Recall@1 when viewpoints are known but 43% when they are not, and the four encoders we test lie within six points of each other: viewpoint, not backbone, is the bottleneck. Six zero-shot vision-language models reach only 0.52-0.67 verification accuracy, with model-specific Yes/No biases that chain-of-thought shifts but does not remove; a quick LoRA fine-tuning on in-domain pairs improves verification accuracy by a few points but sharpens these biases and leaves the viewpoint failure intact.",
+   "authors": [
+    "Alexander Valverde",
+    "Danny Xie-Li",
+    "Zhichao Wang",
+    "Marcos V. Conde"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.02433",
+   "pdf": "https://arxiv.org/pdf/2611.02433v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.02300",
+   "title": "Trustworthy Execution of Industrial Agents",
+   "abstract": "Industrial agents increasingly modify persistent engineering objects rather than merely generate answers. Authentication and successful calls cannot establish whether intended changes occurred, evidence supports a conclusion, or historical results remain applicable. We present a framework for trustworthy industrial-agent execution within a single enterprise governance domain. Eight control domains assign responsibilities across authority, planning, composition, tool execution, actual effects, evidence, baseline and use governance, and recovery and evolution. A four-plane architecture and three control chains connect these responsibilities through typed objects and version-bound interfaces. The specification separates tool returns from actual engineering effects, evidence coverage from engineering judgment, and historical lifecycle state from current applicability. Multi-agent handoffs are an architectural extension examined through deterministic interface tests. Distinct prototypes examine selected mechanisms using conformance tests, ablations, uncertainty stress, CAD/CAE execution, and local persistence. An OpenFOAM fixture produces COMPLETE coverage with FAIL judgment; an expired-job case requires readmission despite completed computation. CAD and recovery counterexamples expose omitted mandatory checks, discarded negative facts, and inconsistent producer-consumer mappings. Targeted repairs support local regression conclusions. The reported 0/29 hazardous commits measure closed-set specification conformance, not a safety probability. We distinguish the complete framework, implemented paths, and empirical evidence, identifying check-inventory completeness and cross-module fact preservation as prerequisites for extending these results.",
+   "authors": [
+    "Zhongjie Wang",
+    "Mingyi Liu",
+    "Xiang He",
+    "Xiao Wang",
+    "Shuang Yu",
+    "Kai Wang"
+   ],
+   "published": "2026-11-01",
+   "url": "https://arxiv.org/abs/2611.02300",
+   "pdf": "https://arxiv.org/pdf/2611.02300v1",
+   "venue": "arXiv cs.SE, cs.MA",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.02286",
+   "title": "Toward Agentic AI-Ready Workflows in Built Environment Organizations: Knowledge Structures and Interoperability Challenges",
+   "abstract": "The rise of agentic artificial intelligence (AI) in the built environment is shifting attention from isolated AI tools toward autonomous systems that reason, plan, and act across project and organizational workflows. The effectiveness of such systems depends not only on large language model capabilities, but also on the readiness of heterogeneous data environments across the Architecture, Engineering, and Construction (AEC) sector. These environments combine structured sources, such as CAD and BIM models, schedules, cost databases, and asset registers, with unstructured ones, including technical reports, design narratives, planning and policy documents, contracts, meeting minutes, and risk registers. This paper reviews how built environment data can be organized to support agentic AI-ready workflows, focusing on knowledge structures, interoperability, and access and integration mechanisms such as retrieval-augmented generation (RAG) and the Model Context Protocol (MCP). Drawing on existing literature, it examines approaches proposed to organize structured and unstructured data and considers how such data can be contextualized and made accessible to AI agents in a reliable manner. The paper synthesizes current perspectives, highlights challenges around fragmentation and interoperability, and identifies open questions for future research on AI-compatible information management in the built environment.",
+   "authors": [
+    "Ahmet Bahaddin Ersoz",
+    "Justin McHenry",
+    "Yevgeniya Kovalchuk",
+    "Edward Barrett",
+    "Mandana Sarey Khanie"
+   ],
+   "published": "2026-11-01",
+   "url": "https://arxiv.org/abs/2611.02286",
+   "pdf": "https://arxiv.org/pdf/2611.02286v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.00777",
+   "title": "From Static Models to Editable CAD: A Design-Intent-Aware Framework for Reverse Parametrization",
+   "abstract": "Neutral CAD formats such as STEP typically preserve geometry but not feature histories or parameter dependencies. Thus, they are inherently limited for iterative design that requires modifications, a critical limitation for design optimization that relies on iterative processes. This study presents a design-intent-aware reverse-parametrization framework that converts history-free STEP parts into editable Grasshopper definitions and represents their assembly relations. Without task-specific training, the framework combines kernel-measured features, geometric relations, a compressed attributed adjacency graph, and multiview renderings. An LLM assigns dimensions independent, fixed, or dependent roles, confirms candidate joints, and interprets verification reports. Kernel- and rule-based modules perform measurement, parameter binding, geometry construction, and verification. Evaluation distinguishes default-shape preservation, design-intent reflection, and edit validity, with the latter examined through assembly-level editing examples involving checks for geometry regeneration, joint alignment, interference, and mechanism closure. As an example, five components of a mechanical mechanism were used, and across 25 runs, the mean global and analytic-feature-region intersection over unions (IoUs) were 0.984 and 0.983, respectively; all runs passed the combined shape-preservation criterion. In a separate request experiment, the requested dimension was selected as an independent variable in 19 of 20 runs. Product-level examples show coordinated changes in part geometry and assembly design while preserving assembly relations and avoiding inter-part interference. These results demonstrate editable reconstruction of history-free CAD models under the evaluated geometric and assembly constraints, indicating potential for subsequent design optimization.",
+   "authors": [
+    "Yurim Lee",
+    "Sumin Lee",
+    "Namwoo Kang"
+   ],
+   "published": "2026-10-31",
+   "url": "https://arxiv.org/abs/2611.00777",
+   "pdf": "https://arxiv.org/pdf/2611.00777v1",
+   "venue": "arXiv cs.CG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.01165",
+   "title": "Composable CAD: Sketch-to-CAD Program Synthesis in Parts",
+   "abstract": "Designers often build CAD models part by part, and may iterate on individual components throughout the design process. Recent vision-language models (VLMs) can synthesize CAD programs from sketches, but generating parts independently does not ensure that they are composable: components may lose the intended proportions and alignments or fail to join correctly where they meet. We present Composable CAD, a framework that uses off-the-shelf VLMs to synthesize a design space of independently sampled, interchangeable component programs, where any selection composes into a coherent CAD model. We recover design constraints from the sketch and use them to construct a coarse proxy that establishes how the components are sized, aligned, and attached. We then generate each component independently from its proxy and apply a deterministic rewrite to ensure that neighboring components meet at their prescribed interfaces. We evaluate Composable CAD across a range of objects and sketch styles and conduct two user studies. Compared to VLM-only baselines, our method produces more detailed, composable designs.",
+   "authors": [
+    "Yuanbo Li",
+    "Vivian Liu",
+    "Sean Liu",
+    "Justin Matejka"
+   ],
+   "published": "2026-10-31",
+   "url": "https://arxiv.org/abs/2611.01165",
+   "pdf": "https://arxiv.org/pdf/2611.01165v1",
+   "venue": "arXiv cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "doi:10.1016/j.autcon.2026.107322",
+   "title": "Inverse design of architectural floorplans with gradient-based optimization of binary subdivision graphs",
+   "abstract": "Computer-aided floorplan synthesis automates a core task in architecture and construction planning: balancing room programs, connectivity, areas, and boundary constraints. The fuzzy nature of machine-learning models makes it difficult for generative methods to achieve the precision and predictable edits needed in architectural design. Building on a hypergraph representation coupling binary subdivision graphs with access graphs, this paper proposes a gradient-based inverse-design workflow for controllable floorplan synthesis. Its differentiable soft-split formulation converts subdivision parameters into continuous room masks, allowing room areas and compactness to be optimized while preserving a prescribed or retrieved subdivision structure. Compared with non-differentiable optimization, this method is faster and performs favorably on several connectivity metrics. Residential floorplan experiments show improved access satisfaction and area accuracy over existing methods. The effectiveness of the proposed method is demonstrated across several design scenarios, supporting interactive computer-aided design and controllable layout synthesis for early-stage decision making under varied design requirements.",
+   "authors": [
+    "Shaoyi Wang",
+    "R. Weber"
+   ],
+   "published": "2026-10-30",
+   "url": "https://doi.org/10.1016/j.autcon.2026.107322",
+   "pdf": "https://doi.org/10.1016/j.autcon.2026.107322",
+   "venue": "Automation in Construction",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.37706",
+   "title": "Search-Guided Reasoning Trace Curation for Verilog Generation",
+   "abstract": "Recent advances in large language models (LLMs) have improved Verilog generation. However, most training pipelines distill natural-language reasoning traces whose intermediate design decisions are weakly structured and are primarily selected according to the correctness of the final generated RTL. We present MCTS-SFT, a verifier-guided framework for curating reasoning traces for supervised fine-tuning (SFT) of Verilog generation models. MCTS-SFT formulates trace construction as search over intermediate reasoning states and uses Monte Carlo Tree Search (MCTS) to propagate functional feedback from complete Verilog rollouts to earlier design decisions. Within this framework, we introduce Plan-MCTS, which searches over compact hardware-design plans that explicitly represent interfaces, timing, state, behavior, and update rules. We further study plan-preserving supervision, in which the searched structured state is retained as part of the downstream SFT target. Our experiments find that Plan-MCTS achieves the highest functional trace yield, with 84.2% correct traces compared with 81.9% for one-shot structured planning and 82.0% for unguided tree exploration. For identical Plan-MCTS trajectories and Verilog outputs, retaining the explicit searched plan during SFT raises pass@10 from 52.56% to 57.7%, demonstrating that the representation of intermediate design decisions materially affects downstream learning. In a separate 6,000-trace study, MCTS-curated supervision improves pass@10 over full-response chain-of-thought distillation by up to 3.7 points while reducing downstream generation length by approximately 50% on VerilogEval-v2. These results demonstrate that structured hardware planning, verifier-guided search, and explicit intermediate-state supervision provide complementary mechanisms for constructing more effective and token-efficient training data for Verilog generation.",
+   "authors": [
+    "Matthew C. DeLorenzo",
+    "Kevin Tieu",
+    "Prithwish Kumar Jana",
+    "Piyush Jha",
+    "Dileep M. Kalathil",
+    "Vijay Ganesh",
+    "Jeyavijayan Rajendran"
+   ],
+   "published": "2026-10-26",
+   "url": "https://doi.org/10.48550/arxiv.2610.37706",
+   "pdf": "https://arxiv.org/pdf/2610.37706",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2610.30858",
+   "title": "Joules-to-GDP: How Much Economic Value Do AI Systems Produce per Unit of Energy?",
+   "abstract": "AI systems are increasingly used to complete economically valuable tasks in various professions, such as software engineering and finance. This motivates the question: how much economic value does an AI system produce per unit of energy? To answer it, we introduce Joules-to-GDP, a framework that measures output dollar value minus AI execution cost per unit of energy, which we call Net Value per Joule (NVJ), and expert time saved per unit of energy, or Time Saving per Joule (TSJ). We then apply the framework to 220 GDPval tasks across 44 occupations. Four findings stand out. First, the most valuable work is not always the most efficient. For example, engineering work such as CAD design yields about 10% more net value per task than software development such as building websites, yet the latter yields about 27% more per joule. Second, defaulting to the most capable model can mean less total value from the same energy budget. Of the five tested models, GLM 5.2 delivers the most net value, $72.27 per task on average, using the energy of about four hours of active laptop use, while Gemma 4 31B achieves 56% of that with 23% of the energy, for 2.5x the NVJ and 2.8x the TSJ. Third, for the same model, NVJ and TSJ vary widely across different accelerators, and adding GPUs can raise energy use for modest gains: eight H100s use 3.2x the energy of one to cut completion time by only 22%, at similar net value. More capable models and more hardware must therefore earn their extra energy with enough gains in output value. Finally, the work of experts who use AI is harder for AI to match than that of experts working alone. Measured against it, GLM 5.2's NVJ falls by 70% and its TSJ by 65%. Taken together, these findings justify economic return per joule as an objective for selecting professional tasks and improving language models and accelerators, and as a basis for examining AI's effect on the economy",
+   "authors": [
+    "Amirreza Zeinali",
+    "Jon Saad-Falcon",
+    "Avanika Narayan",
+    "Mersad Abbasi",
+    "Jonathan S. Hartley",
+    "John Hennessy",
+    "Christopher Re",
+    "Azalia Mirhoseini"
+   ],
+   "published": "2026-10-22",
+   "url": "https://arxiv.org/abs/2610.30858",
+   "pdf": "https://arxiv.org/pdf/2610.30858v2",
+   "venue": "arXiv cs.LG, econ.GN",
+   "source": "arXiv",
+   "tags": [
+    "EDA/芯片"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "arxiv:2611.00076",
+   "title": "CRAFT: Corrective and Robust Multi-Agent Framework for Text-to-Parametric CAD",
+   "abstract": "Text-to-CAD generation has the potential to make mechanical CAD more accessible, but existing approaches face a trade-off between data dependence and output fidelity. Supervised methods rely on large paired text-model datasets, while zero-shot prompting strategies are often brittle and tend to lose the parametric structure needed for downstream editing and customization. We present CRAFT, a corrective and robust multi-agent framework that produces parametric OpenSCAD programs from natural language without task-specific training. At its core is a JSON intermediate representation that carries symbolic parametric expressions throughout the generation process, so the resulting models remain editable and retain their parametric structure. CRAFT combines semantic understanding, parametric planning, compilation, rendering, self-correction, and component-level verification within a layered recovery process, using multi-view visual feedback to detect and repair geometric errors. Across NopSCADlib, ABC, and Slice-100K, CRAFT is competitive with direct zero-shot baselines in perceptual and geometric quality while exposing substantially more editable parametric structure.",
+   "authors": [
+    "Mohammed Musthafa Rafi",
+    "Anushrut Jignasu",
+    "Mahdi Saraeian",
+    "Chinmay Hegde",
+    "Aditya Balu",
+    "Adarsh Krishnamurthy"
+   ],
+   "published": "2026-10-16",
+   "url": "https://arxiv.org/abs/2611.00076",
+   "pdf": "https://arxiv.org/pdf/2611.00076v1",
+   "venue": "arXiv cs.CV, cs.AI, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-03"
+  },
   {
    "id": "doi:10.54097/ht37b711",
    "title": "Co-Construction of Production-Line AAS Geometric Models and Knowledge Graphs Driven by a Vision-Language Model",
