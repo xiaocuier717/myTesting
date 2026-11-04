@@ -1,8 +1,162 @@
 {
- "updated": "2026-11-03T06:48:54+00:00",
- "new_today": 12,
+ "updated": "2026-11-04T06:24:07+00:00",
+ "new_today": 5,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1145/3799682.3840951",
+   "title": "Multi-View Hierarchical Graph Neural Network for Sketch-Based 3D Shape Retrieval",
+   "abstract": "Sketch-based 3D shape retrieval (SBSR) aims to retrieve 3D shapes that are consistent with the category of the input hand-drawn sketch. The core challenge of this task lies in two aspects: existing methods typically employ simplified aggregation strategies for independently encoded 3D multi-view features, which ignore the geometric relationships between views and multi-level details, resulting in weak 3D representation. Simultaneously, traditional SBSR methods are constrained by visible category limitations, leading to poor performance in zero-shot scenarios. To address these challenges, we propose Multi-View Hierarchical Graph Neural Network (MV-HGNN), a novel framework for SBSR. Specifically, we construct a view-level graph and capture adjacent geometric dependencies and cross-view message passing via local graph convolution and global attention. A view selector is further introduced to perform hierarchical graph coarsening, enabling a progressively larger receptive field for graph convolution and mitigating the interference of redundant views, which leads to more discriminate discriminative hierarchical 3D representation. To enable category agnostic alignment and mitigate overfitting to seen classes, we leverage CLIP text embeddings as semantic prototypes and project both sketch and 3D features into a shared semantic space. We use a two-stage training strategy for category-level retrieval and a one-stage strategy for zero-shot retrieval under the same model architecture. Under both category-level and zero-shot settings, extensive experiments on two public benchmarks demonstrate that MV-HGNN outperforms state-of-the-art methods.",
+   "authors": [
+    "Hang Cheng",
+    "Muyan He",
+    "Mingyu Fan",
+    "Chengfeng Xie",
+    "Xi Cheng",
+    "Chenxi Zhai",
+    "Long Zeng"
+   ],
+   "published": "2026-11-03",
+   "url": "https://doi.org/10.1145/3799682.3840951",
+   "pdf": "https://doi.org/10.1145/3799682.3840951",
+   "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-11-04"
+  },
+  {
+   "id": "arxiv:2611.04087",
+   "title": "ScienceVision: Can AI Observe and Reason Like a Scientist?",
+   "abstract": "Scientific discovery builds on accurate observations interpreted through domain knowledge and reasoning. For scientific 3D data, this requires understanding structures and spatial relationships, from protein contacts to anatomical organization. Existing multimodal benchmarks largely evaluate text and 2D images, while scientific 3D evaluations vary in representations and protocols across disciplines, limiting cross-disciplinary comparison. To assess these foundational capabilities, we introduce ScienceVision, a cross-domain benchmark for scientific 3D understanding and reasoning through expert-level visual question answering (VQA). We construct 250 questions, with 50 each from Biology, Chemistry, Medical Imaging, Mechanical CAD, and Architecture, through a pipeline combining synthetic question generation with domain-expert review and annotation. Each task pairs a native 3D artifact with a scientific question, a specified response format, and a task-specific reference answer, requiring domain knowledge to be applied to geometric or topological evidence. We evaluate 12 models on the same questions in three settings: visual question answering with native 3D artifacts accessed through an agent harness's file and code-execution tools; the same workflow augmented with expert-inspired viewer inspection and measurement tools exposed through the Model Context Protocol (MCP); and visual question answering from prescribed rendered 2D images using an agent harness. All settings use the same task-specific deterministic final-answer scoring. The inspection environment supports view changes, target isolation, and slice inspection. In this main comparison, the best mean answer score is 0.53 out of 1. Mean scores in the native-artifact workflow without additional MCP tools exceed those in the rendered-image workflow for every model, by 17.2 percentage points on average.",
+   "authors": [
+    "Tianyi Ma",
+    "Jing Gu",
+    "Haozhe Zhao",
+    "Liang Chen",
+    "Yunfan Zhang",
+    "Haijun Su",
+    "Jialong Wu",
+    "Le Xue",
+    "Arnav Das",
+    "Dustin Tran",
+    "Yinfei Yang",
+    "Andrew Dai",
+    "Kuan Li"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.04087",
+   "pdf": "https://arxiv.org/pdf/2611.04087v1",
+   "venue": "arXiv cs.CV, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-04"
+  },
+  {
+   "id": "arxiv:2611.03178",
+   "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
+   "abstract": "Rapid advances in cowork agents are shifting human-AI collaboration toward real-world automation, delivering software, designs, and other artifacts. However, such productivity work demands both high-quality delivery on complex productivity tasks and continued monitoring and decision-making over long horizons, a combination that remains an open challenge. We introduce CoworkOS, a general-purpose harness for long-horizon work that separates task strategy from execution management: the model decides actions, delegation, and acceptance, while the runtime maintains state and feedback. Its three-layer architecture enables direct execution or delegation to Subagents, synchronously or asynchronously, under stable responsibilities. Through a shared application layer, humans and agents inspect and revise the same evolving documents, presentations, CAD models, and Blender scenes, so human-in-the-loop participation can enter both through conversation and through direct modification of the work itself. To sustain continuity across agents and sessions, CoworkOS further introduces hierarchical workspaces and persistent semantic memory, so working files, key decisions, and long-running Job logs remain shareable, reusable, and resumable after interruption. Across 12 benchmarks and 6 categories of real-world applications, CoworkOS proves highly competitive with frontier agent applications such as Codex and DeepSeek Harness. As a sustained-work case study, CoworkOS uses GLM-5.3 as its backbone to conduct RSI-driven automated post-training on Qwen3.6-35B-A3B. Over five rounds, the model's average score across eight benchmarks rose from 33.19 to 42.95 (+9.76). Looking ahead, we believe CoworkOS opens a meaningful path toward general cowork-agent intelligence.",
+   "authors": [
+    "Jiajie Jin",
+    "Guanting Dong",
+    "Chengjun Pan",
+    "Xin Deng",
+    "Zhuohui Sheng",
+    "Guoqiang Wang",
+    "Tao Gui",
+    "Yutao Zhu",
+    "Yujia Chen",
+    "Shihong Yi",
+    "Binze Hu",
+    "Zhixiong Yang",
+    "Zhichao Sun",
+    "Rui Wang",
+    "Han Han",
+    "Mingyu Ma",
+    "Junhao Huang",
+    "Xiaotao Wang",
+    "Huicheng Jiang",
+    "Yuyang Hu",
+    "Xinyu Yang",
+    "Wanghan Xu",
+    "Yajie Yang",
+    "Zhecan Wang",
+    "Honglin Guo",
+    "Xiaoyu Xing",
+    "Xiaoqian Zhang",
+    "Yulun Zhu",
+    "Xiaoxi Li",
+    "Jiahang Lin",
+    "Shaofan Liu",
+    "Shihan Dou",
+    "Zhiheng Xi",
+    "Qi Zhang",
+    "Yu-Gang Jiang",
+    "See-Kiong Ng",
+    "Yang Zhang",
+    "Tat-Seng Chua",
+    "Ji-Rong Wen",
+    "Zhicheng Dou"
+   ],
+   "published": "2026-11-02",
+   "url": "https://arxiv.org/abs/2611.03178",
+   "pdf": "https://arxiv.org/pdf/2611.03178v1",
+   "venue": "arXiv cs.AI, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-04"
+  },
+  {
+   "id": "doi:10.55593/ej.30119int3",
+   "title": "Using Large Language Models as Context Organizers: A Corpus-Assisted Framework for Analyzing EFL Student Feedback",
+   "abstract": "Student feedback is central to English as a Foreign Language (EFL) instruction; however, scaling qualitative interpretation while preserving contextual meaning remains a methodological challenge. This study proposes the T-CADS-LLMs framework, a qualitative text topic analysis framework integrated into an Agent Skill. Rather than treating large language models as autonomous coders, the framework positions them as context organizers constrained by corpus evidence and human verification. Its feasibility was evaluated using interview data from 27 students across two majors in university EFL courses. Across ten course grouped analytical units, 46 manually generated topics were compared with 63 Skill-based topics and 42 GPT-based topics using Topic Coverage, Weighted Coverage, MATS, WMATS, and qualitative analyses of matched topics. Codex+Skill consistently outperformed the Bare-model in descriptive mean scores for coverage (0.672 vs. 0.502), weighted coverage (0.721 vs. 0.600), MATS (0.778 vs. 0.700), and WMATS (0.816 vs. 0.772). Nevertheless, both workflows showed limited ability to capture relational and identity related meanings, performing substantially below human analysis. These findings provide initial evidence for the feasibility and traceability of the framework within a specific EFL context, while further validation with larger and more diverse datasets remains necessary.",
+   "authors": [
+    "Muyang Niu",
+    "Junjie Gavin Wu",
+    "Yantao Wei"
+   ],
+   "published": "2026-11-01",
+   "url": "https://doi.org/10.55593/ej.30119int3",
+   "pdf": "https://tesl-ej.org/pdf/ej119/int3.pdf",
+   "venue": "Teaching English as a Second or Foreign Language--TESL-EJ",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-04"
+  },
+  {
+   "id": "doi:10.1016/j.jer.2026.10.061",
+   "title": "ASIC-based design space exploration of precision-scalable multiplier architectures for edge AI accelerators",
+   "abstract": "Deep Neural Networks (DNN) offer greater accuracy in artificial intelligence applications at the cost of increased computational complexity and substantial memory requirements. The traditional resource-rich cloud platform suffers from privacy and latency concerns, necessitating the shift of the computing paradigm from cloud to edge. As the majority of computations in DNN are multiply-and-add operations, realizing DNN hardware on edge devices requires energy-efficient multiplier architectures. According to the algorithmic properties of DNN, the operand bit width can be varied across different neural networks or across layers within the same neural network to improve energy efficiency without significant loss of accuracy. Precision-scalability is a promising approach to reducing computational workload and memory footprint, leading to two dominant computing paradigms: coarse-grained and fine-grained precision-scalable designs, each offering distinct trade-offs in computational flexibility, hardware complexity, and implementation cost. This article presents an ASIC-based design space exploration of precision-scalable multiplier architectures for edge accelerators. Representative fine-grained and coarse-grained architectures are modeled in Verilog hardware description language and synthesized using Cadence® Genus with TSMC 65 nm CMOS technology. The architectures are evaluated in terms of the hardware metrics area, power, delay. In addition to that, the composite metrics area-delay product (ADP) and power-delay product (PDP) are also analyzed to provide a comprehensive assessment of design trade-offs. The presented analysis highlights the trade-offs among the precision-scalable multiplier architectures, providing useful insights for selecting suitable energy-efficient multipliers for edge AI applications.",
+   "authors": [
+    "B Saraswathy",
+    "A. Anita Angeline"
+   ],
+   "published": "2026-11-01",
+   "url": "https://doi.org/10.1016/j.jer.2026.10.061",
+   "pdf": "https://www.sciencedirect.com/science/article/pii/S2307187726005705/pdf",
+   "venue": "Journal of Engineering Research",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-04"
+  },
   {
    "id": "arxiv:2611.02659",
    "title": "Parametric CAD Bench v3: Evaluating Agentic Parametric CAD Authoring from Text and Engineering Drawings",
