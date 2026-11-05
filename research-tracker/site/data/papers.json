@@ -1,12 +1,125 @@
 {
- "updated": "2026-11-04T06:24:07+00:00",
+ "updated": "2026-11-05T06:47:39+00:00",
  "new_today": 5,
- "errors": [],
+ "errors": [
+  "OpenAlex: HTTP Error 429: Too Many Requests",
+  "OpenAlex: HTTP Error 429: Too Many Requests"
+ ],
  "papers": [
+  {
+   "id": "arxiv:2611.05758",
+   "title": "Mechanical Engineering Skills: An Open Library of Agent Skills for Design, Analysis and Manufacturing",
+   "abstract": "Mechanical engineers use specialized tools for CAD, simulation, manufacturing and research, each with a distinct interface and learning curve. We present Mechanical Engineering Skills, an open library of 33 agent skills that makes these capabilities accessible through a single text or voice conversation. Each skill combines operating instructions, executable tools and verification procedures. A language model interprets the request, selects and coordinates skills, while deterministic tools perform computations and return checked results. Default workflows require no tool-specific interface training, local model execution or model fine-tuning; skills load on demand and install with one command. Nineteen skills adapt published or preprint research from our laboratory, including text-to-CAD, linkage synthesis, CFD setup, stress-field and lattice surrogates, equation discovery, additive-manufacturing planning and in-process monitoring. Fourteen additional skills support core engineering and education. We describe the skill format, design principles and a method for translating research into practical workflows. Five case studies with explicit evidence scopes and independent reruns demonstrate exact analytical agreement for lattice homogenization, rocket apogee predictions within 4% of stored OpenRocket references, an equation fit nine times more accurate than a cubic polynomial at an unseen temperature, and an end-to-end rehearsal of porosity monitoring. Controlled agent comparisons remain future work. The open library is available at https://github.com/BaratiLab/mechanical-engineering-skills.",
+   "authors": [
+    "Achuth Chandrasekhar",
+    "Jesse Barkley",
+    "Peter Pak",
+    "Rumi Loghmani",
+    "Aakash Oza",
+    "Amir Barati Farimani"
+   ],
+   "published": "2026-11-03",
+   "url": "https://arxiv.org/abs/2611.05758",
+   "pdf": "https://arxiv.org/pdf/2611.05758v1",
+   "venue": "arXiv cs.MA",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-05"
+  },
+  {
+   "id": "doi:10.1007/s10791-026-10719-4",
+   "title": "A hybrid deep temporal architecture for multimodal stress prediction",
+   "abstract": "Stress is a major health concern that motivates reliable and objective monitoring using multimodal physiological and behavioral information. This study presents a hybrid framework for continuous stress regression integrating facial video, Blood Volume Pulse (BVP), and Electrodermal Activity (EDA) with Principal Component Analysis (PCA), Bidirectional Long Short-Term Memory (BiLSTM), Elephant Herding Optimization (EHO), and Extreme Gradient Boosting (XGBoost). The UBFC-Phys cohort comprised 56 subjects; 45 subjects formed the development cohort and 11 fixed subjects were reserved for independent testing. To reduce information leakage, the independent test subjects were excluded from PCA fitting, BiLSTM training, EHO hyperparameter selection, and XGBoost fitting. Within the 45-subject development cohort, five-fold GroupKFold cross-validation was performed by subject, with preprocessing and representation learning refitted within each fold. The strict five-fold evaluation yielded MAE 0.2397 ± 0.0478, RMSE 0.3019 ± 0.0629, and R² -0.5031 ± 0.2763. On the fixed 11-subject independent test cohort, the model obtained MAE 0.2458, MSE 0.1046, RMSE 0.3234, and R² -0.6987. Manual and scikit-learn calculations of independent-test R² agreed exactly. These results show that the integrated pipeline is computationally feasible but does not yet generalize better than a mean-prediction baseline to unseen subjects under the strict protocol. The principal contribution is therefore a leakage-controlled multimodal evaluation and an empirical characterization of the remaining cross-subject generalization challenge. AMIGOS is retained only as an exploratory compatibility assessment because equivalent continuous stress targets were not validated.",
+   "authors": [
+    "Yogesh J. Gaikwad",
+    "N. Mohankumar",
+    "Gagandeep Kaur"
+   ],
+   "published": "2026-11-03",
+   "url": "https://doi.org/10.1007/s10791-026-10719-4",
+   "pdf": "https://link.springer.com/content/pdf/10.1007/s10791-026-10719-4.pdf",
+   "venue": "Discover Computing",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-05"
+  },
+  {
+   "id": "arxiv:2611.05449",
+   "title": "SO(3)-Equivariant Learning on CAD Boundary Representations",
+   "abstract": "Learning on boundary representations (B-reps) requires robustness to the pose of a part, since CAD models are not stored in a canonical orientation. Existing B-rep networks either operate on world-frame coordinates and normals, and thus degrade under rotation, or encode each face in a local reference frame. Local frames yield invariance, but reduce inter-face messages to scalars and discard the relative orientation of adjacent faces. We propose SO3brep, an SO(3)-equivariant graph neural network on the B-rep face-adjacency graph. Node features are computed in local frames and mapped into a shared frame by Wigner D-matrices. Clebsch-Gordan tensor products couple these features with the directions between adjacent faces, so that relative orientation is preserved throughout message passing and the output remains SE(3)-invariant. Across three face-segmentation and two classification benchmarks with randomly rotated test parts, SO3brep achieves the highest accuracy among the compared B-rep networks and equivariant point cloud networks, with the fewest parameters. Its advantage is largest with few labeled parts, a setting typical of industrial CAD. Code is available at https://github.com/UGent-CVAMO/so3brep.",
+   "authors": [
+    "Matteo Ballegeer",
+    "Dries F. Benoit"
+   ],
+   "published": "2026-11-03",
+   "url": "https://arxiv.org/abs/2611.05449",
+   "pdf": "https://arxiv.org/pdf/2611.05449v1",
+   "venue": "arXiv cs.CV, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-05"
+  },
+  {
+   "id": "doi:10.1007/s00170-026-19471-x",
+   "title": "Influence of geometric-process representation explicitness on transformer-based NC code generation",
+   "abstract": "Abstract Generating numerical control (NC) code from computer-aided design (CAD) models is one of the most knowledge-intensive tasks in digital manufacturing, yet how explicit the input representation should be has received little empirical attention. This study encodes the same machining cases at three levels of increasing explicitness — geometry only (L1), geometry with a tool library (L2), and geometry with both a tool library and an operation-level process plan (L3) — on a deterministic dataset of 9,000 prismatic workpieces, fine-tunes a CodeT5 + 220 M encoder–decoder for each level under five training seeds, and evaluates 900 held-out cases through a hierarchical five-level framework from syntax to geometric correspondence. Explicitness had no robust effect on single-sample correctness: mean geometric-correspondence pass rates were 0.954, 0.952, and 0.969 for L1, L2, and L3, a spread an order of magnitude smaller than the between-seed range, and the L1–L3 contrast was significant in opposite directions under two seeds. Its effect on reproducibility was consistent: the geometric reproducibility of L3 stayed at 0.95 or above under every seed and every decoding temperature up to 0.8, whereas L1 and L2 matched it under four seeds and collapsed to about 0.55 under the fifth. An explicitness index counting the process decisions a representation supplies rather than leaves to be inferred reproduces this pattern quantitatively, and a deterministic rule-based reference shows that the omitted decisions can equally be supplied by process-planning rules. Explicitness therefore acts primarily as a stabiliser of reproducibility rather than as a means of improving single-program correctness.",
+   "authors": [
+    "Marko Simonič",
+    "Jernej Hernavs",
+    "Tadej Peršak",
+    "M. Brezočnik",
+    "Simon Klančnik"
+   ],
+   "published": "2026-11-03",
+   "url": "https://doi.org/10.1007/s00170-026-19471-x",
+   "pdf": "https://link.springer.com/content/pdf/10.1007/s00170-026-19471-x.pdf",
+   "venue": "The International Journal of Advanced Manufacturing Technology",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-05"
+  },
+  {
+   "id": "doi:10.1145/3830398.3830483",
+   "title": "PartInteractor: Intent-Driven Part-Aware 3D Authoring for Continuous Co-Creation in XR",
+   "abstract": "As Extended Reality (XR) evolves into an immersive computing medium, interactive 3D authoring becomes essential for creative and functional workflows. However, existing generative XR systems produce monolithic outputs lacking explicit semantic structure, limiting post-generation control. We introduce PartInteractor, a representation-to-interaction framework that investigates how semantic part hierarchies can be incorporated into generative XR authoring, and exposed as first-class, directly manipulable units, turning one-shot prompt-to-object generation into continuous component-level co-creation. PartInteractor supports speech, sketch, and image inputs, integrating an LLM interpreter with a retrieval-generation strategy to scaffold user intent prior to 3D generation. Instead of producing monolithic objects, our system generates semantically decomposed 3D assets with explicit part hierarchies, enabling rich component-level interaction over object structure and composition. Our evaluations suggest that part-aware representation increases post-generation control and reduces reliance on whole-object regeneration, while intent scaffolding mitigates ambiguity and improves intent-result alignment, together supporting more expressive and controllable human-AI co-creation workflows. These results highlight part-aware representation and intent scaffolding as promising design considerations for future generative XR authoring systems.",
+   "authors": [
+    "Jianan Jiang",
+    "Bin Li"
+   ],
+   "published": "2026-10-31",
+   "url": "https://doi.org/10.1145/3830398.3830483",
+   "pdf": "https://doi.org/10.1145/3830398.3830483",
+   "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-05"
+  },
   {
    "id": "doi:10.1145/3799682.3840951",
    "title": "Multi-View Hierarchical Graph Neural Network for Sketch-Based 3D Shape Retrieval",
-   "abstract": "Sketch-based 3D shape retrieval (SBSR) aims to retrieve 3D shapes that are consistent with the category of the input hand-drawn sketch. The core challenge of this task lies in two aspects: existing methods typically employ simplified aggregation strategies for independently encoded 3D multi-view features, which ignore the geometric relationships between views and multi-level details, resulting in weak 3D representation. Simultaneously, traditional SBSR methods are constrained by visible category limitations, leading to poor performance in zero-shot scenarios. To address these challenges, we propose Multi-View Hierarchical Graph Neural Network (MV-HGNN), a novel framework for SBSR. Specifically, we construct a view-level graph and capture adjacent geometric dependencies and cross-view message passing via local graph convolution and global attention. A view selector is further introduced to perform hierarchical graph coarsening, enabling a progressively larger receptive field for graph convolution and mitigating the interference of redundant views, which leads to more discriminate discriminative hierarchical 3D representation. To enable category agnostic alignment and mitigate overfitting to seen classes, we leverage CLIP text embeddings as semantic prototypes and project both sketch and 3D features into a shared semantic space. We use a two-stage training strategy for category-level retrieval and a one-stage strategy for zero-shot retrieval under the same model architecture. Under both category-level and zero-shot settings, extensive experiments on two public benchmarks demonstrate that MV-HGNN outperforms state-of-the-art methods.",
+   "abstract": "Sketch-based 3D shape retrieval (SBSR) aims to retrieve 3D shapes that are consistent with the category of the input hand-drawn sketch. The core challenge of this task lies in two aspects: existing methods typically employ simplified aggregation strategies for independently encoded 3D multi-view features, which ignore the geometric relationships between views and multi-level details, resulting in weak 3D representation. Simultaneously, traditional SBSR methods are constrained by visible category limitations, leading to poor performance in zero-shot scenarios. To address these challenges, we propose Multi-View Hierarchical Graph Neural Network (MV-HGNN), a novel framework for SBSR. Specifically, we construct a view-level graph and capture adjacent geometric dependencies and cross-view message passing via local graph convolution and global attention. A view selector is further introduced to perform hierarchical graph coarsening, enabling a progressively larger receptive field for graph convolution and mitigating the interference of redundant views, which leads to more discriminative hierarchical 3D representation. To enable category-agnostic alignment and mitigate overfitting to seen classes, we leverage CLIP text embeddings as semantic prototypes and project both sketch and 3D features into a shared semantic space. We use a two-stage training strategy for category-level retrieval and a one-stage strategy for zero-shot retrieval under the same model architecture. Under both category-level and zero-shot settings, extensive experiments on three public benchmarks demonstrate that MV-HGNN outperforms state-of-the-art methods.",
    "authors": [
     "Hang Cheng",
     "Muyan He",
