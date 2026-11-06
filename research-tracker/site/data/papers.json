@@ -1,11 +1,91 @@
 {
- "updated": "2026-11-05T06:47:39+00:00",
- "new_today": 5,
- "errors": [
-  "OpenAlex: HTTP Error 429: Too Many Requests",
-  "OpenAlex: HTTP Error 429: Too Many Requests"
- ],
+ "updated": "2026-11-06T06:47:42+00:00",
+ "new_today": 3,
+ "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1145/3845814.3850039",
+   "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+   "abstract": "Large-scale Transformers have achieved remarkable success across NLP, computer vision, and robotics, but their growing computational and memory demands challenge efficient inference. Spatial accelerators offer advantages in on-chip bandwidth and energy efficiency, yet designing them for large models remains costly and time-consuming. Existing accelerator generators typically focus on single-operation support, overlooking the benefits of multi-operation pipelining, which limits throughput and energy efficiency. We propose TranSAGE, a compiler-based framework that jointly optimizes scheduling for large-scale Transformers under multi-operation pipelining and generates corresponding accelerator implementations. Our approach integrates a design space exploration (DSE) engine with multi-operation dataflow optimization and a dynamic programming-based graph partitioning algorithm to efficiently identify pipeline-friendly operation clusters and their optimal dataflow parameters. We further design spatial architecture primitives and lowering passes to automatically generate efficient RTL implementations. Evaluations on four representative LLMs demonstrate that TranSAGE achieves up to 2.41x higher throughput and 13.04x higher energy efficiency than commercial GPU/NPU baselines. Compared with state-of-the-art accelerator generators, TranSAGE achieves up to 11.33x higher throughput and 6.07x higher energy efficiency. Our code is available at https://github.com/sjtu-zhao-lab/TranSAGE.",
+   "authors": [
+    "Chi Zhang",
+    "Yi Sun",
+    "Weichuang Zhang",
+    "Quan Chen",
+    "Jieru Zhao"
+   ],
+   "published": "2026-11-04",
+   "url": "https://doi.org/10.1145/3845814.3850039",
+   "pdf": "https://doi.org/10.1145/3845814.3850039",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-06"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2610.41225",
+   "title": "RTL-Interact: Training EDA-Interactive Models for Multi-Task RTL Design",
+   "abstract": "Large language models offer a promising route to register-transfer-level (RTL) design, but reliable implementations require checking and revision based on electronic design automation (EDA) tools' feedback. Existing RTL-specialized models often lack learned interaction with such EDA tools or rely on separate generation and repair components. We introduce RTL-Interact, a multi-task post-training framework that trains a single RTL-specialized model to generate RTL, construct task-appropriate EDA checks, and revise implementations using tool feedback. The framework combines automatically constructed multi-task demonstrations with staged supervision from chain-of-thought to tool-integrated reasoning. We further introduce Pattern-Aware Policy Optimization (PAPO) for multi-task reinforcement learning. PAPO augments Group Relative Policy Optimization with correctness-gated rewards that favor concise successful checking while rewarding effective revision, and uses task grouping to preserve coverage across objectives. On CVDP, RTL-Interact-32B achieves 48.7% weighted Pass@1 and 68.9% Pass@5, surpassing its teacher model, DeepSeek-V3.2, while RTL-Interact-8B achieves 44.9% weighted Pass@1. Additionally, we show that PAPO can reduce average tool calls by 63.8% while improving Pass@1. Both models also outperform all RTL-specialized baselines on VerilogEval v2 and RTLLM v2, demonstrating the effectiveness of our method.",
+   "authors": [
+    "Wenxuan Shi",
+    "Yaoyu Zhu",
+    "Di Huang",
+    "Chongxiao Li",
+    "Xiaoyun Zhang",
+    "Muxin Song",
+    "Yutong Wu",
+    "Ziyuan Nan",
+    "Pengwei Jin",
+    "Tian Zhi",
+    "Xishan Zhang",
+    "Rui Zhang",
+    "Xing Hu",
+    "Zidong Du",
+    "Qi Guo",
+    "Yunji Chen"
+   ],
+   "published": "2026-10-30",
+   "url": "https://doi.org/10.48550/arxiv.2610.41225",
+   "pdf": "https://arxiv.org/pdf/2610.41225",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-06"
+  },
+  {
+   "id": "doi:10.55248/gengpi.07.1026.34022",
+   "title": "Large Language Models for Verilog Generation and Verification: A Review of Cloud, Domain-Specialised and Resource-Constrained Approaches",
+   "abstract": "Register-transfer-level (RTL) design is a critical but labour-intensive stage in digital hardware development. Large language models (LLMs) have recently shown the ability to convert natural-language specifications into Verilog code, thereby reducing manual design effort. This paper presents a review of LLM-based Verilog generation and verification approaches, organised around deployment requirements and verification strategies. The review covers classical electronic design automation (EDA) foundations, general-purpose cloud coding assistants, Verilog-specialised models and benchmarks, feedback-driven and agentic EDA frameworks, open-source verification back ends, and resource-constrained deployment using quantisation and lightweight inference engines. The literature indicates that cloud- and GPU-based systems remain dominant, while compiler and simulator feedback can improve the syntactic validity of generated designs. However, functional correctness remains difficult because compilation alone does not verify intended hardware behaviour. Resource-constrained deployment is feasible in selected cases; for example, RTLCoder reports a 4-bit quantised model of approximately 4 GB that can operate on a laptop. Nevertheless, consistent reporting of latency, memory use, energy consumption, offline operation, privacy, and reproducibility is still limited. This review identifies major open challenges, including functional verification, benchmark quality, scarcity of high-quality Verilog training data, security of generated hardware, small-model efficiency, and standardised resource-aware evaluation. The findings suggest that reliable AI-assisted RTL design will require closer integration of LLMs with deterministic EDA tools, stronger verification oracles, improved benchmarks, and transparent evaluation practices.",
+   "authors": [
+    "Amol Dhote",
+    "Rajnandinee Patle",
+    "Mansi Borkute",
+    "Khushi Gumgaonkar",
+    "Manaswi Deogirkar",
+    "(Mrs.) S. W. Varade"
+   ],
+   "published": "2026-10-25",
+   "url": "https://doi.org/10.55248/gengpi.07.1026.34022",
+   "pdf": "https://doi.org/10.55248/gengpi.07.1026.34022",
+   "venue": "International Journal of Research Publication and Reviews",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-06"
+  },
   {
    "id": "arxiv:2611.05758",
    "title": "Mechanical Engineering Skills: An Open Library of Agent Skills for Design, Analysis and Manufacturing",
@@ -354,7 +434,7 @@
    ],
    "published": "2026-11-02",
    "url": "https://arxiv.org/abs/2611.02433",
-   "pdf": "https://arxiv.org/pdf/2611.02433v1",
+   "pdf": "https://arxiv.org/pdf/2611.02433v2",
    "venue": "arXiv cs.CV",
    "source": "arXiv",
    "tags": [
