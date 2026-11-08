@@ -1,12 +1,57 @@
 {
- "updated": "2026-11-07T05:59:30+00:00",
+ "updated": "2026-11-08T06:02:15+00:00",
  "new_today": 2,
  "errors": [],
  "papers": [
   {
+   "id": "doi:10.1093/jcde/qwag095",
+   "title": "Appearance-preserving simplification of non-watertight CAD models using NeuS-guided outer shell extraction",
+   "abstract": "Abstract Large-scale industrial computer-aided design (CAD) assemblies in shipbuilding and process plants routinely contain dense interior geometry that hinders real-time visualization and digital twin deployment, and tessellated CAD data exchanged through neutral formats often suffer from small inter-part gaps that render conventional outer shell extraction unreliable. Under these circumstances, visibility-based techniques such as ray casting can preserve the coordinate fidelity of original mesh faces without reconstruction-induced distortion, but are prone to leakage through micro-gaps, causing interior structures to be misclassified as exterior surfaces. Neural implicit surface reconstruction methods, such as neural implicit surfaces (NeuS), can recover watertight topology by closing such gaps, but often degrade geometric fidelity by over-smoothing thin components and sharp mechanical details. To address this trade-off, we propose an automated NeuS-guided outer shell extraction framework that combines geometry-faithful visibility analysis with watertight topological guidance. The proposed method introduces anisotropic cube normalization to improve NeuS reconstruction of high-aspect-ratio industrial structures, uses the NeuS reconstruction as a watertight guide surface rather than as the final output, and refines ray-casting candidates through 6-point asymmetric tolerance filtering to preserve exterior details while rejecting interior faces. Experiments on three non-watertight tessellated benchmark models, comprising one industrial ship assembly and two publicly available polygonal assets, demonstrate that the proposed method improves leakage-robust interior elimination while retaining the coordinate fidelity of the original mesh faces that remain in the extracted shell. On the primary ship benchmark, the method achieves an inner removal rate of 95.26%, an outer preservation rate of 98.21%, and an area-weighted harmonic score of 96.71%. On the car and aircraft benchmark models, area-weighted harmonic scores of 87.18% and 96.87% are obtained, respectively; the car case reveals a near-contact limitation in which improved interior removal is accompanied by reduced exterior preservation, which a model-specific tolerance adjustment partly mitigates. Additional qualitative tests on Helicopter, Submarine, and Train models without manual ground-truth labels further illustrate the applicability of the pipeline to other interior-containing tessellated assemblies.",
+   "authors": [
+    "Taejoo Um",
+    "Minjoo Choi",
+    "Soonjo Kwon",
+    "Mingyu Kim",
+    "박성찬"
+   ],
+   "published": "2026-11-05",
+   "url": "https://doi.org/10.1093/jcde/qwag095",
+   "pdf": "https://academic.oup.com/jcde/advance-article-pdf/doi/10.1093/jcde/qwag095/73131080/qwag095.pdf",
+   "venue": "Journal of Computational Design and Engineering",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-08"
+  },
+  {
+   "id": "doi:10.62051/ijmee.v8n7.08",
+   "title": "Task-Adaptive Dual-Graph Neural Network for Joint Congestion and Timing Prediction",
+   "abstract": "Early physical-design decisions benefit from jointly estimating routing demand and timing risk, but a netlist edge and a geometric-neighbor edge encode different phenomena. We present TD-DGNN, a task-adaptive dual-graph predictor with separate spatial and netlist GraphSAGE branches, learned congestion- and timing-specific fusion gates, and a directed congestion-conditioned timing head. To isolate architectural effects, we construct 144 independently generated synthetic placed directed-acyclic circuits (18,311 cells), using a rectangular uniform wire-density estimator and a congestion-detour longest-path timing engine. Nine configurations, including a capacity-matched baseline, are trained with three seeds and assessed on 24 unseen circuits. TD-DGNN attains mean per-design timing correlation 0.855 and violation ROC-AUC 0.825 versus 0.814 and 0.810 for a parameter-matched single-graph reference; the paired timing gain is 0.041 (95% bootstrap interval 0.032–0.050). Without retraining, on 24 larger synthetic circuits it attains correlation 0.836 versus 0.797 for that reference. Directional predecessor aggregation adds 0.0063 timing correlation relative to undirected coupling. The independent effect of adaptive gates and congestion-conditioning is smaller on this benchmark. These results establish a controlled test of graph separation rather than an estimate of commercial sign-off accuracy.",
+   "authors": [
+    "Daria Phillips",
+    "Arjun Lopez",
+    "Victor Miller",
+    "Mina Kang"
+   ],
+   "published": "2026-11-04",
+   "url": "https://doi.org/10.62051/ijmee.v8n7.08",
+   "pdf": "https://ijmee.org/pdf/2026/10.62051-ijmee.v8n7.08.pdf",
+   "venue": "International Journal of Mechanical and Electrical Engineering",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-08"
+  },
+  {
    "id": "doi:10.1145/3767308.3836503",
    "title": "IterCAD: Iterative Program Repair for CAD Code Generation from Orthographic Views",
-   "abstract": "Generating executable parametric CAD code from dimension-annotated orthographic drawings is a challenging task requiring geometric understanding, procedural reasoning, and precise numerical prediction. Existing vision-language approaches typically formulate this problem as one-shot generation, preventing the model from inspecting intermediate CAD results and correcting early mistakes, often leading to non-executable code or geometrically inconsistent outputs. In this paper, we propose IterCAD, an iterative framework that reformulates orthographic-view-to-CAD generation as a progressive program repair process. Instead of predicting the final CAD code in a single pass, IterCAD repeatedly analyzes the current CAD result, reasons about its discrepancy with the target views, and explicitly decides whether to REVISE the code or STOP the refinement process. To make iterative repair learnable, we further construct IterCAD-RS, a structured revise-or-stop supervision set containing both repairable intermediate CAD states and already-correct states, and develop a three-stage training strategy for initial generation, revision learning, and multi-turn RL optimization. By closing the loop between visual understanding, geometric verification, and code refinement, IterCAD progressively corrects structural and parametric errors. Experiments on CADExpert show that IterCAD consistently improves code executability and geometric fidelity over strong one-shot baselines.",
+   "abstract": "Generating executable CAD code from dimension-annotated orthographic drawings is a challenging task requiring geometric understanding, procedural reasoning, and precise numerical prediction. Existing vision-language approaches typically formulate this problem as one-shot generation, preventing the model from inspecting intermediate CAD results and correcting early mistakes, often leading to non-executable code or geometrically inconsistent outputs. In this paper, we propose IterCAD, an iterative framework that reformulates orthographic-view-to-CAD generation as a progressive program repair process. Instead of predicting the final CAD code in a single pass, IterCAD repeatedly analyzes the current CAD result, reasons about its discrepancy with the target views, and explicitly decides whether to REVISE the code or STOP the refinement process. To make iterative repair learnable, we further construct IterCAD-RS, a structured revise-or-stop supervision set containing both repairable intermediate CAD states and already-correct states, and develop a three-stage training strategy for initial generation, revision learning, and multi-turn RL optimization. By closing the loop between visual understanding, geometric verification, and code refinement, IterCAD progressively corrects structural and parametric errors. Experiments on CADExpert show that IterCAD consistently improves code executability and geometric fidelity over strong one-shot baselines.",
    "authors": [
     "Yuchuan Wu",
     "Ke Niu",
