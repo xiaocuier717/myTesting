@@ -1,8 +1,32 @@
 {
- "updated": "2026-11-08T06:02:15+00:00",
- "new_today": 2,
+ "updated": "2026-11-09T06:31:33+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.09401",
+   "title": "PhyCAD: Physics-Aware Text-to-CAD Generation via Hierarchical Reinforcement Learning",
+   "abstract": "Language-driven computer-aided design (CAD) generation enables the creation of editable parametric models from text, yet geometric correctness alone does not ensure physical feasibility. We present PhyCAD, a framework for physics-aware Text-to-CAD generation that trains language models to produce executable CadQuery programs under geometric and physical constraints. To support this setting, we construct a Text-to-CAD dataset that links parametric CAD models with geometric specifications, loading conditions, and physical constraints. We further develop an automated CAD--CAE verifier that combines program execution, geometric checks, and finite element analysis to provide feedback for model training. A key learning challenge is to prioritize joint satisfaction of geometric and physical constraints while retaining informative feedback on partial progress. A flat aggregation of heterogeneous rewards can obscure this priority, allowing improvements in individual criteria to compensate for unmet design requirements. We therefore introduce a Hierarchical Balanced Advantage for Group Relative Policy Optimization, grouping candidates into levels according to their verification status and combining between-level progress with objective-wise peer ranking within each level. This formulation preserves cross-level priority in the training signal while providing fine-grained feedback for satisfying constraints and improving feasible designs. Experiments across multiple language models show that PhyCAD consistently improves joint geometric and physical constraint satisfaction. These results demonstrate the value of verifiable engineering feedback for advancing language-driven CAD generation beyond geometric reconstruction toward physics-aware design.",
+   "authors": [
+    "Yuxin Cui",
+    "Weijie Zheng",
+    "Zhengyang Li",
+    "Han Wang",
+    "Wenjie Feng",
+    "Qiyu Kang"
+   ],
+   "published": "2026-11-06",
+   "url": "https://arxiv.org/abs/2611.09401",
+   "pdf": "https://arxiv.org/pdf/2611.09401v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-09"
+  },
   {
    "id": "doi:10.1093/jcde/qwag095",
    "title": "Appearance-preserving simplification of non-watertight CAD models using NeuS-guided outer shell extraction",
@@ -502,7 +526,7 @@
    ],
    "published": "2026-11-02",
    "url": "https://arxiv.org/abs/2611.02540",
-   "pdf": "https://arxiv.org/pdf/2611.02540v1",
+   "pdf": "https://arxiv.org/pdf/2611.02540v2",
    "venue": "arXiv cs.CV, cs.CL, cs.LG",
    "source": "arXiv",
    "tags": [
