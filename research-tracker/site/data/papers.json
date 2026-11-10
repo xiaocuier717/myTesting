@@ -1,8 +1,147 @@
 {
- "updated": "2026-11-09T06:31:33+00:00",
- "new_today": 1,
+ "updated": "2026-11-10T07:19:36+00:00",
+ "new_today": 6,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.12712",
+   "title": "Will AI mess my RTL? A snapshot-based approach to verifying AI-written RTL",
+   "abstract": "With the growing interest in using AI (Artificial Intelligence) for RTL (Register-Transfer Level) hardware development, robust and comprehensive verification has become more important than ever. As Large Language Models (LLMs) increasingly assist in creating and modifying RTL designs, ensuring that these changes preserve existing functionality is paramount for building trust in AI-driven workflows. We present SVApshot, a fully automated framework that leverages LLMs to generate and systematically attempt to correct SystemVerilog Assertions (SVA) for RTL modules, completely removing the human from the generation loop. SVApshot introduces a novel snapshot methodology that captures the current functionality of a design as a comprehensive set of formal assertions, creating a regression suite for validating future changes--whether made by humans or AI. The framework features automated duplicate detection, assertion set expansion, and iterative repair of failing assertions using LLM-guided debugging with formal verification feedback. Our experimental evaluation across diverse RTL modules demonstrates high coverage for complex modules, with successful detection of both manually-injected and AI-introduced bugs. Additionally, this framework opens the door for automatic generation of formal testbenches to benchmark LLMs for hardware design, moving beyond binary pass/fail metrics towards nuanced assertion-based scoring.",
+   "authors": [
+    "Bernat Homs",
+    "Oscar Palomar",
+    "Miquel Moreto",
+    "Marcelo Orenes-Vera"
+   ],
+   "published": "2026-11-09",
+   "url": "https://arxiv.org/abs/2611.12712",
+   "pdf": "https://arxiv.org/pdf/2611.12712v1",
+   "venue": "arXiv cs.SE, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.11848",
+   "title": "Causal Signal Credit Assignment for Verilog Code Generation via Counterfactual Hardware Verification",
+   "abstract": "Large language models have improved Verilog generation, yet functional correctness remains difficult to optimize because simulation commonly provides a coarse module-level pass/fail outcome. Such feedback discards useful evidence from partially correct RTL modules and cannot determine whether a source statement is functionally responsible for an observed output behavior. We present a new method named Causal Signal Credit Assignment (CSCA), which is a counterfactual preference-optimization framework for Verilog generation. CSCA first performs continuous signal-level behavioral verification on sampled candidate modules. It then locates output-driving assignment spans and applies five interventions while holding the remaining module and testbench fixed. The resulting changes in signal-level errors are combined with behavioral agreement to form a continuous statement credit, which is mapped to response-token weights for strict weighted direct preference optimization. This enables CSCA to learn from locally supported statements without uniformly reinforcing an otherwise incorrect response. Built on Icarus Verilog and a CodeV-derived corpus, CSCA is evaluated on VerilogEval~2.0 and RTLLM~v2.0, including both code completion and specification-to-RTL tasks. With a Qwen2.5-Coder-7B-Instruct backbone, CSCA leads the evaluated 7B-scale models and remains comparable to the much larger GPT-5.4-mini on the reported Verilog-generation benchmarks.",
+   "authors": [
+    "Yali Du",
+    "Ming Li"
+   ],
+   "published": "2026-11-09",
+   "url": "https://arxiv.org/abs/2611.11848",
+   "pdf": "https://arxiv.org/pdf/2611.11848v1",
+   "venue": "arXiv cs.AI, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.11470",
+   "title": "GOPR-CAD: Graph-of-Operations Progressive Reasoning for CAD Generation",
+   "abstract": "Generating accurate CAD models requires substantial engineering expertise and careful control of geometry, topology, and mechanical constraints. Text-to-CAD aims to simplify this process, but current LLM-based methods often generate CAD programs directly. Language models remain unreliable when producing long code while coordinating coupled geometric, topological, and dimensional constraints. Consequently, executable programs may still produce structurally incorrect models, which execution rate and rendered appearance may fail to reveal. To address these limitations, we propose GOPR-CAD, an agentic Text-to-CAD pipeline based on Graph-of-Operations Progressive Reasoning. A language model acts as a decision agent over encapsulated CAD operations and progressively constructs an executable operation graph, which a deterministic compiler converts into the final CAD model. This separation requires no additional training and supports different language models. To evaluate structural fidelity, we construct MHCAD, a benchmark of 300 standard mechanical part requirements derived from Machinery's Handbook. Their explicit structures enable reference-free STEP/B-rep evaluation. GOPR-CAD achieves 82.7% Structural Yield on MHCAD, and 87.2% Structural Yield on an external CADPrompt subset.",
+   "authors": [
+    "Yitian Pang",
+    "Yifan Li",
+    "Xiaowei Yue",
+    "Li Zheng"
+   ],
+   "published": "2026-11-08",
+   "url": "https://arxiv.org/abs/2611.11470",
+   "pdf": "https://arxiv.org/pdf/2611.11470v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.11051",
+   "title": "PRISM: Preference-based Reward and Uncertainty-Integrated Synthesis Minimization for RTL PPA Optimization",
+   "abstract": "This paper introduces a budget-aware, multi-objective framework (called PRISM) for RTL optimization that improves power, performance, and area (PPA) while sharply limiting expensive commercial synthesis tool calls. Starting from a synthesizable baseline and functional testbench, the method iterates through LLM-driven rewrite generation, fast compile/simulation equivalence filtering, low-cost proxy feature extraction, and selective commercial synthesis tool (Synopsys Design Compiler (DC)) evaluation. To prioritize which candidates deserve high-quality synthesis, we train a preference-based reward model using pairwise ranking supervision derived from commercial synthesis tool outcomes, and combine ensemble uncertainty with a diversity-aware acquisition rule to avoid early bias and redundant evaluations. A key advantage is that PRISM maintains a best-tradeoff set G of non-dominated designs throughout the run: G preserves the best solutions found so far, is fed back into generation and refinement, and enables consistent, cumulative improvements rather than repeatedly restarting from the baseline. Across RTLLM v2.0 modules, the approach consistently yields post-synthesis gains under fixed commercial synthesis tool call budgets, and ablations confirm that reward-guided selection and candidate dropping are central to sample-efficient progress. PRISM efficacy is evaluated across multiple technology nodes (7 nm, 15 nm, and 45 nm) using identical pipelines without retraining.",
+   "authors": [
+    "Armin Abdollahi",
+    "Negin Ashrafi",
+    "Mehdi Kamal",
+    "Massoud Pedram"
+   ],
+   "published": "2026-11-08",
+   "url": "https://arxiv.org/abs/2611.11051",
+   "pdf": "https://arxiv.org/pdf/2611.11051v1",
+   "venue": "arXiv cs.AR, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.10798",
+   "title": "RTLREX: LLM-Guided Framework for Exact High-Level RTL Recovery",
+   "abstract": "Hardware designs may be available only as gate-level netlists or input-output descriptions when the original register-transfer-level (RTL) design and documentation are not accessible. Low-level representations obscure word-level computation and its finite-width behavior. Recovering high-level RTL from such representations therefore helps engineers understand a circuit's functionality and enables RTL rewriting and resynthesis. A plausible function model is also insufficient unless the generated RTL is equivalent to the original circuit for all input combinations. In this paper, we present RTLREX, a large language model (LLM)-guided framework that coordinates domain-specific tools for function recovery, RTL generation, independent verification, and cost-guided rewriting. Independent verification establishes equivalence between the recovered RTL and the original circuit. The LLM uses tool feedback to select further analyses, revise candidate RTL, and propose syntax-cost reductions. Experiments on 30 benchmarks from Problem A of the ICCAD 2022 CAD Contest show that RTLREX recovers equivalent high-level RTL for all benchmarks, surpassing the state-of-the-art method WolFEx in recovery coverage. On benchmarks recovered by both methods, RTLREX reduces mean syntax cost by 20.5% relative to WolFEx. On complete truth-table benchmarks from the IWLS 2026 Contest, our framework reduces mean syntax cost by 95.7% relative to an LLM agent baseline on the benchmarks validated by both methods.",
+   "authors": [
+    "Wuqian Tang",
+    "Fangzhou Liu",
+    "Ruijie Wang",
+    "TingTing Hwang",
+    "Bei Yu",
+    "Chun-Yao Wang"
+   ],
+   "published": "2026-11-07",
+   "url": "https://arxiv.org/abs/2611.10798",
+   "pdf": "https://arxiv.org/pdf/2611.10798v1",
+   "venue": "arXiv cs.AR, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-10"
+  },
+  {
+   "id": "arxiv:2611.10063",
+   "title": "Done Is Not Correct: Measuring Silent Failures and Self-Verification Calibration When LLM Agents Take CAD Actions",
+   "abstract": "When a large language model (LLM) agent writes parametric CAD code from a natural-language specification, syntactic success decouples from semantic correctness. We release a benchmark and harness that measure this gap directly: 13 specification tasks whose every requirement maps to machine-checkable properties of the produced B-rep, measured by the kernel against published tolerance bands, with reference solutions and the full graded attempt corpus. The exact, self-audited oracle isolates two quantities no prior CAD benchmark reports: the silent-failure rate (a valid, renderable solid, an explicit completion claim, and at least one failed semantic check) and completion-claim calibration. Across four models from four vendors (156 attempts per architecture), single-shot agents claimed completion on 98% of attempts and were silently wrong on 14.1%; a tool-use loop that enforces measure-then-claim cut silent failures to 3.2% and raised claim precision from 64% to 96%, and a four-model ablation attributes the change to the claim contract rather than the feedback. A planner-coder-checker pipeline matched that precision at lower coverage with no success gain. Stated confidence was miscalibrated single-shot (ECE 0.32) and became informative under verification for three of four models. Hardening our own oracle flipped 18 of 519 regraded verdicts from pass to fail and none in reverse; a blind expert audit overturned 3 of the 18 silent failures outside the one ambiguously specified task; and fourfold scaling of every tolerance band leaves the contrast intact.",
+   "authors": [
+    "Carson Rodrigues",
+    "Clive Rodrigues",
+    "Aravind Reddy G"
+   ],
+   "published": "2026-11-06",
+   "url": "https://arxiv.org/abs/2611.10063",
+   "pdf": "https://arxiv.org/pdf/2611.10063v1",
+   "venue": "arXiv cs.SE, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-11-10"
+  },
   {
    "id": "arxiv:2611.09401",
    "title": "PhyCAD: Physics-Aware Text-to-CAD Generation via Hierarchical Reinforcement Learning",
@@ -1029,8 +1168,8 @@
   },
   {
    "id": "arxiv:2610.33133",
-   "title": "Physics Informed Neural Networks for Solving the Drift-Diffusion Equations",
-   "abstract": "The drift-diffusion equations are the fundamental building block for the modeling, design, and optimization of modern semiconductor devices. Solutions of the drift-diffusion equations rarely give way to analytical forms, and exhibit strong nonlinearity, with the solutions ranging over several orders of magnitude. These attributes have led to research into numerical solvers, and while many commercial Technology Computer Aided Design (TCAD) packages now exist, they may require long simulation times, exhibit sensitivity to initial guesses, and rely on mesh generation. Further, these solvers are not well suited for inverse problems where the design parameters of a device are retrieved from its desired functional characteristics. To address all these challenges, this work demonstrates the usage of Physics Informed Neural Networks (PINNs) for the solution of the drift-diffusion equations with errors comparable to traditional simulation software using advanced training techniques to solve problems beyond the well-behaved equilibrium regime. For this study, we specifically choose an abrupt PN-junction in both one and two dimensions that features extreme gradients of the carrier concentrations at the Ohmic contacts and an abrupt discontinuity in the doping profile. Using the proposed PINN architecture, we are able to retrieve accurate results for all observables under all bias conditions. Additionally, we apply the PINN solver towards the inverse problem of retrieving doping profiles directly from desired electric field distributions or electrostatic potentials under non-zero applied biases. Our work establishes a powerful PINNs-based approach for semiconductor device modeling with the ability to solve inverse problems under non-equilibrium conditions for microelectronics research and discovery.",
+   "title": "PINND: Physics Informed Neural Networks for Solving the Drift-Diffusion Equations",
+   "abstract": "The drift-diffusion equations are the fundamental building block for the modeling, design, and optimization of modern semiconductor devices. Solutions of the drift-diffusion equations rarely give way to analytical forms, and exhibit strong nonlinearity, with the solutions ranging over several orders of magnitude. These attributes have led to research into numerical solvers, and while many commercial Technology Computer Aided Design (TCAD) packages now exist, they may require long simulation times, exhibit sensitivity to initial guesses, and rely on mesh generation. Further, these solvers are not well suited for inverse problems where the design parameters of a device are retrieved from its desired functional characteristics. To address all these challenges, this work demonstrates the usage of Physics Informed Neural Networks for the Drift-diffusion (PINND) equations with errors comparable to traditional simulation software using advanced training techniques to solve problems beyond the well-behaved equilibrium regime. For this study, we specifically choose an abrupt PN-junction in both one and two dimensions that features extreme gradients of the carrier concentrations at the Ohmic contacts and an abrupt discontinuity in the doping profile. Using the proposed PINN architecture, we are able to retrieve accurate results for all observables under all bias conditions. Additionally, we apply the PINN solver towards the inverse problem of retrieving doping profiles directly from desired electric field distributions or electrostatic potentials under non-zero applied biases. Our work establishes a powerful PINNs-based approach for semiconductor device modeling with the ability to solve inverse problems under non-equilibrium conditions for microelectronics research and discovery.",
    "authors": [
     "Luke Ragan",
     "Matteo G. C. Alasio",
@@ -1039,7 +1178,7 @@
    ],
    "published": "2026-10-23",
    "url": "https://arxiv.org/abs/2610.33133",
-   "pdf": "https://arxiv.org/pdf/2610.33133v1",
+   "pdf": "https://arxiv.org/pdf/2610.33133v2",
    "venue": "arXiv cs.LG",
    "source": "arXiv",
    "tags": [
