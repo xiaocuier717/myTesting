@@ -1,8 +1,166 @@
 {
- "updated": "2026-11-10T07:19:36+00:00",
+ "updated": "2026-11-11T06:22:53+00:00",
  "new_today": 6,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.13713",
+   "title": "Toward Autonomous RTL and Synthesis Optimization: Benchmarking and Self-Improving Agents",
+   "abstract": "Recent advances in large language models (LLMs) and autonomous agents are creating new opportunities for hardware design optimization. This paper examines three connected directions toward autonomous RTL and synthesis optimization: (1) Realistic benchmarking. We discuss reference-based and open-ended RTL optimization benchmarks that evaluate optimization opportunities under realistic EDA workflows. (2) Tool-grounded RTL optimization. We present Dr. RTL, a multi-agent framework that automates critical-path analysis, RTL rewriting, and implementation-level evaluation, while continuously improving through reusable optimization skills. Evaluated on 20 real-world RTL designs, Dr.~RTL achieves average WNS/TNS improvements of 21\\%/17\\% with a 6\\% area reduction over commercial synthesis. (3) Design-specific synthesis optimization. We explore agent-driven synthesis script tuning and the discovery of executable synthesis algorithms across intermediate representations, technology-independent optimization, and technology mapping. Finally, we envision AI-native design automation that jointly explores architectural, RTL, and EDA algorithm design spaces, guided by verification constraints and implementation feedback.",
+   "authors": [
+    "Wenji Fang",
+    "Yao Lu",
+    "Jinghua Wang",
+    "Zhiyao Xie"
+   ],
+   "published": "2026-11-10",
+   "url": "https://arxiv.org/abs/2611.13713",
+   "pdf": "https://arxiv.org/pdf/2611.13713v1",
+   "venue": "arXiv cs.AI, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.13020",
+   "title": "ChipOmni: A General-Purpose AI Agent for Electronic Design Automation",
+   "abstract": "Electronic design automation (EDA) workflows remain highly fragmented, requiring engineers to coordinate heterogeneous representations, specialised software tools, and iterative verification across multiple design stages. Although large language models have brought more general reasoning and code-generation capabilities to EDA, many existing approaches remain focused on isolated tasks and struggle to plan, verify, and repair designs autonomously within executable engineering environments. Here we introduce ChipOmni, a knowledge-enhanced, context-evolving AI agent framework for EDA. ChipOmni integrates multimodal understanding, dynamic planning, multi-agent collaboration, and verification-driven tool interaction into a unified autonomous system. By continually incorporating feedback from external engineering tools, the framework maintains an evolving task context, integrates domain knowledge, and iteratively refines intermediate designs. Across benchmarks for analog circuit, RTL, testbench, and formal-assertion generation, ChipOmni improves multiple task-specific measures over the evaluated baselines and solves all 30 AnalogCoder-Pro tasks. In a long-horizon case study, ChipOmni advances a natural-language RISC-V specification through three design levels to a micro-SoC GDSII layout that passes physical sign-off, without human intervention after initialization. Together, these results show that ChipOmni can coordinate verification-driven design across heterogeneous tasks and sustain long-horizon engineering workflows, advancing a shift from fragmented, tool-centred processes towards agent-centred, closed-loop systems.",
+   "authors": [
+    "Pengkun Wang",
+    "Rui Mao",
+    "Zhe Zhao",
+    "Dongting Xie",
+    "Haibin Wen",
+    "Song Xu",
+    "Di Wu",
+    "Xu Wang",
+    "Zhengyang Zhou",
+    "Binwu Wang",
+    "Xiaofeng Cao",
+    "Yang Wang"
+   ],
+   "published": "2026-11-09",
+   "url": "https://arxiv.org/abs/2611.13020",
+   "pdf": "https://arxiv.org/pdf/2611.13020v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-11"
+  },
+  {
+   "id": "doi:10.1145/3842505",
+   "title": "Neural Centroidal Voronoi Tessellations",
+   "abstract": "Centroidal Voronoi tessellation (CVT) is a fundamental primitive for high-quality surface sampling and isotropic remeshing in computer graphics. However, computing surface CVTs with classical solvers remains expensive: each optimization step repeatedly constructs restricted Voronoi diagrams (RVDs) and integrates quantities over their surface cells. We introduce Neural CVT , a learning-based surface-CVT solver that replaces these costly geometric computations with a recurrent neural optimizer, accelerating CVT optimization by one to two orders of magnitude in our benchmarks while preserving geometric fidelity. Given an input surface, we sample a dense point cloud and extract multi-scale geometric descriptors with a graph neural encoder. A lightweight recurrent optimizer then refines seed positions over a small number of iterations, aggregating interpolated surface features and optimization history to predict per-seed displacements. The framework is trained self-supervised using CVT objectives that promote uniform distributions and, when desired, feature alignment. Across diverse organic and CAD-like shapes, Neural CVT generalizes to unseen geometry, initialization strategies, and seed densities, producing isotropic, feature-preserving remeshes comparable to state-of-the-art offline optimization methods at a fraction of the computational cost. The code and trained models are available at https://github.com/sig-pku/NeuralCVT.",
+   "authors": [
+    "Jiacheng Xu",
+    "Bo Pang",
+    "Rui Xu",
+    "Xiaocheng Zhang",
+    "Yang Liu",
+    "Fei Zhu",
+    "Guoping Wang",
+    "Peng-Shuai Wang"
+   ],
+   "published": "2026-11-09",
+   "url": "https://doi.org/10.1145/3842505",
+   "pdf": "https://doi.org/10.1145/3842505",
+   "venue": "ACM Transactions on Graphics",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-11"
+  },
+  {
+   "id": "doi:10.21203/rs.3.rs-11402689/v1",
+   "title": "Cranio-Diff: Diffusion-based Cross-domain Craniofacial Reconstruction with 2D X-ray Skull",
+   "abstract": "Abstract The identification of unknown human remains is a persistent humanitarian and forensic challenge. In forensic investigations, it becomes even more challenging when common biometric DNA identifications, such as soft-tissue or hair strands are not present, as they degrade with time. To narrow down the process of identification, few attempts have been made to identify an individual by reconstructing a face from the given skeletal remains ( i.e., skull) using generative AI models, such as CycleGAN, Pix2Pix, and diffusion models. However, they fail to effectively capture semantic information in craniofacial reconstruction, due to a mismatch in the alignment of structural information across modalities. To address this issue, we propose \\textit{Cranio-Diff}, a diffusion-based framework for craniofacial reconstruction from 2D X-ray skull images. The proposed approach integrates skull-conditioned structural guidance through ControlNet with biometric text prompts to generate a face. The proposed \\textit{Cranio-Diff} method is evaluated on skull-face dataset obtained from X-ray scans of 120 subjects in lateral and frontal views. To enable controlled evaluation, each face image is artificially synthesized across three age groups (25, 45, 65) and three BMI variations $\\pm10\\%$, yielding 4320 paired samples. This dataset is also curated across different facial modalities ( RGB and sketch) with different appearance conditions (hair and without hair). To the best of our knowledge, this is the only X-ray-face dataset with this magnitude. Extensive experiments showed that the proposed method achieves improved performance over the recent existing approaches in both generated image quality and retrieval task. Finally, to evaluate the performance of our proposed method, we have evaluated the quality of the generated image using FID, SSIM, LPIPS score. Additionally, retrieval performance is evaluated using recall@k, mAP@k and MRR@k. Obtained experimental results demonstrate that the proposed method can be used as an alternate tool in providing aid in forensic investigations.",
+   "authors": [
+    "Ravi Shankar Prasad",
+    "Naresh Gurjar",
+    "Shashank Baghel",
+    "Chirag",
+    "Dinesh Singh"
+   ],
+   "published": "2026-11-09",
+   "url": "https://doi.org/10.21203/rs.3.rs-11402689/v1",
+   "pdf": "https://www.researchsquare.com/article/rs-11402689/latest.pdf",
+   "venue": "Research Square",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12982",
+   "title": "ICLayout-Bench: Benchmarking LLM Agents for Custom Circuit Layout Design",
+   "abstract": "Large language model (LLM) agents are being explored for circuit design, but their ability to produce high-quality custom layouts has not been extensively evaluated. ICLayout-Bench is a benchmark in which agents use electronic design automation (EDA) tools to construct and optimize GDSII layouts from transistor-level circuit netlists. These layouts are evaluated using physical verification, parasitic extraction, and post-layout simulation. Layouts that pass the physical and functional checks are scored on electrical performance and area. The benchmark includes 165 tasks across 13 process design kits (PDKs), covering technology nodes from 3 nm to 180 nm. The tasks span analog, mixed-signal, and digital circuits in open-source and commercial EDA flows. The experiments evaluate 22 configurations spanning seven models on 21 public and 19 private tasks. Mean layout scores range from 4.22 to 80.26 on public tasks and from 1.43 to 67.01 on private tasks, on a 100-point scale. Higher reasoning effort does not consistently improve mean scores, and configurations with comparable scores can incur substantially different model costs.",
+   "authors": [
+    "Zhangmai Li",
+    "Tianrui Ma",
+    "Zheng Weng",
+    "Mo Zou",
+    "Zidong Du",
+    "Yifan Hao",
+    "Yongwei Zhao",
+    "Wei Li",
+    "Jing Li",
+    "Qi Guo",
+    "Yunji Chen"
+   ],
+   "published": "2026-11-08",
+   "url": "https://arxiv.org/abs/2611.12982",
+   "pdf": "https://arxiv.org/pdf/2611.12982v1",
+   "venue": "arXiv cs.AR, cs.AI, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-11"
+  },
+  {
+   "id": "arxiv:2611.12930",
+   "title": "Topology-Aware Reinforcement Learning for CAD Decomposition toward All-Hexahedral Meshing",
+   "abstract": "Automatic hexahedral meshing for complex CAD models has long been regarded as the \"holy grail\" of mesh generation. The fundamental challenge arises from feature misalignment, where orthogonal or interacting features coexist, making direct hexahedral meshing infeasible and requiring decomposition into simpler, meshable blocks. While existing decomposition methods, including frame-field pipelines and learning-based techniques, have reduced manual intervention, they can remain sensitive to geometric and topological complexity and may fail to produce valid decompositions for challenging feature configurations. Specifically, their action spaces are typically restricted to surface-based splitting, which often yields invalid or unmeshable decompositions. To address these limitations, we propose DecompRL, a deep reinforcement learning framework for CAD decomposition toward hexahedral meshing. We design a set of topology-aware internal-splitting actions that leverage both global topological structure and local geometric property to effectively separate misaligned features. Furthermore, we introduce geometric rewards together with meshability feedback to guide the learning process toward valid decompositions and high-quality meshes. Extensive experiments on ABC, Fusion360, NIST, and DeepCAD show that DecompRL achieves the highest success rate among the evaluated learning-based methods on three of the four benchmarks, while maintaining competitive mesh quality. The measured LMFF-to-DecompRL runtime ratio reaches up to two orders of magnitude; this compares the full LMFF procedure with DecompRL decomposition alone, excluding subsequent mesh generation. The largest SR improvement is observed on Fusion360, where DecompRL reaches a success rate of 59.6%.",
+   "authors": [
+    "Jiaming Peng",
+    "Zhihao Zheng",
+    "Rui Wang",
+    "Qinglin Wang",
+    "Jing Xiao",
+    "Jie Liu",
+    "Na Lei",
+    "Xinhai Chen"
+   ],
+   "published": "2026-11-05",
+   "url": "https://arxiv.org/abs/2611.12930",
+   "pdf": "https://arxiv.org/pdf/2611.12930v1",
+   "venue": "arXiv cs.GR, cs.CV, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-11"
+  },
   {
    "id": "arxiv:2611.12712",
    "title": "Will AI mess my RTL? A snapshot-based approach to verifying AI-written RTL",
