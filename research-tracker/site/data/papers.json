@@ -1,8 +1,26 @@
 {
- "updated": "2026-11-11T06:22:53+00:00",
- "new_today": 6,
+ "updated": "2026-11-12T07:12:17+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.21203/rs.3.rs-11409815/v1",
+   "title": "Does Machine Learning Beat ARIMA in Foreign Exchange? Out-of- Sample Evidence on Trading Activity, Volatility and Prices for EUR/USD, GBP/USD and USD/CAD, 2010–2021",
+   "abstract": "Abstract Machine-learning models are used more and more to predict financial markets, but whether they beat simple time-series models is rarely tested under strict out-of-sample conditions. This study compares a Random Forest and a Gradient Boosting Machine (GBM), each using 26 price-derived indicators, with ARIMA models and simple rules for EUR/USD, GBP/USD and USD/CAD, using daily data from 2010 to 2021 and an 890-day test period from February 2018 to July 2021. For next-day tick-volume activity the comparison depends on information. Without volume history the Random Forest correctly classifies 31.8–41.6% of test days, while ARIMA correctly classifies 61.5–63.8%; with volume history the difference between the two is not significant. The GBM forecasts five-day realised volatility less accurately than ARIMA for EUR/USD and USD/CAD and is not significantly different from it for GBP/USD. In the main design it beats a trailing-volatility baseline only for GBP/USD, where a constant forecast performs just as well. For the price, ARIMA does no better than the random walk. Seven robustness analyses, including GARCH and HAR benchmarks, yearly re-fits, a single data source and other horizons, leave these results unchanged. Of 114 tests, four machine-learning wins remain significant after the Holm correction, and all of them are against naive baselines. The results suggest that a price-based machine-learning forecast should beat a simple time-series model, on the same information and test days, before it is trusted. The code, a pinned data download and file hashes are released for reproduction. JEL Classification: C45; C52; C53; F31; G17",
+   "authors": [
+    "Shadia Saeed Alqahtani"
+   ],
+   "published": "2026-11-09",
+   "url": "https://doi.org/10.21203/rs.3.rs-11409815/v1",
+   "pdf": "https://www.researchsquare.com/article/rs-11409815/latest.pdf",
+   "venue": "Research Square",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-11-12"
+  },
   {
    "id": "arxiv:2611.13713",
    "title": "Toward Autonomous RTL and Synthesis Optimization: Benchmarking and Self-Improving Agents",
