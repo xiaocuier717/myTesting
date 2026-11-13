@@ -1,8 +1,165 @@
 {
- "updated": "2026-11-12T07:12:17+00:00",
- "new_today": 1,
+ "updated": "2026-11-13T06:46:57+00:00",
+ "new_today": 6,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.16184",
+   "title": "Flow-CAD: Flow Matching for Contextual Anomaly Detection and Explanation in Tabular Data",
+   "abstract": "Contextual anomaly detection in tabular data aims to identify objects whose behavior is unexpected under their contextual conditions. In data-engineering pipelines, this task screens table rows whose measurements violate context-dependent integrity relationships. Most existing approaches rely on either shallow conditional models with limited distributional expressiveness or localized estimators that require per-context modeling, making it difficult to capture complex conditional relationships and scale to high-dimensional settings. We propose Flow-CAD, a new framework for contextual anomaly detection based on Flow Matching. Flow-CAD learns a single global and amortized conditional generative model that flexibly represents behavioral distributions conditioned on context, without assuming simple parametric forms or retraining local models. To enable robust and interpretable anomaly scoring, we introduce a scale-normalized and truncated residual energy derived from the learned conditional flow, which stabilizes anomaly scores, mitigates domination by extreme deviations, and supports feature-wise attribution. We further provide theoretical insights showing that the proposed residual-based anomaly score is stable under velocity estimation error, and that its Monte Carlo estimator satisfies concentration bounds. Experiments on 20 benchmark datasets with 13 competitors demonstrate that Flow-CAD has the best average rank for PR AUC, ROC AUC, and P@n, highlighting its effectiveness and practicality for contextual anomaly detection in tabular data. We provide the source code at https://github.com/ZhongLIFR/FlowCAD.",
+   "authors": [
+    "Zhong Li",
+    "Qi Huang",
+    "Yuhang Wang",
+    "Yang Cao",
+    "Thomas Bäck",
+    "Niki van Stein",
+    "Matthijs van Leeuwen",
+    "Lincen Yang"
+   ],
+   "published": "2026-11-12",
+   "url": "https://arxiv.org/abs/2611.16184",
+   "pdf": "https://arxiv.org/pdf/2611.16184v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "arxiv:2611.15459",
+   "title": "Fear of Memorizing Objects: End-to-End Zero-Shot Model-Based Object Detection",
+   "abstract": "This paper presents FOMO (Fear of Memorizing Objects), an end-to-end trainable transformer-based architecture for zero-shot model-based object detection. Existing approaches typically follow a proposal-and-match pipeline: target-agnostic mask proposals are generated and then matched to template features in a set of loosely coupled stages, making them susceptible to fragmented proposals in clutter and degraded matching under occlusions. FOMO elegantly replaces this paradigm by injecting object template information early in the detection pipeline: Bidirectional attention between learnable latent tokens, multi-view CAD templates, and query image features produces object-aware image features and conditioned queries which are subsequently decoded into bounding-box and confidence predictions. We train FOMO on Clutter6D, a novel large-scale synthetic dataset with over 500k images featuring more than 10k diverse object models rendered in highly cluttered scenes with multiple instances and varying occlusion levels, which addresses the limited object diversity and lack of realistic dense clutter in existing datasets for training zero-shot multi-instance algorithms. In true zero-shot fashion, FOMO achieves 54.2 mAP on BOP-Classic-Core at 0.23 s per image, ranking second overall with 3.8 pp difference to the top method while being more than 7x faster. Throughout comprehensive ablation studies we investigate and verify architectural design choices.",
+   "authors": [
+    "Leon Greiner",
+    "Wout Boerdijk",
+    "Junwen Huang",
+    "Benjamin Busam",
+    "Rudolph Triebel",
+    "Maximilian Durner"
+   ],
+   "published": "2026-11-11",
+   "url": "https://arxiv.org/abs/2611.15459",
+   "pdf": "https://arxiv.org/pdf/2611.15459v1",
+   "venue": "arXiv cs.CV",
+   "source": "arXiv",
+   "tags": [],
+   "score": 0,
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "doi:10.3991/ijep.v16i6.61849",
+   "title": "AI-Mediated Feedback in Computer-Aided Drafting Education: Exploratory Evidence on Student Performance and Perceptions",
+   "abstract": "Large higher-education classes make timely feedback during practical sessions difficult, encouraging the use of artificial intelligence (AI) as a complementary resource in technical education. This study examined AI-mediated feedback during computer-aided drafting (CAD) activities using structured prompts and task segmentation, alongside instructor-provided feedback across alternating phases. Academic performance and student perceptions were analyzed in a classroom environment. A quasi-experimental within-subjects ABAB design was implemented with 34 first-year Industrial Engineering students over 20 weeks, as the curriculum progressed from two-dimensional (2D) drafting to three-dimensional (3D) modeling. Results showed significant performance variation, with lower scores in later phases involving greater procedural demands. Since feedback modalities were embedded within the curricular progression, these differences cannot be interpreted as isolated causal effects of feedback modality. Students rated both modalities positively and considered AI-mediated feedback useful for resolving specific doubts, although not more useful than instructor feedback, particularly in 3D tasks. AI-mediated feedback may complement CAD instruction, depending on task complexity, prompt precision, response reliability, and instructor guidance.",
+   "authors": [
+    "Víctor A. Erazo-Arteaga",
+    "Santiago Marcelo Vacas Palacios",
+    "Marcelo Cisneros Rúales"
+   ],
+   "published": "2026-11-10",
+   "url": "https://doi.org/10.3991/ijep.v16i6.61849",
+   "pdf": "https://online-journals.org/index.php/i-jep/article/download/61849/17482",
+   "venue": "International Journal of Engineering Pedagogy (iJEP)",
+   "source": "OpenAlex",
+   "tags": [],
+   "score": 0,
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "doi:10.5281/zenodo.23740337",
+   "title": "Nasdanika SDK Runtime Documentation",
+   "abstract": "Most enterprise knowledge is glass. It holds its shape and makes sense up close, and nothing connects it. The definition of a customer lives in a database schema, a Java class, a wiki table and three spreadsheets, and each one is a projection of a model nobody ever wrote down. Ask who owns the definition and you get silence. An AI assistant can't be fed it either. People don't skip structure because it is useless. They skip it because it costs more to keep than it pays, and a spreadsheet never asks anyone to adopt anything. This book argues that the cost has changed, and shows a runtime built on that argument. The Nasdanika SDK Runtime is a set of modules on three foundations: the JDK, EMF core and the OpenTelemetry API. Models as the API. Data and operations are written as text in Xcore and generated by a Maven build, with no Eclipse IDE. Models can be saved as XMI, JSON, YAML or binary, and their operations can be called by a command line or an agent. Capabilities. Code says what it needs and the framework finds it among the modules present, by type, down to the generics. Telemetry as part of the code. Watch work live with no OpenTelemetry SDK and no backend, or save it as a model next to the models it changed. Volumes. A model, a running JVM or a remote system can be presented as files, served over HTTP or mounted as a drive over WebDAV. A command line assembled from contributions. Adding a dependency adds commands. Models that ship with it. Meta, the JVM, HTML, Bootstrap, TypeScript, React, and diagrams with Draw.io, ELK and SVG. A solution built on it runs in one JVM, on a laptop or a single virtual machine, with no cluster, database server or message broker to ask permission for. Who it is for Architects who want more structure with less effort. You don't need to write Java to get value from the first part. Java developers who want an observable, testable foundation with few dependencies. Researchers and R&D teams who need to try an idea before anyone will provision infrastructure for it. AI assistants. The terms are used consistently, the rules of thumb are collected in one place, and every listing compiles. What it is not It is not an introduction to modeling or to Java. My sister, who knows modeling a bit, says of this material that someone walking in from the cold will not get it. She is right. If the problems are not yet yours, the book will keep until they are. How it keeps you honest Every listing is included from example modules that are built and tested before the book is rendered, so a listing that no longer compiles stops the build. Status labels say what is AVAILABLE, what is a SKETCH and what is PLANNED. This book is the menu: the why, the what and a high-level how. The recipes are the Nasdanika Zephyr Books, in-depth manuals for the modules that need more than a chapter. Draw.io and Groovy DSL are on Leanpub in a bundle with this book, and all of them are free on the runtime site and Maven Central. The book follows the runtime's quarterly releases. The text is licensed under CC BY 4.0 and the examples under EPL-2.0.",
+   "authors": [
+    "Pavel Vlasov"
+   ],
+   "published": "2026-11-08",
+   "url": "https://doi.org/10.5281/zenodo.23740337",
+   "pdf": "https://runtime.sdk.nasdanika.org/books/nasdanika-sdk-runtime-2026.11.0.pdf",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "tags": [
+    "LLM/智能体"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.08543",
+   "title": "SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design",
+   "abstract": "Circuit design for analog integrated circuits (ICs) is challenging because circuit topology, device sizing, and circuit performance are tightly coupled. Existing large language model (LLM)-based methods either rely on inference-time correction around frozen models or train on limited circuit types without directly using simulation outcomes as training signals. A key bottleneck is that existing datasets do not provide sufficient task information for training LLMs on end-to-end specification-conditioned design. To fill this gap, we first construct a large-scale simulation-grounded dataset with 8,626 design tasks across 10 different types of analog circuits, where each task includes a textual description, labeled I/O ports, loading condition, target specifications, a testbench, and a reference netlist. Using this dataset, we present SAFTAC, a simulation-augmented fine-tuning framework that trains LLMs to generate and revise analog circuit design. SAFTAC combines three-stage supervised fine-tuning, which progressively builds the capabilities required for analog circuit design and feedback-guided correction, with simulation feedback-augmented reinforcement fine-tuning, which further optimizes models using simulation-grounded rewards. We evaluate SAFTAC under single-pass generation and two-pass generation with simulation feedback, showing improvements over the strongest closed-source LLM by 15.9% and 7.8%, respectively.",
+   "authors": [
+    "Junsheng Huang",
+    "Yifan Sun",
+    "Zhuoer Zhang",
+    "Ning Wei",
+    "Yening Liu",
+    "Michael Molter",
+    "Pavan Kumar Hanumolu",
+    "Elyse Rosenbaum",
+    "Bin Hu",
+    "Huan Zhang"
+   ],
+   "published": "2026-11-05",
+   "url": "https://doi.org/10.48550/arxiv.2611.08543",
+   "pdf": "https://arxiv.org/pdf/2611.08543",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.10015",
+   "title": "Micius-Flash: Lightweight Agentic Intelligence for Engineering",
+   "abstract": "We introduce Micius-Flash, a 27-billion-parameter model for engineering with native multimodal input, deep reasoning and a 256K-token context window. We design the Micius data pipeline as a knowledge-tree-driven data flywheel comprising three stages: knowledge tree construction and expansion, data synthesis, and quality validation with hard-example augmentation. From this data, we train expert models for semiconductor knowledge and reasoning, hardware coding, and semiconductor multimodal understanding, along with agentic experts. Subsequently, we employ Multi-Teacher On-Policy Distillation (MOPD) to supervise training on sequences generated by Micius itself, thereby integrating the capabilities of these expert models into a unified model. On more than 20 datasets with about 15K records, Micius-Flash averages 64.2% on hardware code benchmarks, 15.0 points above a same-size baseline. It scores 62.4% on a semiconductor-specific agent benchmark, exceeding the same-size baseline by 17.2 points. We further develop Micius Harness for industrial applications, connecting the model to specialized tools, including EDA tools and KiCad, as well as execution environments. Case studies in PCB design, chip design workflow automation, and software development demonstrate the model's ability to use tool execution feedback for multi-step planning, code debugging, and iterative verification. We release Micius as an open-source model to advance the development of agents for science and engineering.",
+   "authors": [
+    "Hongcheng Gao",
+    "Weiheng Li",
+    "Ying Wei",
+    "Yu Lei",
+    "Shuo Sun",
+    "Yi Li",
+    "Yajiao Wang",
+    "Jie Luo",
+    "Jianwei Wen",
+    "Xinyi Zhou",
+    "Hongda Li",
+    "Yibing Zhang",
+    "Henghui Sun",
+    "Yufan Zhou",
+    "Tianfang Hao",
+    "Naihao Xue",
+    "Hailong Qu",
+    "Jingjing Zhou",
+    "Peng Xu",
+    "Yongzheng Wei",
+    "Yichen Zhu",
+    "Ziying Wang",
+    "Yibo Wang",
+    "Jianshu Zeng",
+    "Yuhang Lei",
+    "Zeqiang Wang"
+   ],
+   "published": "2026-11-04",
+   "url": "https://doi.org/10.48550/arxiv.2611.10015",
+   "pdf": "https://arxiv.org/pdf/2611.10015",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-13"
+  },
   {
    "id": "doi:10.21203/rs.3.rs-11409815/v1",
    "title": "Does Machine Learning Beat ARIMA in Foreign Exchange? Out-of- Sample Evidence on Trading Activity, Volatility and Prices for EUR/USD, GBP/USD and USD/CAD, 2010–2021",
@@ -863,7 +1020,7 @@
    ],
    "published": "2026-11-02",
    "url": "https://arxiv.org/abs/2611.02433",
-   "pdf": "https://arxiv.org/pdf/2611.02433v2",
+   "pdf": "https://arxiv.org/pdf/2611.02433v3",
    "venue": "arXiv cs.CV",
    "source": "arXiv",
    "tags": [
