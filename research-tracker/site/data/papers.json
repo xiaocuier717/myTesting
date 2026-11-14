@@ -1,8 +1,98 @@
 {
- "updated": "2026-11-13T06:46:57+00:00",
- "new_today": 6,
+ "updated": "2026-11-14T06:24:37+00:00",
+ "new_today": 4,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1038/s41598-026-75880-8",
+   "title": "A flexible language model-assisted electronic design automation framework",
+   "abstract": "Abstract Large language models (LLMs) are transforming electronic design automation (EDA) by enhancing design stages such as schematic design, simulation, netlist synthesis, and place-and-route. Existing methods primarily focus these optimisations within isolated open-source EDA tools and often lack the flexibility to handle multiple domains, such as analogue, digital, and radio-frequency design. In contrast, modern systems require to interface with commercial EDA environments, adhere to tool-specific operation rules, and incorporate feedback from design outcomes while supporting diverse design flows. We propose a versatile framework that uses LLMs to generate files compatible with commercial EDA tools and optimise designs using power-performance-area reports. This is accomplished by guiding the LLMs with tool constraints and feedback from design outputs to meet tool requirements and user specifications. The framework is used to evaluate case studies on operational transconductance amplifiers, microstrip patch antennas, and FPGA circuits.",
+   "authors": [
+    "Cristian Sestito",
+    "Panagiota Kontou",
+    "Pratibha Verma",
+    "Atish Dixit",
+    "Alexandros Dimitrios Keros",
+    "Michael O’Boyle",
+    "Christos-Savvas Bouganis",
+    "Themis Prodromakis"
+   ],
+   "published": "2026-11-12",
+   "url": "https://doi.org/10.1038/s41598-026-75880-8",
+   "pdf": "https://doi.org/10.1038/s41598-026-75880-8",
+   "venue": "Scientific Reports",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-14"
+  },
+  {
+   "id": "https://openalex.org/W7225934142",
+   "title": "The Art of Diminishing: Poetic Geometry and Generative Proportion in Tiered Temple of Kathmandu Valley",
+   "abstract": "Architecture is often understood through its cultural, historical, and symbolic meanings, yet the physical forms through which these meanings are expressed are governed by systems of geometry, proportion, and order. In the architecture of the Kathmandu Valley, the tiered temple represents a distinctive synthesis of cultural tradition and formal organization. While these temples have been studied through their history, symbolism, religious significance, structural behavior and spatial organization, the geometric relationships that generate and organize their vertical form remain less explicitly understood. The complex appearance of tiered temples suggests an underlying order in the relationship between the plinth, walls, cella, and successive roof tiers. These relationships are not necessarily defined by a single fixed dimension or universally documented rule, but may instead emerge through proportional relationships, recurring geometric conditions, and transformations of form. Understanding these relationships raises the question: can the geometry of tiered temples reveal a systematic logic through which their architectural form was established and transformed? This research investigates the geometry and proportional relationships of selected tiered temples of the Kathmandu Valley through observation, photographic measurement, digital reconstruction, and parametric modeling. By examining the relationship between width, height, tier progression, roof slopes, datum conditions, and the proportions of the temple's major components, the research seeks to identify recurring geometric relationships within the vertical composition of these structures. A Grasshopper-based parametric model is further used to reconstruct and manipulate these relationships, allowing the observed geometric conditions to be explored through controlled transformations of the temple form. Rather than reducing traditional architecture to a fixed mathematical formula, this research approaches geometry as a means of understanding how architectural form may carry, preserve, and transform knowledge across time. The study seeks to re-discover the underlying order within the visual complexity of Kathmandu Valley's tiered temples and to demonstrate how the study of geometry can provide a bridge between cultural tradition, architectural form, and contemporary methods of digital exploration.",
+   "authors": [
+    "Yusna Ayer"
+   ],
+   "published": "2026-11-10",
+   "url": "https://hdl.handle.net/10919/143994",
+   "pdf": "https://vtechworks.lib.vt.edu/bitstreams/21de2388-dad9-4dca-a666-d8a0756bfaf8/download",
+   "venue": "VTechWorks (Virginia Tech)",
+   "source": "OpenAlex",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-14"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.10824",
+   "title": "AutoC2V: Synthesis-Guided LLM Training for QoR-Optimized C++-to-Verilog Generation",
+   "abstract": "High-level synthesis (HLS) can translate C/C++ kernels into register-transfer level (RTL) designs, yet generating high-quality hardware still relies heavily on manual pragma tuning and repeated synthesis evaluation. We propose AutoC2V, a C++-to-Verilog generation framework driven by real synthesis feedback that enables large language models (LLMs) to directly generate RTL with improved quality of results (QoR) from synthesizable C++ kernels. We construct training data from real synthesis results, including synthesizable C++ source code, the corresponding Verilog RTL, QoR metrics, and optimization objectives. Using this dataset, we align the model toward synthesis-aware RTL generation through Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO). To reduce the high cost of repeatedly invoking real synthesis during GRPO, we design the QoR Prediction Reward Model (QoR RM), which predicts latency and resource metrics by encoding RTL into long-context semantic representations, thereby providing low-cost and continuous QoR reward signals for policy optimization. Experimental results demonstrate that AutoC2V not only substantially improves RTL functional pass rates, but also achieves superior latency and resource optimization compared to the unfine-tuned base model, representative HLS optimization approaches (HLSPilot, LLM-DSE, and AutoDSE), and advanced general-purpose commercial models (Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro, DeepSeek v4 Pro, and GLM-5.2). These results indicate that combining real synthesis data with efficient QoR reward modeling can further improve the ability of LLMs to generate high-quality RTL.",
+   "authors": [
+    "Guanqi Lyu",
+    "Fei Zhao",
+    "Zhaojun Lu",
+    "Jiaji He",
+    "Yongqiang Lyu"
+   ],
+   "published": "2026-11-07",
+   "url": "https://doi.org/10.48550/arxiv.2611.10824",
+   "pdf": "https://arxiv.org/pdf/2611.10824",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-14"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.10025",
+   "title": "Between Spark and Silicon",
+   "abstract": "Generative agents make it easy to imagine hardware design as a conversation followed by compilation. Yet faster register-transfer-level (RTL) generation does not ensure a faster, defensible engineering decision. This perspective argues that the operative unit of hardware agility is an accepted change supported by current, scoped, and independently governed evidence. We revisit key developments in executable verification, design generators, integrated implementation, and agentic design automation, distinguishing historical capabilities from vendor claims and recent benchmark results.",
+   "authors": [
+    "Zihao Wang"
+   ],
+   "published": "2026-11-05",
+   "url": "https://doi.org/10.48550/arxiv.2611.10025",
+   "pdf": "https://arxiv.org/pdf/2611.10025",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-14"
+  },
   {
    "id": "arxiv:2611.16184",
    "title": "Flow-CAD: Flow Matching for Contextual Anomaly Detection and Explanation in Tabular Data",
@@ -57,7 +147,7 @@
    "authors": [
     "Víctor A. Erazo-Arteaga",
     "Santiago Marcelo Vacas Palacios",
-    "Marcelo Cisneros Rúales"
+    "Marcelo Bayardo Cisneros Rúales"
    ],
    "published": "2026-11-10",
    "url": "https://doi.org/10.3991/ijep.v16i6.61849",
