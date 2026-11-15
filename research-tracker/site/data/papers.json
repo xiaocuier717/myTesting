@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-14T06:24:37+00:00",
- "new_today": 4,
+ "updated": "2026-11-15T06:33:33+00:00",
+ "new_today": 0,
  "errors": [],
  "papers": [
   {
@@ -19,7 +19,7 @@
    ],
    "published": "2026-11-12",
    "url": "https://doi.org/10.1038/s41598-026-75880-8",
-   "pdf": "https://doi.org/10.1038/s41598-026-75880-8",
+   "pdf": "https://www.nature.com/articles/s41598-026-75880-8_reference.pdf",
    "venue": "Scientific Reports",
    "source": "OpenAlex",
    "tags": [
