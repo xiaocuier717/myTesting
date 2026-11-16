@@ -1,8 +1,75 @@
 {
- "updated": "2026-11-15T06:33:33+00:00",
- "new_today": 0,
+ "updated": "2026-11-16T06:31:21+00:00",
+ "new_today": 3,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.18517",
+   "title": "OpenLayout: An Open and Agentic-Driven Platform for Holistic VLSI Physical Design and Benchmarking",
+   "abstract": "Physical design automation of very large-scale integrated circuits (VLSI) has made significant strides, progressing from single-stage placement and routing toward increasingly integrated full-flow implementation. Yet, existing approaches struggle with the vast design space optimization (DSO) arising from diverse technology nodes, circuit designs, and varied constraints. The substantial runtime of physical-design tools further exacerbates this challenge, leaving industrial workflows heavily dependent on experienced engineers to navigate the design space and achieve power, performance, and area (PPA) targets, incurring significant engineering effort. We argue that large language models (LLMs) with strong reasoning capabilities, enriched with distilled human design expertise, offer a promising path toward efficient and automated DSO. Unlike traditional algorithms, LLMs can interpret complex design contexts and naturally incorporate human expertise expressed in natural language for reasoning, acting, observing, and adapting throughout the design process, a capability that conventional optimization methods cannot exploit. To this end, we present OpenLayout, an agentic platform that leverages multi-agent collaboration with embedded design knowledge to enable self-iterative DSO. We further introduce OpenLayout-Bench, a benchmark targeting advanced technology nodes with commercial EDA tools to systematically evaluate physical design automation capabilities of LLMs. Experimental results demonstrate that OpenLayout achieves state-of-the-art performance, with approximately 20% accuracy improvement over baseline methods. Our work is open-sourced at https://github.com/fenggev56/OpenLayout",
+   "authors": [
+    "Qiufeng Li",
+    "Sizhe Tang",
+    "Quan Cheng",
+    "Zirui Wang",
+    "Wantong Li",
+    "Tian Lan",
+    "Weidong Cao"
+   ],
+   "published": "2026-11-13",
+   "url": "https://arxiv.org/abs/2611.18517",
+   "pdf": "https://arxiv.org/pdf/2611.18517v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "arxiv:2611.18535",
+   "title": "A Surrogate Boundary Condition for Improved Accuracy and Performance of Local Modeling in Radiation Transport Simulations",
+   "abstract": "Monte Carlo neutronics analysis of tokamak designs is computationally expensive due to the complex CAD geometries required to accurately model them. Design iteration of port plugs using global transport in the full model is impractical because of the computational cost. To circumvent this, local modeling methods are used. In the local modeling method, a boundary condition is assumed on the port plug, such that particles that leave the port plug do not require transport in the surrounding global model. For this purpose, vacuum and reflective boundaries are assumed, both of which provide poor approximation of the true transport physics in the global model. To improve on current techniques, a surrogate model is presented that provides a physics-informed boundary condition for the component. A neural network is trained to reproduce the boundary condition on the component that represents the behavior of particles returning from the surrounding geometry. Monte Carlo transport is only necessary within the component, and approximate physics from the surrounding region are retained. This approach allows the design in the component to be iterated without requiring full model transport and joining of the component mesh to the global mesh in each iteration. In this work, the surrogate model is evaluated against vacuum and reflective boundaries-- outperforming both in accuracy, with surrogate predictions of the flux in the port plug differing less than 12% from the global transport solution in any given energy bin. The surrogate boundary condition is also demonstrated to be more performant than global transport for the simplified benchmark geometry.",
+   "authors": [
+    "Jonathan Trieloff",
+    "Ethan Peterson"
+   ],
+   "published": "2026-11-13",
+   "url": "https://arxiv.org/abs/2611.18535",
+   "pdf": "https://arxiv.org/pdf/2611.18535v1",
+   "venue": "arXiv physics.comp-ph",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-16"
+  },
+  {
+   "id": "doi:10.3390/wevj17110593",
+   "title": "Circular Design Frameworks and Tools for Energy-Using Components in the Automotive Industry: A Systematic Literature Review on Usability, Integration, and Sustainability Trade-Offs",
+   "abstract": "The transition toward a Circular Economy in the automotive industry demands robust eco-design strategies for complex, energy-using, mechatronic systems. This systematic literature review critically evaluates 30 publications representing 27 distinct frameworks and computational tools for active automotive components. Using a customized Usability Scorecard on a 1–5 quantitative scale, solutions were benchmarked across workflow integration, performance trade-offs, End-of-Life, and Critical Raw Material (CRM) management. Systematic review findings reveal significant methodological gaps: circa 52% of evaluated tools exhibit low CAD/PLM workflow integration relying on manual data entry, while only 30% achieve high integration. For trade-off analysis, most tools, about 80%, rely on static multi-criteria weighting or use offline optimization. Furthermore, CRM tracking is unaddressed in 44% of the tools, rising to circa 60% including purely conceptual methods, with only 22% offering dedicated metrics or Digital Product Passport (DPP) readiness for material traceability. Based on these review findings, future research should investigate and validate automated, open-source AI-driven plug-ins leveraging Large Language Models (LLMs) and Digital Twins embedded directly in engineering environments to translate Circular Economy principles and metrics into daily design practices.",
+   "authors": [
+    "Maurizio Guadagno",
+    "Lorenzo Berzi",
+    "Massimo Delogu"
+   ],
+   "published": "2026-11-12",
+   "url": "https://doi.org/10.3390/wevj17110593",
+   "pdf": "https://doi.org/10.3390/wevj17110593",
+   "venue": "World Electric Vehicle Journal",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-16"
+  },
   {
    "id": "doi:10.1038/s41598-026-75880-8",
    "title": "A flexible language model-assisted electronic design automation framework",
@@ -506,7 +573,7 @@
    ],
    "published": "2026-11-08",
    "url": "https://arxiv.org/abs/2611.11051",
-   "pdf": "https://arxiv.org/pdf/2611.11051v1",
+   "pdf": "https://arxiv.org/pdf/2611.11051v2",
    "venue": "arXiv cs.AR, cs.SE",
    "source": "arXiv",
    "tags": [
@@ -2082,7 +2149,7 @@
    ],
    "published": "2026-10-17",
    "url": "https://arxiv.org/abs/2610.24451",
-   "pdf": "https://arxiv.org/pdf/2610.24451v1",
+   "pdf": "https://arxiv.org/pdf/2610.24451v2",
    "venue": "arXiv cs.GR",
    "source": "arXiv",
    "tags": [
