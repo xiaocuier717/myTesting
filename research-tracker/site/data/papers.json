@@ -1,8 +1,185 @@
 {
- "updated": "2026-11-16T06:31:21+00:00",
- "new_today": 3,
+ "updated": "2026-11-17T07:55:47+00:00",
+ "new_today": 8,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.20451",
+   "title": "Generative AI-Driven Parametric Design Optimization Framework for Vehicle Closure Systems",
+   "abstract": "This study presents a generative AI-driven parametric design optimization framework integrating performance-oriented generation with editable computer-aided design (CAD) and downstream computer-aided engineering (CAE) analysis for industrial vehicle closure systems. The framework is demonstrated on an automotive tailgate assembly with complex geometry, coupled components, and competing performance and feasibility requirements. A production-oriented CATIA model is restructured into a reference-based parametric template with a 13-dimensional design representation. An automated CAD/CAE workflow generates parametric models, performs structural analysis, and constructs a database of mass, maximum displacement, and maximum von Mises stress. Gaussian process regression surrogates predict performance, while diffusion and flow matching models generate design candidates. The design problem minimizes mass and maximum displacement, with stress assessed as an engineering feasibility constraint. Performance-guided generation using surrogate guidance and performance-aware training using a performance-aware loss incorporate engineering objectives, with sensitivity to guidance scale and loss weight evaluated. Generative search is compared with NSGA-II under matched evaluation budgets using a common surrogate model. Selected Pareto-region candidates are reconstructed in CATIA and re-evaluated through native CAE; all verified candidates are successfully regenerated and analyzed. Relative to the baseline, the knee-point design reduces mass by 7.1% and maximum displacement by 29.4%, while extreme verified solutions achieve maximum reductions of 10.3% and 37.3%, respectively. The results demonstrate performance-oriented multi-objective design exploration compatible with editable industrial CAD and native engineering verification.",
+   "authors": [
+    "Dongeon Lee",
+    "Yurim Lee",
+    "Jiyong Kim",
+    "Sanghyeon Kim",
+    "Sanghyun Lee",
+    "Seungyeon Shin",
+    "Jeahong Kim",
+    "Namwoo Kang"
+   ],
+   "published": "2026-11-16",
+   "url": "https://arxiv.org/abs/2611.20451",
+   "pdf": "https://arxiv.org/pdf/2611.20451v1",
+   "venue": "arXiv cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "arxiv:2611.19061",
+   "title": "Large Language Models for AI Infrastructure",
+   "abstract": "Large language models (LLMs) are increasingly used to design, optimize, and operate the infrastructure behind AI training and serving, yet the literature remains fragmented across hardware design, machine learning systems, electronic design automation, and high-performance computing. We present a comprehensive survey of LLM-assisted AI infrastructure across its lifecycle, from accelerator design and kernel engineering to compilation, deployment, operations, data management, and energy optimization. We organize the literature by the primary resource the LLM manages: artifact-centric methods for computational artifacts, operational-centric methods for deployment context and system state, and resource-centric methods for data and energy. These categories span the lifecycle and cover AI-specific concerns such as distributed-training configuration, inference serving, GPU-cluster scheduling, and data loading. Building on this taxonomy, we conduct a cross-study quantitative synthesis of reported results. Because studies adopt heterogeneous benchmarks, baselines, hardware, and metrics, we compare methods only where evaluation conditions permit and align results along common dimensions: functional correctness, execution performance, throughput, resource and energy consumption, operational outcomes, and optimization cost, keeping each result's native metric, baseline, and setting rather than collapsing them into a single score. This comparison reveals where LLM-driven methods yield consistent gains, how reported gains in workload orchestration depend on the evaluation environment, from simulators to real clusters and production, and where evidence is still lacking. Together, the taxonomy, lifecycle perspective, and quantitative evaluation provide an evidence-grounded reference for LLM-driven engineering of AI infrastructure.",
+   "authors": [
+    "Bolin Shen",
+    "Shaoyi Huang",
+    "Yushun Dong"
+   ],
+   "published": "2026-11-14",
+   "url": "https://arxiv.org/abs/2611.19061",
+   "pdf": "https://arxiv.org/pdf/2611.19061v1",
+   "venue": "arXiv cs.AI, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.1080/20464177.2026.2763301",
+   "title": "Performance prediction of contra-rotating propellers based on Artificial Neural Network and optimisation technique",
+   "abstract": "This study presents a machine learning–assisted optimisation framework for the design of contra-rotating propellers (CRPs) to improve hydrodynamic efficiency while accounting for cavitation and noise constraints. A Multiple-Input Multiple-Output Artificial Neural Network (MIMO-ANN) is developed as a surrogate model to predict open-water performance using the thrust loading coefficient (KT/J2), expanded area ratio (EAR) and pitch-to-diameter ratio (P/D) as inputs. The model achieves high predictive accuracy across multiple propeller series, with coefficients of determination (R2) exceeding 0.9996 and root-mean-square errors (RMSE) below 0.005. The ANN is coupled with constrained nonlinear optimisation to maximise open-water efficiency subject to the Keller cavitation criterion and a blade-tip-speed limit. The best-performing CRP configurations achieve efficiencies exceeding 68%, with a maximum of 70.30%, compared with 65.0% for the reference KP505 and 66.71% for the best optimised fixed-pitch propeller (FPP). Including propeller diameter as a decision variable affects thrust loading, rotational speed, and cavitation constraint. Some high-efficiency solutions marginally violate the cavitation constraint because of high operating load and geometric limits of the systematic propeller series; these cases are treated as near-feasible performance boundaries. The framework is intended for preliminary CRP design and design-space screening before higher-fidelity computational fluid dynamics (CFD) or experimental verification.Abbreviations: ANN: Artificial Neural Network; b(ℓ): Bias vector; B: Breadth; CAD: Computer-aided design; CFD: Computational fluid dynamics; CRP: Contra-rotating propeller; D: Diameter; DES: Detached Eddy Simulation; Δ: Displacement; T: Draft; EAR: Expanded area ratio; EARmin: Minimum EAR required to avoid cavitation; EEDI: Energy Efficiency Design Index; ESD: Energy-saving devices; f: Function; FPP: Fixed-pitch propeller; FSI: Fluid–structure interaction; FW-H: Ffowcs Williams–Hawkings; GA: Genetic algorithms; GHG: Greenhouse gas; h: Propeller centerline immersion; IMO: International Maritime Organization; JA: Advance coefficient; k: Constant; KCS: KRISO Container Ship; KQ: Torque coefficient; KRISO: Korea Research Institute of Ships and Ocean Engineering; KT: Thrust coefficient; KT/J2: Thrust loading coefficient; L: Loss function; ℓ: Hidden layer; LFC: Lifetime fuel consumption; LNG: Liquefied natural gas; LWL: Length water line; MFO: Moth-flame optimisation; MIMO: Multiple-Input Multiple-Output; ML: Machine learning; N: Samples; n: propeller rotational speed; NSGA: Non-dominated Sorting Genetic Algorithm; NURBS: Non-Uniform Rational B-Splines; P/D: Pitch-to-diameter ratio; Patm: Atmospheric pressure; PSO: Particle swarm optimisation; Pv: Vapor pressure; R: Correlation coefficients; R2: Coefficients of determination; RANS: Reynolds-Averaged Navier–Stokes; RBFN: Radial basis function networks; RMSE: Root mean square error; S: Wetted surface area; T: Draft; T: Thrust; URN: Underwater radiated noise; VA: Propeller speed of advance; VS: Ship speed; Vtip: Blade tip speed; Vtip-max: Maximum permissible tip speed; w: Wake fraction; W(ℓ): Weight matrix; WCT: Wide-chord-tip; x: Input vector; y: Output vector; Z: Blade numbers; γ: Specific weight; Δ: Displacement; ηo: Open water efficiency; Θ: Biases; σ: Non-linear activation function.",
+   "authors": [
+    "Mina Tadros",
+    "Ευάγγελος Μπουλουγούρης"
+   ],
+   "published": "2026-11-14",
+   "url": "https://doi.org/10.1080/20464177.2026.2763301",
+   "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/20464177.2026.2763301?needAccess=true",
+   "venue": "Journal of Marine Engineering & Technology",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测"
+   ],
+   "score": 4,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.1002/jomd.70006",
+   "title": "A Systematic Review on Generative Design for Manufacturability",
+   "abstract": "ABSTRACT Artificial intelligence (AI) is increasingly being used to support design for manufacturability (DfM) by enabling the generation of manufacturable designs. We refer to this emerging area as generative design for manufacturability (GDfM). Despite growing interest, current literature lacks a dedicated analysis of different approaches for integrating DfM rules in GDfM. This paper presents a systematic review of GDfM based on a PRISMA‐guided search of Scopus, Web of Science, and IEEE Xplore. Of 1547 identified records, 36 studies were selected for detailed analysis. The reviewed studies are compared by manufacturing process, AI method, and data representation. The results show that the literature is dominated by additive manufacturing, with comparatively fewer studies in machining and very limited coverage of casting, molding, forging, and stamping. DfM rules are integrated into designs via data‐driven approaches and rule‐based filters or optimizers within generative design pipelines. Data‐driven approaches ensure manufacturability via manufacturable datasets, enhanced model training, and modified network architectures. Variational autoencoders (VAEs) and generative adversarial networks (GANs) are the most commonly used AI models, whereas other promising models, such as diffusion models and transformers, remain underexplored. In terms of representation, 2D images and voxels dominate despite limited compatibility with downstream engineering tasks. The review identifies key gaps in GDfM in manufacturing process diversity, datasets, benchmarking, and downstream‐compatible representations, and highlights future opportunities in parametric/CAD sequence–based representations, diffusion and transformer models, and broader coverage of traditional manufacturing processes.",
+   "authors": [
+    "W. A. Lakpriya M. Weragoda",
+    "Katja Hölttä‐Otto",
+    "Kevin Otto",
+    "Jiahang Li",
+    "Christoph Wittig",
+    "Sven Matthiesen",
+    "Xingang Li"
+   ],
+   "published": "2026-11-14",
+   "url": "https://doi.org/10.1002/jomd.70006",
+   "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/jomd.70006",
+   "venue": "Journal of Mechanical Design",
+   "source": "OpenAlex",
+   "tags": [
+    "CAD 生成"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.5281/zenodo.24209335",
+   "title": "Data and code for Product-process representations for LLM-based generation of assembly instructions",
+   "abstract": "This dataset supports the study of product-process representations for LLM-based generation of assembly instructions. It contains training and evaluation data for two pneumatic-cylinder families, reference instructions, prompts, generated model answers, evaluation scripts, Excel result tables and figures. Six selected LoRA adapters are included for the main experiment and the preliminary repeatability and input-order study. The reference instructions are generated from explicit assembly rules. Native CAD and STEP files and pretrained base-model weights are excluded. The adapters require the specified Meta Llama 3.1 8B Instruct base model and are subject to the included Llama license terms.",
+   "authors": [
+    "Michael Jonek"
+   ],
+   "published": "2026-11-13",
+   "url": "https://doi.org/10.5281/zenodo.24209335",
+   "pdf": "https://doi.org/10.5281/zenodo.24209335",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.16991",
+   "title": "AnalogLayoutWorld: An Open Benchmark for Agentic Analog Layout Design",
+   "abstract": "Coding agents have demonstrated strong capabilities in software development, yet their ability to tackle long-horizon engineering tasks governed by physical constraints remains less understood. We study this question through analog circuit layout, which demands domain knowledge, geometric reasoning, and iterative interaction with design and verification tools. We introduce \\textbf{AnalogLayoutWorld}, an open-source agent benchmark with 40 expert-reviewed tasks for end-to-end layout generation from fixed transistor-level netlists. It combines an integrated design environment with independent physical and post-layout electrical verification, as well as objective layout quality metrics co-designed with analog layout experts. Across 13 model--harness configurations, 91.1\\% of attempts produce GDS layouts, but only 23.0\\% satisfy the benchmark's acceptance criteria. We also evaluate Novara, an internally developed agent system, which achieves the highest reported aggregate score. Our analysis links performance differences to test-time scaling under fixed budgets, suggesting that reasoning efficiency and effective use of verification feedback help sustain design quality as task complexity grows.",
+   "authors": [
+    "NovaSilicon Team"
+   ],
+   "published": "2026-11-12",
+   "url": "https://doi.org/10.48550/arxiv.2611.16991",
+   "pdf": "https://arxiv.org/pdf/2611.16991",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.16913",
+   "title": "CADET: Construction of PCB Routing Instances with Executable Demonstrations",
+   "abstract": "Printed circuit board (PCB) routing is the stage of physical layout that finds paths connecting the placed pads of each net. Public datasets in this domain are few, and most contain only the final states of routed boards, not demonstrations of the electronic design automation (EDA) engine actions that produce them. To close this gap, we propose CADET (Constructing executAble Demonstrations for Engine-grounded Training), which jointly generates synthetic boards and demonstrations built from EDA engine actions. The resulting RouteDemos provides 100,000 synthetic boards routed with zero design rule violations (DRVs), together with their demonstrations. Their distributions over 17 statistics resemble those of 142 real reference boards. CADET trains a routing policy on these demonstrations with behavior cloning and fine-tunes it with reinforcement learning (RL). On real test boards, the policy raised the rate of complete DRV-free routing from 38.0% to 67.2% over an RL-only baseline. This rate was comparable to that of the open-source autorouter FreeRouting and exceeded those of the other baselines, including GPT-6 Astra. We release the dataset and its generation code as open source at https://github.com/LGAI-Research/CADET.",
+   "authors": [
+    "Hyungseok Song",
+    "Won Seok Choi",
+    "Seohui Bae",
+    "Han-Seul Jeong",
+    "Junseok Park",
+    "Youngjoon Park",
+    "Soonyoung Lee"
+   ],
+   "published": "2026-11-12",
+   "url": "https://doi.org/10.48550/arxiv.2611.16913",
+   "pdf": "https://arxiv.org/pdf/2611.16913",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-17"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.16202",
+   "title": "An Agentic Python Framework for LLM-Driven UVM Testbench Synthesis with Closed-Loop Compiler Feedback",
+   "abstract": "Protocol bridge verification is a persistent bottleneck in SoC development: for every new bridge instance, engineers hand-craft a full UVM testbench from scratch, consuming 40--100 engineering hours of bring-up effort. We present an agentic Python framework that generates complete, protocol-aware UVM testbenches for arbitrary IP and subsystem configurations from a structured Verification Manifest---a JSON specification encoding interface topology, protocol semantics, and coverage intent. The framework employs a dual closed-loop architecture: an inner compiler feedback loop that injects categorised UVM diagnostics rather than raw tool output, and an outer coverage loop driven by intent-gap analysis against the Manifest. Validated on the AMBA AHB-to-APB bridge---a representative production protocol bridge with a 7-state control FSM, two-phase APB handshake, and non-trivial burst serialisation logic---the framework achieves 96.8% functional coverage, a $4.7\\times$ bring-up speedup, and a Protocol Verification Completeness score of 0.87, with only 2.1% of the generated 4,623-line testbench requiring human correction. The generated scoreboard independently identified a critical RTL functional fault that the manual baseline missed entirely. Generalisation across four protocol families confirms that speedup increases with protocol complexity, ranging from $3.1\\times$ (APB Subordinate) to $6.1\\times$ (CHI Subordinate).",
+   "authors": [
+    "Vikash Kumar"
+   ],
+   "published": "2026-11-12",
+   "url": "https://doi.org/10.48550/arxiv.2611.16202",
+   "pdf": "https://arxiv.org/pdf/2611.16202",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-17"
+  },
   {
    "id": "arxiv:2611.18517",
    "title": "OpenLayout: An Open and Agentic-Driven Platform for Holistic VLSI Physical Design and Benchmarking",
