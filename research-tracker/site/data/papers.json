@@ -1,8 +1,164 @@
 {
- "updated": "2026-11-17T07:55:47+00:00",
- "new_today": 8,
+ "updated": "2026-11-18T07:30:01+00:00",
+ "new_today": 7,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.23091",
+   "title": "BugGen 2.0: Rethinking the Roles of LLMs for Scalable RTL Bug Synthesis",
+   "abstract": "AI-assisted RTL localization and debugging need ground-truth bug datasets with known locations and observable failures, while testbench grading uses injected bugs to measure detection capability. Creating such datasets at scale remains a major EDA challenge. BugGen 1.0 shows that Large Language Models (LLMs) can generate context-aware RTL mutations. Still, it relies on the model for both choosing where to mutate and generating the edit, which increases inference costs and can lead to invalid choices. BugGen 2.0 changes this division of labor. Deterministic algorithms handle structural analysis, target selection, and validation, while the LLM focuses on localized semantic rewriting. Across four OpenTitan IP blocks and FabScalar with three LLMs, BugGen 2.0 reaches every requested quota of compilable bug scenarios that cause at least two test failures, with 14-16 of 16 configured mutation types represented. In completed same-model comparisons, it reduces token use by 6.8x-15.4x relative to BugGen 1.0 and 1.5x-7.9x relative to Firefly. BugGen 2.0 also expands the dataset without simulating every new bug. After finding accepted scenarios with observable failures, it generates alternative mutations at the same locations, simulates only a subset, and estimates acceptance for the rest. This skips 63.6% of AES and 33.9% of FabScalar variant simulations. Full simulation finds that 77.7% of AES variants and 95.2% of FabScalar variants are accepted, with a 1.09% estimation error on the directly comparable FabScalar set. These results show that focusing LLMs on semantic rewriting lowers inference and simulation cost while improving consistency across models and designs.",
+   "authors": [
+    "Minh Luu",
+    "Michael Quinn",
+    "Aakash Tyagi",
+    "David Houngninou",
+    "Jiang Hu"
+   ],
+   "published": "2026-11-17",
+   "url": "https://arxiv.org/abs/2611.23091",
+   "pdf": "https://arxiv.org/pdf/2611.23091v1",
+   "venue": "arXiv cs.SE, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.22565",
+   "title": "MillBill: A Machining Agent with Geometric Feedback",
+   "abstract": "Turning a CAD model into a machining program requires both process knowledge and geometric precision. Language models can generate such workflows by writing geometry and toolpath code for each part, but this makes numerical execution part of the model's task. We introduce MillBill, an agent that separates machining decisions from their geometric execution and verification. Given a boundary-representation part, stock, and material, a locally hosted, mid-sized open model proposes operations and cutting parameters for indexed three-axis machining. A geometric harness generates toolpaths, simulates material removal, and returns feedback for plan refinement. Setup planning accounts for what the available cutters can physically reach, rather than visibility alone. We evaluate the resulting programs by the fraction of the target surface area within the specified tolerance after simulated machining. With Qwen3.8-27B, MillBill outperforms frontier-model approaches that construct their own geometry and toolpath workflows on the evaluated machining tasks. Code: https://github.com/kulibinai/millbill",
+   "authors": [
+    "Gennadii Savrasov",
+    "Artem Slavin",
+    "Soslan Kabisov",
+    "Andrey Kuznetsov",
+    "Anton Konushin",
+    "Dmitrii Zhemchuzhnikov"
+   ],
+   "published": "2026-11-17",
+   "url": "https://arxiv.org/abs/2611.22565",
+   "pdf": "https://arxiv.org/pdf/2611.22565v1",
+   "venue": "arXiv cs.AI, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.22563",
+   "title": "CADMAGEDDON: High-Fidelity CAD Reconstruction with Local Inference",
+   "abstract": "CAD practitioners often work with proprietary parts that they are unwilling to share with external services. For individuals and small companies, bringing this work in-house also requires computational resources they can afford. We introduce CADMAGEDDON, an open-source agent that reconstructs editable CAD from meshes and can run locally on single-GPU systems and current-generation laptops. The method decomposes this complex task into a chain of simple visual decisions about what to construct and what to correct. Geometric tools support precise construction, allowing the agent to focus on visual reasoning. Using the mid-sized Qwen3.8-27B model, CADMAGEDDON outperforms prior approaches, including systems based on frontier models, in reconstruction quality on all the main benchmarks. CADMAGEDDON integrates with FreeCAD, bringing its reconstructions into practitioners' existing CAD workflows. Code: https://github.com/kulibinai/cadmageddon",
+   "authors": [
+    "Oleg Pavlov",
+    "Nikita Gavrilov",
+    "Soslan Kabisov",
+    "Gennadii Savrasov",
+    "Andrey Kuznetsov",
+    "Anton Konushin",
+    "Dmitrii Zhemchuzhnikov"
+   ],
+   "published": "2026-11-17",
+   "url": "https://arxiv.org/abs/2611.22563",
+   "pdf": "https://arxiv.org/pdf/2611.22563v1",
+   "venue": "arXiv cs.AI, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.22903",
+   "title": "BRepA: Graph-Based B-Rep Pretraining for Unified CAD Understanding and Generation",
+   "abstract": "Boundary representation (B-Rep) of CAD models encodes geometric primitives and their relations as a graph structure, enabling efficient shape modeling within CAD software. Learning on B-Reps for downstream tasks, such as segmentation and novel shape generation, requires specialized neural network designs. Moreover, performance improvements and accelerated training can be achieved with effective pretraining strategies, which is particularly important for tasks with limited labeled B-Rep data. In this paper, we introduce BRepA, a unified self-supervised pretraining framework that explicitly reconstructs both the geometry and topology of B-Rep objects via graph-based modeling. By learning from large-scale unlabeled CAD data only once, BRepA produces representations that generalize across tasks and significantly enhance both discriminative and generative learning. On segmentation tasks, BRepA demonstrates remarkable data efficiency. For instance, with only 1% labeled samples, BRepA pretraining improves mIoU by 32.52% compared to models trained from scratch. On generative tasks, aligning diffusion model representations with pretrained BRepA features substantially accelerates convergence, achieving nearly 2 times faster training while improving generation quality under the same computational budget, despite the diffusion model being roughly 20 times larger than BRepA. Overall, our results show that geometry- and topology-aware B-Rep pretraining provides a powerful foundation for both understanding and generating CAD structures, serving as a versatile representation backbone for diverse downstream applications. We will release the code to facilitate future research.",
+   "authors": [
+    "Dekai Zhu",
+    "Zhaiyu Chen",
+    "Stefan Gavranovic",
+    "Slobodan Ilic"
+   ],
+   "published": "2026-11-17",
+   "url": "https://arxiv.org/abs/2611.22903",
+   "pdf": "https://arxiv.org/pdf/2611.22903v1",
+   "venue": "arXiv cs.CV, cs.GR",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.21707",
+   "title": "Bookkeeping Is Not Judgement: EJBench, an Engineering Judgement Benchmark Built from a Conjugate Heat Transfer Design Campaign",
+   "abstract": "We introduce EJBench, a benchmark of engineering judgement: whether a model can predict how a design behaves at new conditions from a few earlier results, and decide on it. Unlike engineering benchmarks that test whether an agent can operate simulation or CAD software, EJBench is software-agnostic and asks what an engineer would conclude without running a simulation. Its tasks come from a conjugate heat transfer design campaign for battery cold plates, in three families: matching unlabelled test results to their operating points, choosing which stored runs to reveal before signing off a design, and ranking new duties by peak cell temperature. Every answer is taken from a converged simulation, not from an LLM judge. The best of ten frontier models, GPT-6 Astra, scores 0.71, and models state almost the same confidence on tasks they get wrong as on tasks they get right. We also post-train Qwen3.5-9B with LoRA and reinforcement learning, rewarded by the share of answer criteria the simulation results confirm; on the held-out test split its score rises from 0.071 to 0.106. We release the train, validation and test splits, the evaluation harness and the leaderboard.",
+   "authors": [
+    "James Sadler",
+    "Rotimi Alabi",
+    "Kotub Uddin"
+   ],
+   "published": "2026-11-16",
+   "url": "https://arxiv.org/abs/2611.21707",
+   "pdf": "https://arxiv.org/pdf/2611.21707v1",
+   "venue": "arXiv cs.CE, cs.AI, cs.CL",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "doi:10.55942/jeht.v2i2.2375",
+   "title": "Evaluating generative AI for dimensionally correct and manufacturable CAD models",
+   "abstract": "Generative AI now writes Computer-Aided Design (CAD) programs and boundary representations; however, the output that executes or resembles a target need not be dimensionally correct, constrained, or manufacturable. This review asks what evidence supports the engineering validity of generated parametric CAD. Journal articles from 2022 to 2026 were retrieved from OpenAIRE and Crossref, and records outside design geometry were removed. A bibliometric map of 60 articles was combined with manual coding of 19 core studies against a six-rung validation ladder, technical appraisal of ten full texts, and a structured synthesis of 14 matched contrasts. Output rose from three articles in 2022 to 2023 to 50 in 2025 and the partial year 2026, and mentions of feedback loops more than tripled in 2026. Of the coded studies, 14 reported shape fidelity and 10 execution success, but only 3 checked dimensions or explicit constraints, none reported functional analysis, and one measured a manufactured part. Three of six appraised studies with shape metrics normalized scale away. Feedback from interpreters, kernels, or a rule monitor raised execution or validity by 3.9 to 19.4 percentage points, but none was compared with resampling under an equal budget, and shape fidelity fell in four of five contrasts. The highest correction rates, 32.6 to 36.9 points, came from runs two thirds of which carried author-injected defects, certified by the monitor supplying the feedback. No study held out part families. Generative CAD has learned to produce valid programs; evidence that it satisfies engineering requirements remains thin.",
+   "authors": [
+    "Dimvy Rusefani Asetya"
+   ],
+   "published": "2026-11-15",
+   "url": "https://doi.org/10.55942/jeht.v2i2.2375",
+   "pdf": "https://journal.privietlab.org/index.php/JEHT/article/download/2375/1257",
+   "venue": "Journal of Engineering and High Technology",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-18"
+  },
+  {
+   "id": "arxiv:2611.21678",
+   "title": "RTLReviewBench: LLM Hardware Reviewers Rarely Miss Bugs but Routinely Reject Correct RTL",
+   "abstract": "Hardware teams increasingly ask large language models (LLMs) to review register-transfer level (RTL) code, yet it is unclear whether a model can tell a correct module from a buggy one without simulating it. We introduce RTLReviewBench, a benchmark of 114 matched pairs of buggy and correct Verilog modules. Each pair shares one specification, most buggy modules are real failures of LLM code generators, and every label is confirmed by simulation. Evaluating 12 commercial and open-weight models, we find a consistent asymmetry: reviewers rarely accept buggy code but often reject correct code, producing more than five false rejections for every missed bug. Synthetic mutants hide part of the problem: on the same designs, models miss far fewer injected bugs than real ones. Asking a model to reason before it commits to a verdict sharply reduces false rejections for weaker reviewers, and a controlled ablation shows that where the reasoning appears in the output matters more than the instruction to reason, whereas sampling and majority voting do not help. A blinded audit further shows that some correct \"buggy\" verdicts rest on false technical claims. We release the benchmark, a harder split for future models, all model responses, and the evaluation code at https://github.com/yasirmahmud/RTLReviewBench",
+   "authors": [
+    "Yasir Mahmud"
+   ],
+   "published": "2026-11-14",
+   "url": "https://arxiv.org/abs/2611.21678",
+   "pdf": "https://arxiv.org/pdf/2611.21678v1",
+   "venue": "arXiv cs.AR, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-18"
+  },
   {
    "id": "arxiv:2611.20451",
    "title": "Generative AI-Driven Parametric Design Optimization Framework for Vehicle Closure Systems",
