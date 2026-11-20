@@ -1,11 +1,221 @@
 {
- "updated": "2026-11-19T07:27:39+00:00",
- "new_today": 3,
- "errors": [
-  "OpenAlex: HTTP Error 429: Too Many Requests",
-  "OpenAlex: HTTP Error 429: Too Many Requests"
- ],
+ "updated": "2026-11-20T07:17:37+00:00",
+ "new_today": 8,
+ "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.26517",
+   "title": "From Seed to BLOOM: Autonomously Growing a Better Out-of-Order Core",
+   "abstract": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling. While large teams in industry can afford the engineering resources to target this problem across performance modeling, RTL design, and ASIC implementations, small teams of researchers and engineers cannot take on this huge engineering burden while keeping up with the pace of advancement in processor microarchitecture. Recent advancements in large language model (LLM) agents present a promising substrate to accelerate this traditionally human-intensive process. In this work, we build and evaluate MiracleGro, an agentic AI-based system that, without human intervention, analyzes cycle-level RTL behavior and synthesis results, identifies performance bottlenecks, and translates architectural ideas into RTL implementation in a leading open-source out-of-order superscalar application core, the Berkeley Out-of-Order Machine (BOOM). Taking into account cycle-exact performance, area, and critical path, MiracleGro automatically produces improved BOOM designs that drastically increase the human-optimized BOOM's performance on substantial workload suites such as SPEC CPU2017 with full reference inputs. MiracleGro achieves an 85% IPC speedup and a frequency improvement of 27% in SkyWater 130nm, resulting in a 2.34x wall-clock time speedup on the full SPEC CPU2017 intspeed benchmarks (30 trillion instructions). This result demonstrates the enormous opportunity to harness frontier models to improve state-of-the-art RTL-driven platforms for implementation-grounded microarchitecture research across hardware designs.",
+   "authors": [
+    "Angela Cui",
+    "Ferran Hermida-Rivera",
+    "Jack Toubes",
+    "Jim Fang",
+    "Chengyi Lux Zhang",
+    "Borivoje Nikolić",
+    "Christopher W. Fletcher",
+    "Sagar Karandikar"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.26517",
+   "pdf": "https://arxiv.org/pdf/2611.26517v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.25658",
+   "title": "SiliconGym: A Versatile Reinforcement Learning Environment for Agentic EDA",
+   "abstract": "Reinforcement learning (RL) with electronic design automation (EDA) feedback is advancing large language models for hardware design and verification. Extending these gains to hardware-engineering agents requires environments that span tasks, preserve state across tool calls, and support large hierarchies alongside parallel rollouts. We present SiliconGym, the first versatile, cross-task and cross-toolchain RL environment for hardware design and verification. By decoupling versioned workspaces, budgeted execution, and acceptance-gated scoring, SiliconGym scales from module-level RTL, testbench, and PPA tasks to multi-round repository repair and full-hierarchy SoC flows. Streaming dispatch overlaps tool checks with generation, finishing a 256-answer RL batch 21.9% faster than native ChipSeek. Using interchangeable open-source and commercial backends, we show that open-source-trained functional correctness transfers cleanly to commercial simulation, while paired netlist evaluation reveals when open-source PPA gains survive commercial synthesis.",
+   "authors": [
+    "Hejia Zhang",
+    "Sheng Lu",
+    "Yitong Ma",
+    "Zhongming Yu",
+    "Zhijing Wu",
+    "Wentao Ni",
+    "Chia-Tung Ho",
+    "Jishen Zhao"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.25658",
+   "pdf": "https://arxiv.org/pdf/2611.25658v1",
+   "venue": "arXiv cs.AI, cs.LG",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.25339",
+   "title": "From FIPS to FPGA with LLM Agents: Measuring What Tests and Reviews Miss in Post-Quantum Cryptographic Hardware",
+   "abstract": "As LLM agents increasingly generate RTL alongside the tests and reviews that validate it, self-generated evidence is a weak foundation for trustworthy hardware. We present our seven-stage verification-gated workflow, evolved during a post-quantum design port, in which a gate counts only if shown able to fail on negative controls and fault mutants, and reviewer agents audit work before commit. We then audit this evidence with tool-selected netlist mutants, flaw replays, and formal checks. The flow ported an ML-KEM-768/ML-DSA-65 accelerator to a 300 MHz Zynq UltraScale+ key-custody card: all six operations are byte-exact on the board, and it passes all 85 interface-applicable NIST ACVP cases (of 285) and 484 ML-DSA known answers. However, passing module tests overstate the verification strength. Across three RTL modules, existing simulation gates kill only 76% of 399 tool-selected netlist mutants; specification-derived tests guided by the survivors raise the fresh-draw decapsulation kill rate from 48% to 74%. In pre-registered single-model replays on flaws invisible to known-answer tests, undirected whole-design review catches two verifier flaws in only 3/6 and 1/6 sessions, whereas module-scoped review catches every known flaw in all 54 sessions. Even scoped review detects planted key-custody flaws in only 3/20 sessions, whereas formal checks (one added for the replay) flag every one. In this study, trustworthy agentic hardware needed author-independent mutants for test gates, module-level scoping for LLM review, and formal checks for custody invariants.",
+   "authors": [
+    "Jungmin Park",
+    "Eunha Kim",
+    "Wooseop Kim",
+    "Seongjoon Cho",
+    "Byungho Cha"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.25339",
+   "pdf": "https://arxiv.org/pdf/2611.25339v1",
+   "venue": "arXiv cs.CR, cs.AI, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.26003",
+   "title": "AI agents can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations",
+   "abstract": "Simulation-driven design of real engineering components has to meet three conditions at once. It runs on few solves, since a nonlinear finite-element simulation of a 3D part takes hours; its design space has many values, the hundreds to thousands of values of the part's CAD model; and a better design often needs a redesign, coordinated changes of the part's proportions rather than local polishing of its surface. Automated optimisers meet at most two of these conditions. Classical optimisers, Bayesian or derivative-free, need a person to cut the design down to a few parameters, and on all the values they need far more solves; industrial shape optimisers move every surface node of the mesh in one solve per cycle, but only in small steps that polish rather than redesign. We ask whether a general-purpose large language model (LLM) can meet all three by joining what it knows with what the simulation shows. GPT-6 Astra edits a magnesium stent through a CAD geometry parametrisation of about 1,650 values, with a budget of 15 simulations; every proposal is built in CAD, meshed and simulated with large-deformation plasticity and contact, and the LLM reads the full results of every solve. Within that budget it lowered the objective, a high percentile of the strains in the stent's bends, by 32%; on the same budget, the industrial shape optimiser Tosca improved the original design by a tenth and then stopped improving. An earlier GPT-6 Astra design, 25% lower in the same objective, was checked in an independent, higher-fidelity model of the full deployment with crimping and damage: it was 14% less strained than the original after the full chain, and its most damaged spot began to fail later and carried 63% less damage at full expansion. LLMs can thus join their learned knowledge with simulation data to adjust more than a thousand design values and reach valid designs with real improvements.",
+   "authors": [
+    "Alexandra Starostina",
+    "Alexander Hermann",
+    "Mahish Guru",
+    "Kartik Bali",
+    "Roland Aydin",
+    "Christian C. Cyron"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.26003",
+   "pdf": "https://arxiv.org/pdf/2611.26003v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.25324",
+   "title": "Verified Netlist-to-RTL Recovery with LLM Agents",
+   "abstract": "Gate-level netlists circulate among IP integrators and foundries and can be extracted from chips. Reverse engineering them into readable register-transfer-level (RTL) code would help an adversary understand and modify a design, but remains difficult because word-level operations are scattered across many gates. Large language models (LLMs) can write and optimize RTL, but often fail to recover it from a whole netlist. We propose LOCA (LOgic Cone Attack), an LLM-based attack that divides an anonymized netlist into logic cones, has parallel agents rewrite them, and assembles compact RTL. Each cone contains the complete next-state logic of a group of related registers, giving an agent a small, meaningful task. Of five partitioning methods tested, only grouped cones lead to recovery. LOCA keeps only RTL proven equivalent to the netlist and measures its quality by compression. Function-preserving obfuscation does not stop LOCA on the tested designs, whereas unknown keys or hidden cell functions prevent it from proving recovery of the original design. Across 21 model-design pairs, LOCA recovers 17, versus 6 with whole-netlist prompting. Per-run recovery across models rises from 5% to 74%, at a median cost below one dollar with a low-cost model.",
+   "authors": [
+    "Ahmet Efe",
+    "Recep Bugra Uludag",
+    "Ulya R. Karpuzcu"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.25324",
+   "pdf": "https://arxiv.org/pdf/2611.25324v1",
+   "venue": "arXiv cs.CR, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "arxiv:2611.25228",
+   "title": "MKA: Evaluating Multimodal Knowledge Agents on end-to-end professional tasks",
+   "abstract": "We introduce the Multimodal Knowledge Agent (MKA) benchmark, which measures how well autonomous agents perform end-to-end professional knowledge work that depends on visual understanding. Each task requires an agent to extract and combine information from multiple visually dense files, such as CAD blueprints, electronics schematics, radiographs, complex charts and geospatial maps, and to produce a standalone deliverable in .xlsx, .pptx, .pdf, .docx, .html or .png format. Existing benchmarks leave this capability largely untested: removing image-viewing tools leaves Gemini 4 Carbon's score on GDPval unchanged, and single-format evaluations such as GDP.pdf and GDP.xlsx do not require reasoning across files or modalities. MKA contains 200 tasks across 10 economic sectors. Deliverables are graded against expert-weighted rubrics by a sandboxed agentic autorater that agrees with human domain experts on 96.2% of criterion judgments in our expert-graded study (Cohen's $κ= 0.91$), scored by weighted satisfaction rate (WSR) overall and on frontier criteria unsaturated by prior-generation models (Climb-WSR). Across the frontier models we evaluate (Gemini 4 Carbon, Claude Fable 5.2, Claude Opus 5.5, and GPT-6 Astra), Claude Fable 5.2 (56.6% Climb-WSR, 73.3% Overall WSR) and Gemini 4 Carbon (54.3% Climb-WSR, 71.9% Overall WSR) achieve the highest scores, while Carbon uses $5.7\\times$ fewer tokens. Even for the strongest models, Climb-WSR remains below 57%, leaving substantial headroom for multimodal agents.",
+   "authors": [
+    "Anima Singh",
+    "Suhas Yogin",
+    "Weicheng Kuo",
+    "Ivor Rendulic",
+    "Ivan Jurin",
+    "Antoine Yang",
+    "Oran Kelly",
+    "Rohan Doshi",
+    "Hammad Ayyubi",
+    "Ioana Bica",
+    "Sergi Caelles",
+    "Matthew Conniff",
+    "Dan Graur",
+    "Anastasija Ilić",
+    "Ahmet Iscen",
+    "Chao Jia",
+    "Tomasz Kępa",
+    "Chunyuan Li",
+    "Noah Ó Donnaile",
+    "Filip Pavetic",
+    "Goran Petrovic",
+    "Khalid Salama",
+    "Zhicheng Wang",
+    "Polina Zablotskaia",
+    "Yiqian Zhang",
+    "Ming Zhao",
+    "Benjamin Caine",
+    "Mario Lučić",
+    "Melvin Johnson",
+    "Radu Soricut",
+    "Jean-Baptiste Alayrac"
+   ],
+   "published": "2026-11-18",
+   "url": "https://arxiv.org/abs/2611.25228",
+   "pdf": "https://arxiv.org/pdf/2611.25228v1",
+   "venue": "arXiv cs.AI, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "LLM/智能体"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "doi:10.21203/rs.3.rs-11493537/v1",
+   "title": "Assessing the Effects of Design Complexity and Prompt Engineering on CAD Model Generation Using Microsoft Copilot",
+   "abstract": "Abstract The use of generative artificial intelligence (AI) is rapidly increasing across various sectors, making tasks more accessible, efficient, and user-friendly. One emerging application is computer-aided design (CAD), where AI has the potential to enable users with little or no-prior CAD experience to create three-dimensional (3D) models through natural-language. Despite growing interest in AI-assisted design, the capability of publicly accessible generative AI systems to reliably generate CAD models across varying levels of design complexity remains insufficiently studied. This work benchmarks the performance of Microsoft Copilot for CAD model generation and investigates the influence of prompt engineering on model quality. A benchmark dataset comprising 60 design tasks was developed and categorized into easy, intermediate, and complex levels. The benchmark included primitive geometries, polygonal and polyhedral models, mechanical components, hollow structures, assemblies, lattice designs, and advanced engineering systems. For each prompt, the generated STL file was evaluated based on geometric accuracy, completeness of requested features, and overall structural validity using commercial software. The results revealed a strong dependence of generation success on design complexity, with easy-level tasks exhibiting high first-attempt success rates, while intermediate and complex tasks frequently required prompt refinement. Prompt length alone was found to have minimal influence on performance; instead, successful CAD generation depended primarily on clearly specified dimensions, geometric features, and functional relationships. Overall, the findings demonstrate that generative AI can lower the barrier to CAD modeling for non-expert users while improving productivity for experienced designers, thereby offering significant potential for engineering design, rapid prototyping, and additive manufacturing applications.",
+   "authors": [
+    "Rogelio Lara",
+    "Hector Molina",
+    "Tazdik Patwary Plateau"
+   ],
+   "published": "2026-11-17",
+   "url": "https://doi.org/10.21203/rs.3.rs-11493537/v1",
+   "pdf": "https://www.researchsquare.com/article/rs-11493537/latest.pdf",
+   "venue": "Research Square",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.18422",
+   "title": "The State Is Not the Bottleneck: A Paged-State Gated-DeltaNet Tile on a Tri-Mode Multicast Mesh, Bit-Exact from RTL to Silicon",
+   "abstract": "Linear-attention language models replace a growing key-value cache with a recurrent state of fixed size. On an edge FPGA, this state can exceed the on-chip memory and must be paged to external memory. This paper asks whether such paging dominates the cost of decoding (generating tokens). We built a hardware tile that computes one complete layer of a custom 369-million-parameter hybrid Gated DeltaNet model on an Agilex 5 FPGA and pages its recurrent state. The model state needs 6.2 MiB, whereas the device has 0.87 MiB of block memory. Paging adds 26.0 MB of memory traffic per decoded token, at most 11.2 percent of the calculated total. On the board at 75 MHz, with synthetic weights, one token takes 11.15 ms in this layer. The matrix-vector products with the weights take about 62 percent of this time and the state phase, including the paging, 13 percent. The tile is one node of a multicast mesh of tri-mode processing elements. We measure the error of the fixed-point arithmetic against floating point and check that the hardware agrees bit for bit with a fixed-point reference. In simulation, the state logic agrees with the reference on all 18 recurrent layers. On the board, six builds pass all 30 runs of 64 tokens and two runs of 1,024 tokens. For this model and memory interface, the delivery of the weights limits the decoding performance, and the recurrent state does not. State paging is therefore practical for such a model on an edge FPGA.",
+   "authors": [
+    "Cong Xu",
+    "Ravi Sankar"
+   ],
+   "published": "2026-11-13",
+   "url": "https://doi.org/10.48550/arxiv.2611.18422",
+   "pdf": "https://arxiv.org/pdf/2611.18422",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何",
+    "EDA/芯片"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-20"
+  },
   {
    "id": "arxiv:2611.24681",
    "title": "DrawScore: Evaluating Generated CAD Models against Engineering Drawings",
@@ -57,7 +267,7 @@
   {
    "id": "doi:10.1145/3829340.3842261",
    "title": "CADKnitter: Compositional CAD Generation from Text and Geometry Guidance",
-   "abstract": "Computer-aided design (CAD) defines 3D models as compact, precise, and editable representations, making it directly useful for several fields. Recently, CAD generation has been gaining more attention in both the research community and industry. Crafting CAD models has long been a painstaking and time-intensive task, demanding both precision and expertise from designers. Prior works have achieved early success in single-part CAD generation, which is not well-suited for real-world applications, as multiple parts need to be assembled under semantic constraints and geometric compatibility. In this paper, we propose CADKnitter, a compositional CAD generation framework with geometric-guiding cues to steer diffusion sampling. CADKnitter is able to generate a complementary CAD part that follows both the geometric constraints of the given CAD model and the semantic constraints of the desired design text prompt. We also curate a dataset, so-called KnitCAD, containing over 310,000 samples of CAD models, along with textual prompts and assembly metadata that provide semantic and geometric constraints. Intensive experiments demonstrate that our proposed method outperforms other state-of-the-art baselines by a clear margin. Our project page is available at https://cadknitter.github.io/.",
+   "abstract": "Computer-aided design (CAD) defines 3D models as compact, precise, and editable representations, making it directly useful for several fields. Recently, CAD generation has been gaining more attention in both the research community and industry. Crafting CAD models has long been a painstaking and time-intensive task, demanding both precision and expertise from designers. Prior works have achieved early success in single-part CAD generation, which is not well-suited for real-world applications, as multiple parts need to be assembled under semantic constraints and geometric compatibility. In this paper, we propose CADKnitter, a compositional CAD generation framework with geometric-guiding cues to steer diffusion sampling. CADKnitter is able to generate a complementary CAD part that follows both the geometric constraints of the given CAD model and the semantic constraints of the desired design text prompt. We also curate a dataset, so-called KnitCAD, containing over 310,000 samples of CAD models, along with textual prompts and assembly metadata that provide semantic and geometric constraints. Intensive experiments demonstrate that our proposed method outperforms other state-of-the-art baselines by a clear margin. Our project page is available at https://cadknitter.github.io.",
    "authors": [
     "Tri Le",
     "Khang Nguyen",
