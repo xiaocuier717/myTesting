@@ -1,8 +1,34 @@
 {
- "updated": "2026-11-20T07:17:37+00:00",
- "new_today": 8,
+ "updated": "2026-11-21T07:09:43+00:00",
+ "new_today": 1,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1145/3827602",
+   "title": "A Survey of Circuit Foundation Model: Foundation AI Models for VLSI Circuit Design and EDA",
+   "abstract": "Artificial intelligence (AI)-driven electronic design automation (EDA) techniques have been extensively explored for VLSI circuit design applications. Most recently, foundation AI models for circuits have emerged as a new technology trend. Unlike traditional task-specific AI solutions, these new AI models are developed through two stages: (1) self-supervised pre-training on a large amount of unlabeled data to learn intrinsic circuit properties; and (2) efficient fine-tuning for specific downstream applications, such as early-stage design quality evaluation, circuit-related context generation, and functional verification. This new paradigm brings many advantages: model generalization, less reliance on labeled circuit data, efficient adaptation to new tasks, and unprecedented generative capability. In this article, we propose referring to AI models developed with this new paradigm as circuit foundation models (CFMs) . This article provides a comprehensive survey of the latest progress in circuit foundation models, unprecedentedly covering over 160 relevant works. Over 90% of our introduced works were published in or after 2022, indicating that this emerging research trend has attracted wide attention in a short period. In this survey, we propose to categorize all existing circuit foundation models into two primary types: (1) encoder-based methods performing general circuit representation learning for predictive tasks ; and (2) decoder-based methods leveraging large language models (LLMs) for generative tasks . For our introduced works, we cover their input modalities, model architecture, pre-training strategies, domain adaptation techniques, and downstream design applications. In addition, this article discussed the unique properties of circuits from the data perspective. These circuit properties have motivated many works in this domain and differentiated them from general AI techniques. Finally, we shared our observed challenges and potential future research directions about developing foundation AI models for EDA methodologies.",
+   "authors": [
+    "Wenji Fang",
+    "Jing Wang",
+    "Yao Lu",
+    "Shang Liu",
+    "Yuchao Wu",
+    "Yuzhe Ma",
+    "Zhiyao Xie"
+   ],
+   "published": "2026-10-31",
+   "url": "https://doi.org/10.1145/3827602",
+   "pdf": "https://doi.org/10.1145/3827602",
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-21"
+  },
   {
    "id": "arxiv:2611.26517",
    "title": "From Seed to BLOOM: Autonomously Growing a Better Out-of-Order Core",
@@ -129,7 +155,7 @@
   {
    "id": "arxiv:2611.25228",
    "title": "MKA: Evaluating Multimodal Knowledge Agents on end-to-end professional tasks",
-   "abstract": "We introduce the Multimodal Knowledge Agent (MKA) benchmark, which measures how well autonomous agents perform end-to-end professional knowledge work that depends on visual understanding. Each task requires an agent to extract and combine information from multiple visually dense files, such as CAD blueprints, electronics schematics, radiographs, complex charts and geospatial maps, and to produce a standalone deliverable in .xlsx, .pptx, .pdf, .docx, .html or .png format. Existing benchmarks leave this capability largely untested: removing image-viewing tools leaves Gemini 4 Carbon's score on GDPval unchanged, and single-format evaluations such as GDP.pdf and GDP.xlsx do not require reasoning across files or modalities. MKA contains 200 tasks across 10 economic sectors. Deliverables are graded against expert-weighted rubrics by a sandboxed agentic autorater that agrees with human domain experts on 96.2% of criterion judgments in our expert-graded study (Cohen's $κ= 0.91$), scored by weighted satisfaction rate (WSR) overall and on frontier criteria unsaturated by prior-generation models (Climb-WSR). Across the frontier models we evaluate (Gemini 4 Carbon, Claude Fable 5.2, Claude Opus 5.5, and GPT-6 Astra), Claude Fable 5.2 (56.6% Climb-WSR, 73.3% Overall WSR) and Gemini 4 Carbon (54.3% Climb-WSR, 71.9% Overall WSR) achieve the highest scores, while Carbon uses $5.7\\times$ fewer tokens. Even for the strongest models, Climb-WSR remains below 57%, leaving substantial headroom for multimodal agents.",
+   "abstract": "We introduce the Multimodal Knowledge Agent (MKA) benchmark, which measures how well autonomous agents perform end-to-end professional knowledge work that depends on visual understanding. Each task requires an agent to extract and combine information from multiple visually dense files, such as CAD blueprints, electronics schematics, radiographs, complex charts and geospatial maps, and to produce a standalone deliverable in .xlsx, .pptx, .pdf, .docx, .html or .png format. Existing benchmarks leave this capability largely untested: removing image-viewing tools leaves Gemini 4 Carbon's score on GDPval unchanged, and single-format evaluations such as GDP$.$pdf and GDP$.$xlsx do not require reasoning across files or modalities. MKA contains 200 tasks across 10 economic sectors. Deliverables are graded against expert-weighted rubrics by a sandboxed agentic autorater that agrees with human domain experts on 96.2% of criterion judgments in our expert-graded study (Cohen's $κ= 0.91$), scored by weighted satisfaction rate (WSR) overall and on frontier criteria unsaturated by prior-generation models (Climb-WSR). Across the frontier models we evaluate (Gemini 4 Carbon, Claude Fable 5.2, Claude Opus 5.5, and GPT-6 Astra), Claude Fable 5.2 (56.6% Climb-WSR, 73.3% Overall WSR) and Gemini 4 Carbon (54.3% Climb-WSR, 71.9% Overall WSR) achieve the highest scores, while Carbon uses $5.7\\times$ fewer tokens. Even for the strongest models, Climb-WSR remains below 57%, leaving substantial headroom for multimodal agents.",
    "authors": [
     "Anima Singh",
     "Suhas Yogin",
@@ -178,7 +204,7 @@
   {
    "id": "doi:10.21203/rs.3.rs-11493537/v1",
    "title": "Assessing the Effects of Design Complexity and Prompt Engineering on CAD Model Generation Using Microsoft Copilot",
-   "abstract": "Abstract The use of generative artificial intelligence (AI) is rapidly increasing across various sectors, making tasks more accessible, efficient, and user-friendly. One emerging application is computer-aided design (CAD), where AI has the potential to enable users with little or no-prior CAD experience to create three-dimensional (3D) models through natural-language. Despite growing interest in AI-assisted design, the capability of publicly accessible generative AI systems to reliably generate CAD models across varying levels of design complexity remains insufficiently studied. This work benchmarks the performance of Microsoft Copilot for CAD model generation and investigates the influence of prompt engineering on model quality. A benchmark dataset comprising 60 design tasks was developed and categorized into easy, intermediate, and complex levels. The benchmark included primitive geometries, polygonal and polyhedral models, mechanical components, hollow structures, assemblies, lattice designs, and advanced engineering systems. For each prompt, the generated STL file was evaluated based on geometric accuracy, completeness of requested features, and overall structural validity using commercial software. The results revealed a strong dependence of generation success on design complexity, with easy-level tasks exhibiting high first-attempt success rates, while intermediate and complex tasks frequently required prompt refinement. Prompt length alone was found to have minimal influence on performance; instead, successful CAD generation depended primarily on clearly specified dimensions, geometric features, and functional relationships. Overall, the findings demonstrate that generative AI can lower the barrier to CAD modeling for non-expert users while improving productivity for experienced designers, thereby offering significant potential for engineering design, rapid prototyping, and additive manufacturing applications.",
+   "abstract": "The use of generative artificial intelligence (AI) is rapidly increasing across various sectors, making tasks more accessible, efficient, and user-friendly. One emerging application is computer-aided design (CAD), where AI has the potential to enable users with little or no-prior CAD experience to create three-dimensional (3D) models through natural-language. Despite growing interest in AI-assisted design, the capability of publicly accessible generative AI systems to reliably generate CAD models across varying levels of design complexity remains insufficiently studied. This work benchmarks the performance of Microsoft Copilot for CAD model generation and investigates the influence of prompt engineering on model quality. A benchmark dataset comprising 60 design tasks was developed and categorized into easy, intermediate, and complex levels. The benchmark included primitive geometries, polygonal and polyhedral models, mechanical components, hollow structures, assemblies, lattice designs, and advanced engineering systems. For each prompt, the generated STL file was evaluated based on geometric accuracy, completeness of requested features, and overall structural validity using commercial software. The results revealed a strong dependence of generation success on design complexity, with easy-level tasks exhibiting high first-attempt success rates, while intermediate and complex tasks frequently required prompt refinement. Prompt length alone was found to have minimal influence on performance; instead, successful CAD generation depended primarily on clearly specified dimensions, geometric features, and functional relationships. Overall, the findings demonstrate that generative AI can lower the barrier to CAD modeling for non-expert users while improving productivity for experienced designers, thereby offering significant potential for engineering design, rapid prototyping, and additive manufacturing applications.",
    "authors": [
     "Rogelio Lara",
     "Hector Molina",
@@ -215,6 +241,29 @@
    ],
    "score": 2,
    "first_seen": "2026-11-20"
+  },
+  {
+   "id": "doi:10.1145/3829340.3842261",
+   "title": "CADKnitter: Compositional CAD Generation from Text and Geometry Guidance",
+   "abstract": "Computer-aided design (CAD) defines 3D models as compact, precise, and editable representations, making it directly useful for several fields. Recently, CAD generation has been gaining more attention in both the research community and industry. Crafting CAD models has long been a painstaking and time-intensive task, demanding both precision and expertise from designers. Prior works have achieved early success in single-part CAD generation, which is not well-suited for real-world applications, as multiple parts need to be assembled under semantic constraints and geometric compatibility. In this paper, we propose CADKnitter, a compositional CAD generation framework with geometric-guiding cues to steer diffusion sampling. CADKnitter is able to generate a complementary CAD part that follows both the geometric constraints of the given CAD model and the semantic constraints of the desired design text prompt. We also curate a dataset, so-called KnitCAD, containing over 310,000 samples of CAD models, along with textual prompts and assembly metadata that provide semantic and geometric constraints. Intensive experiments demonstrate that our proposed method outperforms other state-of-the-art baselines by a clear margin. Our project page is available at https://cadknitter.github.io.",
+   "authors": [
+    "Tri Le",
+    "Khang Nguyen",
+    "Baoru Huang",
+    "Tung D. Ta",
+    "Anh Nguyen"
+   ],
+   "published": "2026-11-30",
+   "url": "https://doi.org/10.1145/3829340.3842261",
+   "pdf": "https://doi.org/10.1145/3829340.3842261",
+   "venue": "SIGGRAPH Asia Conference Papers",
+   "source": "OpenAlex",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-19"
   },
   {
    "id": "arxiv:2611.24681",
@@ -262,29 +311,6 @@
     "LLM/智能体"
    ],
    "score": 6,
-   "first_seen": "2026-11-19"
-  },
-  {
-   "id": "doi:10.1145/3829340.3842261",
-   "title": "CADKnitter: Compositional CAD Generation from Text and Geometry Guidance",
-   "abstract": "Computer-aided design (CAD) defines 3D models as compact, precise, and editable representations, making it directly useful for several fields. Recently, CAD generation has been gaining more attention in both the research community and industry. Crafting CAD models has long been a painstaking and time-intensive task, demanding both precision and expertise from designers. Prior works have achieved early success in single-part CAD generation, which is not well-suited for real-world applications, as multiple parts need to be assembled under semantic constraints and geometric compatibility. In this paper, we propose CADKnitter, a compositional CAD generation framework with geometric-guiding cues to steer diffusion sampling. CADKnitter is able to generate a complementary CAD part that follows both the geometric constraints of the given CAD model and the semantic constraints of the desired design text prompt. We also curate a dataset, so-called KnitCAD, containing over 310,000 samples of CAD models, along with textual prompts and assembly metadata that provide semantic and geometric constraints. Intensive experiments demonstrate that our proposed method outperforms other state-of-the-art baselines by a clear margin. Our project page is available at https://cadknitter.github.io.",
-   "authors": [
-    "Tri Le",
-    "Khang Nguyen",
-    "Baoru Huang",
-    "Tung D. Ta",
-    "Anh Nguyen"
-   ],
-   "published": "2026-11-17",
-   "url": "https://doi.org/10.1145/3829340.3842261",
-   "pdf": "https://doi.org/10.1145/3829340.3842261",
-   "venue": "SIGGRAPH Asia Conference Papers",
-   "source": "OpenAlex",
-   "tags": [
-    "CAD 生成",
-    "B-rep/几何"
-   ],
-   "score": 2,
    "first_seen": "2026-11-19"
   },
   {
@@ -690,7 +716,7 @@
   {
    "id": "doi:10.1038/s41598-026-75880-8",
    "title": "A flexible language model-assisted electronic design automation framework",
-   "abstract": "Abstract Large language models (LLMs) are transforming electronic design automation (EDA) by enhancing design stages such as schematic design, simulation, netlist synthesis, and place-and-route. Existing methods primarily focus these optimisations within isolated open-source EDA tools and often lack the flexibility to handle multiple domains, such as analogue, digital, and radio-frequency design. In contrast, modern systems require to interface with commercial EDA environments, adhere to tool-specific operation rules, and incorporate feedback from design outcomes while supporting diverse design flows. We propose a versatile framework that uses LLMs to generate files compatible with commercial EDA tools and optimise designs using power-performance-area reports. This is accomplished by guiding the LLMs with tool constraints and feedback from design outputs to meet tool requirements and user specifications. The framework is used to evaluate case studies on operational transconductance amplifiers, microstrip patch antennas, and FPGA circuits.",
+   "abstract": "Large language models (LLMs) are transforming electronic design automation (EDA) by enhancing design stages such as schematic design, simulation, netlist synthesis, and place-and-route. Existing methods primarily focus these optimisations within isolated open-source EDA tools and often lack the flexibility to handle multiple domains, such as analogue, digital, and radio-frequency design. In contrast, modern systems require to interface with commercial EDA environments, adhere to tool-specific operation rules, and incorporate feedback from design outcomes while supporting diverse design flows. We propose a versatile framework that uses LLMs to generate files compatible with commercial EDA tools and optimise designs using power-performance-area reports. This is accomplished by guiding the LLMs with tool constraints and feedback from design outputs to meet tool requirements and user specifications. The framework is used to evaluate case studies on operational transconductance amplifiers, microstrip patch antennas, and FPGA circuits.",
    "authors": [
     "Cristian Sestito",
     "Panagiota Kontou",
@@ -1374,7 +1400,7 @@
     "Quan Chen",
     "Jieru Zhao"
    ],
-   "published": "2026-11-04",
+   "published": "2027-04-10",
    "url": "https://doi.org/10.1145/3845814.3850039",
    "pdf": "https://doi.org/10.1145/3845814.3850039",
    "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
