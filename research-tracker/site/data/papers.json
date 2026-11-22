@@ -1,8 +1,97 @@
 {
- "updated": "2026-11-21T07:09:43+00:00",
- "new_today": 1,
+ "updated": "2026-11-22T06:49:30+00:00",
+ "new_today": 4,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.5281/zenodo.24407073",
+   "title": "ArchitectOS v79.0: An Offline-First, Geometry-Locked Computational Architecture and Local AI Orchestration Platform",
+   "abstract": "Contemporary generative AI tools for architecture predominantly rely on cloud-hosted, prompt-driven diffusion models that lack deterministic geometric fidelity, local regulatory awareness, and data privacy. This paper presents ArchitectOS (v79.0), an offline-first computational architecture platform designed to orchestrate parametric multi-floor plan synthesis, 2D/3D CAD and BIM processing (DXF, DWG, IFC4, OBJ, GLB), and locally executed generative rendering. Unlike text-only image generators, ArchitectOS enforces a geometry-before-pixels paradigm: natural-language architectural briefs (with native Persian language support) and site surveys (Krocki) are first compiled into typed structural geometry (BuildingProjectResultV3), which subsequently drives depth- and line-art-conditioned local diffusion workflows via ComfyUI and local vision/language models via Ollama. We detail the system's dual-process Flask architecture, contract-based orchestration gates, fail-closed execution boundaries, and dual-source regulatory provenance framework. Based on a repository-grounded technical audit, we report verified release-acceptance results (77/77 passing architectural and isolation checks), scoped offline security test baselines, and an explicit account of current engineering limitations.",
+   "authors": [
+    "Mahdi Ranjbar"
+   ],
+   "published": "2026-11-20",
+   "url": "https://doi.org/10.5281/zenodo.24407073",
+   "pdf": "https://doi.org/10.5281/zenodo.24407073",
+   "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-22"
+  },
+  {
+   "id": "doi:10.1007/s41064-026-00427-5",
+   "title": "Frozen 2D Foundation-Model Features Cluster Tree Species in LiDAR Point Clouds More Coherently than the Evaluated Geometric Descriptors: a Source-Controlled Evaluation",
+   "abstract": "Individual tree species mapping from LiDAR underpins forest inventory and biodiversity monitoring, yet remains difficult because supervised classifiers need expensive, geographically biased per-tree labels, and label-free geometric descriptors capture only predefined statistics. We propose a fully unsupervised, matching-free clustering framework on frozen off-the-shelf 2D vision foundation-model features: each tree is rendered into six pose-canonical depth views, encoded by a frozen image encoder, and clustered without species labels or text prompts. Across two independent LiDAR datasets, these features organize crowns by species more coherently than a hand-crafted geometric descriptor (matching-free Normalized Mutual Information (NMI) 0.28-0.35 versus 0.10) and than a frozen 3D point-cloud foundation model given the native geometry (OpenShape/PointBERT, 0.19-0.27), despite no 3D training. Because that 3D model is pre-trained on computer-aided-design (CAD) shapes, this is an availability comparison among frozen models, not an architectural verdict. The advantage holds for every pre-trained backbone, vanishes for a random-initialized control (isolating pre-training), and is stable across four clustering algorithms, fifteen seeds, and an embedding-dimension control. We further identify acquisition-source confounding as a first-class evaluation hazard: on the multi-sensor dataset most of the global gap recovers acquisition source, leaving a small, bootstrap-significant within-source residual of +0.044 NMI (foundation over geometry) on FOR-species20K, versus +0.204 on the single-sensor BioDiv-3DTrees-ULS. Although the uncontrolled gap is permutation-significant ( p < 1e-4), we anchor our evidence in this within-source bootstrap, treat the global gap as an upper bound, and scope our claims to feature coherence, not deployable classification.",
+   "authors": [
+    "Zhenyu Zhou"
+   ],
+   "published": "2026-11-20",
+   "url": "https://doi.org/10.1007/s41064-026-00427-5",
+   "pdf": "https://www.researchsquare.com/article/rs-10238136/latest.pdf",
+   "venue": "PFG – Journal of Photogrammetry Remote Sensing and Geoinformation Science",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "B-rep/几何"
+   ],
+   "score": 5,
+   "first_seen": "2026-11-22"
+  },
+  {
+   "id": "doi:10.26599/jicv.2026.9210110",
+   "title": "VISTA+: Mesh-based single-view novel view synthesis and CAD-based foreground composition for synthetic driving-scene generation",
+   "abstract": "Synthetic data has emerged as a promising solution for alleviating data scarcity in autonomous driving, especially in cold-start and corner-case scenarios. However, existing synthetic data generation methods still face a trade-off between photorealistic fidelity and engineering scalability. This paper proposes VISTA+, a framework for synthetic driving-scene generation that combines mesh-based single-view novel view synthesis (NVS) of static backgrounds with computer-aided design (CAD)-based foreground rendering and foreground-background composition. Unlike multi-view neural reconstruction methods, VISTA+ avoids large-scale multi-view scene reconstruction, while still requiring camera calibration and source-to-target relative poses, thereby reducing engineering complexity. Specifically, we improve mesh-based background NVS by incorporating foreground inpainting, dense depth supervision, structural pretraining, and joint depth-offset prediction. Dynamic foreground objects are rendered using CAD assets under estimated environmental lighting and are then integrated with generated backgrounds through image harmonization. Experiments on KITTI and nuScenes demonstrate that VISTA+ outperforms representative single-view NVS baselines in terms of peak signal-to-noise ratio (PSNR) and structural similarity index measure (SSIM). Furthermore, synthetic data generated by VISTA+ consistently improves the performance of multiple downstream three-dimensional (3D) object detection models, demonstrating the downstream utility and functional realism of the generated driving scenes.",
+   "authors": [
+    "Song Zhang",
+    "Ruibo Wang",
+    "Jian Li",
+    "Wenxiu Shi",
+    "Huiping Zhu",
+    "Ruo Jia",
+    "Ziyu Lin",
+    "Haiquan Liu"
+   ],
+   "published": "2026-11-19",
+   "url": "https://doi.org/10.26599/jicv.2026.9210110",
+   "pdf": "https://www.sciopen.com/local/article_pdf/10.26599/JICV.2026.9210110.pdf",
+   "venue": "Journal of Intelligent and Connected Vehicles",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-22"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.22328",
+   "title": "PVTSizing 2.0: A Fast and Reliable Analog Circuit Sizing Operator for Agentic EDA Workflows",
+   "abstract": "Analog circuit design automation requires both coordinated tool execution and efficient numerical search. Large language models (LLMs) offer new ways to organize tool execution, but finding one sizing that satisfies specifications across process, voltage, and temperature (PVT) corners remains costly. PVTSizing 2.0 addresses these needs through a human-agent workflow built around an independently usable numerical optimizer. An agent carries the designer's approved task through execution and result review. The optimizer reduces unnecessary training through loss-guided updates and uses critic-guided local refinement to explore additional candidates while accounting for cross-corner conflicts. An optional LLM adviser supplies parameter relationships to focus numerical search on circuit-informed directions, while the optimizer selects adjustment amplitudes and verifies their effects through simulation. Across four circuit benchmarks, the standalone optimizer completes all 40 runs and achieves a 7.3x speedup in overall mean runtime over the original PVTSizing, with a comparable mean sample count. In a separate study, the best tested knowledge-injection configuration further reduces mean runtime by 39.9% and simulation samples by 35.4% relative to the standalone optimizer.",
+   "authors": [
+    "Zichen Kong",
+    "宋明煥",
+    "Xiyuan Tang",
+    "Ziming Wei",
+    "Yi Zhong",
+    "Yuan Wang"
+   ],
+   "published": "2026-11-17",
+   "url": "https://doi.org/10.48550/arxiv.2611.22328",
+   "pdf": "https://arxiv.org/pdf/2611.22328",
+   "venue": "arXiv (Cornell University)",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-22"
+  },
   {
    "id": "doi:10.1145/3827602",
    "title": "A Survey of Circuit Foundation Model: Foundation AI Models for VLSI Circuit Design and EDA",
