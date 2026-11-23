@@ -1,8 +1,108 @@
 {
- "updated": "2026-11-22T06:49:30+00:00",
+ "updated": "2026-11-23T07:40:23+00:00",
  "new_today": 4,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.27567",
+   "title": "Mjolnir: Finding and Reproducing Vulnerabilities in Root-of-Trust Firmware and RTL with Project-Grounded Agents",
+   "abstract": "A root of trust (RoT) anchors secure boot and attestation for the system above it, so a bug in RoT firmware or hardware undermines every layer that trusts it. LLM agents now find real vulnerabilities in general-purpose software, but RoT code presents two challenges. First, many security-relevant bugs depend on project-specific trust boundaries and fault-injection countermeasures rather than generic vulnerability patterns, and may cause no crash. Second, without RoT hardware, agents must exercise RoT inputs through the project's own hardware model, mocks, or RTL testbenches. We present Mjolnir, an agentic pipeline that supplies each project's threat model and design conventions to discovery and skeptical review agents, and reproduces surviving findings as proof-of-concept tests in the project's own toolchain. We evaluate Mjolnir on six firmware and RTL targets in Caliptra, OpenTitan, and OpenPRoT. On Caliptra's runtime firmware, it reaches 83.3%-100% precision across three models under blind expert labeling, including 100% on Gemini 3.8 Flash versus 66.7%-78.6% for four single-agent baselines on the same model. On 34 known security-relevant bugs in Caliptra's core firmware fixed after the models' training cutoffs, it finds 10 with Gemini 3.8 Flash versus 7 for the best baseline, and 17 with Gemini 4 Argon versus 12. Across our evaluation scans, maintainers have confirmed 64 of Mjolnir's findings as previously unknown security-relevant bugs: 37 across three models on Caliptra's runtime firmware and 27 across single scans of the other five targets.",
+   "authors": [
+    "Collin MacDonald",
+    "Carl Lundin",
+    "Stephen Herwig",
+    "Miguel Osorio",
+    "Timothy Trippel"
+   ],
+   "published": "2026-11-20",
+   "url": "https://arxiv.org/abs/2611.27567",
+   "pdf": "https://arxiv.org/pdf/2611.27567v1",
+   "venue": "arXiv cs.CR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "doi:10.1038/s44334-026-00123-7",
+   "title": "Deep learning enables 3D manufacturing inspection from a single image",
+   "abstract": "Manufacturing inspection requires accurate dimensional measurements of mechanical objects. Three-dimensional (3D) optical measurements have significant advantages over traditional tactile measurements; however, industrial use of 3D optical measurements is limited due to high cost, long measurement time, and computational effort. This paper reports a method for accurate 3D measurements from a single image. A deep learning model predicts the accuracy of 3D reconstruction from input images and uses this prediction to create physically accurate 3D mesh objects. The model is trained using synthetic image data rendered from 3700 computer-aided design (CAD) models and tested by measuring 50 unique physical objects. Measurement accuracy is 71 μm for small objects (~3 cm) photographed with a digital camera, and 164 μm for large objects (>10 cm) photographed or video-recorded with a smartphone. The method results in accurate, manufacturing-relevant 3D measurements within a few seconds.",
+   "authors": [
+    "Hossein Kabir",
+    "Miles V. Bimrose",
+    "Charles Whealton",
+    "Christopher H. Conway",
+    "Austin F. Martin",
+    "Adrian K. Jackson",
+    "Asif Rashid",
+    "Weixuan Zheng",
+    "William P. King"
+   ],
+   "published": "2026-11-20",
+   "url": "https://doi.org/10.1038/s44334-026-00123-7",
+   "pdf": "https://www.nature.com/articles/s44334-026-00123-7_reference.pdf",
+   "venue": "npj Advanced Manufacturing",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "arxiv:2611.26912",
+   "title": "Self-Evolving Beyond Human-Crafted Experience for EDA Scripting",
+   "abstract": "The growing complexity of electronic systems demands efficient design flows, yet EDA scripting remains a bottleneck: proprietary APIs are sparsely documented, and errors often appear as silent failures or cryptic exceptions. Hand-crafted knowledge helps but is difficult to maintain as toolchains evolve. We present ZhuLong-SE (Self-Evolution), an execution-grounded LLM agent that learns reusable knowledge from prior task traces. Building on ZhuLong, it enhances the task-level harness with API retrieval, documentation responses, isolated sandbox execution, and static checking, then adds governed cross-task self-evolution. Beyond solving individual tasks, ZhuLong-SE distills past execution traces into a three-tier memory store governed by ground-truth anchoring, disconfirmation filtering, held-out rollback, and anti-leakage retrieval. On the 158-task EDA-Eval-PyAether benchmark, the full task-level harness, with self-evolution disabled, achieves 92.4% pass@1 and outperforms ZhuLong on all five tested LLM backbones. On a harder instance-disjoint test set, self-evolution from the bare configuration surpasses a human-crafted-experience baseline by 2.5 percentage points (80.0% vs. 77.5% pass@1).",
+   "authors": [
+    "Yang Liu",
+    "Shengbo Tong",
+    "Xiyuan Chen",
+    "Shiwei Hou",
+    "Sen Yuan",
+    "Hao Wang",
+    "Yanfeng Li",
+    "Hongwen Li",
+    "Yiming Zhu",
+    "Zhuolun He",
+    "Wenjian Yu"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.26912",
+   "pdf": "https://arxiv.org/pdf/2611.26912v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "arxiv:2611.26815",
+   "title": "Specification-Grounded Adaptive Triage and Formal Invariant Exclusion Synthesis for Autonomous Silicon Coverage Closure",
+   "abstract": "Closing the final 5%-15% of code and functional coverage remains a major schedule bottleneck in silicon tapeouts. Existing LLM-based coverage closure loops feed raw uncovered RTL lines or branches directly into iterative prompts, failing on industrial subsystems due to: (1) token and context explosion from querying thousands of correlated holes independently; (2) illegal stimulus that violates cross-signal invariants and yields dirty coverage; and (3) unsafe exclusion hallucination on structurally unreachable dead code. We present ARGUS (Autonomous Reachability & Guided Unified Stimulus), a specification-grounded, dual-regime coverage closure and formal exclusion synthesis engine. ARGUS mines microarchitectural specs and SystemVerilog Assertions into a formal Block Contract (C), then runs adaptive Macro-Clustering vs. Micro-Surgery triage gated by a per-module hole-density threshold (tau): dense modules collapse correlated holes into root-cause mode, FSM, and backpressure clusters, while sparse modules use AST and loop-domain reachability to separate reachable corners from provably unreachable invariants. Directed tests pair with bit-exact golden scoreboards, and unreachable invariants emit tool-native .el exclusions with formal proofs. Across five core benchmarks -- three open-source LowRISC OpenTitan IPs (uart_core, i2c_core, aes_cipher_core) and two commercial AI accelerator Tensor Layout Converter datapaths (53 SV modules, 376,127 coverage points) -- plus a 2,626-module industrial interconnect subsystem, ARGUS triages 2,626 modules in 0.265 s, cuts token usage by 27.2x to >180x, achieves zero dirty merges via 3-step sanity gating, and reaches 99.32%-100.0% effective coverage with 0 false exclusions across 21,071+ proven exclusions.",
+   "authors": [
+    "Veni Mohan"
+   ],
+   "published": "2026-11-19",
+   "url": "https://arxiv.org/abs/2611.26815",
+   "pdf": "https://arxiv.org/pdf/2611.26815v1",
+   "venue": "arXiv cs.AR, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-23"
+  },
   {
    "id": "doi:10.5281/zenodo.24407073",
    "title": "ArchitectOS v79.0: An Offline-First, Geometry-Locked Computational Architecture and Local AI Orchestration Platform",
