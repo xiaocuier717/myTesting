@@ -1,8 +1,127 @@
 {
- "updated": "2026-11-23T07:40:23+00:00",
- "new_today": 4,
+ "updated": "2026-11-24T09:55:35+00:00",
+ "new_today": 5,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.30766",
+   "title": "Bridging the Semantic Gap from Natural Language Specifications to RTL with Layered Formal Guidance",
+   "abstract": "While large language models (LLMs) have shown promise in generating register-transfer level (RTL) code from natural-language specifications, their reliability remains limited on designs with complex control logic and temporal behavior. This stems from a fundamental semantic gap: high-level natural language often leaves implementation-critical details underspecified, forcing LLMs to infer unstated assumptions. This paper presents Layered Formal Guidance, a novel framework that bridges this semantic gap by using formal properties as an intermediate semantic layer between natural-language specifications and RTL generation. Our framework applies formal guidance across three layers: property-driven specification augmentation before generation, property-consistency checking after generation, and counterexample-guided refinement after checking. Experiments on RTLLM benchmarks and various open-source IP designs demonstrate that our framework achieves higher functional correctness and lower sampled output-trace diversity. Furthermore, we show that Layered Formal Guidance can flexibly augment both general-purpose LLMs and domain-specific models to substantially improve their generation reliability.",
+   "authors": [
+    "Yan Tan",
+    "Xiangchen Meng",
+    "Yangdi Lyu"
+   ],
+   "published": "2026-11-23",
+   "url": "https://arxiv.org/abs/2611.30766",
+   "pdf": "https://arxiv.org/pdf/2611.30766v1",
+   "venue": "arXiv cs.AR, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "arxiv:2611.30422",
+   "title": "HWRE-Bench: Can LLM Agents Understand Hardware They Did Not Design?",
+   "abstract": "Hardware benchmarks for LLM agents all run the design flow forward, from a specification to RTL, a layout or a bug fix. We ask the reverse question: given an implemented artifact, such as a layout, a gate-level netlist or a protected simulation model, can an agent work out what it does well enough to act on that knowledge? We introduce HWRE-Bench, a benchmark for agentic hardware reverse engineering built on one observation. Each step of the forward flow discards information (names, hierarchy, word-level structure, generator parameters, the programming model), and a reverse-engineering task asks the agent to recover what was lost and to prove it with an executable deliverable that the artifact alone cannot supply. Since layout extraction is now mechanical and a correct netlist is already a cycle-exact model, every task carries a mandatory copy-the-netlist control that must score zero. HWRE-Bench spans five tracks (Extract, Abstract, Audit, Interoperate, Modify), four information-loss levels and white- versus black-box access, all on original designs. We report a pilot of 148 rollouts from two agents on four seed tasks under 16 conditions, with stage-annotated trajectories. Agents built their own layout extractors and audited a sanitized layout as reliably as a netlist, at about 27% more turns. Keyless, equivalence-preserving obfuscation changed neither pass rates nor defect-repair scores. Whether agents read the structure at all depended on task framing rather than on necessity, so pass rate alone does not show understanding. Provider safety filters stopped 16% of one agent's runs on the audit tasks. These results argue for deliverables beyond equivalence and for reporting run validity explicitly.",
+   "authors": [
+    "Peilong Zhou",
+    "Cangyuan Li",
+    "Kaiyan Chang",
+    "Ying Wang"
+   ],
+   "published": "2026-11-23",
+   "url": "https://arxiv.org/abs/2611.30422",
+   "pdf": "https://arxiv.org/pdf/2611.30422v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "arxiv:2611.28853",
+   "title": "CivilCADBench: Benchmarking Multimodal LLMs for Understanding, Reconstructing, and Designing Civil Engineering Drawing Sets",
+   "abstract": "Civil infrastructure is designed, built, and maintained through engineering drawing sets, yet preparing and revising them remains labour-intensive and calls for automation. Multimodal large language models (MLLMs) are promising candidates, but assessing them requires a benchmark grounded in real engineering practice. We introduce CivilCADBench, a benchmark for understanding, reconstructing, and designing civil engineering drawing sets, built from real infrastructure drawings and source CAD files containing over 250,000 CAD entities. Unlike parametric 3D CAD models, these drawings are dense, layered, and multi-sheet; and since prints are lossy projections with no pixel trace of layers, a file can print correctly yet remain wrongly organised. CivilCADBench comprises three task families of increasing difficulty: understanding tasks are evaluated with 2,183 expert-reviewed questions ranging from single sheets to whole sets, while reconstruction and design tasks are agentic, requiring models to rebuild printed pages as editable CAD files, either as single pages or entire drawing sets, and to produce new designs. These tasks are performed across 232 pages, 28 sets, and 19 design tasks, and evaluated by a deterministic scorer that compares model outputs with the designers' source files on geometry, layers, text, and dimensions. We evaluate seven frontier MLLMs on CivilCADBench, and find that they read and redraw printed content accurately but recover the file structure poorly: the best model scores above 90% in understanding and single-page reconstruction, yet only 60% on layer assignment and 48% on design. Grounded in real engineering practice, CivilCADBench exposes both the capabilities and the limitations of frontier models in professional civil engineering, laying a foundation for next-generation models and agentic systems for intelligent civil engineering.",
+   "authors": [
+    "Zelin Zheng",
+    "Difei Wu",
+    "Xinyan Liu",
+    "Minghong Chen",
+    "Antoni B. Chan",
+    "Difan Zou"
+   ],
+   "published": "2026-11-21",
+   "url": "https://arxiv.org/abs/2611.28853",
+   "pdf": "https://arxiv.org/pdf/2611.28853v1",
+   "venue": "arXiv cs.CV, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 7,
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "arxiv:2611.28667",
+   "title": "When to Test, Repair, or Regenerate: Decision-Guided Efficient RTL Generation",
+   "abstract": "Large language models (LLMs) can generate register-transfer-level (RTL) designs from natural-language specifications. To improve functional correctness, many RTL agents use simulation feedback to guide refinement. However, without a reference testbench, generating one for every initial implementation incurs inference cost even when the RTL is correct. We therefore introduce an adaptive harness that uses a specialized decision model to orchestrate testing, refinement, and candidate selection. It accepts high-scoring initial implementations and generates testbenches for the rest. When further search is needed, the initial score guides repair--regeneration allocation, while defect rankings and simulation feedback guide repair. For final selection, the harness prioritizes test-passing candidates and ranks them using decision-model scores. Across three benchmarks, the harness with DeepSeek improves mean Pass@1 by 5.4--7.1 percentage points over initial implementations and reduces aggregate estimated inference cost by 11.0--14.3% relative to a testbench-guided repair baseline with the same candidate cap.",
+   "authors": [
+    "Feiyang Pan",
+    "Shenghe Zheng",
+    "Pengfei Xiao",
+    "Chunyan Yin",
+    "Guangbin Dou"
+   ],
+   "published": "2026-11-21",
+   "url": "https://arxiv.org/abs/2611.28667",
+   "pdf": "https://arxiv.org/pdf/2611.28667v1",
+   "venue": "arXiv cs.AR, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "arxiv:2611.28197",
+   "title": "From Point Clouds to Engineering Models: Benchmarking Agentic 3D Reconstruction in the Built Environment",
+   "abstract": "Coding agents can translate 3D measurements into CAD geometry, but reconstructing engineering models for the built environment demands semantic interpretation and consistent construction constraints beyond surface fitting. We formulate scene-level Scan-to-BIM (Building Information Modeling) as an agentic 3D coding task and introduce S2Bench, comprising public and proprietary scans of 128 real-world scenes across five domains, paired with expert-curated reference models spanning diverse spatial scales. A shared framework lets agents measure scans in Python, build class-labeled components in a live CAD/BIM kernel, and iteratively refine their code. We also propose parallel asynchronous collaboration, where a lead delegates versioned tasks, continues modeling while workers execute, and integrates revision-bound proposals. Evaluating five agents and a collaborative team across 1,028 reconstructions shows that scan-to-model residuals directly guide geometric repair, whereas inferring semantic classes and construction relations requires joint geometric, visual, and engineering reasoning that agents struggle to ground and verify. Consequently, the leading agent fits scan geometry closely ($96\\%$ coverage within $5\\,\\text{cm}$) yet reaches only $63\\%$ mIoU, and no agent passes all engineering checks on more than $38\\%$ of scenes. Coverage and engineering conformance drop with scene scale, whereas running a smaller model as a team improves all three axes with greater coverage gains on larger scenes. The project page is available at https://tumcms.github.io/S2Bench.github.io/",
+   "authors": [
+    "Changyu Du",
+    "Stavros Nousias",
+    "Syed Salman Ahmed",
+    "Kai Dietmair",
+    "Mohammad Alrabab'h",
+    "André Borrmann"
+   ],
+   "published": "2026-11-20",
+   "url": "https://arxiv.org/abs/2611.28197",
+   "pdf": "https://arxiv.org/pdf/2611.28197v1",
+   "venue": "arXiv cs.AI, cs.CL, cs.CV",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 2,
+   "first_seen": "2026-11-24"
+  },
   {
    "id": "arxiv:2611.27567",
    "title": "Mjolnir: Finding and Reproducing Vulnerabilities in Root-of-Trust Firmware and RTL with Project-Grounded Agents",
@@ -34,7 +153,7 @@
    "authors": [
     "Hossein Kabir",
     "Miles V. Bimrose",
-    "Charles Whealton",
+    "Charles T. Whealton",
     "Christopher H. Conway",
     "Austin F. Martin",
     "Adrian K. Jackson",
@@ -310,7 +429,7 @@
    ],
    "published": "2026-11-19",
    "url": "https://arxiv.org/abs/2611.26003",
-   "pdf": "https://arxiv.org/pdf/2611.26003v1",
+   "pdf": "https://arxiv.org/pdf/2611.26003v2",
    "venue": "arXiv cs.AI",
    "source": "arXiv",
    "tags": [
@@ -1419,7 +1538,7 @@
   {
    "id": "arxiv:2611.10798",
    "title": "RTLREX: LLM-Guided Framework for Exact High-Level RTL Recovery",
-   "abstract": "Hardware designs may be available only as gate-level netlists or input-output descriptions when the original register-transfer-level (RTL) design and documentation are not accessible. Low-level representations obscure word-level computation and its finite-width behavior. Recovering high-level RTL from such representations therefore helps engineers understand a circuit's functionality and enables RTL rewriting and resynthesis. A plausible function model is also insufficient unless the generated RTL is equivalent to the original circuit for all input combinations. In this paper, we present RTLREX, a large language model (LLM)-guided framework that coordinates domain-specific tools for function recovery, RTL generation, independent verification, and cost-guided rewriting. Independent verification establishes equivalence between the recovered RTL and the original circuit. The LLM uses tool feedback to select further analyses, revise candidate RTL, and propose syntax-cost reductions. Experiments on 30 benchmarks from Problem A of the ICCAD 2022 CAD Contest show that RTLREX recovers equivalent high-level RTL for all benchmarks, surpassing the state-of-the-art method WolFEx in recovery coverage. On benchmarks recovered by both methods, RTLREX reduces mean syntax cost by 20.5% relative to WolFEx. On complete truth-table benchmarks from the IWLS 2026 Contest, our framework reduces mean syntax cost by 95.7% relative to an LLM agent baseline on the benchmarks validated by both methods.",
+   "abstract": "Hardware designs may be available only as gate-level netlists or input-output descriptions when the original register-transfer-level (RTL) design and documentation are not accessible. Low-level representations obscure word-level computation and its finite-width behavior. Recovering high-level RTL from such representations therefore helps engineers understand a circuit's functionality and enables RTL rewriting and resynthesis. A plausible function candidate is also insufficient unless the generated RTL is equivalent to the original circuit for all input combinations. In this paper, we present RTLREX, a large language model (LLM)-guided framework that coordinates domain-specific tools for function recovery, RTL generation, independent verification, and cost-guided rewriting. Independent verification establishes equivalence between the recovered RTL and the original circuit. The LLM uses tool feedback to select further analyses, revise RTL candidates, and propose syntax-cost reductions. Experiments on 30 benchmarks from Problem A of the ICCAD 2022 CAD Contest show that RTLREX recovers equivalent high-level RTL for all benchmarks, surpassing the state-of-the-art method WolFEx in recovery coverage. On benchmarks recovered by both methods, RTLREX reduces mean syntax cost by 20.5% relative to WolFEx. On complete truth-table benchmarks from the IWLS 2026 Contest, our framework reduces mean syntax cost by 95.7% relative to an LLM agent baseline on the benchmarks validated by both methods.",
    "authors": [
     "Wuqian Tang",
     "Fangzhou Liu",
@@ -1430,7 +1549,7 @@
    ],
    "published": "2026-11-07",
    "url": "https://arxiv.org/abs/2611.10798",
-   "pdf": "https://arxiv.org/pdf/2611.10798v1",
+   "pdf": "https://arxiv.org/pdf/2611.10798v2",
    "venue": "arXiv cs.AR, cs.AI",
    "source": "arXiv",
    "tags": [
