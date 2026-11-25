@@ -1,8 +1,125 @@
 {
- "updated": "2026-11-24T09:55:35+00:00",
+ "updated": "2026-11-25T08:36:21+00:00",
  "new_today": 5,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.33093",
+   "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+   "abstract": "A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong. AIChipBench asks what LLM coding agents need to build such hardware correctly. Agents implement quantized Qwen3.5, Gemma 3, Gemma 4, and Llama 3.2 decoders in synthesizable register-transfer-level (RTL) code against an executable integer reference that specifies the outputs and the stored state at every decoding step. They debug against public tests under fixed budgets; their frozen designs are graded on held-out token sequences, resets, memory stalls, and synthesis, and a second track asks them to speed up a correct design at nearly fixed area. Across 9,136 attempts by four coding agents, the difficulty lies in stored state. Feedback that points to the first state mismatch raises acceptance over output-only feedback in all 12 agent--task cells of a matched study, by 25.0 to 46.9 percentage points, and halves the agent-hours per accepted design. Regraded on new sequences and conditions, 45 of 69 accepted designs fail within the 32 steps their tests required. More than a third of attempts to speed up a correct design end without one. An overall score ranks Sol 5.6 and Fable 5.1 above Astra 6 and Opus 5.5, and both halves of the instances give this order in all 200 random splits. Hardware agents therefore need debugging feedback that exposes stored state, and their benchmarks need final tests well beyond the development cases.",
+   "authors": [
+    "Guangyuan Wang",
+    "Chengran Li",
+    "Minchen Luo",
+    "Jichen Feng",
+    "Mengdi Wang",
+    "Yifan Zhang"
+   ],
+   "published": "2026-11-24",
+   "url": "https://arxiv.org/abs/2611.33093",
+   "pdf": "https://arxiv.org/pdf/2611.33093v1",
+   "venue": "arXiv cs.CL, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.32405",
+   "title": "CPU-Eval: Evaluating Large Language Models for CPU Hardware Code Generation",
+   "abstract": "Benchmarks such as VerilogEval have supported rapid advances in hardware description language (HDL) generation by large language models (LLMs). However, recent HDL-generation systems achieve pass rates above 90% on VerilogEval, leaving limited headroom for revealing further advances. To provide a challenging target for further progress on a practically important hardware-development task, we introduce CPU-Eval, a benchmark of 339 HDL-generation problems constructed from six CPUs. Drawn from practical CPU designs, including families fabricated in silicon, the problems span CPUs from small embedded cores to Linux-capable out-of-order cores and cover diverse CPU functions written in SystemVerilog, Chisel, and SpinalHDL. In each problem, an LLM performs the real CPU-development task of generating HDL. Across seven state-of-the-art LLMs, mean pass@1 is 45.14 percentage points lower on CPU-Eval than on VerilogEval v2 Spec-to-RTL, exposing capability differences obscured by VerilogEval's high pass rates. CPU-Eval reveals that pass@1 is lower for submodules with more source-code lines, which motivates fine-grained modular design for LLM-aided hardware generation. We also show that pass@1 is lower for CPUs written in less widely used HDLs, motivating designers to verify that an LLM is sufficiently proficient at generating code in the HDL they use before deployment.",
+   "authors": [
+    "Yuisei Iwata",
+    "Yutaka Masuda",
+    "Tohru Ishihara"
+   ],
+   "published": "2026-11-24",
+   "url": "https://arxiv.org/abs/2611.32405",
+   "pdf": "https://arxiv.org/pdf/2611.32405v1",
+   "venue": "arXiv cs.AR, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31876",
+   "title": "AgentDRC: Multi-Agent Algorithms for Spatially-Aware Automated DRC Correction",
+   "abstract": "Design Rule Checking (DRC) error fixing remains a time-consuming bottleneck in physical design, often requiring manual intervention despite advanced EDA optimizations. Existing LLM-agent approaches fall short due to redundant contextual shapes, limited spatial reasoning over raw coordinates, and inefficient flat layout representations. We propose AgentDRC, which formulates iterative DRC correction as a multi-agent algorithm and introduces a spatial-aware verification and correction algorithm that reconstructs structured spatial relations among critical shapes and validates fixes through geometric and semantic constraint checking. The system coordinates four specialized agents to perceive multi-level, multi-modal geometric features, filter irrelevant shapes, and iteratively correct violations. Experiments show that AgentDRC achieves up to 30.4% pass@1 and 55.7% pass@5 on challenging violations, with 13.8% pass@5 improvement over the best baseline. We will open-source all code and benchmark tasks upon acceptance.",
+   "authors": [
+    "Pengju Liu",
+    "Nuo Xu",
+    "Winso Chen",
+    "Peijun Li",
+    "Yang",
+    "Zhao",
+    "Yu Cao",
+    "Caiwen Ding"
+   ],
+   "published": "2026-11-24",
+   "url": "https://arxiv.org/abs/2611.31876",
+   "pdf": "https://arxiv.org/pdf/2611.31876v1",
+   "venue": "arXiv cs.AR, cs.MA",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31709",
+   "title": "RTLDetective: Agentic RTL Debugging through Dataflow Analysis and Simulation-Guided Fault Localization",
+   "abstract": "Large language model (LLM) agents have shown promise in RTL debugging, yet accurately localizing functional errors and generating reliable repairs remain challenging. We propose RTLDetective, a multi-agent framework that integrates signal dependency analysis, simulation-guided fault localization, and knowledge-based reasoning for automated RTL debugging and repair. RTLDetective constructs signal dependency graphs from RTL code and extracts failure information from waveform traces. A lightweight localizer agent predicts expected intermediate signal values and evaluates them through targeted simulation interventions, iteratively probing signal dependencies to isolate suspicious logic and identify potential fault locations. A debug agent combines this evidence with static analysis, a curated knowledge base of hardware design principles and RTL bug patterns, and reasoning to generate corrected RTL. To reduce inference overhead, the framework reuses cached context across debugging iterations. We evaluate RTLDetective on the MEIC benchmark, achieving an 86.1% fix rate, 13.9 percentage points above the best baseline, while making fewer LLM calls.",
+   "authors": [
+    "Neusha Javidnia",
+    "Ruisi Zhang",
+    "Farinaz Koushanfar"
+   ],
+   "published": "2026-11-23",
+   "url": "https://arxiv.org/abs/2611.31709",
+   "pdf": "https://arxiv.org/pdf/2611.31709v1",
+   "venue": "arXiv cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-25"
+  },
+  {
+   "id": "arxiv:2611.31661",
+   "title": "Boundary Representation-Driven Graph Transformer Modeling for Machining Operation Sequencing",
+   "abstract": "Machining process planning is inherently complex due to the interdependence between part geometry, machining operations, and evolving manufacturable states. Traditional approaches rely heavily on expert knowledge and rule-based systems, limiting scalability and automation. While recent machine learning methods have shown promise, most operate on simplified geometric representations, such as voxels or hand-crafted features, which fail to fully exploit the rich geometric and topological information encoded in Boundary Representation (B-Rep) models. In this work, we propose a graph transformer-based framework for geometry-to-sequence learning that directly predicts machining operation sequences from B-Rep design geometry. The proposed method constructs topology-aware graphs from B-Rep entities, where faces and their adjacencies are encoded as node and edge features capturing both geometric and relational information. A graph neural network encoder learns geometry-aware embeddings, which are then used to condition a dual-decoder transformer that autoregressively generates machining operation sequences. This formulation enables the model to capture both operation-type prediction and process-level ordering constraints directly from design geometry, without requiring intermediate feature extraction or machining-state representations. Experiments on a dataset of 2,991 synthetic machined parts demonstrate strong performance, achieving 95% accuracy for main operation prediction, 64% accuracy for sub-operation prediction, and 93% accuracy for sequence length prediction. Further analysis shows that the model effectively captures precedence relationships and geometry-dependent constraints inherent in machining processes. These results highlight the potential of B-Rep-driven graph learning for scalable and automated machining process planning.",
+   "authors": [
+    "Fatemeh Elhambakhsh",
+    "Gaurav Ameta",
+    "Aditi Roy",
+    "Hyunwoong Ko"
+   ],
+   "published": "2026-11-23",
+   "url": "https://arxiv.org/abs/2611.31661",
+   "pdf": "https://arxiv.org/pdf/2611.31661v1",
+   "venue": "arXiv cs.LG, cs.CE",
+   "source": "arXiv",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-25"
+  },
   {
    "id": "arxiv:2611.30766",
    "title": "Bridging the Semantic Gap from Natural Language Specifications to RTL with Layered Formal Guidance",
@@ -301,7 +418,7 @@
    "published": "2026-11-17",
    "url": "https://doi.org/10.48550/arxiv.2611.22328",
    "pdf": "https://arxiv.org/pdf/2611.22328",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -541,7 +658,7 @@
    "published": "2026-11-13",
    "url": "https://doi.org/10.48550/arxiv.2611.18422",
    "pdf": "https://arxiv.org/pdf/2611.18422",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "B-rep/几何",
@@ -944,7 +1061,7 @@
    "published": "2026-11-12",
    "url": "https://doi.org/10.48550/arxiv.2611.16202",
    "pdf": "https://arxiv.org/pdf/2611.16202",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -1081,7 +1198,7 @@
    "published": "2026-11-07",
    "url": "https://doi.org/10.48550/arxiv.2611.10824",
    "pdf": "https://arxiv.org/pdf/2611.10824",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -1101,7 +1218,7 @@
    "published": "2026-11-05",
    "url": "https://doi.org/10.48550/arxiv.2611.10025",
    "pdf": "https://arxiv.org/pdf/2611.10025",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -1213,7 +1330,7 @@
    "published": "2026-11-05",
    "url": "https://doi.org/10.48550/arxiv.2611.08543",
    "pdf": "https://arxiv.org/pdf/2611.08543",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -1258,7 +1375,7 @@
    "published": "2026-11-04",
    "url": "https://doi.org/10.48550/arxiv.2611.10015",
    "pdf": "https://arxiv.org/pdf/2611.10015",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "测试/评测",
@@ -1746,7 +1863,7 @@
    "published": "2026-10-30",
    "url": "https://doi.org/10.48550/arxiv.2610.41225",
    "pdf": "https://arxiv.org/pdf/2610.41225",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "EDA/芯片",
@@ -2263,7 +2380,7 @@
    "published": "2026-10-26",
    "url": "https://doi.org/10.48550/arxiv.2610.37706",
    "pdf": "https://arxiv.org/pdf/2610.37706",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "EDA/芯片",
@@ -2422,7 +2539,7 @@
    "published": "2026-10-26",
    "url": "https://doi.org/10.48550/arxiv.2610.35579",
    "pdf": "https://arxiv.org/pdf/2610.35579",
-   "venue": "arXiv (Cornell University)",
+   "venue": "arXiv",
    "source": "OpenAlex",
    "tags": [
     "EDA/芯片",
