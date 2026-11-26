@@ -1,8 +1,106 @@
 {
- "updated": "2026-11-25T08:36:21+00:00",
- "new_today": 5,
+ "updated": "2026-11-26T08:19:23+00:00",
+ "new_today": 4,
  "errors": [],
  "papers": [
+  {
+   "id": "arxiv:2611.33973",
+   "title": "Kolpona: An Agentic Framework with Gradient-Free Neuron Programming for RTL Generation",
+   "abstract": "Open-weight large language models (LLMs) for register-transfer level (RTL) design are usually improved by fine-tuning on curated Verilog corpora, which needs large sets of verified designs and GPU training. We present Kolpona, an agentic framework that improves such models without gradient training. Its first component is neuron programming, a new form of weight-space programming (WSP) that writes single neurons in closed form into the weights to remove failure habits found on practice tasks, and keeps each edit only when testbench results on fresh tasks favour it. At inference time, tool-using agents propose designs, and a label-free selection stage delivers one design per task from the specification, the candidates and their simulations alone. On Qwen3.5-4B, edits to 16 neurons raise the VerilogEval v2 pass@1 of the model alone from 31.7% to 55.4%, and the full framework reaches 77.6%. On Qwen3.8-27B, Kolpona lifts pass@1 from 73.1% to 94.9% on VerilogEval v2 and from 66.0% to 92.0% on RTLLM v2.1 on a single 32 GB GPU, above every published system in our comparison. The RTL edits also carry over to Python and raise the pass@1 of the 4B model alone from 84.8% to 91.5% on HumanEval+ and from 67.7% to 77.5% on MBPP+.",
+   "authors": [
+    "Musa Tur Farazi",
+    "Md Nasir Uddin",
+    "Soumik Bhattacharjee",
+    "Tishna Sabrina",
+    "Chowdhury Mohammad Rakin Haider"
+   ],
+   "published": "2026-11-25",
+   "url": "https://arxiv.org/abs/2611.33973",
+   "pdf": "https://arxiv.org/pdf/2611.33973v1",
+   "venue": "arXiv cs.LG, cs.AI, cs.AR",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-26"
+  },
+  {
+   "id": "arxiv:2611.33748",
+   "title": "REFORGE: LLM-Assisted RTL Bug Repair with Structured Context and Verification Feedback",
+   "abstract": "Large language models (LLMs) can write and repair RTL, but successful compilation or testbench execution does not establish defect removal, behavioral preservation, security, or implementation feasibility. Existing LLM-based RTL repair methods often report a single repair rate without retaining separate evidence for these properties, limiting reproducible comparison and integration into hardware design flows. We present REFORGE, which, to our knowledge, is the first LLM-assisted RTL repair framework that maintains and accumulates structured repair evidence across iterations, allowing it to generate fixes that satisfy multiple objectives simultaneously, including functionality, behavioral equivalence, security, and cost efficiency. REFORGE profiles buggy RTL, identifies structural and security-relevant features, localizes failing behavior, and uses verification-guided diagnosis to generate complete RTL repair variants. Each variant undergoes syntax checking, simulation, formal analysis, off-trigger preservation, security re-scan, and synthesis-based power, performance, and area analysis. We implement REFORGE as a backend-independent repair-and-verification flow and evaluate it in 288 runs across three LLM backends and three benchmark suites. On CirFix, the proposed context and diagnosis increase runs delivering a checked repair from 32/63 to 51/63, while every configuration repairs the Hack@DAC OpenTitan defect. Evidence records also show that a testbench-only criterion reports 3.9 times more repairs than the full set of applicable checks, security-clean outputs may lack functional verification, and different RTL repairs can implement equivalent hardware. These results show that LLM-generated RTL repairs require explicit multi-stage verification evidence rather than a single pass/fail outcome.",
+   "authors": [
+    "Tanvir Hossain",
+    "Sudipta Paria",
+    "Aidan Gleason Myers",
+    "Swarup Bhunia",
+    "Tamzidul Hoque"
+   ],
+   "published": "2026-11-25",
+   "url": "https://arxiv.org/abs/2611.33748",
+   "pdf": "https://arxiv.org/pdf/2611.33748v1",
+   "venue": "arXiv cs.AI, cs.SE",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-26"
+  },
+  {
+   "id": "arxiv:2611.33617",
+   "title": "Controllable CAD Generation and Interactive Editing of Fluid Rotors",
+   "abstract": "Computer-aided design (CAD) provides the geometric foundation for rotors in fluid rotating machinery. However, creating models for different rotors requires different modeling processes, making it difficult to control geometry through design intent and reuse existing models. We introduce VaneCraft, an agent-driven framework for rotor generation, inverse recovery, and editing through a unified analytical representation. The agent interprets design requests and invokes geometric modeling operations. The representation defines geometric controls through meridional geometry and independent boundary angle laws. An anisotropic partial differential equation (PDE) maps these controls to the blade surfaces. Geometric parameter correction (GPC) uses a joint geometric encoder and a parameter decoder to refine controls initialized from rotor category and dimensions. Inverse recovery maps existing CAD to the same geometric controls for reconstruction and continued editing. Experiments demonstrate that VaneCraft supports anisotropy control and parameter editing and outperforms representative baselines in rotor CAD generation tasks. Project page is available on \\href{https://github.com/shenchen333/vanecraft}{GitHub}.",
+   "authors": [
+    "Shen Chen",
+    "Lei Li",
+    "Jiajun Sun",
+    "Zitian Wang",
+    "Huaping Zhang",
+    "Peng Wu"
+   ],
+   "published": "2026-11-25",
+   "url": "https://arxiv.org/abs/2611.33617",
+   "pdf": "https://arxiv.org/pdf/2611.33617v1",
+   "venue": "arXiv cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "CAD 生成",
+    "B-rep/几何",
+    "LLM/智能体"
+   ],
+   "score": 3,
+   "first_seen": "2026-11-26"
+  },
+  {
+   "id": "arxiv:2611.33453",
+   "title": "SecID: An LLM-Guided Framework for Threat-Aware Secondary Asset Identification with Quantitative RTL Analysis",
+   "abstract": "The growing complexity of modern hardware designs is making security assurance increasingly difficult. One of the foundational steps in pre-silicon security verification is identifying security assets. While primary assets are often evident from design functionality, the internal signals that can facilitate their compromise are much less apparent. Complex data- and control-flow dependencies create many such internal security-critical locations, whose exploitation depends on the threat-specific attack mechanism---these are the secondary assets. To precisely identify these, we propose SecID, a multi-agent framework that combines deterministic RTL analysis with bounded dynamic evaluation and LLM reasoning to identify threat-specific secondary assets. Each asset decision is supported by functional influence, threat features, and explicit attack mechanisms. We demonstrate SecID on seven open-source SoC and IP designs, including openMSP430, NEORV32, and CV32E40P. The experimental results are corroborated through comparison with prior work, fault simulation, and formal analysis, and further evaluated through pipeline- and final-stage ablation, threshold-sensitivity studies, and final-stage repeatability analysis. Together, these evaluations show that SecID can identify highly threat-relevant secondary assets with respect to a given primary asset, providing a scalable path toward hardware-security verification.",
+   "authors": [
+    "Md Ajoad Hasan",
+    "Dipayan Saha",
+    "Upoma Das",
+    "Sujan Kumar Saha",
+    "Mark Tehranipoor",
+    "Farimah Farahmandi"
+   ],
+   "published": "2026-11-24",
+   "url": "https://arxiv.org/abs/2611.33453",
+   "pdf": "https://arxiv.org/pdf/2611.33453v1",
+   "venue": "arXiv cs.CR, cs.AI",
+   "source": "arXiv",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-26"
+  },
   {
    "id": "arxiv:2611.33093",
    "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
@@ -57,7 +155,7 @@
    "authors": [
     "Pengju Liu",
     "Nuo Xu",
-    "Winso Chen",
+    "Winson Chen",
     "Peijun Li",
     "Yang",
     "Zhao",
@@ -66,7 +164,7 @@
    ],
    "published": "2026-11-24",
    "url": "https://arxiv.org/abs/2611.31876",
-   "pdf": "https://arxiv.org/pdf/2611.31876v1",
+   "pdf": "https://arxiv.org/pdf/2611.31876v2",
    "venue": "arXiv cs.AR, cs.MA",
    "source": "arXiv",
    "tags": [
@@ -362,7 +460,7 @@
   {
    "id": "doi:10.1007/s41064-026-00427-5",
    "title": "Frozen 2D Foundation-Model Features Cluster Tree Species in LiDAR Point Clouds More Coherently than the Evaluated Geometric Descriptors: a Source-Controlled Evaluation",
-   "abstract": "Individual tree species mapping from LiDAR underpins forest inventory and biodiversity monitoring, yet remains difficult because supervised classifiers need expensive, geographically biased per-tree labels, and label-free geometric descriptors capture only predefined statistics. We propose a fully unsupervised, matching-free clustering framework on frozen off-the-shelf 2D vision foundation-model features: each tree is rendered into six pose-canonical depth views, encoded by a frozen image encoder, and clustered without species labels or text prompts. Across two independent LiDAR datasets, these features organize crowns by species more coherently than a hand-crafted geometric descriptor (matching-free Normalized Mutual Information (NMI) 0.28-0.35 versus 0.10) and than a frozen 3D point-cloud foundation model given the native geometry (OpenShape/PointBERT, 0.19-0.27), despite no 3D training. Because that 3D model is pre-trained on computer-aided-design (CAD) shapes, this is an availability comparison among frozen models, not an architectural verdict. The advantage holds for every pre-trained backbone, vanishes for a random-initialized control (isolating pre-training), and is stable across four clustering algorithms, fifteen seeds, and an embedding-dimension control. We further identify acquisition-source confounding as a first-class evaluation hazard: on the multi-sensor dataset most of the global gap recovers acquisition source, leaving a small, bootstrap-significant within-source residual of +0.044 NMI (foundation over geometry) on FOR-species20K, versus +0.204 on the single-sensor BioDiv-3DTrees-ULS. Although the uncontrolled gap is permutation-significant ( p < 1e-4), we anchor our evidence in this within-source bootstrap, treat the global gap as an upper bound, and scope our claims to feature coherence, not deployable classification.",
+   "abstract": "Individual tree species mapping from LiDAR underpins forest inventory and biodiversity monitoring, yet remains difficult because supervised classifiers need expensive, geographically biased per-tree labels, and label-free geometric descriptors capture only predefined statistics. We propose a fully unsupervised, matching-free clustering framework on frozen off-the-shelf 2D vision foundation-model features: each tree is rendered into six pose-canonical depth views, encoded by a frozen image encoder, and clustered without species labels or text prompts. Across two independent LiDAR datasets, these features organize crowns by species more coherently than a hand-crafted geometric descriptor (matching-free Normalized Mutual Information (NMI) 0.28-0.35 versus 0.10) and than a frozen 3D point-cloud foundation model given the native geometry (OpenShape/PointBERT, 0.19-0.27), despite no 3D training. Because that 3D model is pre-trained on computer-aided-design (CAD) shapes, this is an availability comparison among frozen models, not an architectural verdict. The advantage holds for every pre-trained backbone, vanishes for a random-initialized control (isolating pre-training), and is stable across four clustering algorithms, fifteen seeds, and an embedding-dimension control. We further identify acquisition-source confounding as a first-class evaluation hazard: on the multi-sensor dataset most of the global gap recovers acquisition source, leaving a small, bootstrap-significant within-source residual of +0.044 NMI (foundation over geometry) on FOR-species20K, versus +0.204 on the single-sensor BioDiv-3DTrees-ULS. Although the uncontrolled gap is permutation-significant (p < 1e-4), we anchor our evidence in this within-source bootstrap, treat the global gap as an upper bound, and scope our claims to feature coherence, not deployable classification.",
    "authors": [
     "Zhenyu Zhou"
    ],
@@ -431,7 +529,7 @@
   {
    "id": "doi:10.1145/3827602",
    "title": "A Survey of Circuit Foundation Model: Foundation AI Models for VLSI Circuit Design and EDA",
-   "abstract": "Artificial intelligence (AI)-driven electronic design automation (EDA) techniques have been extensively explored for VLSI circuit design applications. Most recently, foundation AI models for circuits have emerged as a new technology trend. Unlike traditional task-specific AI solutions, these new AI models are developed through two stages: (1) self-supervised pre-training on a large amount of unlabeled data to learn intrinsic circuit properties; and (2) efficient fine-tuning for specific downstream applications, such as early-stage design quality evaluation, circuit-related context generation, and functional verification. This new paradigm brings many advantages: model generalization, less reliance on labeled circuit data, efficient adaptation to new tasks, and unprecedented generative capability. In this article, we propose referring to AI models developed with this new paradigm as circuit foundation models (CFMs) . This article provides a comprehensive survey of the latest progress in circuit foundation models, unprecedentedly covering over 160 relevant works. Over 90% of our introduced works were published in or after 2022, indicating that this emerging research trend has attracted wide attention in a short period. In this survey, we propose to categorize all existing circuit foundation models into two primary types: (1) encoder-based methods performing general circuit representation learning for predictive tasks ; and (2) decoder-based methods leveraging large language models (LLMs) for generative tasks . For our introduced works, we cover their input modalities, model architecture, pre-training strategies, domain adaptation techniques, and downstream design applications. In addition, this article discussed the unique properties of circuits from the data perspective. These circuit properties have motivated many works in this domain and differentiated them from general AI techniques. Finally, we shared our observed challenges and potential future research directions about developing foundation AI models for EDA methodologies.",
+   "abstract": "Artificial intelligence (AI)-driven electronic design automation (EDA) techniques have been extensively explored for VLSI circuit design applications. Most recently, foundation AI models for circuits have emerged as a new technology trend. Unlike traditional task-specific AI solutions, these new AI models are developed through two stages: (1) self-supervised pre-training on a large amount of unlabeled data to learn intrinsic circuit properties; and (2) efficient fine-tuning for specific downstream applications, such as early-stage design quality evaluation, circuit-related context generation, and functional verification. This new paradigm brings many advantages: model generalization, less reliance on labeled circuit data, efficient adaptation to new tasks, and unprecedented generative capability. In this article, we propose referring to AI models developed with this new paradigm as circuit foundation models (CFMs). This article provides a comprehensive survey of the latest progress in circuit foundation models, unprecedentedly covering over 160 relevant works. Over 90% of our introduced works were published in or after 2022, indicating that this emerging research trend has attracted wide attention in a short period. In this survey, we propose to categorize all existing circuit foundation models into two primary types: (1) encoder-based methods performing general circuit representation learning for predictive tasks; and (2) decoder-based methods leveraging large language models (LLMs) for generative tasks. For our introduced works, we cover their input modalities, model architecture, pre-training strategies, domain adaptation techniques, and downstream design applications. In addition, this article discussed the unique properties of circuits from the data perspective. These circuit properties have motivated many works in this domain and differentiated them from general AI techniques. Finally, we shared our observed challenges and potential future research directions about developing foundation AI models for EDA methodologies.",
    "authors": [
     "Wenji Fang",
     "Jing Wang",
@@ -2485,7 +2583,7 @@
   {
    "id": "doi:10.1145/3856825",
    "title": "HaVen-Agent: Enhancing Hallucination-Mitigated Verilog Code Generation Aligned with HDL Engineers through Code Repair and Multi-Agent Orchestration",
-   "abstract": "Recently, the use of large language models (LLMs) for Verilog code generation has attracted great research interest to enable hardware design automation. However, previous works have shown a gap between the ability of LLMs and the practical demands of hardware description language (HDL) engineering. This gap includes differences in how engineers phrase questions and hallucinations in the generated code. To address these challenges, we introduce HaVen , a novel LLM framework designed to mitigate hallucinations and align Verilog code generation with the practices of HDL engineers. HaVen tackles hallucination issues by proposing a comprehensive taxonomy and employing a chain-of-thought (CoT) mechanism to translate symbolic modalities ( e .g. truth tables, state diagrams, e tc.) into accurate natural language descriptions. Furthermore, HaVen bridges this gap by using a data augmentation strategy, synthesizing high-quality instruction-code pairs that match real HDL engineering practices. Building upon HaVen , we develop HaVen -R, a reasoning-augmented extension fine-tuned with a Rejection Sampling Fine-Tuning (RFT) Dataset and a Reasoning Dataset, enabling Chain-of-Thought (CoT) guided self-reflection to iteratively repair Verilog code. We further introduce HaVen -Agent, a multi-agent system that orchestrates a Planner Agent (GPT-4o), a Coder Agent ( HaVen -R), and a Verifier Agent for iterative code repair. Our experiments demonstrate that HaVen -Agent significantly improves the correctness of Verilog code generation, outperforming state-of-the-art methods on VerilogEval and RTLLM benchmarks. Additional evaluations include a 400-case multi-generator repair study, component and iteration ablations, CVDP, end-to-end cost and latency analysis, and protocol-aware comparisons with recent feedback, agentic, and reasoning-augmented methods. HaVen is publicly available at https://github.com/Intelligent-Computing-Research-Group/HaVen.",
+   "abstract": "Recently, the use of large language models (LLMs) for Verilog code generation has attracted great research interest to enable hardware design automation. However, previous works have shown a gap between the ability of LLMs and the practical demands of hardware description language (HDL) engineering. This gap includes differences in how engineers phrase questions and hallucinations in the generated code. To address these challenges, we introduce HaVen, a novel LLM framework designed to mitigate hallucinations and align Verilog code generation with the practices of HDL engineers. HaVen tackles hallucination issues by proposing a comprehensive taxonomy and employing a chain-of-thought (CoT) mechanism to translate symbolic modalities (e.g. truth tables, state diagrams, e tc.) into accurate natural language descriptions. Furthermore, HaVen bridges this gap by using a data augmentation strategy, synthesizing high-quality instruction-code pairs that match real HDL engineering practices. Building upon HaVen, we develop HaVen -R, a reasoning-augmented extension fine-tuned with a Rejection Sampling Fine-Tuning (RFT) Dataset and a Reasoning Dataset, enabling Chain-of-Thought (CoT) guided self-reflection to iteratively repair Verilog code. We further introduce HaVen -Agent, a multi-agent system that orchestrates a Planner Agent (GPT-4o), a Coder Agent (HaVen -R), and a Verifier Agent for iterative code repair. Our experiments demonstrate that HaVen -Agent significantly improves the correctness of Verilog code generation, outperforming state-of-the-art methods on VerilogEval and RTLLM benchmarks. Additional evaluations include a 400-case multi-generator repair study, component and iteration ablations, CVDP, end-to-end cost and latency analysis, and protocol-aware comparisons with recent feedback, agentic, and reasoning-augmented methods. HaVen is publicly available at https://github.com/Intelligent-Computing-Research-Group/HaVen.",
    "authors": [
     "Yiyao Yang",
     "Fu Teng",
