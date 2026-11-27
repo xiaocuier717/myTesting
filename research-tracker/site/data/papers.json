@@ -1,8 +1,57 @@
 {
- "updated": "2026-11-26T08:19:23+00:00",
- "new_today": 4,
+ "updated": "2026-11-27T08:35:49+00:00",
+ "new_today": 2,
  "errors": [],
  "papers": [
+  {
+   "id": "doi:10.1111/cgf.70660",
+   "title": "Reward‐Driven Learning of Concise CAD Command Sequences From Point Clouds",
+   "abstract": "CAD reconstruction from point clouds has attracted growing interest in command‐based modelling that preserves procedural structure and captures the design process beyond static geometry. However, CAD command prediction is challenging due to inherent procedural ambiguity: multiple valid trajectories may produce the same shape, enlarging the hypothesis space and obscuring geometry‐command correspondence. Motivated by this observation, we mitigate the effect of procedural ambiguity by introducing conciseness as an efficiency‐oriented learning signal, guiding the model toward compact and geometrically faithful command trajectories. To this end, we formulate CAD command generation as a point‐to‐CAD Markov decision process and propose the Online CAD Decision Transformer (O‐CDT), which combines return‐conditioned modelling with entropy‐bounded online exploration to jointly optimize geometric fidelity and procedural conciseness. Furthermore, we extend the modelling vocabulary by incorporating revolution operations alongside sketch–extrude and free‐form Bézier primitives, enhancing modelling expressiveness. We also construct a large‐scale dataset supporting these extended operations. Extensive experiments demonstrate that, by discovering concise modelling trajectories and leveraging richer primitive operations, O‐CDT achieves superior geometric accuracy while producing more compact CAD programs compared to prior art. The source code and dataset are available at https://github.com/Yijie‐Ding/O‐CDT.",
+   "authors": [
+    "Yijie Ding",
+    "Haobo Jiang",
+    "Yang Liu",
+    "Jianmin Zheng"
+   ],
+   "published": "2026-11-24",
+   "url": "https://doi.org/10.1111/cgf.70660",
+   "pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cgf.70660",
+   "venue": "Computer Graphics Forum",
+   "source": "OpenAlex",
+   "tags": [
+    "B-rep/几何"
+   ],
+   "score": 1,
+   "first_seen": "2026-11-27"
+  },
+  {
+   "id": "doi:10.48550/arxiv.2611.27035",
+   "title": "Mind the Delta: Early Pruning of RTL Variants for Agentic Hardware Optimization",
+   "abstract": "Autonomous coding agents powered by large language models (LLMs) now write diverse microarchitectural variants of existing register-transfer level (RTL) designs at high throughput, shifting the primary bottleneck of agentic RTL optimization onto logic synthesis. Commercial toolchains take hours per variant, creating an acute compute asymmetry between proposing and evaluating variants. Existing fast evaluators falter in this regime. Subtle RTL edits trigger nonlinear synthesis shifts that learned predictors and coding agents cannot resolve, while synthesis proxies at reduced effort either alter the optimization trajectory or retain most of its runtime. Selecting a variant, however, does not require regressing absolute quality of results across designs, only identifying when a candidate cannot surpass the best completed feasible implementation. Based on the observation that synthesis trajectories share strong design-specific bias with their base design, we propose DiffScope, a training-free anytime selection framework that races full synthesis runs in parallel. By pairing live area telemetry with the already synthesized base trajectory, DiffScope cancels early mapping inflation, reducing residual variance during initial mapping by 73.6X, and stops uncompetitive runs via a lower bound calibrated on other design lineages. Across 43 design families from small blocks to processors with millions of cells, DiffScope uniquely recovers the optimum of exhaustive synthesis in every family, cuts total evaluation work by 44.9% (1.81X), and reaches 2.18X on L-tier designs.",
+   "authors": [
+    "Siyang Cai",
+    "Cangyuan Li",
+    "Haoyu Gao",
+    "Kun Wang",
+    "Mochen Li",
+    "Yilin Zhong",
+    "Ke Xu",
+    "Yinhe Han",
+    "Ying Wang"
+   ],
+   "published": "2026-11-20",
+   "url": "https://doi.org/10.48550/arxiv.2611.27035",
+   "pdf": "https://arxiv.org/pdf/2611.27035",
+   "venue": "arXiv",
+   "source": "OpenAlex",
+   "tags": [
+    "测试/评测",
+    "EDA/芯片",
+    "LLM/智能体"
+   ],
+   "score": 6,
+   "first_seen": "2026-11-27"
+  },
   {
    "id": "arxiv:2611.33973",
    "title": "Kolpona: An Agentic Framework with Gradient-Free Neuron Programming for RTL Generation",
@@ -751,7 +800,7 @@
    "abstract": "Linear-attention language models replace a growing key-value cache with a recurrent state of fixed size. On an edge FPGA, this state can exceed the on-chip memory and must be paged to external memory. This paper asks whether such paging dominates the cost of decoding (generating tokens). We built a hardware tile that computes one complete layer of a custom 369-million-parameter hybrid Gated DeltaNet model on an Agilex 5 FPGA and pages its recurrent state. The model state needs 6.2 MiB, whereas the device has 0.87 MiB of block memory. Paging adds 26.0 MB of memory traffic per decoded token, at most 11.2 percent of the calculated total. On the board at 75 MHz, with synthetic weights, one token takes 11.15 ms in this layer. The matrix-vector products with the weights take about 62 percent of this time and the state phase, including the paging, 13 percent. The tile is one node of a multicast mesh of tri-mode processing elements. We measure the error of the fixed-point arithmetic against floating point and check that the hardware agrees bit for bit with a fixed-point reference. In simulation, the state logic agrees with the reference on all 18 recurrent layers. On the board, six builds pass all 30 runs of 64 tokens and two runs of 1,024 tokens. For this model and memory interface, the delivery of the weights limits the decoding performance, and the recurrent state does not. State paging is therefore practical for such a model on an edge FPGA.",
    "authors": [
     "Cong Xu",
-    "Ravi Sankar"
+    "Ravi T. Sankar"
    ],
    "published": "2026-11-13",
    "url": "https://doi.org/10.48550/arxiv.2611.18422",
@@ -1246,7 +1295,7 @@
     "Pratibha Verma",
     "Atish Dixit",
     "Alexandros Dimitrios Keros",
-    "Michael O’Boyle",
+    "Michael F. P. O’boyle",
     "Christos-Savvas Bouganis",
     "Themis Prodromakis"
    ],
